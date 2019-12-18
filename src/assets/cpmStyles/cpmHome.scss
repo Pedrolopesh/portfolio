@@ -2,7 +2,7 @@
     background-image: url('./src/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 1000px;
+    min-height: 1089px;
 }
 
 .logo-header{
@@ -13,7 +13,23 @@
 .bg-mask{
     max-width: 100%;
     width: 100%;
-    background-color: rgba(111 ,111 ,111 ,0.4) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.text-container-home{
+    max-width: 40% !important;
+    margin-top: 150px;
+
+    @media screen and (max-width:700px) {
+        max-width: 100% !important;
+        margin-top: 80px;
+        text-align: center;
+    }
+}
+
+.tile-home{
+    color: white;
+    font-size: 60px;
 }
 
 
@@ -27,7 +43,7 @@
 }
  
 .b-menu{
-    border: none !important;
+    border:2px solid transparent !important;
     margin-left: 30px;
     background-color: rgba(255, 255, 255, 0) !important;
     font-size: 27px !important;
@@ -37,6 +53,6 @@
         min-height: 0px;
         font-size: 22px;
         border-radius: none !important;
-        border-bottom: 2px solid rgb(255, 230, 0) !important;
+        border-bottom-color: rgb(255, 230, 0) !important;
     }
 }
