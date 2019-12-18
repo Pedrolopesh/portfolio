@@ -2,18 +2,41 @@
     background-image: url('./src/images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 1000px;
 }
 
 .logo-header{
-    
     max-width: 100%;
     width: 80px;
+}
 
-
+.bg-mask{
+    max-width: 100%;
+    width: 100%;
+    background-color: rgba(111 ,111 ,111 ,0.4) !important;
 }
 
 
 .container-header{
     max-width: 100%;
     display: flex;
+}
+
+.b-container{
+    margin-right: 150px !important;
+}
+ 
+.b-menu{
+    border: none !important;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0) !important;
+    font-size: 27px !important;
+    
+    &:hover{
+        transition: 0.3s;
+        min-height: 0px;
+        font-size: 22px;
+        border-radius: none !important;
+        border-bottom: 2px solid rgb(255, 230, 0) !important;
+    }
 }

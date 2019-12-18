@@ -2,10 +2,15 @@
   <div class="home">
 
     <div class="bg-full-screen bv-example-row container-header">
-    
+    <div class="bg-mask">
+
+
     <b-col><cpmLogo></cpmLogo></b-col>
     <b-col><sideMenu></sideMenu></b-col>
       
+
+
+    </div>
     </div>
 
 
