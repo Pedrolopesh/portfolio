@@ -26,7 +26,14 @@
 
       <carousel></carousel>
 
+  <div class="container">
+      <h1 class="title-1">Serviços</h1>
+  </div>
+      <services></services>
+
+<div class="mt-contact">
       <contact></contact>
+</div>
 
       <foot></foot>
 
@@ -37,6 +44,7 @@
 // @ is an alias to /src
 import sideMenu from '../components/cpmMenu.vue'
 import carousel from '../components/cpmCarousel.vue'
+import services from '../components/cpmServices.vue'
 import contact from '../components/cpmContact.vue'
 import foot from '../components/cpmFoot.vue'
 import cpmLogo from '../components/cpmLogo.vue'
@@ -51,6 +59,7 @@ export default {
     carousel,
     cpmLogo,
     foot,
+    services,
     sideMenu
   },
   created() {},

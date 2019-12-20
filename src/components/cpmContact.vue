@@ -13,6 +13,7 @@
                     <b-form-input v-model="name" placeholder="Name"></b-form-input>
                     <!-- <div class="mt-2">Value: {{ text }}</div> -->
 
+
                     <h4 class="form-input mt-10">E-mail</h4>
                     <b-form-input
                       id="input-live"
