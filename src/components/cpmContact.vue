@@ -8,7 +8,7 @@
               <b-row>
 
                 <b-col>
-                  <div> 
+                  <div class="container-left"> 
                     <h4 class="form-input mt-10">Name</h4>
                     <b-form-input v-model="name" placeholder="Name"></b-form-input>
                     <!-- <div class="mt-2">Value: {{ text }}</div> -->
@@ -45,7 +45,7 @@
 
 
                 <b-col>
-                  <div class="mt-10">
+                  <div class="mt-10 ml-10">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884.0684262759233!2d-48.525227770736585!3d-27.58504271027366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527385c3e0b55a5%3A0xc317eb275fc4aac!2sR.%20Lauro%20Linhares%2C%20628-638%20-%20Trindade%2C%20Florian%C3%B3polis%20-%20SC%2C%2088036-001!5e0!3m2!1spt-BR!2sbr!4v1576707322602!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                   </div>
                 </b-col>

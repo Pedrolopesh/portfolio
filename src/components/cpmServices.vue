@@ -2,13 +2,14 @@
   <div class="mt-8">
       <div class="container-service ac mt-10">
           <!-- <b-container class="bv-example-row"> -->
+
         <b-row>
-            <b-col class="border-text mr-5 container-content-text">
+            <b-col cols="8" class="border-text container-content-text">
                 <p class="content-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quo blanditiis placeat deserunt deleniti pariatur, id obcaecati quisquam? Id voluptas tenetur modi velit dolorem, asperiores molestiae. Vel sed eos consequatur exercitationem iusto facilis. Non exercitationem quia amet, cupiditate quisquam vel voluptate! Non commodi sint necessitatibus quos alias dolor at doloribus.
+                    Produção e elaboração de artes 
                 </p>
             </b-col>
-            <b-col>
+            <b-col cols="4">
                 <div class="bg-image-service-1">
                     <!-- <img src="../assets/src/imagens/contact.jpg"> -->
                 </div>
@@ -23,7 +24,7 @@
           <!-- <b-container class="bv-example-row"> -->
         <b-row>
             <b-col class="mr-5">
-                <div class="bg-image-service-1">
+                <div class="bg-image-service-2">
                     <!-- <img src="../assets/src/imagens/contact.jpg"> -->
                 </div>
             </b-col>
@@ -48,7 +49,7 @@
                 </p>
             </b-col>
             <b-col>
-                <div class="bg-image-service-1">
+                <div class="bg-image-service-3">
                     <!-- <img src="../assets/src/imagens/contact.jpg"> -->
                 </div>
             </b-col>
