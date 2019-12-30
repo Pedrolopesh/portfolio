@@ -3,8 +3,56 @@
 }
 
 .container-service{
-    max-width: 80%;
+    max-width: 80% !important;
 }
+
+.container-card{
+    max-width: 50%;
+    
+    @media screen and (max-width:700px) {
+        max-width: 95%;
+    }
+    
+    .bg-image-card{
+        max-width: 70%;
+        background-image: url('./src/images/background1.jpeg');
+        min-height:500px ;
+        background-repeat: no-repeat;
+        
+        @media screen and (max-width:700px) {
+            min-height:300px ;
+        }
+        
+        
+        .bg-mask{
+            max-width: 100%;
+            width: 100%;
+            min-height:500px ;
+            background-color: rgba(0, 0, 0, 0.541) !important;
+            padding: 85px;
+            
+            @media screen and (max-width:700px) {
+                padding: 1px;
+                min-height:300px ;
+            }
+
+            .content-card{
+                border: 1px solid white;
+                padding: 40px;
+                align-items: center;
+                text-align: center;
+                color: white;
+
+                @media screen and (max-width:700px) {
+                    font-size: 30px;
+                    min-height:300px ;
+                }
+            }
+        }
+    }
+}
+
+
 
 .bg-image-service-1{
     min-height:300px;
