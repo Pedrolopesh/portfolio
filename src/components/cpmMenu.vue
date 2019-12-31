@@ -5,8 +5,10 @@
   <b-row align-h="end">
   <b-button class="b-menu">home</b-button>
   <b-button class="b-menu">works</b-button>
-  <b-button class="b-menu">Button</b-button>
-  <b-button class="b-menu">Button</b-button>
+  <b-button class="b-menu">serviços</b-button>
+  <b-button class="b-menu">contato</b-button>
+
+  <router-link to="/About"> <b-button class="b-menu">sobre nós</b-button> </router-link>
   </b-row>
 </b-container>
 

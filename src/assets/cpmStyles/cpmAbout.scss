@@ -1,0 +1,43 @@
+.bg-full-screen-1{
+    background-image: url('./src/images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1089px;
+}
+
+.picture-pedro{
+    background-image: url('./src/images/pedro.jpeg');
+    background-repeat: no-repeat;
+    max-width: 95%;
+    background-size: cover;
+    min-height: 900px;
+}
+
+.container-personal{
+    max-width: 85%;
+    width: 100%;
+    // padding-right: 15px;
+    // padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.text-box-0{
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 30px;
+}
+.text-box-1{
+    max-width: 100%;
+    width: 250px;
+    border: 1px solid black;
+    padding: 15px;
+    // margin-top: 15vh;
+    font-size: 30px;
+}
+.text-box-2{
+    border: 1px solid black;
+    padding: 15px;
+    margin-top: 45vh;
+    font-size: 30px;
+}

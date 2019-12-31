@@ -1,0 +1,49 @@
+.midle{
+    border: 1px solid black;
+    max-width: 0% !important;
+    width: 1px;
+    padding: 0 !important;
+}
+.container-skill{
+    display: flex;
+}
+
+.level{
+    margin-top: 50px;
+    width: 170px;
+}
+
+.container-icons{
+    display: block !important;
+}
+
+.js-icon{
+    color: #F7DF1E;
+}
+.html-icon{
+    color: #F16528;
+}
+.sass-icon{
+    color: #CF679A;
+}
+.bs-icon{
+    color: #634092;
+}
+
+.il-icon{
+    background-color: rgb(22, 14, 2);
+}
+
+.ph-icon{
+    background-color: rgb(22, 14, 2);
+}
+
+.xd-icon{
+    border-radius: 22px;
+    background-color: rgb(22, 14, 2);
+}
+
+.icons{
+    display: block;
+    width: 110px;
+}
