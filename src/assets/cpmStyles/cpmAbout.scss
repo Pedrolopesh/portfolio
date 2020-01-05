@@ -5,12 +5,14 @@
     min-height: 1089px;
 }
 
+
 .picture-pedro{
     background-image: url('./src/images/pedro.jpeg');
     background-repeat: no-repeat;
     max-width: 95%;
     background-size: cover;
-    min-height: 900px;
+    min-height: 80vh !important;
+    
 }
 
 .container-personal{
@@ -22,22 +24,37 @@
     margin-left: auto;
 }
 
-.text-box-0{
-    border: 1px solid black;
-    padding: 15px;
-    font-size: 30px;
-}
-.text-box-1{
-    max-width: 100%;
-    width: 250px;
-    border: 1px solid black;
-    padding: 15px;
-    // margin-top: 15vh;
-    font-size: 30px;
-}
-.text-box-2{
-    border: 1px solid black;
-    padding: 15px;
-    margin-top: 45vh;
-    font-size: 30px;
+.row-left-image{
+    display: block !important;
+
+    .text-box {
+        border: 1px solid black;
+        padding: 15px;
+        font-size: 30px;
+        max-width: 100%;
+        width: 70%;
+    }
+
+    // .text-box-0{
+    //     border: 1px solid black;
+    //     padding: 15px;
+    //     font-size: 30px;
+    //     max-width: 100%;
+    //     width: 70%;
+    // }
+    // .text-box-1{
+    //     border: 1px solid black;
+    //     padding: 15px;
+    //     font-size: 30px;
+    //     max-width: 100%;
+    //     width: 70%;
+    //     // margin-top: 15vh;
+    // }
+    // .text-box-2{
+    //     border: 1px solid black;
+    //     padding: 15px;
+    //     font-size: 30px;
+    //     max-width: 100%;
+    //     width: 70%;
+    // }
 }

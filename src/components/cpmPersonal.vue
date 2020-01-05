@@ -9,10 +9,10 @@
 
   <b-row>
     <b-col>
-        <b-row class="mt-10">
-            <b-col align-self="start"><p class="text-box-0">Cursado em design pelo curso de arte visual saga</p></b-col>
-            <b-col align-self="center"><p class="text-box-1">5 anos de inglês na WIZARD e 1 ano no Centro Britânico</p></b-col>
-            <b-col align-self="end"><p class="text-box-2">Cursando sistemas da informação no SENAI</p></b-col>
+        <b-row class="mt-10 row-left-image">
+            <b-col><p class="text-box ac mt-10">Cursado em design pelo curso de arte visual saga</p></b-col>
+            <b-col><p class="text-box ac mt-10">5 anos de inglês na WIZARD e 1 ano no Centro Britânico</p></b-col>
+            <b-col><p class="text-box ac mt-10">Cursando sistemas da informação no SENAI</p></b-col>
         </b-row>
     </b-col>
 

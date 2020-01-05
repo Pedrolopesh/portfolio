@@ -4,13 +4,17 @@
     width: 1px;
     padding: 0 !important;
 }
+.container-all-skills{
+    margin-top: 35vh;
+}
+
 .container-skill{
     display: flex;
 }
 
 .level{
     margin-top: 50px;
-    width: 170px;
+    width: 120px;
 }
 
 .container-icons{
@@ -39,11 +43,11 @@
 }
 
 .xd-icon{
-    border-radius: 22px;
+    border-radius: 18px;
     background-color: rgb(22, 14, 2);
 }
 
 .icons{
     display: block;
-    width: 110px;
+    width: 90px;
 }
