@@ -5,8 +5,10 @@
     <div class="bg-mask">
 
 
-    <b-col><cpmLogo></cpmLogo></b-col>
-    <b-col><sideMenu></sideMenu></b-col>
+    <b-col class="container-header">
+      <cpmLogo></cpmLogo>
+      <sideMenu></sideMenu>
+    </b-col>
       
       <div class="container text-container-home">
         <h1 class="tile-home">A portfolio created <br> by <br> Pedro Lopes</h1>

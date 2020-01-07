@@ -15,19 +15,25 @@
 
 
                     <h4 class="form-input mt-10">E-mail</h4>
-                    <b-form-input
+                    <b-form-input v-model="data.email" id="input-invalid" :state="checkEmailValid()" placeholder="email"></b-form-input>
+                      <!-- @keyup="callValidation()" -->
+
+
+
+
+                    <!-- <b-form-input
                       id="input-live"
                       v-model="name"
                       :state="nameState"
                       aria-describedby="input-live-help input-live-feedback"
                       placeholder="E-mail"
                       trim
-                    ></b-form-input>
+                    ></b-form-input> -->
 
                     <!-- This will only be shown if the preceding input has an invalid state -->
-                    <b-form-invalid-feedback id="input-live-feedback">
-                      Enter at least 3 letters
-                    </b-form-invalid-feedback>
+                    <!-- <b-form-invalid-feedback id="input-live-feedback">
+                      Preencha um email válido
+                    </b-form-invalid-feedback> -->
 
 
 
@@ -39,6 +45,10 @@
                     rows="3"
                     max-rows="6"
                   ></b-form-textarea>
+
+                  <div class="ac">
+                    <b-button variant="info" class="ac sendform-button mt-3" @click="callValidation()">Enviar</b-button>
+                  </div>
                   <!-- <pre class="mt-3 mb-0">{{ text }}</pre> -->
                   </div>
                 </b-col>
@@ -61,16 +71,61 @@
 export default {
 
   components: {},
-  created() {},
+  created() {
+    console.log(this.data.email)
+  },
   data: () => ({
+    data: {
+      email:''
+    },
     name: '',
-    text: ''
+    text: '',
+    formValid: false,
   }),
-  mounted() {},
-  methods: {},
+  mounted() {
+    
+  },
+  methods: {
+    callValidation(){
+      this.formValid = true;
+
+      if(this.formValid){
+          this.formValid = this.checkEmailValid();
+      }
+    },
+
+    checkEmailValid(){
+      var re = /^(([^<>()\\\\.,;:\s@"]+(\.[^<>()\\\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      let emailInput = re.test(this.data.email);
+      // console.log('duhsdushdu' + bah)
+
+
+      if(emailInput==""){
+        return null
+      }
+      if(!emailInput){
+        // this.warning = "Email Inválido";
+        // this.warningShow = true;
+        
+        // console.log(this.warningShow)
+        // console.log('Email está incorreto!')
+        return false
+      } 
+      if(emailInput){
+        return true
+      }
+
+
+      else{
+        return true
+      }
+
+    }
+  },
   computed: {
     nameState() {
-        return this.name.length > 2 ? true : false
+
+        // return this.name.length > 2 ? true : false
       }
   },
   watch: {}

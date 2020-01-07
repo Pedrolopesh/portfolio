@@ -2,7 +2,14 @@
     background-image: url('./src/images/contact.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 800px;
+    min-height: 900px;
+}
+
+.sendform-button{
+    margin-top: 10px;
+    width: 100% !important;
+    max-width: 150px !important;
+    display: block !important;
 }
 
 .mt-contact{
