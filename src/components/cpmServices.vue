@@ -2,8 +2,9 @@
   <div class="mt-8">
 
 <div class="container-service container">
-
-    <b-row>
+<b-button variant="success" @click="animation()">Button</b-button>
+<b-button variant="danger" @click="resetAnimation()">Button</b-button>
+    <b-row class="fixed-row" id="first-card">
       <b-col align-self="start">
         <div class="container-card">
             <div class="bg-image-card">
@@ -22,7 +23,7 @@
 <div class="container-service container mt-5" id="teucuderola">
 fdsfdfd
 {{positions.first}}
-    <b-row>
+    <b-row class="fixed-row-midle" id="second-card">
       <b-col align-self="center">
         <div class="container-card ac">
             <div class="bg-image-card ac">
@@ -90,14 +91,25 @@ export default {
        window.addEventListener("scroll", this.checkScroll);
     },
     checkScroll(){
-      console.log(window.pageYOffset)
+      // console.log(window.pageYOffset)
       // if(window.pageYOffset > this.positions.first){
       //   alert("opa,passou")
       // }
     },
     animation(){
+      var first = document.querySelector('#first-card')
+      first.classList.add('slide-animation-1')
 
+      var second = document.querySelector('#second-card')
+      second.classList.add('slide-animation-2')
     },
+    resetAnimation(){
+      var first = document.querySelector('#first-card')
+      first.classList.remove('slide-animation-1')
+      
+      var first = document.querySelector('#second-card')
+      first.classList.remove('slide-animation-2')
+      },
     alertTeuCu(){
      
       alert("teu cu")

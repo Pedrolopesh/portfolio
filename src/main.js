@@ -4,10 +4,12 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import BootstrapVue from 'bootstrap-vue'
-import './assets/index.scss'
+
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import './assets/index.scss'
 
 
 Vue.use(BootstrapVue)
