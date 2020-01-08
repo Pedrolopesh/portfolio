@@ -19,7 +19,7 @@
     </b-row>
 </div>
 
-<div class="container-service container mt-5 teucuderola" id="teucuderola">
+<div class="container-service container mt-5" id="teucuderola">
 fdsfdfd
 {{positions.first}}
     <b-row>

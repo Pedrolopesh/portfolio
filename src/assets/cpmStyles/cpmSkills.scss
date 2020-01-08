@@ -104,7 +104,7 @@
 // ========================================================= js ========================================================
 .background-bar-js{
     min-height: 90px;
-    width: 600px;
+    width: 6vw;
     border-radius: 90px;
     // background-color: #f7df1e;
     background: linear-gradient(90deg, rgba(213,178,0,1) 0%, rgba(247,223,30,1) 90%, rgba(247,223,30,1) 100%);
@@ -123,7 +123,7 @@
 // ========================================================= HTML ========================================================
 .background-bar-html{
     min-height: 90px;
-    width: 1900px;
+    width: 6vw;
     border-radius: 90px;
     // background-color: #f7df1e;
     background: linear-gradient(90deg, rgba(182,48,4,1) 0%, rgba(241,101,40,1) 90%, rgba(241,101,40,1) 100%);
@@ -141,7 +141,7 @@
 // ========================================================= sass ========================================================
 .background-bar-sass{
     min-height: 90px;
-    width: 900px;
+    width: 6vw;
     border-radius: 90px;
     // background-color: #f7df1e;
     background: linear-gradient(90deg, rgba(131,8,68,1) 0%, rgba(207,103,154,1) 90%, rgba(207,103,154,1) 100%);
@@ -159,7 +159,7 @@
 // ========================================================= Bootstrap ========================================================
 .background-bar-bs{
     min-height: 90px;
-    width: 400px;
+    width: 6vw;
     border-radius: 90px;
     // background-color: #f7df1e;
     background: linear-gradient(90deg, rgba(34,0,80,1) 0%, rgba(99,64,146,1) 90%, rgba(99,64,146,1) 100%);
@@ -215,13 +215,47 @@
     border-radius: 90px;
     // background-color: #f7df1e;
     background: linear-gradient(90deg, rgba(140,0,98,1) 0%, rgba(255,38,190,1) 90%, rgba(255,38,190,1) 100%);
-
+    
 }
-    .background-logo-xd{
+.background-logo-xd{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: end;
     margin-top: 10px;
     margin-right: 10px;
     font-size: 50px;
+}
+
+
+
+// ========================================================= efects ========================================================
+.reset{width: 6vw;}
+
+.js-level{
+    width:45vw;
+    animation-name: js-level-animation;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes js-level-animation {
+        0%  {width:6vw; }
+        60% {width:35vw;}
+        100%{width:45vw;}
+      }
+}
+
+.html-level{
+    width:90vw;
+    animation-name: js-level-animation;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes js-level-animation {
+        0%  {width:6vw; }
+        60% {width:40vw;}
+        80% {width:75vw;}
+        100%{width:90vw ;}
+      }
 }
