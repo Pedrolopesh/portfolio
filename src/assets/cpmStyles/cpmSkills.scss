@@ -25,13 +25,16 @@
     color: #F7DF1E;
 }
 .html-icon{
-    color: #F16528;
+    // color: #F16528;
+    color: rgb(255, 255, 255);
 }
 .sass-icon{
-    color: #CF679A;
+    // color: #CF679A;
+    color: rgb(255, 255, 255);
 }
 .bs-icon{
-    color: #634092;
+    // color: #634092;
+    color: rgb(255, 255, 255);
 }
 
 .il-icon{
@@ -49,5 +52,176 @@
 
 .icons{
     display: block;
-    width: 90px;
+    width: 60px;
+}
+
+
+
+.container-bar{
+    min-height: 10px;
+}
+
+.background-bar{
+    display: flex;
+    max-width: 100%;
+    min-height: 90px;
+    width: 600px;
+    border-radius: 90px;
+    box-shadow: 4px 4px 7px 3px rgba(0, 0, 0, 0.110);
+    background-color: rgb(236, 236, 236);
+}
+
+.background-bar-js, .background-logo-js
+,.background-bar-html,.background-logo-html
+,.background-bar-bs,.background-logo-bs
+,.background-bar-sass, .background-logo-sass
+,.background-bar-ai, .background-logo-ai
+,.background-bar-Ps, .background-logo-Ps
+,.background-bar-xd, .background-logo-xd
+
+{
+    display: block;
+    max-width: 100%;
+}
+
+.container-content-bar{
+    max-width: 100%;
+    width: 100%;
+}
+
+.content{
+    text-align: end;
+        margin-right: 15px;
+        color: rgb(177, 177, 177);
+        font-size: 20px;
+        margin-top: 32px;
+        display: block;
+    }
+
+
+
+
+// ========================================================= js ========================================================
+.background-bar-js{
+    min-height: 90px;
+    width: 600px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(213,178,0,1) 0%, rgba(247,223,30,1) 90%, rgba(247,223,30,1) 100%);
+}
+
+.background-logo-js{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+
+// ========================================================= HTML ========================================================
+.background-bar-html{
+    min-height: 90px;
+    width: 1900px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(182,48,4,1) 0%, rgba(241,101,40,1) 90%, rgba(241,101,40,1) 100%);
+}
+.background-logo-html{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+
+// ========================================================= sass ========================================================
+.background-bar-sass{
+    min-height: 90px;
+    width: 900px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(131,8,68,1) 0%, rgba(207,103,154,1) 90%, rgba(207,103,154,1) 100%);
+}
+.background-logo-sass{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+
+// ========================================================= Bootstrap ========================================================
+.background-bar-bs{
+    min-height: 90px;
+    width: 400px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(34,0,80,1) 0%, rgba(99,64,146,1) 90%, rgba(99,64,146,1) 100%);
+}
+.background-logo-bs{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+
+// ========================================================= Ai ========================================================
+.background-bar-ai{
+    min-height: 90px;
+    width: 700px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(145,53,0,1) 0%, rgba(255,122,27,1) 90%, rgba(255,122,27,1) 100%);
+}
+    .background-logo-ai{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+
+// ========================================================= Ps ========================================================
+.background-bar-Ps{
+    min-height: 90px;
+    width: 550px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(2,70,171,1) 0%, rgba(65,206,251,1) 90%, rgba(65,206,251,1) 100%);
+
+}
+    .background-logo-Ps{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+}
+// ========================================================= XD ========================================================
+.background-bar-xd{
+    min-height: 90px;
+    width: 350px;
+    border-radius: 90px;
+    // background-color: #f7df1e;
+    background: linear-gradient(90deg, rgba(140,0,98,1) 0%, rgba(255,38,190,1) 90%, rgba(255,38,190,1) 100%);
+
+}
+    .background-logo-xd{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 50px;
 }
