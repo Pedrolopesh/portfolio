@@ -236,7 +236,7 @@
     width:45vw;
 
     animation-name: grow-animation-1;
-    animation-duration: 0.8s;
+    animation-duration: 0.9s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 
@@ -250,7 +250,7 @@
 .grow-animation-2{
     width:70vw;
     animation-name: grow-animation-2;
-    animation-duration: 0.8s;
+    animation-duration: 0.9s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
 
@@ -260,5 +260,21 @@
         80% {width:50vw;}
         90% {width:60vw;}
         100%{width:70vw;}
+      }
+}
+
+.grow-animation-3{
+    width:30vw;
+    animation-name: grow-animation-3;
+    animation-duration: 0.9s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes grow-animation-3 {
+        0%  {width:6vw; }
+        40% {width:17vw;}
+        // 80% {width:20vw;}
+        // 90% {width:26vw;}
+        100%{width:30vw;}
       }
 }
