@@ -41,7 +41,7 @@ fdsfdfd
 
 <div class="container-service container mt-5" id="teucuderola2">
 {{positions.second}}
-    <b-row>
+    <b-row class="fixed-row-end" id="third-card">
       <b-col align-self="end">
         <div class="container-card ml-a">
             <div class="bg-image-card ml-a">
@@ -75,8 +75,10 @@ export default {
   }),
   mounted() {
     this.getPositions();
+    // this.animation()
   },
   methods: {
+
     getPositions(){
        var testDiv = document.querySelector("#teucuderola");
        console.log('sas')
@@ -91,29 +93,59 @@ export default {
        window.addEventListener("scroll", this.checkScroll);
     },
     checkScroll(){
-      // console.log(window.pageYOffset)
-      // if(window.pageYOffset > this.positions.first){
-      //   alert("opa,passou")
-      // }
+      console.log(window.pageYOffset)
+      if(window.pageYOffset > this.positions.first){
+        this.animation()
+      }
     },
-    animation(){
-      var first = document.querySelector('#first-card')
-      first.classList.add('slide-animation-1')
 
+    alertTeuCu(){
+      
+      alert("teu cu")
+    },
+
+      
+      
+      
+      
+      
+      
+      
+      animation(){
+        var first = document.querySelector('#first-card')
+        first.classList.add('slide-animation-1')
+  
+        // var second = document.querySelector('#second-card')
+        // second.classList.add('slide-animation-2')
+  
+        // var first = document.querySelector('#third-card')
+        // first.classList.add('slide-animation-3')
+  
+        setTimeout( () => {this.animation2()}, 1000);
+        setTimeout( () => {this.animation3()}, 2000);
+      },
+
+    animation2(){
       var second = document.querySelector('#second-card')
       second.classList.add('slide-animation-2')
     },
-    resetAnimation(){
-      var first = document.querySelector('#first-card')
-      first.classList.remove('slide-animation-1')
-      
-      var first = document.querySelector('#second-card')
-      first.classList.remove('slide-animation-2')
+
+    animation3(){
+      var third = document.querySelector('#third-card')
+      third.classList.add('slide-animation-3')
+    },
+
+      resetAnimation(){
+        var first = document.querySelector('#first-card')
+        first.classList.remove('slide-animation-1')
+        
+        var first = document.querySelector('#second-card')
+        first.classList.remove('slide-animation-2')
+
+        var first = document.querySelector('#third-card')
+        first.classList.remove('slide-animation-3')
       },
-    alertTeuCu(){
-     
-      alert("teu cu")
-    }
+
   },
   computed: {},
   watch: {}

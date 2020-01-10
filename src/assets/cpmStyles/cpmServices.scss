@@ -15,7 +15,10 @@
 .fixed-row-midle{
     width: 100%;
     margin-left: -67vw;
-
+}
+.fixed-row-end{
+    width: 100%;
+    margin-left: -100vw;
 }
 
 
@@ -122,7 +125,7 @@
   }
   
 
-  .slide-animation-1{
+.slide-animation-1{
     margin-left: 0vw;
     animation-name: slide-animation-1;
     animation-duration: 1s;
@@ -132,8 +135,44 @@
 
 @keyframes slide-animation-1{
     0%  {
-        margin-left: -67vw;
+        margin-left: -100vw;
         opacity: 0.2;
+    }
+    10%  {
+        margin-left: -100vw;
+        opacity: 0.2;
+    }
+    20%  {
+        margin-left: -100vw;
+        opacity: 0.2;
+    }
+    30%  {
+        margin-left: -100vw;
+        opacity: 0.2;
+    }
+    40%  {
+        margin-left: -100vw;
+        opacity: 0.2;
+    }
+    50%  {
+        margin-left: -48vw;
+        opacity: 0.2;
+    }
+    60%  {
+        margin-left: -38vw;
+        opacity: 0.3;
+    }
+    70%  {
+        margin-left: -28vw;
+        opacity: 0.5;
+    }
+    80%  {
+        margin-left: -18vw;
+        opacity: 0.7;
+    }
+    90%  {
+        margin-left: -8vw;
+        opacity: 0.9;
     }
 
     100%{
@@ -142,27 +181,118 @@
     }
   }
 
-  .slide-animation-2{
-      animation-name: slide-animation-2;
-      animation-duration: 1s;
-      animation-delay: 0.6s;
-      animation-timing-function: linear;
-      animation-iteration-count: 1; 
-      margin-left: 0vw;
-}
-
-@keyframes slide-animation-2{
-    0%  {
-        margin-left: -67vw;
-        opacity: 0.2;
-    }
-
-    100%{
+    .slide-animation-2{
+        animation-name: slide-animation-2;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1; 
         margin-left: 0vw;
-        opacity: 1;
     }
-  }
 
+    @keyframes slide-animation-2{
+        0%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        10%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        20%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        30%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        40%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        50%  {
+            margin-left: -48vw;
+            opacity: 0.2;
+        }
+        60%  {
+            margin-left: -38vw;
+            opacity: 0.3;
+        }
+        70%  {
+            margin-left: -28vw;
+            opacity: 0.5;
+        }
+        80%  {
+            margin-left: -18vw;
+            opacity: 0.7;
+        }
+        90%  {
+            margin-left: -8vw;
+            opacity: 0.9;
+        }
+
+        100%{
+            margin-left: 0vw;
+            opacity: 1;
+        }
+    }
+
+
+    .slide-animation-3{
+        margin-left: 0vw;
+        animation-name: slide-animation-3;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1; 
+    }
+    
+    @keyframes slide-animation-3{
+        0%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        10%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        20%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        30%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        40%  {
+            margin-left: -100vw;
+            opacity: 0.2;
+        }
+        50%  {
+            margin-left: -48vw;
+            opacity: 0.2;
+        }
+        60%  {
+            margin-left: -38vw;
+            opacity: 0.3;
+        }
+        70%  {
+            margin-left: -28vw;
+            opacity: 0.5;
+        }
+        80%  {
+            margin-left: -18vw;
+            opacity: 0.7;
+        }
+        90%  {
+            margin-left: -8vw;
+            opacity: 0.9;
+        }
+    
+        100%{
+            margin-left: 0vw;
+            opacity: 1;
+        }
+      }
 .position-2{
     margin-left: 0vw !important;
     
