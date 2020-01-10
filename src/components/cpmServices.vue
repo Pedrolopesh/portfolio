@@ -1,9 +1,15 @@
 <template>
   <div class="mt-8">
 
+<b-button variant="success" @click="animation()">1</b-button>
+<b-button variant="success" @click="animation2()">2</b-button>
+<b-button variant="success" @click="animation3()">3</b-button>
+
+<b-button variant="danger" @click="resetAnimation()">rest</b-button>
+
+<span class="locator" id="firstLocator">PRIMEIRO</span>
+
 <div class="container-service container">
-<b-button variant="success" @click="animation()">Button</b-button>
-<b-button variant="danger" @click="resetAnimation()">Button</b-button>
     <b-row class="fixed-row" id="first-card">
       <b-col align-self="start">
         <div class="container-card">
@@ -20,9 +26,12 @@
     </b-row>
 </div>
 
-<div class="container-service container mt-5" id="teucuderola">
+<div class="container-service container mt-5" id="secondLocator">
 fdsfdfd
-{{positions.first}}
+{{positions.second}}
+
+<span class="locator" id="secondLocator">SEGUNDO</span>
+
     <b-row class="fixed-row-midle" id="second-card">
       <b-col align-self="center">
         <div class="container-card ac">
@@ -39,7 +48,9 @@ fdsfdfd
     </b-row>
 </div>
 
-<div class="container-service container mt-5" id="teucuderola2">
+<span class="locator" id="thirdLocator">TERCEIRO</span>
+
+<div class="container-service container mt-5">
 {{positions.second}}
     <b-row class="fixed-row-end" id="third-card">
       <b-col align-self="end">
@@ -80,28 +91,34 @@ export default {
   methods: {
 
     getPositions(){
-       var testDiv = document.querySelector("#teucuderola");
-       console.log('sas')
-       this.positions.first = testDiv.offsetTop;
+       var firstLocator = document.querySelector("#firstLocator");
+      //  console.log(firstLocator.offsetTop)
+       this.positions.first = firstLocator.offsetTop;
 
-       var testDiv2 = document.querySelector("#teucuderola2");
-       console.log('sas')
-       this.positions.second = testDiv2.offsetTop;
-      // alert( testDiv.offsetTop);
+       var secondLocator = document.querySelector("#secondLocator");
+       console.log(secondLocator.offsetTop)
+       this.positions.second = secondLocator.offsetTop;
 
+
+       var thirdLocator = document.querySelector("#thirdLocator");
+      //  console.log(thirdLocator.offsetTop)
+       this.positions.third = thirdLocator.offsetTop;
 
        window.addEventListener("scroll", this.checkScroll);
     },
+
+
     checkScroll(){
-      console.log(window.pageYOffset)
-      if(window.pageYOffset > (this.positions.first - 1500)){
+      // console.log(window.pageYOffset)
+      if(window.pageYOffset > (this.positions.first - 1000)){
         this.animation()
       }
-    },
-
-    alertTeuCu(){
-      
-      alert("teu cu")
+      if(window.pageYOffset > (this.positions.sencond - 800)){
+        this.animation2()
+      }
+      if(window.pageYOffset > (this.positions.third - 1000)){
+        this.animation3()
+      }
     },
 
       
@@ -121,8 +138,8 @@ export default {
         // var first = document.querySelector('#third-card')
         // first.classList.add('slide-animation-3')
   
-        setTimeout( () => {this.animation2()}, 1000);
-        setTimeout( () => {this.animation3()}, 2000);
+        // setTimeout( () => {this.animation2()}, 1000);
+        // setTimeout( () => {this.animation3()}, 2000);
       },
 
     animation2(){
@@ -139,11 +156,11 @@ export default {
         var first = document.querySelector('#first-card')
         first.classList.remove('slide-animation-1')
         
-        var first = document.querySelector('#second-card')
-        first.classList.remove('slide-animation-2')
+        var second = document.querySelector('#second-card')
+        second.classList.remove('slide-animation-2')
 
-        var first = document.querySelector('#third-card')
-        first.classList.remove('slide-animation-3')
+        var third = document.querySelector('#third-card')
+        third.classList.remove('slide-animation-3')
       },
 
   },
