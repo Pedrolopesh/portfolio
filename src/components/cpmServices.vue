@@ -94,7 +94,7 @@ export default {
     },
     checkScroll(){
       console.log(window.pageYOffset)
-      if(window.pageYOffset > this.positions.first){
+      if(window.pageYOffset > (this.positions.first - 1500)){
         this.animation()
       }
     },
