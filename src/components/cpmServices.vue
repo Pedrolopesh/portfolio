@@ -51,7 +51,7 @@ fdsfdfd
 <span class="locator" id="thirdLocator">TERCEIRO</span>
 
 <div class="container-service container mt-5">
-{{positions.second}}
+{{positions.third}}
     <b-row class="fixed-row-end" id="third-card">
       <b-col align-self="end">
         <div class="container-card ml-a">
@@ -82,7 +82,11 @@ export default {
   },
   data: () => ({
     card:'',
-    positions: { first:{positon:0, checked: false}},
+    positions: { 
+      first:{positon:0, checked: false},
+      second:{positon:0, checked: false},
+      third:{positon:0, checked: false}
+      },
   }),
   mounted() {
     this.getPositions();
@@ -92,16 +96,16 @@ export default {
 
     getPositions(){
        var firstLocator = document.querySelector("#firstLocator");
-      //  console.log(firstLocator.offsetTop)
+       console.log("1) first= "+firstLocator.offsetTop)
        this.positions.first = firstLocator.offsetTop;
 
        var secondLocator = document.querySelector("#secondLocator");
-       console.log(secondLocator.offsetTop)
+       console.log("2) second= "+secondLocator.offsetTop)
        this.positions.second = secondLocator.offsetTop;
 
 
        var thirdLocator = document.querySelector("#thirdLocator");
-      //  console.log(thirdLocator.offsetTop)
+       console.log("3) third= "+thirdLocator.offsetTop)
        this.positions.third = thirdLocator.offsetTop;
 
        window.addEventListener("scroll", this.checkScroll);
@@ -113,10 +117,15 @@ export default {
       if(window.pageYOffset > (this.positions.first - 1000)){
         this.animation()
       }
-      if(window.pageYOffset > (this.positions.sencond - 800)){
+
+      // window.pageYOffset > this.positions.first
+      
+      if(window.pageYOffset > (this.positions.second - 800)){
         this.animation2()
-      }
-      if(window.pageYOffset > (this.positions.third - 1000)){
+      } 
+      
+      if(window.pageYOffset > (this.positions.third -800)){
+        console.log("3")
         this.animation3()
       }
     },
@@ -140,6 +149,11 @@ export default {
   
         // setTimeout( () => {this.animation2()}, 1000);
         // setTimeout( () => {this.animation3()}, 2000);
+
+        // if(window.pageYOffset > (this.positions.sencond)){
+          // console.log("2")
+          // this.animation2()
+        // }
       },
 
     animation2(){

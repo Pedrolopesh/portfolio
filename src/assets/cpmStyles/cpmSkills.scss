@@ -48,7 +48,7 @@
 
 .icons{
     display: block;
-    width: 50px;
+    width: 45px;
 }
 
 
@@ -135,7 +135,7 @@
     text-align: end;
     margin-top: 10px;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 12px;
     font-size: 50px;
 }
 .gradient-html{
@@ -152,7 +152,7 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: end;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 7px;
     font-size: 50px;
 }
 
@@ -167,7 +167,7 @@
     font-family: Arial, Helvetica, sans-serif;
     text-align: end;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 8px;
     font-size: 50px;
 }
 
@@ -236,7 +236,7 @@
 
 
 // ========================================================= efects ========================================================
-.reset{width: 6vw;}
+.reset{width: 5vw;}
 
 .grow-animation-1{
     width:45vw;
@@ -250,6 +250,21 @@
         0%  {width:6vw; }
         60% {width:35vw;}
         100%{width:45vw;}
+      }
+}
+
+.reverse-grow-animation-1{
+    widows: 5vw;
+
+    animation-name: reverse-grow-animation-1;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-1{
+        0%  {width:45vw; }
+        60% {width:25vw;}
+        100%{width:5vw;}
       }
 }
 
@@ -269,6 +284,23 @@
       }
 }
 
+.reverse-grow-animation-2{
+    width:4vw;
+
+    animation-name: reverse-grow-animation-2;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-2{
+        0%  {width:70vw;}
+        30% {width:45vw;}
+        70% {width:25vw;}
+        80% {width:16vw;}
+        100%{width:4vw; }
+      }
+}
+
 .grow-animation-3{
     width:30vw;
     animation-name: grow-animation-3;
@@ -277,13 +309,29 @@
     animation-iteration-count: 1;
 
     @keyframes grow-animation-3 {
-        0%  {width:6vw; }
+        0%  {width:4vw; }
         40% {width:17vw;}
         // 80% {width:20vw;}
         // 90% {width:26vw;}
         100%{width:30vw;}
       }
 }
+
+.reverse-grow-animation-3{
+    width:5vw;
+
+    animation-name: reverse-grow-animation-3;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-3{
+        0%  {width:30vw;}
+        50% {width:15vw;}
+        100%{width:5vw; }
+      }
+}
+
 .grow-animation-4{
     width:20vw;
     animation-name: grow-animation-4;
@@ -297,6 +345,20 @@
         // 80% {width:20vw;}
         // 90% {width:26vw;}
         100%{width:20vw;}
+      }
+}
+.reverse-grow-animation-4{
+    width:5vw;
+
+    animation-name: reverse-grow-animation-4;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-4{
+        0%  {width:20vw;}
+        50% {width:10vw;}
+        100%{width:5vw; }
       }
 }
 .grow-animation-5{
@@ -314,6 +376,20 @@
         100%{width:50vw;}
       }
 }
+.reverse-grow-animation-5{
+    width:5vw;
+
+    animation-name: reverse-grow-animation-5;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-5{
+        0%  {width:50vw;}
+        40% {width:25vw;}
+        100%{width:5vw; }
+      }
+}
 .grow-animation-6{
     width:30vw;
     animation-name: grow-animation-6;
@@ -329,6 +405,20 @@
         100%{width:30vw;}
       }
 }
+.reverse-grow-animation-6{
+    width:5vw;
+
+    animation-name: reverse-grow-animation-6;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-6{
+        0%  {width:30vw;}
+        50% {width:15vw;}
+        100%{width:5vw; }
+      }
+}
 .grow-animation-7{
     width:20vw;
     animation-name: grow-animation-7;
@@ -342,5 +432,19 @@
         // 80% {width:20vw;}
         // 90% {width:26vw;}
         100%{width:20vw;}
+      }
+}
+.reverse-grow-animation-7{
+    width:5vw;
+
+    animation-name: reverse-grow-animation-7;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+
+    @keyframes reverse-grow-animation-7{
+        0%  {width:20vw;}
+        40% {width:13vw;}
+        100%{width:5vw; }
       }
 }
