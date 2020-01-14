@@ -1,13 +1,13 @@
 <template>
   <div class="mt-8">
 
-<b-button variant="success" @click="animation()">1</b-button>
+<!-- <b-button variant="success" @click="animation()">1</b-button>
 <b-button variant="success" @click="animation2()">2</b-button>
 <b-button variant="success" @click="animation3()">3</b-button>
 
-<b-button variant="danger" @click="resetAnimation()">rest</b-button>
+<b-button variant="danger" @click="resetAnimation()">rest</b-button> -->
 
-<span class="locator" id="firstLocator">PRIMEIRO</span>
+<span id="firstLocator"></span>
 
 <div class="container-service container">
     <b-row class="fixed-row" id="first-card">
@@ -27,10 +27,10 @@
 </div>
 
 <div class="container-service container mt-5" id="secondLocator">
-fdsfdfd
-{{positions.second}}
 
-<span class="locator" id="secondLocator">SEGUNDO</span>
+<!-- {{positions.second}} -->
+
+<span id="secondLocator"></span>
 
     <b-row class="fixed-row-midle" id="second-card">
       <b-col align-self="center">
@@ -48,10 +48,10 @@ fdsfdfd
     </b-row>
 </div>
 
-<span class="locator" id="thirdLocator">TERCEIRO</span>
+<span id="thirdLocator"></span>
 
 <div class="container-service container mt-5">
-{{positions.third}}
+<!-- {{positions.third}} -->
     <b-row class="fixed-row-end" id="third-card">
       <b-col align-self="end">
         <div class="container-card ml-a">
@@ -68,7 +68,7 @@ fdsfdfd
     </b-row>
 </div>
 
-<button @click="animation()">click</button>
+<!-- <button @click="animation()">click</button> -->
   </div>
 </template>
 

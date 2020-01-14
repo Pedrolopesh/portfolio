@@ -1,9 +1,9 @@
 <template>
   <div class="container-all-skills">
 
-<span class="locator" id="locator">LOCATOR</span>
-<b-button variant="success" @click="efect()">Button</b-button>
-<b-button variant="danger" @click="resetEfect()">Button</b-button>
+<span id="locator"></span>
+<!-- <b-button variant="success" @click="efect()">Button</b-button> -->
+<!-- <b-button variant="danger" @click="resetEfect()">Button</b-button> -->
 
   <b-row class="text-center">
       <!-- v-for="data in data.animation" :key="data.animation" -->
@@ -177,9 +177,9 @@
     </b-col>
   </b-row>
 
-<span class="locator" id="locatorEnd">LOCATOR</span>
-first: {{this.positions.first}}
-end:   {{this.positions.end}}
+<span id="locatorEnd"></span>
+<!-- first: {{this.positions.first}}
+end:   {{this.positions.end}} -->
 
 
 
@@ -211,82 +211,50 @@ export default {
   },
   methods: {
       resetEfect(){
-        var js = document.querySelector('#grow-animation-1')
-        js.classList.remove('grow-animation-1')
-        js.classList.add('reverse-grow-animation-1')
 
-        var html = document.querySelector('#grow-animation-2')
-        html.classList.remove('grow-animation-2')
-        html.classList.add('reverse-grow-animation-2')
 
-        var sass = document.querySelector('#grow-animation-3')
-        sass.classList.remove('grow-animation-3')
-        sass.classList.add('reverse-grow-animation-3')
+        //   if(!this.positions.fisrt.checked){
 
-        var bs = document.querySelector('#grow-animation-4')
-        bs.classList.remove('grow-animation-4')
-        bs.classList.add('reverse-grow-animation-4')
+        //     for(var i=0;i<7;i++){
+        //         var element = document.querySelector('#grow-animation-'+i)
+        //         element.classList.remove('grow-animation-'+i)
+        //         element.classList.add('reverse-grow-animation-'+i)
+        //     }
+        // this.positions.fisrt.checked = true
+        // }
 
-        var ai = document.querySelector('#grow-animation-5')
-        ai.classList.remove('grow-animation-5')
-        ai.classList.add('reverse-grow-animation-5')
-
-        var ps = document.querySelector('#grow-animation-6')
-        ps.classList.remove('grow-animation-6')
-        ps.classList.add('reverse-grow-animation-6')
-
-        var xd = document.querySelector('#grow-animation-7')
-        xd.classList.remove('grow-animation-7')
-        xd.classList.add('reverse-grow-animation-7')
-
+      
       },
 
       efect(){
-        var js = document.querySelector('#grow-animation-1')
-        js.classList.remove('reverse-grow-animation-1')
-        js.classList.add('grow-animation-1')
-
-        var html = document.querySelector('#grow-animation-2')
-        html.classList.remove('reverse-grow-animation-2')
-        html.classList.add('grow-animation-2')
-
-        var sass = document.querySelector('#grow-animation-3')
-        sass.classList.remove('reverse-grow-animation-3')
-        sass.classList.add('grow-animation-3')
-
-        var bs = document.querySelector('#grow-animation-4')
-        bs.classList.remove('reverse-grow-animation-4')
-        bs.classList.add('grow-animation-4')
-        
-        var ai = document.querySelector('#grow-animation-5')
-        ai.classList.remove('reverse-grow-animation-5')
-        ai.classList.add('grow-animation-5')
-
-        var ps = document.querySelector('#grow-animation-6')
-        ps.classList.remove('reverse-grow-animation-6')
-        ps.classList.add('grow-animation-6')
-        
-        var xd = document.querySelector('#grow-animation-7')
-        xd.classList.remove('reverse-grow-animation-7')
-        xd.classList.add('grow-animation-7')
+        if(!this.positions.first.checked){
+        for(var i=0;i<7;i++){
+            var element = document.querySelector('#grow-animation-'+(i+1))
+            console.log(element)
+            element.classList.add('grow-animation-'+(i+1))
+            // element.classList.remove('reverse-grow-animation-'+(i+1))
+        }
+            this.positions.first.checked = true 
+            }
+      
       },
 
       getPositions(){
        var firstLocator = document.querySelector("#locator");
-       console.log("locator= "+firstLocator.offsetTop)
-       this.positions.first = firstLocator.offsetTop;
+    //    console.log("locator= "+firstLocator.offsetTop)
+       this.positions.first.positon = firstLocator.offsetTop;
 
        var endLocator = document.querySelector("#locatorEnd");
-       console.log("locator end= "+endLocator.offsetTop)
-       this.positions.end = endLocator.offsetTop;
+    //    console.log("locator end= "+endLocator.offsetTop)
+       this.positions.end.positon = endLocator.offsetTop;
 
        window.addEventListener("scroll", this.checkScroll);
     },
 
     checkScroll(){
-      console.log(window.pageYOffset)
+    //   console.log(window.pageYOffset)
       
-    if(window.pageYOffset > (this.positions.first - 400)){
+    if(window.pageYOffset > (this.positions.first.positon - 800)){
         this.efect()
     }
     
