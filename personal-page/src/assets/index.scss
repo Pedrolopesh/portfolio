@@ -1,0 +1,19 @@
+@import './fonts.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.ac{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.cp{
+    cursor: pointer;
+}
