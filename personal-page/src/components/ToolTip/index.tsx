@@ -1,12 +1,15 @@
-import { Container, Card } from './style';
+import { Container, Card, ContainerWorks, TrianglePointer } from './style';
 
 const ToolTip = () => {
     return (
         <>
             <Container>
                 <Card>
+                    <ContainerWorks>
 
+                    </ContainerWorks>
                 </Card>
+                <TrianglePointer />
             </Container>
         </>
     )

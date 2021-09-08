@@ -30,8 +30,19 @@ export const Container = styled.div`
   /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%,#000446 100%); */
 `
 export const ContainerLetters = styled.div`
-  margin-top: 100px;
+  margin-top: 300px;
   display: block;
+`
+export const ContainerParticles = styled.div`
+  width: 50%;
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+
+  position: fixed;
+  top: 0;
+  left: 60%;
+  overflow: hidden;
 `
 export const TitleBaner = styled.span`
   color: white;
@@ -44,13 +55,13 @@ export const BGCode = styled.div`
 `
 export const SelfImage = styled.img`
     top: 0;
-    width: 25%;
+    width: 13%;
     display: block;
     max-width: 100%;
     overflow: hidden;
     position: absolute;
     animation-duration: 2s;
-    transform: translate(280%, 10%);
+    transform: translate(335%, 10%);
     animation-direction: alternate;
     animation-timing-function: linear;
     animation-name: slide-animation-photo;
@@ -58,13 +69,13 @@ export const SelfImage = styled.img`
 
   @keyframes slide-animation-photo {
     0% {
-      transform: translate(280%, -100%);
+      transform: translate(335%, -100%);
       /* border-radius: 0; */
       opacity: 0;
     }
     
     40% {
-      transform: translate(280%, -10%);
+      transform: translate(335%, -10%);
     }
 
     100% {
