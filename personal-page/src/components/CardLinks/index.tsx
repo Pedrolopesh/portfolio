@@ -1,10 +1,10 @@
 import { Card, WorkButton, Container } from './style'
-import ToolTip from '../ToolTip';
+import ModalWork from '../ModalWork';
 const CardLinks = () => {
     return (
         <>
+            <ModalWork />
             <Container>
-                {/* <ToolTip /> */}
                 <Card>
                     <WorkButton> Trabalhos com Design </WorkButton>
                     <WorkButton> Trabalhos com desenvolvimento WEB </WorkButton>
@@ -14,5 +14,6 @@ const CardLinks = () => {
         </>
     )
 }
+
 
 export default CardLinks;

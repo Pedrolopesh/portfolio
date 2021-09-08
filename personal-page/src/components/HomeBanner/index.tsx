@@ -18,6 +18,17 @@ import Particles from 'react-particles-js';
                     
                     <ContainerParticles>
                         <Particles params={{
+                            fpsLimit: 60,
+                            interactivity:{
+                                detect_on: "window",
+                                events: {
+                                    onHover:{
+                                        enable: false,
+                                        mode: 'repulse'
+                                    },
+                                    resize: true
+                                }
+                            },
                             particles: {
                                 color: {
                                     value: '#ffffff'

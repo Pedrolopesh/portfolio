@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: block;
   width: 100%;
 
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,48,1) 48%, rgba(64,0,66,1) 100%) no-repeat;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,48,1) 48%, #2b002c 100%) no-repeat;
   background-size: 300% 300%;
   transition: 10s;
   animation: gradient 10s ease infinite;
@@ -43,11 +43,16 @@ export const ContainerParticles = styled.div`
   top: 0;
   left: 60%;
   overflow: hidden;
+
+  div{
+    height: 100vh;
+  }
 `
 export const TitleBaner = styled.span`
   color: white;
   display: block;
   text-align: center;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
 `
 export const BGCode = styled.div`
