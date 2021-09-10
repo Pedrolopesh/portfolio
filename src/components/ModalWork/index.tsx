@@ -19,59 +19,28 @@ import {
     ButtonText,
 } from './style';
 
-interface Itens {
-    image:string,
-    title:string,
-    description:string,
-    link:string,
-}
+const ModalWork = ({ paramEvent, modalState, items }: any) => {
 
-interface TypeParamEvent {
-    modalState: boolean,
-    paramEvent:(state: boolean) => void
-}
-
-
-
-const ModalWork = ({ paramEvent, modalState }: TypeParamEvent) => {
-
-    const [workItens, setWorkItens] = useState<Itens[]>([])
+    const [workItens, setWorkItens]: any[] = useState([])
     const [selectedWork, setSelectedWork] = useState(0)
     
     const [hiddenAll, setHiddenAll] = useState(true)
 
+    useEffect(() => {
+        if(items !== undefined){
+            if(items.data.length > 0){
+                console.log('items 1', items)
+                setWorkItens(items.data)
+            }
+        }
+    }, [items])
 
     useEffect(() => {
-
-        const itens:Itens[] = [
-            {
-                image:'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/pet-care-logo_bxlqea.png',
-                title:'Pet Care',
-                description:'O UX/UI desse projeto foi feito a partir de uma atividade da aula de processos de software da faculdade, propõe um app para ajudar animais que estão em situações de rua ou mesmo que correm algum perigo ...',
-                link: ''
-            },
-            {
-                image:'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/macht-coder-logo_e2hfmn.png',
-                title:'Match Coder',
-                description:'Match Coder é um projeto de UX/UI feito de uma atividade da aula de processos de software da faculdade, a ideia desse software é fazer um sistema de relacionamento entre empresa e canditado da área de software ...',
-                link: ''
-            },
-            {
-                image:'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/alert-commuty-logo_sxzxzf.png',
-                title:'Community Alert',
-                description:'Esse projeto UX/UI foi criado a partir de uma lista de re4quisitos proposta pelo professor de Projetos de interface da faculdade, tem a ideia de avisar a população de desastres naturais que poderm estar acontecendo ...',
-                link: ''
-            },
-            {
-                image:'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/educaCred-logo_bahqvy.png',
-                title:'Educa Cred',
-                description:'Educa Cred é um projeto de UX/UI feito de um desafio proposto pelo SERASA para propor uma solução financeira para a população, baseado em alguns requisitos porpóstos pelo coordenador da vaga ...',
-                link: ''
-            },
-        ]
-
-        setWorkItens(itens)
-    }, [])
+        console.log('workItens', workItens)
+        // if(data.length > 0){
+        //     setWorkItens(data)
+        // }
+    }, [workItens])
 
     const closeModal = () => {
         paramEvent(false)
@@ -86,10 +55,6 @@ const ModalWork = ({ paramEvent, modalState }: TypeParamEvent) => {
         }
     }, [modalState])
 
-    // setTimeout(() => {
-    //     setHiddenAll(true)
-    // }, 1000)
-
     return (
         <>
             <div className={hiddenAll ? 'hidden-modal' : ''}>
@@ -100,17 +65,18 @@ const ModalWork = ({ paramEvent, modalState }: TypeParamEvent) => {
                     <CardContainer>
                         <ContainerSlickWorks>
 
-                            <ContainerWorkItem 
+                            <ContainerWorkItem
                                 style={{ transform: ( (selectedWork === 2) ? 'translateX(-180px)' : '') || ((selectedWork === 3) ? 'translateX(-183px)' : ''), }}
                             >
+                                {/* {checkEmptyData(workItens)} */}
                                 {
-                                    workItens && 
+                                    workItens.length > 0 && 
                                     (
                                         <> 
                                             {workItens.map((item:any, index:number) => {
                                                 return (
                                                     <>
-                                                        <WorkItem className={'selectedBG-'+selectedWork} onClick={() => {setSelectedWork(index)}}>
+                                                        <WorkItem style={{ borderRadius: (index !== selectedWork) ? 10 : ''}} className={'selectedBG-'+index} onClick={() => {setSelectedWork(index)}}>
                                                             <WorkImage src={item.image} alt="work Image" />
                                                         </WorkItem>
                                                     </>

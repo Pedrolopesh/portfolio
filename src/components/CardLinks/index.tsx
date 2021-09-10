@@ -1,18 +1,30 @@
 import { Card, WorkButton, Container } from './style'
 import ModalWork from '../ModalWork';
 import { useState } from 'react';
+import uxData from '../../utils/works_UX.json'
+import webData from '../../utils/works_web.json'
 // import { useEffect } from 'react';
 const CardLinks = () => {
 
-    const [visibleModal, setVisibleModal] = useState(false)
+    const [visibleUXModal, setVisibleUXModal] = useState(false)
+    const [visibleWebModal, setVisibleWebModal] = useState(false)
+    const [selectedItem, setSelectedItem]:any = useState([])
 
     const listenChieldEvent = (modalState: boolean) => {
-        setVisibleModal(modalState)
+        setVisibleUXModal(modalState)
     }
 
-    const openModal = () => {
+    const openUXModal = () => {
         console.log('CHANGE STATE')
-        setVisibleModal(true)
+        setVisibleUXModal(true)
+        setSelectedItem(uxData)
+    }
+    
+
+    const openWebModal = () => {
+        console.log('CHANGE STATE')
+        setVisibleWebModal(true)
+        setSelectedItem(webData)
     }
     
     // useEffect(() => {
@@ -23,13 +35,14 @@ const CardLinks = () => {
     return (
         <>
             <ModalWork
+                items={selectedItem === undefined ? selectedItem : uxData} 
                 paramEvent={listenChieldEvent}
-                modalState={visibleModal}
+                modalState={visibleUXModal || visibleWebModal}
             />
             <Container>
                 <Card>
-                    <WorkButton onClick={() => {openModal()} }> Trabalhos com Design </WorkButton>
-                    <WorkButton> Trabalhos com desenvolvimento WEB </WorkButton>
+                    <WorkButton onClick={() => {openUXModal()} }> Trabalhos com Design </WorkButton>
+                    <WorkButton onClick={() => {openWebModal()} }> Trabalhos com desenvolvimento WEB </WorkButton>
                     <WorkButton> Trabalhos com desenvolvimento backend </WorkButton>
                 </Card>
             </Container>
