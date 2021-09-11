@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { FaDoorOpen } from 'react-icons/fa';
 import { 
     BGModalWork, 
@@ -36,6 +36,19 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
 
     const closeModal = () => {
         paramEvent(false)
+        setSelectedWork(0)
+    }
+
+    const openProject = (param: any) => {
+        console.log('param', param)
+    }
+
+    const checkData = (param: any) => {
+        if(param) {
+            return param
+        }else{
+            return ''
+        }
     }
 
 
@@ -51,25 +64,24 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                             <ContainerWorkItem
                                 style={{ 
                                     transform:  ((selectedWork === 2) ? 'translateX(-180px)' : '') || 
-                                                ((selectedWork === 3 && items.data.length === 4) ? 'translateX(-183px)' : '') ||
+                                                ((selectedWork === 3 && items.data.length === 4) ? 'translateX(-205px)' : '') ||
                                                 ((selectedWork === 3 && items.data.length === 5) ? 'translateX(-360px)' : '') ||
-                                                ((selectedWork === 4 && items.data.length === 5) ? 'translateX(-363px)' : '')
+                                                ((selectedWork === 4 && items.data.length === 5) ? 'translateX(-390px)' : '')
                                     
                                 }}
                                 
                             >
-                                {/* {checkEmptyData(workItens)} */}
                                 {
                                     workItens.length > 0 && 
                                     (
                                         <> 
                                             {workItens.map((item:any, index:number) => {
                                                 return (
-                                                    <>
-                                                        <WorkItem style={{ borderRadius: (index !== selectedWork) ? 10 : ''}} className={'selectedBG-'+index} onClick={() => {setSelectedWork(index)}}>
+                                                    <Fragment key={index}>
+                                                        <WorkItem style={{ border: (index === selectedWork) ? '4px solid' : ''}} className={ (index === selectedWork) ? 'selectedBG' : ''} onClick={() => {setSelectedWork(index)}}>
                                                             <WorkImage src={item.image} alt="work Image" />
                                                         </WorkItem>
-                                                    </>
+                                                    </Fragment>
                                                 )
                                             })}
                                         </>
@@ -82,24 +94,24 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                         <UnderScoreMarker
                             style={{
                                 marginLeft: 
-                                            ((selectedWork === 1 || selectedWork === 2) ? 190 : '') || 
-                                            (selectedWork === 3 && items.data.length === 4 ? 367 : '') ||
-                                            ((selectedWork === 3 && items.data.length === 5) ? 190 : '') ||
-                                            (selectedWork === 4 && items.data.length === 5 ? 367 : '')
+                                            ((selectedWork === 1 || selectedWork === 2) ? 265 : '') || 
+                                            (selectedWork === 3 && items.data.length === 4 ? 415 : '') ||
+                                            ((selectedWork === 3 && items.data.length === 5) ? 265 : '') ||
+                                            (selectedWork === 4 && items.data.length === 5 ? 410 : '')
                             }} 
                         />
                         </ContainerSlickWorks>
                         
                         <WorkBoxItem>
                             <ContainerDescription>
-                                <Title> { workItens.length > 0 && workItens[selectedWork].title} </Title>
+                                <Title> { workItens.length > 0 && checkData(workItens[selectedWork].title)} </Title>
 
                                 <DescriptionText> {workItens.length > 0 && workItens[selectedWork].description} </DescriptionText>
                             </ContainerDescription>
                         </WorkBoxItem>
 
                         <ButtonWork> 
-                            <ButtonText>Ver mais</ButtonText>
+                            <ButtonText onClick={() => { openProject(items.data[selectedWork]) } }>Ver mais</ButtonText>
                             <FaDoorOpen style={{ color: 'white', fontSize: 20, marginRight: 'auto' }} /> 
                         </ButtonWork>
                     </CardContainer>

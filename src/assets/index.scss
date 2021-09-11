@@ -78,6 +78,13 @@ body {
     // animation: hiddenModal 1s ease;
 }
 
+.selectedBG{
+    transition: 0.5s !important;
+    border-image: linear-gradient(to left, #743ad5, #d53a9d) !important;
+    border-image-slice: 1 !important;
+    box-shadow: 5px 5px 16px #000000 !important;
+}
+
 .selectedBG-0{
     transition: 1s !important;
     background: linear-gradient(to right,#2d002d ,#350040);

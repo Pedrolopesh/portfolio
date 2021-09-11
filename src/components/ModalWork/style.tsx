@@ -41,11 +41,10 @@ export const CloseContainer = styled.div`
 `
 
 export const CardContainer = styled.div`
-    background-color: black;
+    /* background-color: black; */
     border-radius: 10px;
     max-width: 100%;
     width: 100%;
-    height: 440px;
 `
 export const ContainerSlickWorks = styled.div`
     display: grid;
@@ -78,7 +77,7 @@ export const WorkItem = styled.div`
     align-items: center;
     background: #360043;
     /* background-image: linear-gradient(to right, #2d002d , #47006b); */
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
 
     &:hover {
         cursor: pointer;
@@ -96,11 +95,19 @@ export const UnderScoreMarker = styled.span`
     /* background-image: linear-gradient(to right, #2d002d , #47006b); */
     display: block;
     max-width: 100%;
-    height: 10px;
-    width: 160px;
-    margin: 0px 10px 0px 10px;
+    /* height: 10px; */
+    /* width: 160px; */
+    margin-left: 85px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     transition: 1s;
-    background: #360043;
+    /* background: #360043; */
+
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #360043;
 `
 
 export const WorkBoxItem = styled.div`
@@ -112,7 +119,8 @@ export const WorkBoxItem = styled.div`
     transition: 1s;
     width: 93%;
     margin: 0px 10px 0px 20px;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px;
+    box-shadow: 7px 6px 15px rgb(0 0 0 / 68%) !important;
 `
 
 export const ContainerDescription = styled.div`
@@ -141,7 +149,6 @@ export const ButtonWork = styled.button`
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     border-radius: 5px;
-    background: purple;
     max-width: 100%;
     color: white;
     padding: 13px;
@@ -150,7 +157,17 @@ export const ButtonWork = styled.button`
     align-items: center;
     display: flex;
     text-align: center;
-    margin: 20px auto 0px auto;
+    margin: 35px auto 0px auto;
+    margin-bottom: 30px;
+    box-shadow: 7px 6px 15px rgb(0 0 0 / 68%) !important;
+    background-image: linear-gradient(to right,#8c008c ,#4d0273);
+    /* background: purple; */
+    transition: 1s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1); 
+    }
 `
 
 export const ButtonText = styled.span`

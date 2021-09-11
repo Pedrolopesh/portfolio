@@ -4,6 +4,7 @@ import ModalWork from '../ModalWork';
 import { useState } from 'react';
 import uxData from '../../utils/works_UX.json'
 import webData from '../../utils/works_web.json'
+import backendData from '../../utils/works_backend.json'
 const CardLinks = () => {
 
     const [visibleModal, setVisibleModal] = useState(false)
@@ -22,6 +23,11 @@ const CardLinks = () => {
     const openWebModal = () => {
         setVisibleModal(true)
         setSelectedItem(webData)
+    }
+
+    const openBackendModal = () => {
+        setVisibleModal(true)
+        setSelectedItem(backendData)
     }
     
     // useEffect(() => {
@@ -43,7 +49,7 @@ const CardLinks = () => {
                 <Card>
                     <WorkButton onClick={() => {openUXModal()} }> Trabalhos com Design </WorkButton>
                     <WorkButton onClick={() => {openWebModal()} }> Trabalhos com desenvolvimento WEB </WorkButton>
-                    <WorkButton> Trabalhos com desenvolvimento backend </WorkButton>
+                    <WorkButton onClick={() => {openBackendModal()} }> Trabalhos com desenvolvimento backend </WorkButton>
                 </Card>
             </Container>
         </>
