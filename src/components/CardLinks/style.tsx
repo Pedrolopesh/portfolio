@@ -19,6 +19,16 @@ export const Card = styled.div`
     text-align: center;
     left: 32%;
     top: 50%;
+
+    @media screen and (max-width: 1100px){
+        width: 65%;
+        left: 17%;
+    }
+
+    @media screen and (max-width: 500px){
+        width: 90%;
+        left: 5%;
+    }
 `
 
 export const WorkButton = styled.button`
@@ -38,5 +48,9 @@ export const WorkButton = styled.button`
 
     &:hover {
         transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 500px){
+        width: 95%;
     }
 `

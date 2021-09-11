@@ -23,7 +23,25 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
 
     const [workItens, setWorkItens]: any[] = useState([])
     const [selectedWork, setSelectedWork] = useState(0)
+
+    const [responsiveLayout, setResponsiveLayout] = useState(false)
+
+    const responsiveLayoutFunc = () => {
+        if(window.screen.width < 700){
+            console.log('window screen width', window.screen.width )
+            setResponsiveLayout(true)
+        }else{
+            setResponsiveLayout(false)
+        }
+    }
     
+    window.addEventListener('resize', function(event) {
+        responsiveLayoutFunc()
+    }, true);
+
+    useEffect(() => {
+        responsiveLayoutFunc()
+    }, [])
 
     useEffect(() => {
         if(items !== undefined){
@@ -63,10 +81,16 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
 
                             <ContainerWorkItem
                                 style={{ 
-                                    transform:  ((selectedWork === 2) ? 'translateX(-180px)' : '') || 
-                                                ((selectedWork === 3 && items.data.length === 4) ? 'translateX(-205px)' : '') ||
-                                                ((selectedWork === 3 && items.data.length === 5) ? 'translateX(-360px)' : '') ||
-                                                ((selectedWork === 4 && items.data.length === 5) ? 'translateX(-390px)' : '')
+                                    transform:  ((selectedWork === 2 && !responsiveLayout) ? 'translateX(-180px)' : '') ||
+                                                ((selectedWork === 3 && items.data.length === 4 && !responsiveLayout) ? 'translateX(-205px)' : '') ||
+                                                ((selectedWork === 3 && items.data.length === 5 && !responsiveLayout) ? 'translateX(-360px)' : '') ||
+                                                ((selectedWork === 4 && items.data.length === 5 && !responsiveLayout) ? 'translateX(-390px)' : '') ||
+                                                
+                                                //RESPONSIVE LAYOUT
+                                                ((responsiveLayout && selectedWork === 1) ? 'translateX(-110px)' : '') ||
+                                                ((responsiveLayout && selectedWork === 2) ? 'translateX(-290px)' : '') ||
+                                                ((responsiveLayout && selectedWork === 3) ? 'translateX(-470px)' : '') ||
+                                                ((responsiveLayout && selectedWork === 4) ? 'translateX(-650px)' : '')
                                     
                                 }}
                                 
@@ -94,10 +118,18 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                         <UnderScoreMarker
                             style={{
                                 marginLeft: 
-                                            ((selectedWork === 1 || selectedWork === 2) ? 265 : '') || 
-                                            (selectedWork === 3 && items.data.length === 4 ? 415 : '') ||
-                                            ((selectedWork === 3 && items.data.length === 5) ? 265 : '') ||
-                                            (selectedWork === 4 && items.data.length === 5 ? 410 : '')
+                                            (selectedWork === 1 && !responsiveLayout ? 265 : '') ||
+                                            (selectedWork === 2 && !responsiveLayout ? 265 : '') ||
+                                            (selectedWork === 3 && items.data.length === 4 && !responsiveLayout ? 415 : '') ||
+                                            ((selectedWork === 3 && items.data.length === 5 && !responsiveLayout) ? 265 : '') ||
+                                            (selectedWork === 4 && items.data.length === 5 && !responsiveLayout ? 410 : '') ||
+                                            
+                                            //RESPONSIVE LAYOUT
+                                            ((responsiveLayout && selectedWork === 1) ? 150 : '' ) ||
+                                            ((responsiveLayout && selectedWork === 2) ? 150 : '' ) ||
+                                            ((responsiveLayout && selectedWork === 3) ? 150 : '' ) ||
+                                            ((responsiveLayout && selectedWork === 4) ? 150 : '' )
+                                            // ((selectedWork === 3 && items.data.length === 4 && responsiveLayout) ? 150 : '' )
                             }} 
                         />
                         </ContainerSlickWorks>

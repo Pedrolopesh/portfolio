@@ -22,6 +22,16 @@ export const Container = styled.div`
     top: 15%;
     left: 35%;
     position: absolute;
+
+    @media screen and (max-width: 1300px){
+        width: 45%;
+        left: 30%;
+    }
+    
+    @media screen and (max-width: 700px){
+        width: 95%;
+        left: 3%;
+    }
 `
 
 export const CloseContainer = styled.div`
@@ -38,6 +48,14 @@ export const CloseContainer = styled.div`
     background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+
+    /* @media screen and (max-width: 700px){
+        width: 8%;
+    } */
+    
+    @media screen and (max-width: 700px){
+        width: 8%;
+    }
 `
 
 export const CardContainer = styled.div`
@@ -89,6 +107,10 @@ export const WorkImage = styled.img`
     max-width: 100%;
     width: 90%;
     margin: 0px auto 0px auto;
+
+    @media screen and (max-width: 700px){
+        width: 80%;
+    }
 `
 
 export const UnderScoreMarker = styled.span`
@@ -121,6 +143,12 @@ export const WorkBoxItem = styled.div`
     margin: 0px 10px 0px 20px;
     border-radius: 10px;
     box-shadow: 7px 6px 15px rgb(0 0 0 / 68%) !important;
+    
+    
+    @media screen and (max-width: 700px){
+        margin: 0px 10px 0px 7px;
+        width: 95%;
+    }
 `
 
 export const ContainerDescription = styled.div`
@@ -164,6 +192,10 @@ export const ButtonWork = styled.button`
     /* background: purple; */
     transition: 1s;
     cursor: pointer;
+
+    @media screen and (max-width: 700px){
+        width: 60%;
+    }
 
     &:hover {
         transform: scale(1.1); 

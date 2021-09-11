@@ -30,22 +30,31 @@ export const Container = styled.div`
   /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%,#000446 100%); */
 `
 export const ContainerLetters = styled.div`
-  margin-top: 300px;
+  margin-top: 17%;
   display: block;
+
+  @media screen and (max-width: 700px){
+    margin-top: 45%;
+  }
 `
 export const ContainerParticles = styled.div`
   width: 50%;
   display: block;
   max-width: 100%;
   margin-left: auto;
-
+  
   position: fixed;
   top: 0;
   left: 60%;
   overflow: hidden;
-
+  
   div{
     height: 100vh;
+  }
+  
+  @media screen and (max-width: 700px){
+    left: 0%;
+    width: 100%;
   }
 `
 export const TitleBaner = styled.span`
@@ -71,6 +80,7 @@ export const SelfImage = styled.img`
     animation-timing-function: linear;
     animation-name: slide-animation-photo;
     border-radius: 100%;
+    z-index: 11;
 
   @keyframes slide-animation-photo {
     0% {
@@ -88,5 +98,27 @@ export const SelfImage = styled.img`
       /* border-radius: 100%; */
       opacity: 1;
     }
+  }
+
+
+  @media screen and (max-width: 700px){
+    width: 35%;
+    animation-name: slide-animation-photo-responsive;
+    transform: translate(95%, 10%);
+
+    @keyframes slide-animation-photo {
+    0% {
+      transform: translate(95%, -100%);
+      opacity: 0;
+    }
+    
+    40% {
+      transform: translate(95%, -10%);
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
   }
 `
