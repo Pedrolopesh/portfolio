@@ -1,27 +1,33 @@
 {
     "data": [
         {
-            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/pet-care-logo_bxlqea.png",
-            "title":"Pet Care",
-            "description":"O UX/UI desse projeto foi feito a partir de uma atividade da aula de processos de software da faculdade, propõe um app para ajudar animais que estão em situações de rua ou mesmo que correm algum perigo ...",
+            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631247860/portfolio/Link-leito_hl6mwg.png",
+            "title":"Link Leito",
+            "description":"Projeto",
             "link": ""
         },
         {
-            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/macht-coder-logo_e2hfmn.png",
-            "title":"Match Coder",
-            "description":"Match Coder é um projeto de UX/UI feito de uma atividade da aula de processos de software da faculdade, a ideia desse software é fazer um sistema de relacionamento entre empresa e canditado da área de software ...",
+            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631247860/portfolio/tc-chat-app_fur9um.png",
+            "title":"The chat app",
+            "description":"",
             "link": ""
         },
         {
-            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/alert-commuty-logo_sxzxzf.png",
-            "title":"Community Alert",
-            "description":"Esse projeto UX/UI foi criado a partir de uma lista de re4quisitos proposta pelo professor de Projetos de interface da faculdade, tem a ideia de avisar a população de desastres naturais que poderm estar acontecendo ...",
+            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631247860/portfolio/quizz_u0pky0.png",
+            "title":"Quizz Game",
+            "description":"",
             "link": ""
         },
         {
-            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631142564/portfolio/educaCred-logo_bahqvy.png",
-            "title":"Educa Cred",
-            "description":"Educa Cred é um projeto de UX/UI feito de um desafio proposto pelo SERASA para propor uma solução financeira para a população, baseado em alguns requisitos porpóstos pelo coordenador da vaga ...",
+            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631247860/portfolio/pet-system_n8curc.png",
+            "title":"Pet System",
+            "description":"",
+            "link": ""
+        },
+        {
+            "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631247860/portfolio/admitone_hvs3gx.png",
+            "title":"AdmitOne",
+            "description":"",
             "link": ""
         }
     ]

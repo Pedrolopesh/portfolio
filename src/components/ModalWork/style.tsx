@@ -66,15 +66,17 @@ export const ContainerWorkItem = styled.div`
     width: 100%;
     transition: 1s;
     /* transform: translateX(10px); */
-`
+    `
 
 export const WorkItem = styled.div`
+    background: #360043;
     display: flex;
     max-width: 100%;
     width: 160px;
     height: 160px;
     margin: 0px 10px 0px 10px;
     align-items: center;
+    background: #360043;
     /* background-image: linear-gradient(to right, #2d002d , #47006b); */
     border-radius: 10px 10px 0px 0px;
 
@@ -98,10 +100,13 @@ export const UnderScoreMarker = styled.span`
     width: 160px;
     margin: 0px 10px 0px 10px;
     transition: 1s;
+    background: #360043;
 `
 
 export const WorkBoxItem = styled.div`
-    background-image: linear-gradient(to right, #2d002d , #47006b);
+    /* background-image: linear-gradient(to right, #2d002d , #47006b);
+    */
+    background: #360043;
     display: block;
     max-width: 100%;
     transition: 1s;

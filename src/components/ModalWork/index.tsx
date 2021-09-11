@@ -24,40 +24,23 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
     const [workItens, setWorkItens]: any[] = useState([])
     const [selectedWork, setSelectedWork] = useState(0)
     
-    const [hiddenAll, setHiddenAll] = useState(true)
 
     useEffect(() => {
         if(items !== undefined){
             if(items.data.length > 0){
-                console.log('items 1', items)
                 setWorkItens(items.data)
             }
         }
     }, [items])
 
-    useEffect(() => {
-        console.log('workItens', workItens)
-        // if(data.length > 0){
-        //     setWorkItens(data)
-        // }
-    }, [workItens])
 
     const closeModal = () => {
         paramEvent(false)
-        setTimeout(() => {
-            setHiddenAll(true)
-        }, 1000)
     }
 
-    useEffect(() => {
-        if(modalState){
-            setHiddenAll(false)
-        }
-    }, [modalState])
 
     return (
         <>
-            <div className={hiddenAll ? 'hidden-modal' : ''}>
             <BGModalWork className={modalState ? 'show-bg-modal' : 'hide-bg-modal'}>
                 <Container className={modalState ? 'show-modal' : 'hide-modal'}>
                     <CloseContainer onClick={() => {closeModal()}} >X</CloseContainer>
@@ -66,7 +49,14 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                         <ContainerSlickWorks>
 
                             <ContainerWorkItem
-                                style={{ transform: ( (selectedWork === 2) ? 'translateX(-180px)' : '') || ((selectedWork === 3) ? 'translateX(-183px)' : ''), }}
+                                style={{ 
+                                    transform:  ((selectedWork === 2) ? 'translateX(-180px)' : '') || 
+                                                ((selectedWork === 3 && items.data.length === 4) ? 'translateX(-183px)' : '') ||
+                                                ((selectedWork === 3 && items.data.length === 5) ? 'translateX(-360px)' : '') ||
+                                                ((selectedWork === 4 && items.data.length === 5) ? 'translateX(-363px)' : '')
+                                    
+                                }}
+                                
                             >
                                 {/* {checkEmptyData(workItens)} */}
                                 {
@@ -90,9 +80,12 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                             </ContainerWorkItem>
 
                         <UnderScoreMarker
-                            className={'selectedBG-'+selectedWork}
                             style={{
-                                marginLeft: ((selectedWork === 1 || selectedWork === 2) ? 190 : '') || (selectedWork === 3 ? 367 : ''), 
+                                marginLeft: 
+                                            ((selectedWork === 1 || selectedWork === 2) ? 190 : '') || 
+                                            (selectedWork === 3 && items.data.length === 4 ? 367 : '') ||
+                                            ((selectedWork === 3 && items.data.length === 5) ? 190 : '') ||
+                                            (selectedWork === 4 && items.data.length === 5 ? 367 : '')
                             }} 
                         />
                         </ContainerSlickWorks>
@@ -112,7 +105,6 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                     </CardContainer>
                 </Container>
             </BGModalWork>
-            </div>
         </>
     )
 }

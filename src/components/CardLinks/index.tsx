@@ -1,43 +1,43 @@
+// import { useEffect } from 'react';
 import { Card, WorkButton, Container } from './style'
 import ModalWork from '../ModalWork';
 import { useState } from 'react';
 import uxData from '../../utils/works_UX.json'
 import webData from '../../utils/works_web.json'
-// import { useEffect } from 'react';
 const CardLinks = () => {
 
-    const [visibleUXModal, setVisibleUXModal] = useState(false)
-    const [visibleWebModal, setVisibleWebModal] = useState(false)
-    const [selectedItem, setSelectedItem]:any = useState([])
+    const [visibleModal, setVisibleModal] = useState(false)
+    const [selectedItem, setSelectedItem]:any = useState(uxData)
 
     const listenChieldEvent = (modalState: boolean) => {
-        setVisibleUXModal(modalState)
+        setVisibleModal(modalState)
     }
 
     const openUXModal = () => {
-        console.log('CHANGE STATE')
-        setVisibleUXModal(true)
+        setVisibleModal(true)
         setSelectedItem(uxData)
     }
     
 
     const openWebModal = () => {
-        console.log('CHANGE STATE')
-        setVisibleWebModal(true)
+        setVisibleModal(true)
         setSelectedItem(webData)
     }
     
     // useEffect(() => {
-    //     console.log('STATE',visibleModal)
+    //     console.log('selectedItem', selectedItem)
+    //     if(selectedItem === undefined){
+    //         setSelectedItem(uxData)
+    //     }
         
-    // }, [visibleModal])
+    // }, [selectedItem])
 
     return (
         <>
             <ModalWork
-                items={selectedItem === undefined ? selectedItem : uxData} 
+                items={selectedItem} 
                 paramEvent={listenChieldEvent}
-                modalState={visibleUXModal || visibleWebModal}
+                modalState={visibleModal}
             />
             <Container>
                 <Card>

@@ -40,24 +40,8 @@ body {
 }
 
 .hide-bg-modal {
-    // display: none !important;
-    // transition: 1s;
-    animation: hideBgModal 1s ease;
-}
-
-@keyframes hideBgModal {
-    0% {
-        opacity: 1;
-    }
-
-    // 50% {
-        //   background-position: 100% 50%;
-        // }
-        
-    100% {
-        opacity: 0;
-    }
-
+    display: none !important;
+    transition: 1s;
 }
 
 
@@ -110,6 +94,11 @@ body {
 }
 
 .selectedBG-3{
+    transition: 1s !important;
+    background: linear-gradient(to right, #3f0058, #47006b);
+}
+
+.selectedBG-4{
     transition: 1s !important;
     background: linear-gradient(to right, #3f0058, #47006b);
 }
