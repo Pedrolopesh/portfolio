@@ -1,5 +1,5 @@
 // import { useEffect } from 'react';
-import { Card, WorkButton, Container } from './style'
+import { Card, ContainerText, Hr, WorkButton, Container } from './style'
 import ModalWork from '../ModalWork';
 import { useState } from 'react';
 import uxData from '../../utils/works_UX.json'
@@ -47,6 +47,10 @@ const CardLinks = () => {
             />
             <Container>
                 <Card>
+                    <ContainerText>
+                        Veja a seguir alguns dos serviços que tenho a oferecer no mundo digital
+                    </ContainerText>
+                    <Hr />
                     <WorkButton onClick={() => {openUXModal()} }> Trabalhos com Design </WorkButton>
                     <WorkButton onClick={() => {openWebModal()} }> Trabalhos com desenvolvimento WEB </WorkButton>
                     <WorkButton onClick={() => {openBackendModal()} }> Trabalhos com desenvolvimento backend </WorkButton>

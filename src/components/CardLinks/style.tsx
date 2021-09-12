@@ -4,6 +4,19 @@ export const Container = styled.div`
     display: block;
 `
 
+export const ContainerText = styled.div`
+    /* display: block; */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px auto 0px auto;
+    font-size: 20px;
+    max-width: 90%;
+    width: 70%;
+
+    @media screen and (max-width: 500px){
+        width: 100%;
+    }
+`
+
 export const Card = styled.div`
     width: 35%;
     padding: 10px;
@@ -53,4 +66,10 @@ export const WorkButton = styled.button`
     @media screen and (max-width: 500px){
         width: 95%;
     }
+`
+
+export const Hr = styled.hr`
+    margin-top: 20px;
+    max-width: 100%;
+    width: 60%;
 `

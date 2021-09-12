@@ -1,15 +1,15 @@
 import { Container, BGCode, ContainerParticles} from './style'
 import CodeAnimation from '../CodeAnimation';
 import Particles from 'react-particles-js';
-import MainInfo from '../HomeInfo'
+// import MainInfo from '../HomeInfo'
 
- const HomeBanner = () => {
+ const AboutBanner = () => {
     return (
         <>
             <Container>
                 <BGCode>
-                    <MainInfo />
-                   
+                    {/* <MainInfo /> */}
+                    
                     <ContainerParticles>
                         <Particles params={{
                             fpsLimit: 60,
@@ -61,4 +61,4 @@ import MainInfo from '../HomeInfo'
 };
 
 
-export default HomeBanner;
+export default AboutBanner;
