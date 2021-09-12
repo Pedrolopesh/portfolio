@@ -1,15 +1,15 @@
 import { Container, BGCode, ContainerParticles} from './style'
 import CodeAnimation from '../CodeAnimation';
 import Particles from 'react-particles-js';
-// import MainInfo from '../HomeInfo'
+import CardInfos from '../CardInfos'
 
  const AboutBanner = () => {
     return (
         <>
             <Container>
                 <BGCode>
-                    {/* <MainInfo /> */}
-                    
+                    <CardInfos />
+
                     <ContainerParticles>
                         <Particles params={{
                             fpsLimit: 60,
