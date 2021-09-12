@@ -34,7 +34,7 @@ export const ContainerLetters = styled.div`
   display: block;
 
   @media screen and (max-width: 700px){
-    margin-top: 45%;
+    margin-top: 70%;
   }
 `
 export const ContainerParticles = styled.div`
@@ -102,18 +102,18 @@ export const SelfImage = styled.img`
 
 
   @media screen and (max-width: 700px){
-    width: 35%;
+    width: 50%;
     animation-name: slide-animation-photo-responsive;
-    transform: translate(95%, 10%);
+    transform: translate(50%, 10%);
 
     @keyframes slide-animation-photo {
     0% {
-      transform: translate(95%, -100%);
+      transform: translate(50%, -100%);
       opacity: 0;
     }
     
     40% {
-      transform: translate(95%, -10%);
+      transform: translate(50%, -10%);
     }
 
     100% {

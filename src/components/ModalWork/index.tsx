@@ -58,7 +58,9 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
     }
 
     const openProject = (param: any) => {
-        console.log('param', param)
+        console.log('param', param.link)
+        // window.location.href = "www.yoursite.com";
+        // window.location.replace(param);
     }
 
     const checkData = (param: any) => {
@@ -142,7 +144,7 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
                             </ContainerDescription>
                         </WorkBoxItem>
 
-                        <ButtonWork> 
+                        <ButtonWork target="_blank" href={items.data[selectedWork].link} > 
                             <ButtonText onClick={() => { openProject(items.data[selectedWork]) } }>Ver mais</ButtonText>
                             <FaDoorOpen style={{ color: 'white', fontSize: 20, marginRight: 'auto' }} /> 
                         </ButtonWork>

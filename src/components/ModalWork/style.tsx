@@ -173,7 +173,7 @@ export const DescriptionText = styled.p`
 
 `
 
-export const ButtonWork = styled.button`
+export const ButtonWork = styled.a`
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     border-radius: 5px;
