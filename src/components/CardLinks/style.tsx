@@ -46,18 +46,17 @@ export const Card = styled.div`
 
 export const WorkButton = styled.button`
     width: 70%;
+    border: none;
     padding: 15px;
     display: block;
-    max-width: 100%;
-    border-radius: 15px;
-    background-color: #39004c;
     color: white;
+    transition: 1s;
+    max-width: 100%;
     font-size: 20px;
-    border: none;
-    border-radius: 6px;
+    border-radius: 15px;
     margin: 25px auto 25px auto;
     box-shadow: 4px 5px 10px #19002fa6;
-    transition: 1s;
+    background: linear-gradient(to right, #290033, #41005a);
 
     &:hover {
         transform: scale(1.05);
