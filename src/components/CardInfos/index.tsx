@@ -1,4 +1,9 @@
-import { Container, CardContainer, Card, 
+import { 
+    Container, 
+    CardContainer,
+    CardSkillsContainer,
+    Card,
+    CardSkills,
     TitleCard,
     AnimationTest
 } from './style'
@@ -42,11 +47,13 @@ const CardInfos = () => {
                     </Card>
                 </CardContainer>
 
-                <CardContainer style={{ marginTop: 900 }}>
-                    <Card style={{ margin: '0px auto 0px auto' }} >
+                <CardSkillsContainer style={{ marginTop: 900 }}>
+                    <CardSkills>
+                        <TitleCard>Experiência profissional</TitleCard>
+                        <hr />
                         <SkillsAnimation />
-                    </Card>
-                </CardContainer>
+                    </CardSkills>
+                </CardSkillsContainer>
             </Container>
         </>
     )

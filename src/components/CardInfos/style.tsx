@@ -8,6 +8,15 @@ export const Container = styled.div`
 export const CardContainer = styled.div`
     display: flex;
     max-width: 100%;
+    width: 95%;
+    top: 160%;
+    position: absolute;
+`
+
+export const CardSkillsContainer = styled.div`
+    display: flex;
+    max-width: 100%;
+    width: 100%;
     top: 160%;
     position: absolute;
 `
@@ -21,6 +30,16 @@ export const Card = styled.div`
     padding: 15px;
     left: 10%;
     /* margin: 0px 20px 0px auto; */
+`
+
+export const CardSkills = styled.div`
+    display: block;
+    max-width: 100%;
+    width: 75%;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 0px auto 0px auto;
 `
 
 export const TitleCard = styled.h1`

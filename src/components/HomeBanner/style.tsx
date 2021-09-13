@@ -4,7 +4,7 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  min-height: 350vh;
+  min-height: 450vh;
   max-width: 100%;
   display: block;
   width: 100%;
