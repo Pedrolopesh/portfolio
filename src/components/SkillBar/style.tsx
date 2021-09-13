@@ -8,9 +8,7 @@ export const Container = styled.div`
 export const ImageSkill = styled.img`
     display: block;
     max-width: 100%;
-    width: 55px;
-    margin-left: auto;
-
+    width: 55px;    
 `
 
 export const SkillBarShape = styled.div`
@@ -29,10 +27,9 @@ export const BarSkill = styled.div`
     padding: 0px 2px 0px 0px;
     max-width: 100%;
     min-height: 50px;
-    width: 15vw;
+    /* width: 15vw; */
     border-radius: 90px;
-    background: linear-gradient(90deg, rgba(213,178,0,1) 0%, rgba(247,223,30,1) 90%);
-
+    /* background: linear-gradient(90deg, rgba(213,178,0,1) 0%, rgba(247,223,30,1) 90%); */
 `
 
 export const BGSkill = styled.div`
@@ -42,7 +39,12 @@ export const BGSkill = styled.div`
     margin-top: 5px;
     margin-bottom: 3px;
     margin-right: 19px;
-    font-size: 40px;
+    width: 55px;
+    margin-left: auto;
+
+    @media screen and (max-width: 700px){
+        width: 40px;
+    }
 `
 
 export const TextSkill = styled.span`
@@ -52,4 +54,8 @@ export const TextSkill = styled.span`
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px 15px 0px auto;
+
+    @media screen and (max-width: 700px){
+        font-size: 15px;
+    }
 `

@@ -55,6 +55,7 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
     const closeModal = () => {
         paramEvent(false)
         setSelectedWork(0)
+        unlockScroll()
     }
 
     const openProject = (param: any) => {
@@ -71,6 +72,11 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
         }
     }
 
+    const unlockScroll = () => {
+        const bodyLocator:any = document.querySelector("body")
+        bodyLocator.removeAttribute("style")
+        // ("style", "overflow: hidden");
+    }
 
     return (
         <>

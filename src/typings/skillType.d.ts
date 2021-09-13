@@ -1,7 +1,7 @@
 
 export interface SkillType {
     image: string
-    percent: number
+    skillAnimation: string
     skillName: string
     color: string
 }

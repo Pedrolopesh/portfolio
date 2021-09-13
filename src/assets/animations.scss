@@ -1,0 +1,154 @@
+
+.animationBar-react {
+    width: 20vw;
+    animation: animationBarReact 2.5s ease;
+    
+    @keyframes animationBarReact {
+        0% { width: 6vw; } 100% { width: 20vw;}
+    }
+
+    @media screen and (max-width: 700px){
+        width: 35vw;
+        animation: animationBarReact-responsive 2.5s ease;
+
+        @keyframes animationBarReact-responsive {
+            0% { width: 6vw; } 100% { width: 35vw;}
+        }
+    }
+
+}
+
+
+.animationBar-vue {
+    width: 23vw;
+    animation: animationBarVue 2.5s ease;
+
+    @keyframes animationBarVue {
+        0% { width: 6vw; } 100% { width: 23vw;}
+    }
+
+    
+    @media screen and (max-width: 700px){
+        width: 40vw;
+        animation: animationBarVue-responsive 2.5s ease;
+
+        @keyframes animationBarVue-responsive {
+            0% { width: 6vw; } 100% { width: 40vw;}
+        }
+    }
+}
+
+.animationBar-angular {
+    animation: animationBarAngular 2.5s ease;
+    width: 12vw;
+
+
+    @keyframes animationBarAngular {
+        0% { width: 6vw; } 100% { width: 12vw;}
+    }
+
+        
+    @media screen and (max-width: 700px){
+        width: 20vw;
+        animation: animationBarAngular-responsive 2.5s ease;
+
+        @keyframes animationBarAngular-responsive {
+            0% { width: 6vw; } 100% { width: 20vw;}
+        }
+    }
+}
+
+.animationBar-node {
+    animation: animationBarNode 2.5s ease;
+    width: 18vw;
+
+
+    @keyframes animationBarNode {
+        0% { width: 6vw;} 100% { width: 18vw; }
+    }
+
+    @media screen and (max-width: 700px){
+        width: 32vw;
+        animation: animationBarNode-responsive 2.5s ease;
+
+        @keyframes animationBarNode-responsive {
+            0% { width: 6vw; } 100% { width: 32vw;}
+        }
+    }
+}
+
+.animationBar-mongo {
+    animation: animationBarMongo 2.5s ease;
+    width: 17vw;
+
+    @keyframes animationBarMongo {
+        0% { width: 6vw; } 100% { width: 17vw;}        
+    }
+    
+    @media screen and (max-width: 700px){
+        width: 30vw;
+        animation: animationBarMongo-responsive 2.5s ease;
+
+        @keyframes animationBarMongo-responsive {
+            0% { width: 6vw; } 100% { width: 30vw;}
+        }
+    }
+}
+
+.animationBar-graphql {
+    animation: animationBarGraphql 2.5s ease;
+    width: 15vw;
+
+    @keyframes animationBarGraphql {
+        0% { width: 6vw; } 100% { width: 15vw; }
+    }
+   
+    @media screen and (max-width: 700px){
+        width: 23vw;
+        animation: animationBarGraphql-responsive 2.5s ease;
+
+        @keyframes animationBarGraphql-responsive {
+            0% { width: 6vw; } 100% { width: 23vw;}
+        }
+    }
+}
+
+.animationBar-mysql {
+    animation: animationBarMysql 2.5s ease;
+    width: 12vw;
+
+
+    @keyframes animationBarMysql {
+        0% { width: 6vw; } 100% { width: 12vw; }
+    }
+
+        
+    @media screen and (max-width: 700px){
+        width: 15vw;
+        animation: animationBarMysql-responsive 2.5s ease;
+
+        @keyframes animationBarMysql-responsive {
+            0% { width: 6vw; } 100% { width: 15vw;}
+        }
+    }
+}
+
+.animationBar-docker {
+    animation: animationBarDocker 2.5s ease;
+    width: 19vw;
+
+
+    @keyframes animationBarDocker {
+        0% { width: 6vw; } 100% { width: 19vw; }
+    }
+
+            
+    @media screen and (max-width: 700px){
+        width: 25vw;
+        animation: animationBarDocker-responsive 2.5s ease;
+
+        @keyframes animationBarDocker-responsive {
+            0% { width: 6vw; } 100% { width: 25vw;}
+        }
+    }
+}

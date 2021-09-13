@@ -17,17 +17,26 @@ const CardLinks = () => {
     const openUXModal = () => {
         setVisibleModal(true)
         setSelectedItem(uxData)
+        lockScroll()
     }
     
 
     const openWebModal = () => {
         setVisibleModal(true)
         setSelectedItem(webData)
+        lockScroll()
     }
 
     const openBackendModal = () => {
         setVisibleModal(true)
         setSelectedItem(backendData)
+        lockScroll()
+    }
+
+    const lockScroll = () => {
+        const bodyLocator:any = document.querySelector("body")
+        bodyLocator.setAttribute("style", "overflow: hidden");
+        window.scrollTo(0,0)
     }
     
     // useEffect(() => {

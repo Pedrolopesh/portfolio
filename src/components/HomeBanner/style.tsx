@@ -15,19 +15,15 @@ export const Container = styled.div`
   animation: gradient 10s ease infinite;
 
   @keyframes gradient {
-  0% {
-    background-position: 0 50%;
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
   }
   
-  50% {
-    background-position: 100% 50%;
-  }
   
-  100% {
-    background-position: 0% 50%;
+  @media screen and (max-width: 700px){
+    height: 500vh;
   }
-}
-  /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%,#000446 100%); */
 `
 
 export const ContainerParticles = styled.div`
