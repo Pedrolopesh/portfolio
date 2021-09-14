@@ -50,8 +50,6 @@ export const CardSkillsContainer = styled.div`
     display: flex;
     max-width: 100%;
     width: 100%;
-    /* top: 160%; */
-    position: absolute;
 `
 
 

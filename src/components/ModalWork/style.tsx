@@ -31,6 +31,7 @@ export const Container = styled.div`
     @media screen and (max-width: 700px){
         width: 95%;
         left: 3%;
+        top: 6%;
     }
 `
 

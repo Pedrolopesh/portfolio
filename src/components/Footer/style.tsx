@@ -1,23 +1,23 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    position: absolute;
+    /* position: absolute; */
     max-width: 100%;
     width: 100%;
     display: block;
-    top: 325%;
+    margin-top: 150px;
 
-    @media screen and (max-width: 700px){
+    /* @media screen and (max-width: 700px){
         top: 490%;
     }
 
-    @media screen and (height: 720px){
+    @media screen and (max-height: 720px){
         top: 530%;
     }
 
-    @media screen and (height: 650px){
-        top: 600%;
-    }
+    @media screen and (max-width: 400px){
+        top: 550%;
+    } */
 `
 
 export const ContainerButtons = styled.div`

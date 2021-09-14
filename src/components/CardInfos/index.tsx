@@ -17,6 +17,8 @@ import {
 import AnimationAssetCode from '../../assets/animations/animation_walking.gif'
 import AnimationAssetWork from '../../assets/animations/animation_work1.gif'
 import SkillsAnimation from '../SkillsAnimation'
+import Footer from '../../components/Footer';
+
 
 const CardInfos = () => {
 
@@ -80,6 +82,9 @@ const CardInfos = () => {
                         <SkillsAnimation />
                     </CardSkills>
                 </CardSkillsContainer>
+
+
+                <Footer />
             </Container>
         </>
     )

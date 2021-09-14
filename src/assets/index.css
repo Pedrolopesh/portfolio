@@ -16,7 +16,7 @@ body {
     cursor: pointer;
 }
 
-.show-bg-modal {
+/* .show-bg-modal {
     display: block !important;
     animation: showBgModal 1s ease;
 }
@@ -29,9 +29,9 @@ body {
 .hide-bg-modal {
     display: none !important;
     transition: 1s;
-}
+} */
 
-.show-modal {
+/* .show-modal {
     transition: 1s;
     animation: showModal 1s ease;
 }
@@ -47,7 +47,7 @@ body {
         transform: translatey(0%);
     }
         
-}
+} */
 
 .hide-modal {
     display: none !important;

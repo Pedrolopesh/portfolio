@@ -18,6 +18,7 @@ import {
     ButtonWork,
     ButtonText,
 } from './style';
+import './style.css'
 
 const ModalWork = ({ paramEvent, modalState, items }: any) => {
 
@@ -80,6 +81,7 @@ const ModalWork = ({ paramEvent, modalState, items }: any) => {
 
     return (
         <>
+            {/* className={modalState ? 'show-bg-modal' : 'hide-bg-modal'}  */}
             <BGModalWork className={modalState ? 'show-bg-modal' : 'hide-bg-modal'}>
                 <Container className={modalState ? 'show-modal' : 'hide-modal'}>
                     <CloseContainer onClick={() => {closeModal()}} >X</CloseContainer>
