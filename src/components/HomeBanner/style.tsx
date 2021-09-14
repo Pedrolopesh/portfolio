@@ -21,11 +21,11 @@ export const Container = styled.div`
   }
   
   
-  @media screen and (max-width: 850px){
+  @media screen and (width: 850px){
     height: 550vh !important;
   }
 
-  @media screen and (min-height: 650px){
+  @media screen and (height: 650px){
     height: 650vh;
   }
 `
