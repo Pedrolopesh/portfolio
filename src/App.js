@@ -1,5 +1,7 @@
 import Routes from './routes';
-import './assets/index.scss';
+import './assets/index.css';
+import './assets/animations.css';
+import './assets/fonts.css';
 
 const App = () => {
   return (

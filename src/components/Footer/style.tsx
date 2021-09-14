@@ -5,10 +5,18 @@ export const Container = styled.div`
     max-width: 100%;
     width: 100%;
     display: block;
-    top: 330%;
+    top: 325%;
 
     @media screen and (max-width: 700px){
         top: 490%;
+    }
+
+    @media screen and (height: 720px){
+        top: 530%;
+    }
+
+    @media screen and (height: 650px){
+        top: 600%;
     }
 `
 

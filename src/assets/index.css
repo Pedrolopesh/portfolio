@@ -1,6 +1,3 @@
-@import './fonts.scss';
-@import './animations.scss';
-
 body {
     margin: 0;
     padding: 0;
@@ -21,23 +18,12 @@ body {
 
 .show-bg-modal {
     display: block !important;
-
     animation: showBgModal 1s ease;
 }
 
 @keyframes showBgModal {
-    0% {
-        opacity: 0;
-    }
-    
-    // 50% {
-        //   background-position: 100% 50%;
-        // }
-        
-    100% {
-        opacity: 100%;
-    }
-        
+    0% { opacity: 0; }
+    100% { opacity: 100%;}
 }
 
 .hide-bg-modal {
@@ -45,10 +31,7 @@ body {
     transition: 1s;
 }
 
-
-
 .show-modal {
-    // display: block !important;
     transition: 1s;
     animation: showModal 1s ease;
 }
@@ -59,10 +42,6 @@ body {
         transform: translatey(-130%);
     }
     
-    // 50% {
-        //   background-position: 100% 50%;
-        // }
-        
     100% {
         opacity: 1;
         transform: translatey(0%);
@@ -76,7 +55,6 @@ body {
 
 .hidden-modal {
     display: none !important;
-    // animation: hiddenModal 1s ease;
 }
 
 .selectedBG{

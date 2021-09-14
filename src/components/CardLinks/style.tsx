@@ -2,6 +2,27 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: block;
+    position: absolute;
+    /* left: 32%; */
+    top: 50%;
+    overflow: hidden;
+    z-index: 10;
+    max-width: 100%;
+    width: 100%;
+
+    @media screen and (max-width: 500px){
+        flex-direction: column-reverse;
+    }
+`
+
+export const ContainerMainHome = styled.div`
+    max-width: 100%;
+    width: 100%;
+
+    @media screen and (max-width: 500px){
+        flex-direction: column-reverse;
+        display: flex;
+    }
 `
 
 export const ContainerText = styled.div`
@@ -26,12 +47,7 @@ export const Card = styled.div`
     background-color: white;
     margin: 0px auto 0px auto;
 
-    position: absolute;
-    overflow: hidden;
-    z-index: 10;
     text-align: center;
-    left: 32%;
-    top: 50%;
 
     @media screen and (max-width: 1100px){
         width: 65%;
@@ -71,4 +87,17 @@ export const Hr = styled.hr`
     margin-top: 20px;
     max-width: 100%;
     width: 60%;
+`
+
+export const AnimationScroll = styled.img`
+    display: block;
+    max-width: 100%;
+    width: 8%;
+    margin: 20px auto 0px auto;
+
+    @media screen and (max-width: 500px){
+        width: 35%;
+        margin-bottom: 30px;
+    }
+
 `

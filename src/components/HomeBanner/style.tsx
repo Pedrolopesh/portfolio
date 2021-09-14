@@ -4,7 +4,7 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  min-height: 450vh;
+  min-height: 380vh;
   max-width: 100%;
   display: block;
   width: 100%;
@@ -21,8 +21,12 @@ export const Container = styled.div`
   }
   
   
-  @media screen and (max-width: 700px){
-    height: 550vh;
+  @media screen and (max-width: 850px){
+    height: 550vh !important;
+  }
+
+  @media screen and (min-height: 650px){
+    height: 650vh;
   }
 `
 
