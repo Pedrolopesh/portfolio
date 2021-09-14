@@ -1,17 +1,19 @@
 .show-bg-modal {
     display: block !important;
-    animation: showBgModal 1s ease;
-}
-
-@keyframes showBgModal {
-    0% { opacity: 0; }
-    100% { opacity: 100%;}
+    transition: 1s;
+    /* animation: showBgModal 1s ease; */
 }
 
 .hide-bg-modal {
     display: none !important;
     transition: 1s;
 }
+
+/* @keyframes showBgModal {
+    0% { opacity: 0; }
+    100% { opacity: 100%;}
+} */
+
 
 
 .show-modal {
@@ -21,12 +23,12 @@
 
 @keyframes showModal {
     0% {
-        opacity: 0;
+        /* opacity: 0; */
         transform: translatey(-130%);
     }
     
     100% {
-        opacity: 1;
+        /* opacity: 1; */
         transform: translatey(0%);
     }
         
