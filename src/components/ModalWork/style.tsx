@@ -166,8 +166,9 @@ export const Title = styled.span`
     margin-top: 30px;
     display: block;
     color: white;
-    
-    `
+    text-align: center;
+`
+
 export const DescriptionText = styled.p`
     font-family: Arial, Helvetica, sans-serif;
     color: white;

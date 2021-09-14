@@ -28,7 +28,7 @@ export const ContainerMainHome = styled.div`
 export const ContainerText = styled.div`
     /* display: block; */
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px auto 0px auto;
+    margin: 15px auto 0px auto;
     font-size: 20px;
     max-width: 90%;
     width: 70%;

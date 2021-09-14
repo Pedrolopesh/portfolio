@@ -51,7 +51,7 @@ const CardLinks = () => {
                 <ContainerMainHome>
                     <Card>
                         <ContainerText>
-                            Veja a seguir alguns dos serviços que tenho a oferecer no mundo digital
+                            Alguns dos tipos de trabalho que já produzi
                         </ContainerText>
                         <Hr />
                         <WorkButton onClick={() => {openUXModal()} }> Trabalhos com Design </WorkButton>

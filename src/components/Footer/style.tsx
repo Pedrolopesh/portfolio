@@ -83,9 +83,14 @@ export const HomeButton = styled.button`
     cursor: pointer;
     background: linear-gradient(90deg, rgba(54,0,97,1) 0%, rgba(143,0,255,1) 100%);
     
+    @media screen and (max-width: 1500px) {
+        margin: 40px auto 0px auto;
+        width: 25%;
+    }
+    
     @media screen and (max-width: 700px) {
         margin: 40px auto 0px auto;
-        width: 65%;
+        width: 90%;
     }
 `
 
