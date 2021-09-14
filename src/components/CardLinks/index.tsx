@@ -38,14 +38,6 @@ const CardLinks = () => {
         bodyLocator.setAttribute("style", "overflow: hidden");
         window.scrollTo(0,0)
     }
-    
-    // useEffect(() => {
-    //     console.log('selectedItem', selectedItem)
-    //     if(selectedItem === undefined){
-    //         setSelectedItem(uxData)
-    //     }
-        
-    // }, [selectedItem])
 
     return (
         <>
