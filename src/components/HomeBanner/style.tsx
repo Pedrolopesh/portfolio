@@ -20,17 +20,48 @@ export const Container = styled.div`
   100% { background-position: 0% 50%; }
   }
   
-  
-  @media screen and (max-width: 850px){
-    height: 510vh;
+  //WIDTH
+  @media (max-width: 1500px){
+    height: 450vh;
   }
 
-  /* @media screen and (max-height: 650px){
-    height: 650vh;
-  } */
+  @media (max-width: 1100px){
+    height: 480vh;
+  }
 
-  
-  @media screen and (max-width: 420px){
+  @media (max-width: 850px){
+    height: 580vh;
+  }
+
+  @media (max-width: 700px){
+    height: 680vh;
+  }
+
+  @media (max-width: 500px){
+    height: 580vh;
+  }
+
+  @media (max-width: 450px){
+    height: 620vh;
+  }
+
+  @media (max-width: 400px){
+    height: 650vh;
+  }
+
+  @media (max-width: 380px){
+    height: 550vh;
+  }
+
+  @media (max-width: 350px){
+    height: 710vh;
+  }
+
+  @media (max-height: 675px){
+    height: 500vh;
+  }
+
+  /* @media screen and (max-width: 420px){
     height: 570vh;
   }
   
@@ -40,7 +71,25 @@ export const Container = styled.div`
 
   @media screen and (max-width: 340px){
     height: 710vh;
+  } */
+
+  //HEIGHT
+  /* @media screen and (max-height: 600px) {
+    min-height: 585vh;
   }
+  
+  @media screen and (max-height: 700px) {
+    min-height: 505vh;
+  }
+
+  @media screen and (max-height: 800px) {
+    min-height: 415vh;
+  }
+  
+  @media screen and (max-height: 900px) {
+    min-height: 365vh;
+  } */
+  
 `
 
 export const ContainerParticles = styled.div`

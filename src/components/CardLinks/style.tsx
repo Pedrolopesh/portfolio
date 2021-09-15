@@ -10,6 +10,10 @@ export const Container = styled.div`
     max-width: 100%;
     width: 100%;
 
+    @media screen and (max-width: 700px){
+        top: 70%;
+    }
+
     @media screen and (max-width: 500px){
         flex-direction: column-reverse;
     }
@@ -39,7 +43,7 @@ export const ContainerText = styled.div`
 `
 
 export const Card = styled.div`
-    width: 35%;
+    width: 40%;
     padding: 10px;
     display: block;
     max-width: 100%;

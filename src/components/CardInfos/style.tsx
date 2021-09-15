@@ -5,6 +5,10 @@ export const Container = styled.div`
     max-width: 100%;
     top: 130%;
     position: absolute;
+
+    @media (max-width: 400px) {
+        top: 150%;
+    }
 `
 
 export const ContainerCardsInfo = styled.div`
@@ -37,6 +41,7 @@ export const CardContainer = styled.div`
     /* top: 160%; */
     /* position: absolute; */
 
+
     @media screen and (max-width: 700px){
         width: 100%;
         &:first-child{
@@ -62,6 +67,10 @@ export const Card = styled.div`
     padding: 15px 35px 15px 35px;
     left: 10%;
 
+    @media screen and (max-width: 1000px){
+        width: 85%;
+    }
+
     @media screen and (max-width: 700px){
         width: 95%;
         margin: 20px auto 0px auto !important;
@@ -71,11 +80,15 @@ export const Card = styled.div`
 export const CardSkills = styled.div`
     display: block;
     max-width: 100%;
-    width: 75%;
+    width: 85%;
     background: white;
     border-radius: 15px;
     padding: 15px;
     margin: 0px auto 0px auto;
+
+    @media screen and (max-width: 1000px){
+        width: 95%;
+    }
     
     @media screen and (max-width: 700px){
         width: 95%;
@@ -104,6 +117,14 @@ export const AnimationTest = styled.img`
     max-width: 100%;
     border-radius: 15px;
     margin: 0px auto 0px 20px;
+
+    @media screen and (max-width: 1400px){
+        width: 30%;
+    }
+
+    @media screen and (max-width: 1200px){
+        width: 40%;
+    }
 
     @media screen and (max-width: 700px){
         margin: 0px auto 0px auto !important;
