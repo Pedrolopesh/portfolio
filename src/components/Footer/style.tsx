@@ -5,7 +5,7 @@ export const Container = styled.div`
     max-width: 100%;
     width: 100%;
     display: block;
-    margin-top: 150px;
+    margin: 150px 0px 100px 0px;
 
     /* @media screen and (max-width: 700px){
         top: 490%;
@@ -44,13 +44,16 @@ export const WorkButtons = styled.a`
     cursor: pointer;
     max-width: 100%;
     border-radius: 30px;
-    background: linear-gradient(90deg, rgba(54,0,97,1) 0%, rgba(143,0,255,1) 100%);
+    background: linear-gradient(to right, #e2986a, #25067d);
 
+    flex-wrap: wrap;
+    
     &:nth-child(1){
         margin: 0px 20px 0px auto !important;
     }
-
+    
     &:nth-child(2){
+        background: linear-gradient(to right, #25067d, #e2986a);
         margin: 0px 20px 0px 20px !important;
     }
 
@@ -72,7 +75,7 @@ export const WorkLogo = styled.img`
 `
 
 export const HomeButton = styled.button`
-    width: 13%;
+    width: 200px;
     padding: 20px;
     border: none;
     display: flex;
@@ -81,11 +84,11 @@ export const HomeButton = styled.button`
     align-items: center;
     margin: 100px auto 0px auto;
     cursor: pointer;
-    background: linear-gradient(90deg, rgba(54,0,97,1) 0%, rgba(143,0,255,1) 100%);
-    
+    background: linear-gradient(to right, #e2986a, #25067d);
+
     @media screen and (max-width: 1500px) {
         margin: 40px auto 0px auto;
-        width: 25%;
+        width: 300px;
     }
     
     @media screen and (max-width: 700px) {

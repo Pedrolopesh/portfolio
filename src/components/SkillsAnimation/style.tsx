@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FlexContainer = styled.div`
     display: flex;
     max-width: 100%;
+    margin: 25px 0px 25px 0px;
 
     @media screen and (max-width: 700px){
         flex-direction: column;

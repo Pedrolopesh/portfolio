@@ -8,17 +8,19 @@ import {
     Card,
     CardSkills,
     TitleCard,
-    Separate,
+    // Separate,
     CardDescription,
     AnimationTest,
+    ContainerHeader,
+    ContainerBody,
+    ComandText,
 } from './style'
 // import Lottie from 'react-lottie';
 // import AnimationAsset from '../../assets/animations/walking.json'
 import AnimationAssetCode from '../../assets/animations/animation_walking.gif'
 import AnimationAssetWork from '../../assets/animations/animation_work1.gif'
 import SkillsAnimation from '../SkillsAnimation'
-import Footer from '../../components/Footer';
-
+import { HiOutlineTerminal } from 'react-icons/hi';
 
 const CardInfos = () => {
 
@@ -41,16 +43,23 @@ const CardInfos = () => {
                 <ContainerCardsInfo>
                     <CardContainer> 
                         <Card style={{ margin: '0px 20px 0px auto' }}>
-                            <TitleCard>Trajetória pessoal</TitleCard>
-                            <Separate />
-                            <CardDescription>
-                                Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, 
-                                nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular. 
-                                <br />
-                                <br />
-                                Em paralelo estudando ferramentas ágeis para aprimorar nos processos e gerenciamento do tempo, em seguida estudei linguagens e frameworks backend como o node js, express, nest js e loopback 4, por fim, 
-                                junto a este conhecimentos em API's fiz a criação de alguns esquemas e funcionalidades em banco de dados NOSQL e MYSQL.
-                            </CardDescription>
+                            <ContainerHeader>
+                                <HiOutlineTerminal />
+                                <TitleCard>Trajetória pessoal</TitleCard>
+                            </ContainerHeader>
+                            {/* <Separate /> */}
+
+                            <ContainerBody>
+                                <CardDescription>
+                                    <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/pessoal</ComandText> $
+                                    Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, 
+                                    nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular. 
+                                    <br />
+                                    <br />
+                                    Em paralelo estudando ferramentas ágeis para aprimorar nos processos e gerenciamento do tempo, em seguida estudei linguagens e frameworks backend como o node js, express, nest js e loopback 4, por fim, 
+                                    junto a este conhecimentos em API's fiz a criação de alguns esquemas e funcionalidades em banco de dados NOSQL e MYSQL.
+                                </CardDescription>
+                            </ContainerBody>
                         </Card>
                         
                         <AnimationTest src={AnimationAssetWork}  />
@@ -60,16 +69,22 @@ const CardInfos = () => {
                         <AnimationTest style={{ margin: '0px 20px 0px auto' }} src={AnimationAssetCode}  />
 
                         <Card style={{ margin: '0px auto 0px 20px' }} >
-                            <TitleCard>Experiência profissional</TitleCard>
-                            <Separate />
-                            <CardDescription>
-                                Atualmente atuo como desenvolvedor FullStack, estou cursando graduação em engenharia de software na UDESC (Universidade estadual de Santa Catarina) e possuo 2 anos de experiência em desenvolvimento frontend e 1 ano e meio de conhecimento em backend,
-                                realizei projetos pessoais utilizando frameworks javascripts buscando sempre uma melhor qualificação. 
-                                <br />
-                                <br />
-                                Obtive certificação em design gráfico, me ajudando a desenvolver minhas soft skills e a ter um conhecimento diversificado, isto tem me favorecido com relação ao visual e experiência do usuário. Atualmente sigo estudando mais ferramentas de design e ênfase
-                                com a experiÊncia do usuário.
-                            </CardDescription>
+                            {/* <Separate /> */}
+                            <ContainerHeader>
+                                <HiOutlineTerminal />
+                                <TitleCard>Experiência profissional</TitleCard>
+                            </ContainerHeader>
+                            <ContainerBody>
+                                <CardDescription>
+                                    <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/profissional</ComandText> $
+                                    Atualmente atuo como desenvolvedor FullStack, estou cursando graduação em engenharia de software na UDESC (Universidade estadual de Santa Catarina) e possuo 2 anos de experiência em desenvolvimento frontend e 1 ano e meio de conhecimento em backend,
+                                    realizei projetos pessoais utilizando frameworks javascripts buscando sempre uma melhor qualificação. 
+                                    <br />
+                                    <br />
+                                    Obtive certificação em design gráfico, me ajudando a desenvolver minhas soft skills e a ter um conhecimento diversificado, isto tem me favorecido com relação ao visual e experiência do usuário. Atualmente sigo estudando mais ferramentas de design e ênfase
+                                    com a experiÊncia do usuário.
+                                </CardDescription>
+                            </ContainerBody>
                         </Card>
                     </CardContainer>
                 </ContainerCardsInfo>
@@ -77,14 +92,15 @@ const CardInfos = () => {
 
                 <CardSkillsContainer style={{ marginTop: 100 }}>
                     <CardSkills>
-                        <TitleCard>Software Skills</TitleCard>
-                        <Separate />
+                        <ContainerHeader>
+                                <HiOutlineTerminal />
+                                <TitleCard>Software Skills</TitleCard>
+                            </ContainerHeader>
+                        {/* <Separate /> */}
                         <SkillsAnimation />
                     </CardSkills>
                 </CardSkillsContainer>
 
-
-                <Footer />
             </Container>
         </>
     )

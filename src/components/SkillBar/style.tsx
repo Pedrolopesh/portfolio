@@ -16,9 +16,9 @@ export const SkillBarShape = styled.div`
     max-width: 100%;
     min-height: 10px;
     width: 85%;
-    border-radius: 90px;
+    border-radius: 10px;
     box-shadow: 4px 4px 7px 3px rgba(0, 0, 0, 0.110);
-    background-color: rgb(236, 236, 236);
+    background-color: #2C2C2C;
     margin: 15px auto 15px auto;
 `
 
@@ -28,7 +28,7 @@ export const BarSkill = styled.div`
     max-width: 100%;
     min-height: 50px;
     /* width: 15vw; */
-    border-radius: 90px;
+    border-radius: 10px;
     /* background: linear-gradient(90deg, rgba(213,178,0,1) 0%, rgba(247,223,30,1) 90%); */
 `
 
