@@ -104,8 +104,8 @@ export const BgWhite = styled.img`
 export const ContainerAssetsAnimation = styled.div`
     display: block;
     max-width: 100%;
-    /* width: 50%; */
     position: absolute;
+    width: 45%;
 
     @media screen and (max-width: 1900px){
         width: 40%;
@@ -124,18 +124,19 @@ export const CubeAnimation = styled.img`
     display: block;
     max-width: 100%;
     width: 20%;
-    margin: 40px 335px 0px auto;
+    margin: 40px 150px 0px auto;
 
     animation: animationBarReact-responsive 5s infinite;
+    
+    @media screen and (max-width: 1900px){
+        width: 25%;
+        margin: 40px 20px 0px auto;
+    }
     
     @media screen and (max-width: 1300px){
         margin: 20px 165px 0px auto;
     }
 
-    @media screen and (max-width: 1900px){
-        width: 25%;
-        margin: 40px 20px 0px auto;
-    }
     
     @keyframes animationBarReact-responsive {
         0% { transform: translateY(0px); } 
@@ -148,7 +149,7 @@ export const ComputerAnimation = styled.img`
     display: block;
     max-width: 100%;
     width: 40%;
-    margin: 60px 40px 0px auto;
+    margin: 10px 0px 0px auto;
     
     animation: animationBarReact-responsive 5s infinite;  
     
