@@ -2,10 +2,10 @@
 import { Card, ContainerText, Hr, WorkButton, Container, ContainerMainHome, AnimationScroll } from './style'
 import ModalWork from '../ModalWork';
 import { useState } from 'react';
-import uxData from '../../utils/works_UX.json'
-import webData from '../../utils/works_web.json'
-import backendData from '../../utils/works_backend.json'
-import animationScroll from '../../assets/animations/animation_scroll.gif'
+import uxData from '../../utils/works_UX.json';
+import webData from '../../utils/works_web.json';
+import backendData from '../../utils/works_backend.json';
+import animationScroll from '../../assets/animations/animation_scroll.gif';
 const CardLinks = () => {
 
     const [visibleModal, setVisibleModal] = useState(false)

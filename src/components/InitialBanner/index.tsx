@@ -20,6 +20,8 @@ import { useState } from 'react';
 import uxData from '../../utils/works_UX.json'
 import webData from '../../utils/works_web.json'
 import backendData from '../../utils/works_backend.json'
+import ModalWork from '../ModalWork';
+
 
 const InitialBanner = () => {
     const [visibleModal, setVisibleModal] = useState(false)
@@ -44,6 +46,10 @@ const InitialBanner = () => {
         lockScroll()
     }
 
+    const listenChieldEvent = (modalState: boolean) => {
+        setVisibleModal(modalState)
+    }
+
     const lockScroll = () => {
         console.log(visibleModal, selectedItem)
         // const bodyLocator:any = document.querySelector("body")
@@ -53,6 +59,11 @@ const InitialBanner = () => {
 
     return (
         <>
+            <ModalWork
+                items={selectedItem} 
+                paramEvent={listenChieldEvent}
+                modalState={visibleModal}
+            />
             <Container>
                  <ContainerLeft>
                     <ContainerTexts>
