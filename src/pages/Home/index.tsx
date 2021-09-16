@@ -1,13 +1,15 @@
-import CardInfos from '../../components/CardInfos';
-import CardLinks from '../../components/CardLinks';
+// import CardInfos from '../../components/CardInfos';
+// import CardLinks from '../../components/CardLinks';
 import HomeBanner from '../../components/HomeBanner'
+import MainContent from '../../components/MainContent';
 
 const Home = () => {
     return (
         <>
-            <CardLinks />
+            {/* <CardLinks /> */}
+            {/* <CardInfos /> */}
+            <MainContent />
             <HomeBanner />
-            <CardInfos />
         </>
     )
 }

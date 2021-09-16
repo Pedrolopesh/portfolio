@@ -1,6 +1,27 @@
 body {
     margin: 0;
     padding: 0;
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: absolute; */
+    /* min-height: 365vh; */
+    max-width: 100%;
+    display: block;
+    width: 100%;
+  
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
+    background-size: 300% 300%;
+    transition: 10s;
+    animation: gradient 10s ease infinite;
+}
+
+
+@keyframes gradient {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 * {

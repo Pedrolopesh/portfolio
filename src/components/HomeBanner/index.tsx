@@ -1,12 +1,12 @@
-import { Container, BGCode, ContainerParticles} from './style'
-import CodeAnimation from '../CodeAnimation';
-import Particles from 'react-particles-js';
-import MainInfo from '../HomeInfo'
+// import { Container, BGCode} from './style'
+// import CodeAnimation from '../CodeAnimation';
+// import Particles from 'react-particles-js';
+// import MainInfo from '../HomeInfo'
 
  const HomeBanner = () => {
     return (
         <>
-            <Container>
+            {/* <Container>
                 <BGCode>
                     <MainInfo />
                    
@@ -55,7 +55,7 @@ import MainInfo from '../HomeInfo'
                     
                     <CodeAnimation></CodeAnimation>
                 </BGCode>
-            </Container>
+            </Container> */}
         </>
     )
 };

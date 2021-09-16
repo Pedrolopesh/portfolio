@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: block;
   width: 100%;
 
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,48,1) 48%, #2b002c 100%) no-repeat;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
   background-size: 300% 300%;
   transition: 10s;
   animation: gradient 10s ease infinite;
