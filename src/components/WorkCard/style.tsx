@@ -85,7 +85,7 @@ export const ButtonWork = styled.a`
     color: white;
     padding: 13px;
     border: none;
-    width: 30%;
+    width: 40%;
     align-items: center;
     display: flex;
     text-align: center;
@@ -111,6 +111,6 @@ export const ButtonText = styled.span`
     font-size: 16px;
     max-width: 100%;
     text-align: center;
-    margin-left: auto;
-    margin-right: 10px;
+    margin-left: 10px;
+    margin-right: auto;
 `

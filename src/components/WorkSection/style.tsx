@@ -16,27 +16,31 @@ export const ContainerButtons = styled.div`
 
 export const WorkButton = styled.button`
     width: 250px;
-    width: 250px;
+    background: none;
     border: none;
-    padding: 15px;
     display: block;
     color: white;
-    transition: 1s;
     max-width: 100%;
     font-size: 20px;
-    border-radius: 15px;
     margin: 25px auto 25px auto;
-    box-shadow: 4px 5px 10px #19002fa6;
-    background: linear-gradient(to right, #e2986a, #25067d);
+    line-height: 15px;
+    padding: 15px;
+    /* transition: 1s; */
+    border: 5px solid transparent;
+    /* border-image: linear-gradient(45deg,red,blue) 10;
+    padding: 15px; */
 
-    &:nth-child(2){
-        background: linear-gradient(to right, #25067d, #e2986a);
-    }
+    /* border: 0px #ff0000; */
+
+
     flex-wrap: wrap;
+    /* &:nth-child(2){
+        background: linear-gradient(to right, #25067d, #e2986a);
+    } */
 
-    &:hover {
+    /* &:hover {
         transform: scale(1.05);
-    }
+    } */
 
     @media screen and (max-width: 1300px){
         margin: 25px 10px 25px 10px;

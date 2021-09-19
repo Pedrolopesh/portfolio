@@ -92,7 +92,7 @@ export const ContainerRigth = styled.div`
 
 export const BgWhite = styled.img`
     display: block;
-    max-width: 100%;
+    max-width: 98%;
     width: 80%;
     margin: 0px 0px 0px auto;
 

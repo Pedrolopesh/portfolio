@@ -83,7 +83,7 @@ const WorkCard = ({ paramEvent, modalState, items }: any) => {
                             <Card className="item item2">
                                 <CardHeader>
                                     <HiOutlineTerminal />
-                                    <TitleCard>Trajetória pessoal</TitleCard>
+                                    <TitleCard>{item.title}</TitleCard>
                                 </CardHeader>
                                 <ContainerBody>
                                     <WorkImage src={item.image} />
@@ -93,7 +93,7 @@ const WorkCard = ({ paramEvent, modalState, items }: any) => {
                                     </CardDescription>
                                     
                                     <ButtonWork onClick={() => {redirect(items.data[index])}} className="linkButton" target="_blank" href={items.link}>
-                                        <FaDoorOpen style={{ color: 'white', fontSize: 20, marginRight: 'auto' }} /> 
+                                        <FaDoorOpen style={{ color: 'white', fontSize: 20, marginLeft: 'auto' }} /> 
                                         <ButtonText>Ver mais</ButtonText>
                                     </ButtonWork>
                                 </ContainerBody>

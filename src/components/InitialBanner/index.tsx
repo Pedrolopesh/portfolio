@@ -3,8 +3,8 @@ import {
     ContainerLeft,
     ContainerRigth,
     ContainerTexts,
-    ContainerButtons,
-    WorkButton,
+    // ContainerButtons,
+    // WorkButton,
     ContainerAssetsAnimation, 
     BgWhite, 
     CubeAnimation,
@@ -17,53 +17,53 @@ import HomeBG from '../../assets/img/home-bg.png'
 import ComputerAnimationAsset from '../../assets/img/computer.png'
 import CubeAnimationAsset from '../../assets/img/cubeAsset.png'
 import { useState } from 'react';
-import uxData from '../../utils/works_UX.json'
-import webData from '../../utils/works_web.json'
-import backendData from '../../utils/works_backend.json'
-import ModalWork from '../ModalWork';
+// import uxData from '../../utils/works_UX.json'
+// import webData from '../../utils/works_web.json'
+// import backendData from '../../utils/works_backend.json'
+// import ModalWork from '../ModalWork';
 
 
 const InitialBanner = () => {
     const [visibleModal, setVisibleModal] = useState(false)
-    const [selectedItem, setSelectedItem]:any = useState(uxData)
+    // const [selectedItem, setSelectedItem]:any = useState(uxData)
 
-    const openUXModal = () => {
-        setVisibleModal(true)
-        setSelectedItem(uxData)
-        lockScroll()
-    }
+    // const openUXModal = () => {
+    //     setVisibleModal(true)
+    //     setSelectedItem(uxData)
+    //     lockScroll()
+    // }
     
 
-    const openWebModal = () => {
-        setVisibleModal(true)
-        setSelectedItem(webData)
-        lockScroll()
-    }
+    // const openWebModal = () => {
+    //     setVisibleModal(true)
+    //     setSelectedItem(webData)
+    //     lockScroll()
+    // }
 
-    const openBackendModal = () => {
-        setVisibleModal(true)
-        setSelectedItem(backendData)
-        lockScroll()
-    }
+    // const openBackendModal = () => {
+    //     setVisibleModal(true)
+    //     setSelectedItem(backendData)
+    //     lockScroll()
+    // }
 
     const listenChieldEvent = (modalState: boolean) => {
         setVisibleModal(modalState)
     }
 
-    const lockScroll = () => {
-        console.log(visibleModal, selectedItem)
-        // const bodyLocator:any = document.querySelector("body")
-        // bodyLocator.setAttribute("style", "overflow: hidden");
-        // window.scrollTo({top: 0, behavior: 'smooth'});
-    }
+    // const lockScroll = () => {
+    //     console.log(visibleModal, selectedItem)
+    //     // const bodyLocator:any = document.querySelector("body")
+    //     // bodyLocator.setAttribute("style", "overflow: hidden");
+    //     // window.scrollTo({top: 0, behavior: 'smooth'});
+    // }
 
     return (
         <>
-            <ModalWork
+            {/* <ModalWork
                 items={selectedItem} 
                 paramEvent={listenChieldEvent}
                 modalState={visibleModal}
-            />
+            /> */}
             <Container>
                  <ContainerLeft>
                     <ContainerTexts>
@@ -74,11 +74,11 @@ const InitialBanner = () => {
                         </TextDescription>
                     </ContainerTexts>
 
-                    <ContainerButtons>
+                    {/* <ContainerButtons>
                         <WorkButton onClick={() => {openUXModal()} }> Trabalhos Design </WorkButton>
                         <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton>
                         <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton>
-                    </ContainerButtons>
+                    </ContainerButtons> */}
                  </ContainerLeft>
 
                  <ContainerRigth>

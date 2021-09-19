@@ -13,8 +13,7 @@ body {
   
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
     background-size: 300% 300%;
-    transition: 10s;
-    animation: gradient 10s ease infinite;
+    animation: gradient 5s ease infinite;
 }
 
 

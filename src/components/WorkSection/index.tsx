@@ -11,9 +11,26 @@ import {
 } from './style'
 import WorkCard from '../WorkCard'
 
+interface IOprtions {
+    options: string
+}
+
 const WorkSection = () => {
     const [visibleModal, setVisibleModal] = useState(false)
     const [selectedItem, setSelectedItem]:any = useState(uxData)
+    const [selectedButton, setSelectedButton]:any = useState(0)
+
+    const options: IOprtions[] = [
+        {
+            options:'Trabalhos Design'
+        },
+        {
+            options:'Trabalhos WEB'
+        },
+        {
+            options:'Trabalhos backend'
+        }
+    ]
 
     const openUXModal = () => {
         setVisibleModal(true)
@@ -46,6 +63,13 @@ const WorkSection = () => {
         // window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
+    const switchOption = (option: string, index:any) => {
+        if(option === 'Trabalhos Design') openUXModal()
+        if(option === 'Trabalhos WEB') openWebModal()
+        if(option === 'Trabalhos backend') openBackendModal()
+        setSelectedButton(index)
+    }
+
     useEffect(() => {
         setSelectedItem(uxData)
     }, [])
@@ -55,9 +79,28 @@ const WorkSection = () => {
             <Container>
                 
                 <ContainerButtons>
-                    <WorkButton onClick={() => {openUXModal()} }> Trabalhos Design </WorkButton>
-                    <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton>
-                    <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton>
+                    {options.map((value:IOprtions, index:number) => {
+                        return (
+                            <>
+                                <WorkButton
+                                    style={{ 
+                                        border: (selectedButton === index) ? '5px solid' :'',
+                                        borderImage: (selectedButton === index) ? 'linear-gradient(45deg,red,blue) 10' : '',
+                                        // padding: (selectedButton === index) ? '15px' : ''
+                                    }} 
+                                    onClick={() => {
+                                        switchOption(value.options, index) 
+                                    }}
+                                > 
+                                    {value.options}
+                                </WorkButton>
+
+
+                    {/* <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton> */}
+                    {/* <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton> */}
+                            </>
+                        )
+                    })}
                 </ContainerButtons>
                 <ContainerWorksSection>
                     <WorkCard
