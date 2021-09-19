@@ -83,9 +83,9 @@ const WorkSection = () => {
                         return (
                             <>
                                 <WorkButton
-                                    style={{ 
+                                    style={{
                                         border: (selectedButton === index) ? '5px solid' :'',
-                                        borderImage: (selectedButton === index) ? 'linear-gradient(45deg,red,blue) 10' : '',
+                                        borderImage: (selectedButton === index) ? 'linear-gradient(45deg,#da926b,#2a0a7d) 10' : '',
                                         // padding: (selectedButton === index) ? '15px' : ''
                                     }} 
                                     onClick={() => {

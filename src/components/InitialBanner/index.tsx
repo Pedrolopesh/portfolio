@@ -16,7 +16,7 @@ import {
 import HomeBG from '../../assets/img/home-bg.png'
 import ComputerAnimationAsset from '../../assets/img/computer.png'
 import CubeAnimationAsset from '../../assets/img/cubeAsset.png'
-import { useState } from 'react';
+// import { useState } from 'react';
 // import uxData from '../../utils/works_UX.json'
 // import webData from '../../utils/works_web.json'
 // import backendData from '../../utils/works_backend.json'
@@ -24,7 +24,7 @@ import { useState } from 'react';
 
 
 const InitialBanner = () => {
-    const [visibleModal, setVisibleModal] = useState(false)
+    // const [visibleModal, setVisibleModal] = useState(false)
     // const [selectedItem, setSelectedItem]:any = useState(uxData)
 
     // const openUXModal = () => {
@@ -46,9 +46,9 @@ const InitialBanner = () => {
     //     lockScroll()
     // }
 
-    const listenChieldEvent = (modalState: boolean) => {
-        setVisibleModal(modalState)
-    }
+    // const listenChieldEvent = (modalState: boolean) => {
+    //     setVisibleModal(modalState)
+    // }
 
     // const lockScroll = () => {
     //     console.log(visibleModal, selectedItem)
@@ -70,7 +70,7 @@ const InitialBanner = () => {
                         <BannerTitle> Pedro Lopes </BannerTitle>
                         <UnderScore />
                         <TextDescription>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro odio impedit exercitationem ea, voluptatibus quae libero? Soluta ipsum sed sint?
+                            Olá, sou pedro Lopes, designer e programador, fique a vontade para conhecer mais sobre mim e mus trabalhos.
                         </TextDescription>
                     </ContainerTexts>
 

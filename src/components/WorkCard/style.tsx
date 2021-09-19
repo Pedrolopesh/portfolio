@@ -19,6 +19,10 @@ export const Card = styled.div`
     background: #2d0922;
     width: 20%;
     border-radius: 15px;
+    
+    @media screen and (max-width: 700px) {
+        width: 100%;
+    }
 
 `
 

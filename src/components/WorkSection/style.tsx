@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: block;
     max-width: 100%;
     width: 100%;
+    margin-top: 100px;
 `
 
 export const ContainerButtons = styled.div`
@@ -11,6 +12,12 @@ export const ContainerButtons = styled.div`
     max-width: 100%;
     width: 50%;
     margin: 200px 0px 0px 110px;
+    
+    @media screen and (max-width: 800px){
+        width: 70%;
+        margin: 0 auto 0 auto;
+        flex-wrap: wrap;
+    }
 `
 
 
@@ -23,7 +30,7 @@ export const WorkButton = styled.button`
     max-width: 100%;
     font-size: 20px;
     margin: 25px auto 25px auto;
-    line-height: 15px;
+    line-height: 30px;
     padding: 15px;
     /* transition: 1s; */
     border: 5px solid transparent;
@@ -43,7 +50,7 @@ export const WorkButton = styled.button`
     } */
 
     @media screen and (max-width: 1300px){
-        margin: 25px 10px 25px 10px;
+        margin: 25px auto 25px auto;
     }
 `
     

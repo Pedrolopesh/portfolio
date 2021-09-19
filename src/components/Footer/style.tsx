@@ -93,7 +93,7 @@ export const HomeButton = styled.button`
     
     @media screen and (max-width: 700px) {
         margin: 40px auto 0px auto;
-        width: 90%;
+        width: 70%;
     }
 `
 

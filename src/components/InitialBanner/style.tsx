@@ -6,6 +6,10 @@ export const Container = styled.div`
     max-width: 100%;
     width: 100%;
 
+    @media screen and (max-width: 1200px){
+        flex-direction: column-reverse;
+    }
+
 `
 
 export const ContainerLeft = styled.div`
@@ -16,14 +20,33 @@ export const ContainerLeft = styled.div`
     @media screen and (max-width: 1200px){
         width: 45%;
     }
+
+    @media screen and (max-width: 800px){
+        width: 100%;
+    }
+`
+
+export const ContainerRigth = styled.div`
+    display: block;
+    max-width: 100%;
+    width: 100%;
+
+    
+    @media screen and (max-width: 800px){
+        width: 100%;
+    }
 `
 
 export const ContainerTexts = styled.div`
     display: block;
     max-width: 100%;
     width: 85%;
-    /* padding: 30px; */
     margin: 200px 0px 0px auto;
+    
+    @media screen and (max-width: 800px){
+        margin: 0px 0px 0px 15px;
+        width: 90%;
+    }
 `
 
 export const ContainerButtons = styled.div`
@@ -65,6 +88,11 @@ export const WorkButton = styled.button`
 export const BannerTitle = styled.h1`
     font-family: 'Roboto';
     color: white;
+    font-size: 50px;
+
+    @media screen and (max-width: 800px){
+        font-size: 35px;
+    }
 `
 
 export const UnderScore = styled.hr`
@@ -82,12 +110,11 @@ export const UnderScore = styled.hr`
 export const TextDescription = styled.p`
     font-family: 'Roboto';
     color: white;
-`
-
-export const ContainerRigth = styled.div`
-    display: block;
-    max-width: 100%;
-    width: 100%;
+    font-size: 22px;
+    
+    @media screen and (max-width: 800px){
+        font-size: 18px;
+    }
 `
 
 export const BgWhite = styled.img`
@@ -117,6 +144,10 @@ export const ContainerAssetsAnimation = styled.div`
 
     @media screen and (max-width: 1200px){
         width: 45%;
+    }
+
+    @media screen and (max-width: 800px){
+        width: 95%;
     }
 `
 
