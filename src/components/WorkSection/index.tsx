@@ -2,12 +2,13 @@ import uxData from '../../utils/works_UX.json'
 import webData from '../../utils/works_web.json'
 import backendData from '../../utils/works_backend.json'
 import { useState, useEffect } from 'react'
-
+import animationLateralScroll from '../../assets/animations/scroll_rigth.gif'
 import { 
     Container, 
     ContainerButtons,
     ContainerWorksSection,
     WorkButton,
+    AnimationRigthScroll,
 } from './style'
 import WorkCard from '../WorkCard'
 
@@ -102,6 +103,9 @@ const WorkSection = () => {
                         )
                     })}
                 </ContainerButtons>
+
+                <AnimationRigthScroll src={animationLateralScroll} alt="animation scroll" />
+
                 <ContainerWorksSection>
                     <WorkCard
                         items={selectedItem}

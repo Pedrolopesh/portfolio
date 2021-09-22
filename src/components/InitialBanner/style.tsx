@@ -117,6 +117,19 @@ export const TextDescription = styled.p`
     }
 `
 
+export const AnimationScroll = styled.img`
+    display: block;
+    max-width: 100%;
+    width: 8%;
+    margin: 20px auto 0px auto;
+
+    @media screen and (max-width: 500px){
+        width: 35%;
+        margin-bottom: 30px;
+    }
+
+`
+
 export const BgWhite = styled.img`
     display: block;
     max-width: 98%;
@@ -157,7 +170,7 @@ export const CubeAnimation = styled.img`
     width: 20%;
     margin: 40px 150px 0px auto;
 
-    animation: animationBarReact-responsive 5s infinite;
+    animation: animationCube-responsive 5s infinite;
     
     @media screen and (max-width: 1900px){
         width: 25%;
@@ -169,7 +182,7 @@ export const CubeAnimation = styled.img`
     }
 
     
-    @keyframes animationBarReact-responsive {
+    @keyframes animationCube-responsive {
         0% { transform: translateY(0px); } 
         50% { transform: translateY(-16px);}
         100% { transform: translateY(0px); }
@@ -182,7 +195,7 @@ export const ComputerAnimation = styled.img`
     width: 40%;
     margin: 10px 0px 0px auto;
     
-    animation: animationBarReact-responsive 5s infinite;  
+    animation: animationComputer-responsive 5s infinite;  
     
     
     @media screen and (max-width: 1900px){
@@ -196,7 +209,7 @@ export const ComputerAnimation = styled.img`
         margin: 0px 20px 0px auto;
     }
 
-    @keyframes animationBarReact-responsive {
+    @keyframes animationComputer-responsive {
         0% { transform: translateY(0px); } 
         50% { transform: translateY(-16px);}
         100% { transform: translateY(0px); }

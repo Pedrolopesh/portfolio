@@ -12,10 +12,12 @@ import {
     BannerTitle,
     UnderScore,
     TextDescription,
+    AnimationScroll,
 } from './style'
 import HomeBG from '../../assets/img/home-bg.png'
 import ComputerAnimationAsset from '../../assets/img/computer.png'
 import CubeAnimationAsset from '../../assets/img/cubeAsset.png'
+import animationScroll from '../../assets/animations/animation_scroll.gif';
 // import { useState } from 'react';
 // import uxData from '../../utils/works_UX.json'
 // import webData from '../../utils/works_web.json'
@@ -89,6 +91,8 @@ const InitialBanner = () => {
                     <BgWhite src={HomeBG}  alt="Home White BG" />
                  </ContainerRigth>
             </Container>
+
+            <AnimationScroll src={animationScroll} alt="animation scroll" />
         </>
     )
 }
