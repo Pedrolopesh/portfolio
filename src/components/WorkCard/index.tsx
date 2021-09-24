@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
+import { useTranslation } from "react-i18next";
 import {
     Card,
     CardHeader,
@@ -16,10 +17,10 @@ import { HiOutlineTerminal } from 'react-icons/hi';
 import { FaDoorOpen } from 'react-icons/fa';
 
 
-const WorkCard = ({ paramEvent, modalState, items }: any) => {
+const WorkCard = ({ paramEvent, modalState, items, workOption }: any) => {
+    const { t } = useTranslation();
+
     const [workItens, setWorkItens]: any[] = useState([])
-    // const [selectedWork, setSelectedWork] = useState(0)
-    // const [responsiveLayout, setResponsiveLayout] = useState(false)
 
     const slider:any = document.querySelector('.items');
     let isDown = false;
@@ -51,7 +52,6 @@ const WorkCard = ({ paramEvent, modalState, items }: any) => {
             const x = e.pageX - slider.offsetLeft;
             const walk = (x - startX) * 3; //scroll-fast
             slider.scrollLeft = scrollLeft - walk;
-            console.log(walk);
         });
 
     }
@@ -61,7 +61,6 @@ const WorkCard = ({ paramEvent, modalState, items }: any) => {
     }
 
     useEffect(() => {
-        console.log('items', items)
         if(items !== undefined){
             if(items.data.length > 0){
                 setWorkItens(items.data)
@@ -73,13 +72,9 @@ const WorkCard = ({ paramEvent, modalState, items }: any) => {
     return (
         <>
             <div className="items">
-                {/* <div className="item item1">
-
-                </div> */}
                 {workItens.map((item:any, index:number) => {
-                    console.log('foi ?')
                     return (
-                        <>
+                        <Fragment key={index}>
                             <Card className="item item2">
                                 <CardHeader>
                                     <HiOutlineTerminal />
@@ -89,26 +84,20 @@ const WorkCard = ({ paramEvent, modalState, items }: any) => {
                                     <WorkImage src={item.image} />
                                     <CardDescription>
                                         <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/works</ComandText> $ {''}
-                                        <TextCard>{item.description}</TextCard>
+                                        {/* <TextCard>{item.description}</TextCard> */}
+                                        <TextCard>{t(`${workOption}_project_description_${index}`)}</TextCard>
                                     </CardDescription>
                                     
                                     <ButtonWork onClick={() => {redirect(items.data[index])}} className="linkButton" target="_blank" href={items.link}>
                                         <FaDoorOpen style={{ color: 'white', fontSize: 20, marginLeft: 'auto' }} /> 
-                                        <ButtonText>Ver mais</ButtonText>
+                                        <ButtonText>{t('button_work_show_more')}</ButtonText>
                                     </ButtonWork>
                                 </ContainerBody>
                             </Card>
-                        </>
+                        </Fragment>
                     )
                 })}
-                {/* <div className="item item3"></div>
-                <div className="item item4"></div>
-                <div className="item item5"></div>
-                <div className="item item6"></div>
-                <div className="item item7"></div>
-                <div className="item item8"></div>
-                <div className="item item9"></div>
-                <div className="item item10"></div> */}
+
             </div>
         </>
     )

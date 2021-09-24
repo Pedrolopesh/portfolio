@@ -1,8 +1,9 @@
 import uxData from '../../utils/works_UX.json'
 import webData from '../../utils/works_web.json'
 import backendData from '../../utils/works_backend.json'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import animationLateralScroll from '../../assets/animations/scroll_rigth.gif'
+import { useTranslation } from "react-i18next";
 import { 
     Container, 
     ContainerButtons,
@@ -17,9 +18,12 @@ interface IOprtions {
 }
 
 const WorkSection = () => {
+    const { t } = useTranslation();
+
     const [visibleModal, setVisibleModal] = useState(false)
     const [selectedItem, setSelectedItem]:any = useState(uxData)
     const [selectedButton, setSelectedButton]:any = useState(0)
+    const [selectedOption, setSelectedOption]:any = useState('ux')
 
     const options: IOprtions[] = [
         {
@@ -36,20 +40,20 @@ const WorkSection = () => {
     const openUXModal = () => {
         setVisibleModal(true)
         setSelectedItem(uxData)
-        lockScroll()
+        setSelectedOption('ux')
     }
     
 
     const openWebModal = () => {
         setVisibleModal(true)
         setSelectedItem(webData)
-        lockScroll()
+        setSelectedOption('web')
     }
 
     const openBackendModal = () => {
         setVisibleModal(true)
         setSelectedItem(backendData)
-        lockScroll()
+        setSelectedOption('backend')
     }
 
     
@@ -57,12 +61,6 @@ const WorkSection = () => {
         setVisibleModal(modalState)
     }
 
-    const lockScroll = () => {
-        console.log(visibleModal, selectedItem)
-        // const bodyLocator:any = document.querySelector("body")
-        // bodyLocator.setAttribute("style", "overflow: hidden");
-        // window.scrollTo({top: 0, behavior: 'smooth'});
-    }
 
     const switchOption = (option: string, index:any) => {
         if(option === 'Trabalhos Design') openUXModal()
@@ -82,7 +80,7 @@ const WorkSection = () => {
                 <ContainerButtons>
                     {options.map((value:IOprtions, index:number) => {
                         return (
-                            <>
+                            <Fragment key={index}>
                                 <WorkButton
                                     style={{
                                         border: (selectedButton === index) ? '5px solid' :'',
@@ -93,13 +91,12 @@ const WorkSection = () => {
                                         switchOption(value.options, index) 
                                     }}
                                 > 
-                                    {value.options}
+                                    {t(`button_work_text_`+index)}
+
                                 </WorkButton>
-
-
-                    {/* <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton> */}
-                    {/* <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton> */}
-                            </>
+                                {/* <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton> */}
+                                {/* <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton> */}
+                            </Fragment>
                         )
                     })}
                 </ContainerButtons>
@@ -109,6 +106,7 @@ const WorkSection = () => {
                 <ContainerWorksSection>
                     <WorkCard
                         items={selectedItem}
+                        workOption={selectedOption}
                         paramEvent={listenChieldEvent}
                         modalState={visibleModal}
                     />

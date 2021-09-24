@@ -1,0 +1,44 @@
+{
+    "welcome_to_React": "Welcome to react-i18next",
+    "title_banner": "Pedro Lopes",
+    "overview_text_banner": "Hello, I'm pedro Lopes, designer e software developer, feel free to met more about me and my projects.",
+    "first_section_title":"Who am I?",
+    "first_modal_title":"Personal trajectory",
+    "first_terminal_path_source":"personal",
+    "first_terminal_description_0": " I start at tecnology through Quality and assurance job doing tests in financial products, after I implement maintenance in frontend of this products, in this moment i learn some javascript frameworks like vue.js, react, react-native and angular.",
+    "first_terminal_description_1":"With the javascript knowledge, I start learning agil skills and improve my workflow and management of projects, next I studied backend programing languages and frameworks  like java with spring boot, Hibernate and javascript with node js, express, next js, loopback. Finally with this backend knowledge I studied some database functionalities with NOSQL and MYSQL.",
+    
+    "second_modal_title":"Professional experience",
+    "second_terminal_path_source":"professional",
+    "second_terminal_description_0":" Currently I work as full stack developer, I am in the way to graduate in software engineer at USC (University  of state Santa Catarina) I have 3 years of experience in frontend development  ans 2 years of experience in cakend development, I have done personal projects with javascript knowledge improving project and my software skills ",
+    "second_terminal_description_1":"I have certificate in Graphic Design that helped me to improve my software skills and user interface (UI) and user experience (UX) having a diversified knowledge, now I still always learning design tools and software technologies with focus at user experience",
+
+    "skills_modal_title":"Software Skills",
+
+    "button_work_text_0":"Design projects",
+    "button_work_text_1":"Web projects",
+    "button_work_text_2":"Backend projects",
+
+    "ux_project_description_0":"the UX/UI of these project was made from an exercise in process software class at university, the idea is help homeless animals that can be in danger...",
+    "ux_project_description_1":"Match Coder is a UX/UI project was made from an exercise in process software class at university, the idea is to create a software that relate a job candidate and software companies...",
+    "ux_project_description_2":"This UX/UI was created from a requirements list at project interface class on university, the idea is warn people from natural disasters that can be happening near user location...",
+    "ux_project_description_3":"Educa Cred is a UX/UI project was made from a company challenge to proposal a financial solution for people that don't have much money based on requirements prototype...",
+    
+    "web_project_description_0":"Link Leito it's app that has functionalities to attend patients from a hospital, the idea is reduce hospitalization time and all health professionals can see the patient flow...",
+    "web_project_description_1":"The chat app it's an aplication of chat messages, this project was made with vue js, node js and socket io to have a real time communication and the database is mongo db...",
+    "web_project_description_2":"Quizz Game it's a question and answer game, the idea is create questions that focus in important tests in Brazil and all question count points, was created in javascript...",
+    "web_project_description_3":"Pet System it's admin system developed for a pet shop managment, the system was created with pure HTML, CSS javascript without any framework... ",
+    "web_project_description_4":"AdmitOne it's a project that recreating the home page of the web page https://admitone.com/ ,it was a frontend challenge to a frontend job interview...",
+
+    "backend_project_description_0":"This Project was create with node js, mongodb, express js to make easy way built an API application to management data  and points from the players  of quizz game app, there is unit tests running on this app too...",
+    "backend_project_description_1":"This API was created with node js, express framework, cloudinary for upload images, mongo db as data base and socket io for real time communication for chat messages work on the-chat-app, there is unit tests running on this app too...",
+    "backend_project_description_2":"This API was created with node js express framework, cloudinary for upload images and nodemailer to send emails, the ideia, the ideia is to create a management images and emails, there is unit tests running on this app too...",
+    "backend_project_description_3":"This API was created in java with spring boot, the idea of this app is to management data of link-leito app, sending, receiving and treating patient data having all hospital flow control...",
+
+    "button_work_show_more":"show more",
+
+    "footer_section_title":"Contact me",
+
+    "footer_button_home":"back home"
+
+}

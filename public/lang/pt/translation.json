@@ -1,0 +1,44 @@
+{
+    "welcome_to_React": "Bem vindo ao react-i18next",
+    "title_banner": "Pedro Lopes",
+    "overview_text_banner": "Olá, sou pedro Lopes, designer e programador, fique a vontade para conhecer mais sobre mim e mus trabalhos.",
+    "first_section_title":"Quem sou eu?",
+    "first_modal_title":"Trajetória pessoal",
+    "first_terminal_path_source":"pessoal",
+    "first_terminal_description_0":" Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular.",
+    "first_terminal_description_1":"Em paralelo estudando ferramentas ágeis para aprimorar nos processos e gerenciamento do tempo, em seguida estudei linguagens e frameworks backend como o node js, express, nest js e loopback 4, por fim, junto a este conhecimentos em API's fiz a criação de alguns esquemas e funcionalidades em banco de dados NOSQL e MYSQL.",
+    
+    "second_modal_title":"Experiência profissional",
+    "second_terminal_path_source":"profissional",
+    "second_terminal_description_0":" Atualmente atuo como desenvolvedor FullStack, estou cursando graduação em engenharia de software na UDESC (Universidade estadual de Santa Catarina) e possuo 3 anos de experiência em desenvolvimento frontend e 2 ano e meio de conhecimento em backend, realizei projetos pessoais utilizando frameworks javascripts buscando sempre uma melhor qualificação.",
+    "second_terminal_description_1":"Obtive certificação em design gráfico, me ajudando a desenvolver minhas soft skills e a ter um conhecimento diversificado, isto tem me favorecido com relação ao visual e experiência do usuário. Atualmente sigo estudando mais ferramentas de design e ênfase com a experiÊncia do usuário.",
+
+    "skills_modal_title":"Software Skills",
+
+    "button_work_text_0":"Trabalhos Design",
+    "button_work_text_1":"Trabalhos Web",
+    "button_work_text_2":"Trabalhos Backend",
+
+    "ux_project_description_0":"O UX/UI desse projeto foi feito a partir de uma atividade da aula de processos de software da faculdade, propõe um app para ajudar animais que estão em situações de rua ou mesmo que correm algum perigo ...",
+    "ux_project_description_1":"Match Coder é um projeto de UX/UI feito de uma atividade da aula de processos de software da faculdade, a ideia desse software é fazer um sistema de relacionamento entre empresa e canditado da área de software ...",
+    "ux_project_description_2":"Esse projeto UX/UI foi criado a partir de uma lista de re4quisitos proposta pelo professor de Projetos de interface da faculdade, tem a ideia de avisar a população de desastres naturais que poderm estar acontecendo ...",
+    "ux_project_description_3":"Educa Cred é um projeto de UX/UI feito de um desafio proposto pelo SERASA para propor uma solução financeira para a população, baseado em alguns requisitos porpóstos pelo coordenador da vaga ...",
+    
+    "web_project_description_0":"Link Leito é um aplicativo que consiste em uma gama de utilidades para atender a pacientes de um hospital de maneira mais eficiente e rápida permitindo todos os profissionais visualizem e interagam com o processo do paciente...",
+    "web_project_description_1":"The chat app é um aplicativo de mensagens por chat, esse projeto foi desenvolvido com tecnologia web como vue js, node js, e socket io para uma comunicação em tempo real e um banco de dados em mongo DB...",
+    "web_project_description_2":"Quizz Game é um aplicativo idealizado através de uma atividade da matéria de introdução a engenharia de software, o aplicativo propõe um jogo com matérias voltadas para vestibulares do brasil, desenvolvido com tecnologias web mais atuais...",
+    "web_project_description_3":"Pet System é um sistema que foi desenvolvido para gestão de um pet shop, esse sistema foi criado com HTML, CSS e javascript puro sem a utlização de nenhum Framework... ",
+    "web_project_description_4":"AdmitOne é um projeto a partir de um desafio para uma vaga como desenvolvedor frontend, o desafio propõe recriar a página do site da empresa https://admitone.com/ ...",
+
+    "backend_project_description_0":"Esse projeto foi desenvolvido com node js, mongo DB utilizando express como um facilitador para a construção da aplicação, neste projeto existe também a implementação de testes unitários...",
+    "backend_project_description_1":"Essa API foi desenvolvida com node js, express, cloudinary para uploads, mongo DB como banco de dados e socket io para comunicação em tempo real, neste projeto existe também a implementação de testes unitários... ",
+    "backend_project_description_2":"Essa API foi desenvolvida com node js, express, cloudinary para uploads e nodemailer para envio de emails, neste projeto existe também a implementação de testes unitários...",
+    "backend_project_description_3":"Essa API foi desenvolvida com java com spring boot, neste projeto consiste em recriar as funcionalidades do link leito para controle de um hospital...",
+
+    "button_work_show_more":"Ver mais",
+
+    "footer_section_title":"Entre em contato",
+
+    "footer_button_home":"Voltar ao inicio"
+
+}

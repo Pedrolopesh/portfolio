@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { 
     Container,
     FooterTitle,
@@ -10,6 +12,7 @@ import {
 } from './style'
 
 const Footer = () => {
+    const { t } = useTranslation();
 
     const scrollToTop = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -17,7 +20,7 @@ const Footer = () => {
 
     return (
         <Container>
-            <FooterTitle> Entre em contato </FooterTitle>
+            <FooterTitle>{t('footer_section_title')}</FooterTitle>
 
             <ContainerButtons>
                 
@@ -37,7 +40,7 @@ const Footer = () => {
 
                 <HomeButton onClick={() => { scrollToTop() }}>
                     <HomeLogo src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577758/portfolio/icons/home_vao1ix.png'} alt="Home"/>
-                    <ButtonText> Voltar ao inicio </ButtonText> 
+                    <ButtonText> {t('footer_button_home')} </ButtonText> 
                 </HomeButton>
 
         </Container>

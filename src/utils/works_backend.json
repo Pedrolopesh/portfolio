@@ -3,25 +3,25 @@
         {
             "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631331316/portfolio/quizz-api_uoznr5.png",
             "title":"Quest Game API",
-            "description":"Esse projeto foi desenvolvido com node js, mongo DB utilizando express como um facilitador para a construção da aplicação, neste projeto existe também a implementação de testes unitários...",
+            "description":"backend_project_description_0",
             "link": "https://github.com/Pedrolopesh/quest-game-api"
         },
         {
             "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631331316/portfolio/chat-api_dlhirv.png",
             "title":"The chat API",
-            "description":"Essa API foi desenvolvida com node js, express, cloudinary para uploads, mongo DB como banco de dados e socket io para comunicação em tempo real, neste projeto existe também a implementação de testes unitários... ",
+            "description":"backend_project_description_1",
             "link": "https://github.com/Pedrolopesh/the-chat-api"
         },
         {
             "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631331316/portfolio/the-chat-api_gkug1f.png",
             "title":"Public Services",
-            "description":"Essa API foi desenvolvida com node js, express, cloudinary para uploads e nodemailer para envio de emails, neste projeto existe também a implementação de testes unitários...",
+            "description":"backend_project_description_3",
             "link": "https://github.com/Pedrolopesh/public-services"
         },
         {
             "image":"https://res.cloudinary.com/publi-node-uploads/image/upload/v1631331316/portfolio/management-api_ql4mul.png",
             "title":"management Hospital",
-            "description":"Essa API foi desenvolvida com java com spring boot, neste projeto consiste em recriar as funcionalidades do link leito para controle de um hospital...",
+            "description":"backend_project_description_4",
             "link": "https://github.com/Pedrolopesh/management-hospital"
         }
     ]

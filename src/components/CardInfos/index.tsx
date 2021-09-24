@@ -21,9 +21,10 @@ import AnimationAssetCode from '../../assets/animations/animation_walking.gif'
 import AnimationAssetWork from '../../assets/animations/animation_work1.gif'
 import SkillsAnimation from '../SkillsAnimation'
 import { HiOutlineTerminal } from 'react-icons/hi';
+import { useTranslation } from "react-i18next";
 
 const CardInfos = () => {
-
+    const { t } = useTranslation();
     // const defaultOptions = {
     //     loop: true,
     //     autoplay: true, 
@@ -37,7 +38,7 @@ const CardInfos = () => {
         <>
             <Container>
                 <ContainerTitle>
-                    <SectionTitle>Quem sou eu?</SectionTitle>
+                    <SectionTitle>{t('first_section_title')}</SectionTitle>
                 </ContainerTitle>
 
                 <ContainerCardsInfo>
@@ -45,19 +46,17 @@ const CardInfos = () => {
                         <Card style={{ margin: '0px 20px 0px auto' }}>
                             <ContainerHeader>
                                 <HiOutlineTerminal />
-                                <TitleCard>Trajetória pessoal</TitleCard>
+                                <TitleCard>{t('first_modal_title')}</TitleCard>
                             </ContainerHeader>
                             {/* <Separate /> */}
 
                             <ContainerBody>
                                 <CardDescription>
-                                    <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/pessoal</ComandText> $
-                                    Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, 
-                                    nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular. 
+                                    <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/{t('first_terminal_path_source')}</ComandText> $
+                                    {t('first_terminal_description_0')}
                                     <br />
                                     <br />
-                                    Em paralelo estudando ferramentas ágeis para aprimorar nos processos e gerenciamento do tempo, em seguida estudei linguagens e frameworks backend como o node js, express, nest js e loopback 4, por fim, 
-                                    junto a este conhecimentos em API's fiz a criação de alguns esquemas e funcionalidades em banco de dados NOSQL e MYSQL.
+                                    {t('first_terminal_description_1')}
                                 </CardDescription>
                             </ContainerBody>
                         </Card>
@@ -72,17 +71,15 @@ const CardInfos = () => {
                             {/* <Separate /> */}
                             <ContainerHeader>
                                 <HiOutlineTerminal />
-                                <TitleCard>Experiência profissional</TitleCard>
+                                <TitleCard>{t('second_modal_title')}</TitleCard>
                             </ContainerHeader>
                             <ContainerBody>
                                 <CardDescription>
-                                    <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/profissional</ComandText> $
-                                    Atualmente atuo como desenvolvedor FullStack, estou cursando graduação em engenharia de software na UDESC (Universidade estadual de Santa Catarina) e possuo 2 anos de experiência em desenvolvimento frontend e 1 ano e meio de conhecimento em backend,
-                                    realizei projetos pessoais utilizando frameworks javascripts buscando sempre uma melhor qualificação. 
+                                    <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/{t('second_terminal_path_source')}</ComandText> $
+                                    {t('second_terminal_description_0')}
                                     <br />
                                     <br />
-                                    Obtive certificação em design gráfico, me ajudando a desenvolver minhas soft skills e a ter um conhecimento diversificado, isto tem me favorecido com relação ao visual e experiência do usuário. Atualmente sigo estudando mais ferramentas de design e ênfase
-                                    com a experiÊncia do usuário.
+                                    {t('second_terminal_description_1')}
                                 </CardDescription>
                             </ContainerBody>
                         </Card>
@@ -94,7 +91,7 @@ const CardInfos = () => {
                     <CardSkills>
                         <ContainerHeader>
                                 <HiOutlineTerminal />
-                                <TitleCard>Software Skills</TitleCard>
+                                <TitleCard>{t('skills_modal_title')}</TitleCard>
                             </ContainerHeader>
                         {/* <Separate /> */}
                         <SkillsAnimation />

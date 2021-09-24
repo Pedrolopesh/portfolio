@@ -75,7 +75,7 @@ export const WorkLogo = styled.img`
 `
 
 export const HomeButton = styled.button`
-    width: 200px;
+    width: 300px;
     padding: 20px;
     border: none;
     display: flex;

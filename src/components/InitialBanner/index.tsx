@@ -18,69 +18,23 @@ import HomeBG from '../../assets/img/home-bg.png'
 import ComputerAnimationAsset from '../../assets/img/computer.png'
 import CubeAnimationAsset from '../../assets/img/cubeAsset.png'
 import animationScroll from '../../assets/animations/animation_scroll.gif';
-// import { useState } from 'react';
-// import uxData from '../../utils/works_UX.json'
-// import webData from '../../utils/works_web.json'
-// import backendData from '../../utils/works_backend.json'
-// import ModalWork from '../ModalWork';
-
+import { useTranslation } from "react-i18next";
 
 const InitialBanner = () => {
-    // const [visibleModal, setVisibleModal] = useState(false)
-    // const [selectedItem, setSelectedItem]:any = useState(uxData)
-
-    // const openUXModal = () => {
-    //     setVisibleModal(true)
-    //     setSelectedItem(uxData)
-    //     lockScroll()
-    // }
-    
-
-    // const openWebModal = () => {
-    //     setVisibleModal(true)
-    //     setSelectedItem(webData)
-    //     lockScroll()
-    // }
-
-    // const openBackendModal = () => {
-    //     setVisibleModal(true)
-    //     setSelectedItem(backendData)
-    //     lockScroll()
-    // }
-
-    // const listenChieldEvent = (modalState: boolean) => {
-    //     setVisibleModal(modalState)
-    // }
-
-    // const lockScroll = () => {
-    //     console.log(visibleModal, selectedItem)
-    //     // const bodyLocator:any = document.querySelector("body")
-    //     // bodyLocator.setAttribute("style", "overflow: hidden");
-    //     // window.scrollTo({top: 0, behavior: 'smooth'});
-    // }
+    const { t } = useTranslation();
 
     return (
         <>
-            {/* <ModalWork
-                items={selectedItem} 
-                paramEvent={listenChieldEvent}
-                modalState={visibleModal}
-            /> */}
+
             <Container>
                  <ContainerLeft>
                     <ContainerTexts>
-                        <BannerTitle> Pedro Lopes </BannerTitle>
-                        <UnderScore />
-                        <TextDescription>
-                            Olá, sou pedro Lopes, designer e programador, fique a vontade para conhecer mais sobre mim e mus trabalhos.
-                        </TextDescription>
-                    </ContainerTexts>
 
-                    {/* <ContainerButtons>
-                        <WorkButton onClick={() => {openUXModal()} }> Trabalhos Design </WorkButton>
-                        <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton>
-                        <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton>
-                    </ContainerButtons> */}
+                        {/* <BannerTitle> Pedro Lopes </BannerTitle> */}
+                        <BannerTitle> {t('title_banner')} </BannerTitle>
+                        <UnderScore />
+                        <TextDescription>{t('overview_text_banner')}</TextDescription>
+                    </ContainerTexts>
                  </ContainerLeft>
 
                  <ContainerRigth>
