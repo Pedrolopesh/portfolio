@@ -1,0 +1,121 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: absolute; */
+  /* min-height: 365vh; */
+  max-width: 100%;
+  display: block;
+  width: 100%;
+
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
+  background-size: 300% 300%;
+  animation: gradient 5s ease infinite;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ac{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.cp{
+  cursor: pointer;
+}
+
+/* .show-bg-modal {
+  display: block !important;
+  animation: showBgModal 1s ease;
+}
+
+@keyframes showBgModal {
+  0% { opacity: 0; }
+  100% { opacity: 100%;}
+}
+
+.hide-bg-modal {
+  display: none !important;
+  transition: 1s;
+} */
+
+/* .show-modal {
+  transition: 1s;
+  animation: showModal 1s ease;
+}
+
+@keyframes showModal {
+  0% {
+      opacity: 0;
+      transform: translatey(-130%);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translatey(0%);
+  }
+      
+} */
+
+.hide-modal {
+  display: none !important;
+}
+
+.hidden-modal {
+  display: none !important;
+}
+
+.selectedBG{
+  transition: 0.5s !important;
+  border-image: linear-gradient(to left, #743ad5, #d53a9d) !important;
+  border-image-slice: 1 !important;
+  box-shadow: 5px 5px 16px #000000 !important;
+}
+
+.selectedBG-0{
+  transition: 1s !important;
+  background: linear-gradient(to right,#2d002d ,#350040);
+}
+
+.selectedBG-1{
+  transition: 1s !important;
+  background: linear-gradient(to right, #360043, #3e0056);
+}
+
+.selectedBG-2{
+  transition: 1s !important;
+  background: linear-gradient(to right, #360043, #3e0056);
+}
+
+.selectedBG-3{
+  transition: 1s !important;
+  background: linear-gradient(to right, #3f0058, #47006b);
+}
+
+.selectedBG-4{
+  transition: 1s !important;
+  background: linear-gradient(to right, #3f0058, #47006b);
+}

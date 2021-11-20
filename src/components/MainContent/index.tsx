@@ -1,8 +1,8 @@
-import InitialBanner from "../InitialBanner";
+import InitialBanner from "./InitialBanner";
 import { Container } from './style';
-import CardInfos from "../CardInfos";
-import WorkSection from "../WorkSection";
-import Footer from '../Footer';
+import CardInfos from "./CardInfos";
+import WorkSection from "./WorkSection";
+// import Footer from './Footer';
 
 const MainContent = () => {
     return (
@@ -11,7 +11,7 @@ const MainContent = () => {
                 <InitialBanner/>
                 <CardInfos />
                 <WorkSection />
-                <Footer />
+                {/* <Footer /> */}
             </Container>
         </>
     )
