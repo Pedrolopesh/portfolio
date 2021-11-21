@@ -1,7 +1,8 @@
 import { FlexContainer, LeftContainer, RigthContainer } from './style'
 import { useEffect, useState, Fragment } from "react";
 import SkillBar from '../SkillBar';
-import { SkillType } from '../../typings/skillType';
+import { SkillType } from '../../../typings/skillType';
+import Style from '../../../styles/mainStyles/SkillAnimation.module.css'
 
 const SkillsAnimation = () => {
 
@@ -66,8 +67,8 @@ const SkillsAnimation = () => {
 
     return (
         <>
-            <FlexContainer>
-                <LeftContainer>
+            <div className={Style.FlexContainer}>
+                <div className={Style.LeftContainer}>
                     {skillData.map((item: SkillType, index:number) => {
                         return(
                             <Fragment key={index}>
@@ -75,9 +76,9 @@ const SkillsAnimation = () => {
                             </Fragment>
                         )
                     })}
-                </LeftContainer>
+                </div>
 
-                <RigthContainer>
+                <div className={Style.RigthContainer}>
                     {skillData.map((item: SkillType, index:number) => {
                         return(
                             <Fragment key={index}>
@@ -85,8 +86,8 @@ const SkillsAnimation = () => {
                             </Fragment>
                         )
                     })}
-                </RigthContainer>
-            </FlexContainer>
+                </div>
+            </div>
         </>
     )
 }

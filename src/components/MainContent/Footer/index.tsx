@@ -1,15 +1,5 @@
 import { useTranslation } from "react-i18next";
-
-import { 
-    Container,
-    FooterTitle,
-    ContainerButtons, 
-    WorkButtons, 
-    WorkLogo,
-    ButtonText,
-    HomeLogo,
-    HomeButton,
-} from './style'
+import Style from '../../../styles/mainStyles/Footer.module.css'
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -19,31 +9,31 @@ const Footer = () => {
     }
 
     return (
-        <Container>
-            <FooterTitle>{t('footer_section_title')}</FooterTitle>
+        <div className={Style.Container}>
+            <h1 className={Style.FooterTitle}>{t('footer_section_title')}</h1>
 
-            <ContainerButtons>
+            <div className={Style.ContainerButtons}>
                 
-                <WorkButtons target="_blank" href="mailto: pedrolopeshls@gmail.com">
-                    <WorkLogo src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/gmail_ou0olp.png'} alt=""/> 
-                </WorkButtons>
+                <a className={Style.WorkButtons} target="_blank" href="mailto: pedrolopeshls@gmail.com">
+                    <img className={Style.WorkLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/gmail_ou0olp.png'} alt=""/> 
+                </a>
 
-                <WorkButtons target="_blank" href="https://www.behance.net/pedrohenrique139">
-                    <WorkLogo src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/behance_nvbffv.png'} alt=""/> 
-                </WorkButtons>
+                <a className={Style.WorkButtons} target="_blank" href="https://www.behance.net/pedrohenrique139">
+                    <img className={Style.WorkLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/behance_nvbffv.png'} alt=""/> 
+                </a>
 
-                <WorkButtons target="_blank" href="https://www.linkedin.com/in/pedro-lopes-50b3b818a/">
-                    <WorkLogo src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/linkedin_txj3bg.png'} alt=""/> 
-                </WorkButtons>
+                <a className={Style.WorkButtons} target="_blank" href="https://www.linkedin.com/in/pedro-lopes-50b3b818a/">
+                    <img className={Style.WorkLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/linkedin_txj3bg.png'} alt=""/> 
+                </a>
 
-            </ContainerButtons>
+            </div>
 
-                <HomeButton onClick={() => { scrollToTop() }}>
-                    <HomeLogo src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577758/portfolio/icons/home_vao1ix.png'} alt="Home"/>
-                    <ButtonText> {t('footer_button_home')} </ButtonText> 
-                </HomeButton>
+                <button className={Style.HomeButton} onClick={() => { scrollToTop() }}>
+                    <img className={Style.HomeLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577758/portfolio/icons/home_vao1ix.png'} alt="Home"/>
+                    <span className={Style.ButtonText}> {t('footer_button_home')} </span> 
+                </button>
 
-        </Container>
+        </div>
     )
 }
 

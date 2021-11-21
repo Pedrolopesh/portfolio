@@ -1,0 +1,40 @@
+.FlexContainer{
+    display: flex;
+    max-width: 100%;
+    margin: 25px 0px 25px 0px;
+}
+
+
+@media screen and (max-width: 700px){
+    .FlexContainer{
+        flex-direction: column;
+    }
+}
+
+
+
+.LeftContainer{
+    display: block;
+    max-width: 100%;
+    width: 50%;
+}
+
+
+@media screen and (max-width: 700px){
+    .LeftContainer{
+        width: 100%;
+    }
+}
+
+
+.RigthContainer{
+    display: block;
+    max-width: 100%;
+    width: 50%;
+}
+
+@media screen and (max-width: 700px){
+    .RigthContainer{
+        width: 100%;
+    }
+}

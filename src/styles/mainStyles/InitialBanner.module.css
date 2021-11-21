@@ -1,0 +1,276 @@
+.Container{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+} 
+
+@media screen and (max-width: 1200px){
+    .Container{
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+.ContainerLeft{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+} 
+
+
+@media screen and (max-width: 1200px){
+    .ContainerLeft{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .ContainerLeft{
+        width: 100%;
+    }
+}
+
+
+.ContainerRigth{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+} 
+
+
+    
+@media screen and (max-width: 800px){
+    .ContainerRigth{
+        width: 100%;
+    }
+}
+
+
+.ContainerTexts{
+    display: block;
+    max-width: 100%;
+    width: 85%;
+    margin: 200px 0px 0px auto;
+} 
+
+    
+@media screen and (max-width: 800px){
+    .ContainerTexts{
+        margin: 0px 0px 0px 15px;
+        width: 90%;
+    }
+}
+
+
+.ContainerButtons{
+    display: flex;
+    max-width: 100%;
+    width: 85%;
+    /* padding: 30px; */
+    margin: 200px 0px 0px auto;
+} 
+
+
+
+.WorkButton{
+    width: 250px;
+    border: none;
+    padding: 15px;
+    display: block;
+    color: white;
+    transition: 1s;
+    max-width: 100%;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 25px auto 25px auto;
+    box-shadow: 4px 5px 10px #19002fa6;
+    background: linear-gradient(to right, #e2986a, #25067d);
+    flex-wrap: wrap;
+}
+
+
+.WorkButton:nth-child(2){
+    background: linear-gradient(to right, #25067d, #e2986a);
+}
+    
+
+.WorkButton:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1300px){
+    .WorkButton{
+        margin: 25px 10px 25px 10px;
+    }
+}
+
+
+.BannerTitle{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 800px){
+    .BannerTitle{
+        font-size: 35px;
+    }
+}
+
+
+.UnderScore{
+    max-width: 100%;
+    display: block;
+    width: 40%;
+    margin: 0px auto 0px 0px;
+    height: 7px;
+    border-radius: 100px;
+    background: linear-gradient(to right, #e2986a, #25067d);
+    border: none;
+}
+
+
+
+
+.TextDescription{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 22px;
+}
+
+    
+@media screen and (max-width: 800px){
+    .TextDescription{
+        font-size: 18px;
+    }
+}
+
+
+.AnimationScroll{
+    display: block;
+    max-width: 100%;
+    width: 8%;
+    margin: 20px auto 0px auto;
+}
+
+
+@media screen and (max-width: 500px){
+    .AnimationScroll{
+        width: 35%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+.BgWhite{
+    display: block;
+    max-width: 98%;
+    width: 80%;
+    margin: 0px 0px 0px auto;
+}
+
+
+@media screen and (max-width: 1300px){
+    .BgWhite{
+        width: 100%;
+    }
+}
+
+
+.ContainerAssetsAnimation{
+    display: block;
+    max-width: 100%;
+    position: absolute;
+    width: 45%;
+
+} 
+
+@media screen and (max-width: 1900px){
+    .ContainerAssetsAnimation {
+       width: 40%;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .ContainerAssetsAnimation {
+       width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .ContainerAssetsAnimation {
+       width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .ContainerAssetsAnimation {
+       width: 95%;
+    }
+}
+
+
+.CubeAnimation{
+    display: block;
+    max-width: 100%;
+    width: 20%;
+    margin: 40px 150px 0px auto;
+
+    animation: animationCube-responsive 5s infinite;
+}
+
+    
+@media screen and (max-width: 1900px){
+    .CubeAnimation{
+        width: 25%;
+        margin: 40px 20px 0px auto;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .CubeAnimation{
+        margin: 20px 165px 0px auto;
+    }
+}
+
+
+@keyframes animationCube-responsive {
+    0% { transform: translateY(0px); } 
+    50% { transform: translateY(-16px);}
+    100% { transform: translateY(0px); }
+}
+
+
+.ComputerAnimation{
+    display: block;
+    max-width: 100%;
+    width: 40%;
+    margin: 10px 0px 0px auto;
+    
+    animation: animationComputer-responsive 5s infinite;  
+}
+
+    
+
+@media screen and (max-width: 1900px){
+    .ComputerAnimation{
+        /* width: 55%; */
+        margin: 10px 0px 0px auto;
+        /* margin: 10px ​0px 0px auto; */
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .ComputerAnimation{        
+        width: 55%;
+        margin: 0px 20px 0px auto;
+    }
+}
+
+@keyframes animationComputer-responsive {
+    0% { transform: translateY(0px); } 
+    50% { transform: translateY(-16px);}
+    100% { transform: translateY(0px); }
+}

@@ -1,0 +1,187 @@
+.Container {
+    display: block;
+    max-width: 100%;
+    margin-top: 150px;
+    /* top: 130%; */
+    /* position: absolute; */
+}
+ 
+@media (max-width: 400px) {
+    .Container{
+        top: 150%;
+    }
+}
+
+.ContainerCardsInfo {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    /* top: 160%; */
+    /* position: absolute; */
+}
+
+
+.ContainerTitle {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+.SectionTitle {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin: 0px auto 120px auto;
+}
+
+.CardContainer {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: inherit !important;
+    /* top: 160%; */
+    /* position: absolute; */
+}
+
+.CardContainer:first-child{
+    flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 700px){
+    .CardContainer{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+
+.CardSkillsContainer {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+}
+
+
+.Card {
+    display: block;
+    max-width: 100%;
+    background: #2d0922;
+    width: 55%;
+    border-radius: 15px;
+    /* left: 10%; */
+}
+
+@media screen and (max-width: 1000px){
+    .Card{
+        width: 85%;
+    }
+} 
+
+@media screen and (max-width: 700px){
+    .Card {    
+        width: 95%;
+        margin: 20px auto 0px auto !important;
+    }
+}
+
+.ContainerHeader {
+    display: flex;
+    color: white;
+    align-items: center;
+    background-color: #2E2E2E;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+
+.ContainerHeader svg {
+    font-size: 30px;
+}
+
+.ContainerBody {
+    display: block;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.CardSkills {
+    display: block;
+    max-width: 100%;
+    width: 85%;
+    background: #2d0922;
+    border-radius: 15px;
+    margin: 0px auto 0px auto;
+}
+
+@media screen and (max-width: 1000px){
+    .CardSkills{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .CardSkills{
+        width: 95%;
+    }
+}
+
+.TitleCard {
+    margin: 0;
+    display: block;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin: 0px 0px 0px 10px;
+}
+
+
+.Separate {
+    display: inline-block;
+    max-width: 100%;
+    width: 40%;
+}
+
+
+.CardDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: white;
+}
+
+
+.ComandText {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: #8ae234;
+}
+
+
+.AnimationTest {
+    width: 20%;
+    display: block;
+    max-width: 100%;
+    border-radius: 15px;
+    margin: 0px auto 0px 20px;
+}
+
+
+@media screen and (max-width: 1400px){
+    .AnimationTest{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .AnimationTest{
+        width: 40%;
+    }   
+}
+
+@media screen and (max-width: 700px){
+    .AnimationTest{
+        margin: 0px auto 0px auto !important;
+        width: 80%;
+    }
+}

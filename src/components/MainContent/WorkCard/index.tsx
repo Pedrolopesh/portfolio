@@ -1,17 +1,6 @@
 import React, { useState, useEffect, Fragment, useRef } from 'react'
 import { useTranslation } from "react-i18next";
-import {
-    Card,
-    CardHeader,
-    TitleCard,
-    ContainerBody,
-    WorkImage,
-    CardDescription,
-    ComandText,
-    TextCard,
-    ButtonWork,
-    ButtonText
-} from './style'
+
 import Styles from '../../../styles/WorkCard.module.css'
 import { HiOutlineTerminal } from 'react-icons/hi';
 import { FaDoorOpen } from 'react-icons/fa';
@@ -109,25 +98,25 @@ const WorkCard = ({ paramEvent, modalState, items, workOption }: any) => {
                 {workItens.map((item:any, index:number) => {
                     return (
                         <Fragment key={index}>
-                            <Card className={`${Styles.item2} ${Styles.item}`}>
-                                <CardHeader>
+                            <div className={`${Styles.item2} ${Styles.item} ${Styles.Card}`}>
+                                <div className={Styles.CardHeader}>
                                     <HiOutlineTerminal />
-                                    <TitleCard>{item.title}</TitleCard>
-                                </CardHeader>
-                                <ContainerBody>
-                                    <WorkImage src={item.image} />
-                                    <CardDescription>
-                                        <ComandText> pedro@linux-desktop</ComandText>:<ComandText style={{ color: '#3478FF' }}> ~/works</ComandText> $ {''}
+                                    <h1 className={Styles.TitleCard}>{item.title}</h1>
+                                </div>
+                                <div className={Styles.ContainerBody}>
+                                    <img className={Styles.WorkImage} src={item.image} />
+                                    <div className={Styles.CardDescription}>
+                                        <span className={Styles.ComandText}> pedro@linux-desktop</span>:<span className={Styles.ComandText} style={{ color: '#3478FF' }}> ~/works</span> $ {''}
                                         {/* <TextCard>{item.description}</TextCard> */}
-                                        <TextCard>{t(`${workOption}_project_description_${index}`)}</TextCard>
-                                    </CardDescription>
+                                        <span className={Styles.TextCard}>{t(`${workOption}_project_description_${index}`)}</span>
+                                    </div>
                                     
-                                    <ButtonWork onClick={() => {redirect(items.data[index])}} className={Styles.linkButton} target="_blank" href={items.link}>
+                                    <a onClick={() => {redirect(items.data[index])}} className={`${Styles.linkButton} ${Styles.ButtonWork}`} target="_blank" href={items.link}>
                                         <FaDoorOpen style={{ color: 'white', fontSize: 20, marginLeft: 'auto' }} /> 
-                                        <ButtonText>{t('button_work_show_more')}</ButtonText>
-                                    </ButtonWork>
-                                </ContainerBody>
-                            </Card>
+                                        <span className={Styles.ButtonText}>{t('button_work_show_more')}</span>
+                                    </a>
+                                </div>
+                            </div>
                         </Fragment>
                     )
                 })}

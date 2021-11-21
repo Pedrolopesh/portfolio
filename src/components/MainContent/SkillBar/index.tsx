@@ -1,6 +1,6 @@
-import { SkillBarShape, BarSkill, BGSkill, ImageSkill, TextSkill} from './style'
 import { SkillType } from '../../../typings/skillType';
 import React, { useEffect, useState } from 'react';
+import Style from '../../../styles/mainStyles/SkillBar.module.css'
 
 const SkillBar = ({ image, skillAnimation, skillName, color }: SkillType) => {
     // console.log(skillAnimation, skillName)
@@ -30,14 +30,15 @@ const SkillBar = ({ image, skillAnimation, skillName, color }: SkillType) => {
     return (
         <>
             <span id="locator"></span>
-            <SkillBarShape>
-                <BarSkill className={responsiveLayout ? 'animationBar-'+skillAnimation : ''} style={{ background: `${color}` }}>
-                    <BGSkill>
-                        <ImageSkill src={image} alt="" />
-                    </BGSkill>
-                </BarSkill>
-                    <TextSkill>{skillName}</TextSkill>
-            </SkillBarShape>
+            <div className={Style.SkillBarShape}>
+                {/* <BarSkill className={responsiveLayout ? 'animationBar-'+skillAnimation : ''} style={{ background: `${color}` }}> */}
+                <div className={`${Style.BarSkill} ${responsiveLayout ? 'animationBar-'+skillAnimation : ''}`} style={{ background: `${color}` }}>
+                    <div className={Style.BGSkill}>
+                        <img className={Style.ImageSkill} src={image} alt="" />
+                    </div>
+                </div>
+                    <span className={Style.TextSkill}>{skillName}</span>
+            </div>
         </>
     )
 }

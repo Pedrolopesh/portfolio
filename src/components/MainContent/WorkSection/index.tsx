@@ -3,18 +3,13 @@ import webData from '../../../utils/works_web.json'
 import backendData from '../../../utils/works_backend.json'
 import { useState, useEffect, Fragment } from 'react'
 import { useTranslation } from "react-i18next";
-import { 
-    Container, 
-    ContainerButtons,
-    ContainerWorksSection,
-    WorkButton,
-    AnimationRigthScroll,
-} from './style'
 import WorkCard from '../WorkCard'
 
 interface IOprtions {
     options: string
 }
+
+import Style from '../../../styles/mainStyles/WorkSection.module.css'
 
 const WorkSection = () => {
     const { t } = useTranslation();
@@ -74,13 +69,14 @@ const WorkSection = () => {
 
     return (
         <>
-            <Container>
+            <div className={Style.Container}>
                 
-                <ContainerButtons>
+                <div className={Style.ContainerButtons}>
                     {options.map((value:IOprtions, index:number) => {
                         return (
                             <Fragment key={index}>
-                                <WorkButton
+                                <button
+                                    className={Style.WorkButton}
                                     style={{
                                         border: (selectedButton === index) ? '5px solid' :'',
                                         borderImage: (selectedButton === index) ? 'linear-gradient(45deg,#da926b,#2a0a7d) 10' : '',
@@ -92,25 +88,25 @@ const WorkSection = () => {
                                 > 
                                     {t(`button_work_text_`+index)}
 
-                                </WorkButton>
+                                </button>
                                 {/* <WorkButton onClick={() => {openWebModal()} }> Trabalhos WEB </WorkButton> */}
                                 {/* <WorkButton onClick={() => {openBackendModal()} }> Trabalhos backend </WorkButton> */}
                             </Fragment>
                         )
                     })}
-                </ContainerButtons>
+                </div>
 
-                <AnimationRigthScroll src='/animations/scroll_rigth.gif' alt="animation scroll" />
+                <img className={Style.AnimationRigthScroll} src='/animations/scroll_rigth.gif' alt="animation scroll" />
 
-                <ContainerWorksSection>
+                <div className={Style.ContainerWorksSection}>
                     <WorkCard
                         items={selectedItem}
                         workOption={selectedOption}
                         paramEvent={listenChieldEvent}
                         modalState={visibleModal}
                     />
-                </ContainerWorksSection>
-            </Container>
+                </div>
+            </div>
         </>
     )
 }
