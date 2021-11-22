@@ -1,18 +1,19 @@
 import InitialBanner from "./InitialBanner";
-import { Container } from './style';
 import CardInfos from "./CardInfos";
 import WorkSection from "./WorkSection";
 import Footer from './Footer';
 
+import Style from '../../styles/mainStyles/MainContent.module.css'
+
 const MainContent = () => {
     return (
         <>
-            <Container>
+            <div className={Style.Container}>
                 <InitialBanner/>
                 <CardInfos />
                 <WorkSection />
                 <Footer />
-            </Container>
+            </div>
         </>
     )
 }

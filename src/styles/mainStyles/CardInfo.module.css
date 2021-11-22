@@ -45,14 +45,15 @@
     /* position: absolute; */
 }
 
-.CardContainer:first-child{
-    flex-direction: column-reverse;
-}
 
 @media screen and (max-width: 700px){
     .CardContainer{
         width: 100%;
-        flex-direction: column;
+        flex-direction: column !important;
+    }
+    
+    .CardContainer:first-child{
+        flex-direction: column-reverse !important;
     }
 }
 
