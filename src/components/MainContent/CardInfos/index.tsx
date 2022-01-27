@@ -45,11 +45,11 @@ const CardInfos = () => {
                             </div>
                         </div>
                         
-                        <img className={Style.AnimationTest} src='/animations/animation_work1.gif'  />
+                        <img className={Style.AnimationTest} src='/animations/animation_work1.gif' alt='animation person work' />
                     </div>
 
                     <div className={Style.CardContainer} style={{ marginTop: 100 }}>
-                        <img className={Style.AnimationTest} style={{ margin: '0px 20px 0px auto' }} src='/animations/animation_walking.gif'  />
+                        <img className={Style.AnimationTest} style={{ margin: '0px 20px 0px auto' }} src='/animations/animation_walking.gif' alt='animation person walking' />
 
                         <div className={Style.Card} style={{ margin: '0px auto 0px 20px' }} >
                             {/* <Separate /> */}

@@ -104,14 +104,14 @@ const WorkCard = ({ paramEvent, modalState, items, workOption }: any) => {
                                     <h1 className={Styles.TitleCard}>{item.title}</h1>
                                 </div>
                                 <div className={Styles.ContainerBody}>
-                                    <img className={Styles.WorkImage} src={item.image} />
+                                    <img className={Styles.WorkImage} src={item.image} alt='skill icon image' />
                                     <div className={Styles.CardDescription}>
                                         <span className={Styles.ComandText}> pedro@linux-desktop</span>:<span className={Styles.ComandText} style={{ color: '#3478FF' }}> ~/works</span> $ {''}
                                         {/* <TextCard>{item.description}</TextCard> */}
                                         <span className={Styles.TextCard}>{t(`${workOption}_project_description_${index}`)}</span>
                                     </div>
                                     
-                                    <a onClick={() => {redirect(items.data[index])}} className={`${Styles.linkButton} ${Styles.ButtonWork}`} target="_blank" href={items.link} rel="noopener">
+                                    <a onClick={() => {redirect(items.data[index])}} className={`${Styles.linkButton} ${Styles.ButtonWork}`} target="_blank" href={items.link} rel="noopener noreferrer">
                                         <FaDoorOpen style={{ color: 'white', fontSize: 20, marginLeft: 'auto' }} /> 
                                         <span className={Styles.ButtonText}>{t('button_work_show_more')}</span>
                                     </a>

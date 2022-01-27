@@ -34,7 +34,7 @@ const SkillBar = ({ image, skillAnimation, skillName, color }: SkillType) => {
                 {/* <BarSkill className={responsiveLayout ? 'animationBar-'+skillAnimation : ''} style={{ background: `${color}` }}> */}
                 <div className={`${Style.BarSkill} ${responsiveLayout ? 'animationBar-'+skillAnimation : ''}`} style={{ background: `${color}` }}>
                     <div className={Style.BGSkill}>
-                        <img className={Style.ImageSkill} src={image} alt="" />
+                        <img className={Style.ImageSkill} src={image} alt="Image skil" />
                     </div>
                 </div>
                     <span className={Style.TextSkill}>{skillName}</span>
