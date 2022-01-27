@@ -111,7 +111,7 @@ const WorkCard = ({ paramEvent, modalState, items, workOption }: any) => {
                                         <span className={Styles.TextCard}>{t(`${workOption}_project_description_${index}`)}</span>
                                     </div>
                                     
-                                    <a onClick={() => {redirect(items.data[index])}} className={`${Styles.linkButton} ${Styles.ButtonWork}`} target="_blank" href={items.link}>
+                                    <a onClick={() => {redirect(items.data[index])}} className={`${Styles.linkButton} ${Styles.ButtonWork}`} target="_blank" href={items.link} rel="noopener">
                                         <FaDoorOpen style={{ color: 'white', fontSize: 20, marginLeft: 'auto' }} /> 
                                         <span className={Styles.ButtonText}>{t('button_work_show_more')}</span>
                                     </a>

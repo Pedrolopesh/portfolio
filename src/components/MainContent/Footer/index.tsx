@@ -14,15 +14,15 @@ const Footer = () => {
 
             <div className={Style.ContainerButtons}>
                 
-                <a className={Style.WorkButtons} target="_blank" href="mailto: pedrolopeshls@gmail.com">
+                <a className={Style.WorkButtons} target="_blank" href="mailto: pedrolopeshls@gmail.com" rel="noopener">
                     <img className={Style.WorkLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/gmail_ou0olp.png'} alt=""/> 
                 </a>
 
-                <a className={Style.WorkButtons} target="_blank" href="https://www.behance.net/pedrohenrique139">
+                <a className={Style.WorkButtons} target="_blank" href="https://www.behance.net/pedrohenrique139" rel="noopener">
                     <img className={Style.WorkLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/behance_nvbffv.png'} alt=""/> 
                 </a>
 
-                <a className={Style.WorkButtons} target="_blank" href="https://www.linkedin.com/in/pedro-lopes-50b3b818a/">
+                <a className={Style.WorkButtons} target="_blank" href="https://www.linkedin.com/in/pedro-lopes-50b3b818a/" rel="noopener">
                     <img className={Style.WorkLogo} src={'https://res.cloudinary.com/publi-node-uploads/image/upload/v1631577598/portfolio/icons/linkedin_txj3bg.png'} alt=""/> 
                 </a>
 
