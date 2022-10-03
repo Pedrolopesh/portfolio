@@ -39,6 +39,33 @@
 
     "footer_section_title":"Contact me",
 
-    "footer_button_home":"back home"
+    "footer_button_home":"back home",
+
+    "modal_option_text":"Before entering this site, I want you to have the best experience possible, so tell me...",
+    "button_design_option":"I'm just visiting",
+    "button_code_option":"I'm from IT",
+
+    "about_me_title": "About Me",
+    
+    "about_me_subtitle_1": "The Start",
+    "about_me_text_1": "I start at tecnology through Quality and assurance job doing tests in financial products, after I implement maintenance in frontend of this products, in this moment i learn some javascript frameworks like vue.js, react, react-native and angular.",
+    
+    "about_me_subtitle_2": "Contact",
+    "about_me_text_2": "You can contact me by email or social midia, I usualy answer in 3 days",
+    
+    "button_about_me_hire": "HIRE ME",
+    "button_about_me_know_more": "KNOW MORE",
+
+    "pretitle_services": "WHAT I WILL DO FOR YOU",
+    "title_services": "Services",
+    
+    "services_ux_ui": "UX/UI",
+    "services_ux_ui_text": "Create a project plan, wireframes, concept testing, style guide, responsiveness, User testing interface.",
+
+    "services_web_dev": "Web Development",
+    "services_web_dev_text": "Create a website and application based on a ux/ui project plan, responsiveness, multiplatform, and usability functionalities.",
+
+    "services_software_engineer": "Software Engineering",
+    "services_software_engineer_text": "Create an API application, CI/CD deployment, DevOps, and technology solution."
 
 }

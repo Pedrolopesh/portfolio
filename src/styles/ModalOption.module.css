@@ -1,0 +1,92 @@
+.containerBgModal {
+  display: block;
+  position: fixed;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  backdrop-filter: saturate(180%) blur(15px);
+}
+
+.hideModal {
+  display: none;
+}
+
+.containerModal {
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 100%;
+  width: 60%;
+  margin: 50px auto 0 auto;
+}
+
+.imgModal {
+  width: 20%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.containerHeaderModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.containerHeaderModal h3 {
+  margin: 0 auto 0 auto;
+}
+
+.closeItem {
+  font-family: sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contentModalOption {
+  display: block;
+}
+
+.containerTextDisclaimer {
+  display: flex;
+  padding: 10px;
+  width: 70%;
+  margin: 30px auto 20px auto;
+}
+
+.containerTextDisclaimer p {
+  text-align: center;
+  font-size: 22px;
+}
+
+.containerActionsModal {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  /* margin: 50px 0 0 0; */
+}
+
+.buttonModal, .design_button, .code_button {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #E29869 0%, #25067D 99.03%);
+}
+
+.buttonTextModalOptions {
+  margin: 0 0 0 10px !important;
+}
+
+.design_button {
+  background: linear-gradient(90deg, #E29869 0%, #25067D 99.03%);
+}
+
+.code_button {
+  background: #1D1D1D;  
+}

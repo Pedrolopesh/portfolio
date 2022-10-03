@@ -39,6 +39,33 @@
 
     "footer_section_title":"Entre em contato",
 
-    "footer_button_home":"Voltar ao inicio"
+    "footer_button_home":"Voltar ao inicio",
+    
+    "modal_option_text":"Antes de entrar neste site, quero que você tenha a melhor experiência possivel, então me conta...",
+    "button_design_option":"Só estou de olho",
+    "button_code_option":"Sou da TI",
 
+    "about_me_title": "Sobre",
+    
+    "about_me_subtitle_1": "O começo",
+    "about_me_text_1": "Meu inicio na tecnologia foi através do trabalho em qualidade de softwares fazendo testes em produtos financeiros, após implementar manutenção no frontend desses produtos, neste momento aprendo alguns frameworks javascript como vue.js, react, react-native e angular.",
+
+    "about_me_subtitle_2": "Contato",
+    "about_me_text_2": "Você pode entrar em contato comigo por e-mail ou rede social, eu costumo responder em 3 dias",
+    
+    "button_about_me_hire": "CONTRATE-ME",
+    "button_about_me_know_more": "SAIBA MAIS",
+
+    "pretitle_services": "O QUE EU FAREI POR VOCÊ",
+    "title_services": "Serviços",
+
+    "services_ux_ui": "UX/UI",
+    "services_ux_ui_text": "Crio planos de projeto, wireframes, testes de conceito, guia de estilo, responsividade, interface de teste do usuário.",
+
+    "services_web_dev": "Desenvolvimento Web",
+    "services_web_dev_text": "Crio sites e aplicativos com base em projetos ux/ui, responsividade, multiplataforma e funcionalidades de usabilidade.",
+
+    "services_software_engineer": "Engenheiro de software",
+    "services_software_engineer_text": "Crio aplicações como API's e severs, implantação CI/CD, DevOps e solução de tecnologia."
+    
 }

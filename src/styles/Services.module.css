@@ -1,0 +1,48 @@
+.containerServiceCards {
+  justify-content: space-around;
+  margin-top: 50px;
+  display: flex;
+}
+
+.serviceCard {
+  display: block;
+  background: none;
+  border: 3px solid #ff7897;
+  border-radius: 10px;
+  max-width: 95%;
+  width: 28%;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* .containerServiceCards :hover {
+  background-color: #ff7897 !important;
+  color: #fff;
+} */
+
+.serviceCard h3 {
+  color:#ff7897;
+}
+
+.serviceCard p {
+  color:#f4f4f4;
+}
+
+.containerServices {
+  margin: 150px 0 0 0;
+}
+
+.preTitleServices {
+  text-align: center;
+  font-size: 15px;
+  margin: 0 auto;
+  color: white;
+}
+
+.titleServices {
+  text-align: center;
+  margin: 0;
+  font-size: 50px;
+  color: #ff7897;
+}
