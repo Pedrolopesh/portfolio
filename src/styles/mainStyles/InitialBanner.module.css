@@ -4,6 +4,39 @@
     width: 100%;
 } 
 
+.containerAnimation {
+    display: flex;
+    width: 50%;
+}
+
+.ContainerSecondBanner {
+    display: flex;
+    z-index: 10;
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.secondBg {
+    max-width: 100%;
+    width: 100%;
+    background: url('../../../public/img/home-2-bg.png') no-repeat;
+}
+
+.animationBanner {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+}
+
+.BgSecondWhite {
+    display: block;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px){
     .Container{
         flex-direction: column-reverse;
@@ -106,6 +139,12 @@
 }
 
 
+.SecondBannerTitle{
+    font-family: 'Roboto';
+    color: rgb(20, 20, 20);
+    font-size: 50px;
+}
+
 .BannerTitle{
     font-family: 'Roboto';
     color: white;
@@ -131,6 +170,13 @@
 }
 
 
+
+
+.secondTextDescription{
+    font-family: 'Roboto';
+    color: rgb(20, 20, 20);
+    font-size: 22px;
+}
 
 
 .TextDescription{

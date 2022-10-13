@@ -1,7 +1,8 @@
 import React from 'react';
 import HeadPages from '../components/HeadPages';
 import ChangeLang from "../components/ChangeLang";
-import InitialBanner from '../components/MainContent/InitialBanner';
+// import InitialBanner from '../components/MainContent/InitialBanner';
+import SecondBanner from '../components/MainContent/SecondBanner';
 import AboutMe from '../components/MainContent/AboutMe';
 import Services from '../components/MainContent/Services';
 import SliderComents from '../components/MainContent/SliderComents';
@@ -12,7 +13,8 @@ const DesignPage = () => {
         <div>
             <HeadPages />
             <ChangeLang />
-            <InitialBanner />
+            {/* <InitialBanner /> */}
+            <SecondBanner />
 
             <AboutMe />
             <Services />

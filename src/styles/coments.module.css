@@ -1,0 +1,56 @@
+.sliderContainer {
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.comentSection {
+    margin: 120px 0 50px 0;
+    background-color: white;
+    padding: 80px 0;
+}
+
+.comentTitleSection {
+    font-size: 3rem;
+    text-align: center;
+    color: #FF7897;
+}
+
+.itemCardComent {
+    display: block;
+    background-color: #FF7897;
+    max-width: 75%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.lineCardComent {
+    width: 200px;
+    height: 4px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.imageCardComent {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 30px auto;
+    object-fit: cover;
+}
+
+.textCardComent {
+    color: white;
+    /* font-size: 1.2rem; */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.linkCardComent {
+    color: white;
+    text-align: center;
+    display: block;
+}
