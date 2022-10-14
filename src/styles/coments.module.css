@@ -54,3 +54,11 @@
     text-align: center;
     display: block;
 }
+
+.arrowLeft {
+    background-color: red;
+}
+
+.arrowRight {
+    background-color: red;
+}

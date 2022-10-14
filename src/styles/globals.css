@@ -14,14 +14,21 @@ body {
   max-width: 100%;
   display: block;
   width: 100%;
+}
 
+.design_bg {
+  background-color: #FFE3FC
+}
+
+.it_bg {
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
   background-size: 300% 300%;
   animation: gradient 5s ease infinite;
 }
 
 .slick-prev, .slick-next {
-  font-size: 15px !important;
+  width: 40px;
+  height: 40px;
 }
 
  .slick-prev:before, .slick-next:before  {

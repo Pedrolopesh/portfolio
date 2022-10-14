@@ -1,8 +1,12 @@
 import React from "react";
-import Slider from "react-slick";
+import Slider, { SwipeDirection } from "react-slick";
 import style from '../../../styles/coments.module.css'
 import { data } from "../../../utils/coments.json";
 import { BsLinkedin } from 'react-icons/bs'
+
+// import RightArrow from '../../../../public/img/Arrow_rigth.png'
+// import LeftArrow from '../../../../public/img/Arrow_left.png';
+
 interface cardItemType {
     img: string,
     text: string,
@@ -10,37 +14,35 @@ interface cardItemType {
 }
 
 const SliderComents = () => {
-    function SampleNextArrow(props) {
-        const {className, style, onClick} = props
-        return (
-            <div
-                className="slick-arrow"
-                style={{...style, display: 'block'}}
-                onClick={onClick}
-            >
-                proximo
-                {/* <img src={ARROW_left} alt="arrow_left"/> */}
-            </div>
-        );
-    }
-      
-    const SamplePrevArrow = (props) => {
-        const { className, onClick } = props
-        return (
-            <div 
-                className={className}
-                onClick={onClick}
-            >
-                <BsLinkedin size={25} />
-                {/* <FontAwesomeIcon
-                    icon={Icons.faAngleLeft}
-                    color="#000"
-                    size="2x"
-                /> */}
-            </div>
-        );
-    }
+    // const renderArrows = () => {
+    //     return (
+    //       <div className="slider-arrow">
+    //         <button
+    //           className="arrow-btn prev"
+    //           onClick={() => {SwipeDirection('left')}}
+    //         >
+    //           {/* <ArrowLeft /> */}
+    //           left
+    //         </button>
+    //         <button
+    //           className="arrow-btn next"
+    //           // onClick={() => slider.slickNext()}
+    //         >
+    //           {/* <ArrowRight /> */}
+    //           rigth
+    //         </button>
+    //       </div>
+    //     );
+    //   };
+    const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+      <img className={style.arrowLeft} src='/img/Arrow_left.png' alt="prevArrow" {...props} />
+    );
+  
+    const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+      <img className={style.arrowRight} src='/img/Arrow_rigth.png' alt="nextArrow" {...props} />
+    );
 
+    
     const settings = {
         className: "center",
         centerMode: true,
@@ -48,8 +50,8 @@ const SliderComents = () => {
         centerPadding: "60px",
         slidesToShow: 3,
         speed: 500,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        nextArrow: <SlickArrowRight currentSlide={undefined} slideCount={undefined} />,
+        prevArrow:  <SlickArrowLeft currentSlide={undefined} slideCount={undefined} />
     };
 
     const CardComent = (item: cardItemType) => {
@@ -74,6 +76,7 @@ const SliderComents = () => {
       <div className={style.comentSection}>
         <h2 className={style.comentTitleSection}> Testimonial </h2>
         <div className={style.sliderContainer}>
+            {/* {renderArrows()} */}
             <Slider {...settings}>
                 {data && 
                     data.map((item, index) => { 

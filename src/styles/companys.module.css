@@ -1,0 +1,13 @@
+.containerCompanys {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 20px 40px;
+    margin-top: 60px;
+}
+
+.imageCompany {
+    display: flex;
+}
