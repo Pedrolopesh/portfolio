@@ -62,7 +62,7 @@ const SliderComents = () => {
                 <div>
                     <p className={style.textCardComent}>{item.text}</p>
                 </div>
-                <hr className={style.lineCardComent} />
+                <hr className={style.secondlineCardComent} />
                 <div>
                     <a className={style.linkCardComent} href={item.externalLink} target="_blank" rel="noreferrer">
                         <BsLinkedin size={25} />

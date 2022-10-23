@@ -7,7 +7,7 @@ import AboutMe from '../components/MainContent/AboutMe';
 import Services from '../components/MainContent/Services';
 import SliderComents from '../components/MainContent/SliderComents';
 import Companys from '../components/MainContent/Companys';
-import Footer from '../components/MainContent/Footer';
+import FooterDesign from '../components/MainContent/FooterDesign';
 
 const DesignPage = () => {
 
@@ -32,7 +32,7 @@ const DesignPage = () => {
             <Companys />
             <SliderComents />
 
-            <Footer />
+            <FooterDesign />
         </div>
     )
 }

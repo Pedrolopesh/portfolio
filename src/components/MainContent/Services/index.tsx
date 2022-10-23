@@ -1,8 +1,10 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import { HiOutlineLightBulb, HiDesktopComputer } from 'react-icons/hi'
 import { BsCodeSquare } from 'react-icons/bs';
 import { useTranslation } from "react-i18next";
 import style from '../../../styles/Services.module.css';
+import { Card } from './style'
 
 const servicesData = [
     {
@@ -35,11 +37,11 @@ const Services = () => {
             <div className={style.containerServiceCards}>
                 {servicesData.map((service, index) => {
                     return (
-                        <div className={style.serviceCard}>
+                        <Card>
                             {service.icon}
                             <h3>{t(service.title)}</h3>
                             <p>{t(service.text)}</p>
-                        </div>
+                        </Card>
                     )
                 })}
             </div>

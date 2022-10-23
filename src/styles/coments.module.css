@@ -6,7 +6,7 @@
 
 .comentSection {
     margin: 120px 0 50px 0;
-    background-color: white;
+    /* background-color: white; */
     padding: 80px 0;
 }
 
@@ -18,18 +18,28 @@
 
 .itemCardComent {
     display: block;
-    background-color: #FF7897;
+    /* background-color: #FF7897; */
+    background: none;
     max-width: 75%;
     width: 100%;
     padding: 20px;
     border-radius: 15px;
     margin: 0 auto;
+    border: 1px solid #FF7897;
+}
+
+.secondlineCardComent {
+    width: 100px;
+    height: 4px;
+    background: #FF7897;
+    border: none;
+    border-radius: 5px;
 }
 
 .lineCardComent {
     width: 200px;
     height: 4px;
-    background: white;
+    background: #FF7897;
     border: none;
     border-radius: 5px;
 }
@@ -43,14 +53,14 @@
 }
 
 .textCardComent {
-    color: white;
+    color: #FF7897;
     /* font-size: 1.2rem; */
     text-align: center;
     margin: 20px 0;
 }
 
 .linkCardComent {
-    color: white;
+    color: #FF7897;
     text-align: center;
     display: block;
 }
