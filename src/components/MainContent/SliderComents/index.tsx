@@ -2,7 +2,8 @@ import React from "react";
 import Slider, { SwipeDirection } from "react-slick";
 import style from '../../../styles/coments.module.css'
 import { data } from "../../../utils/coments.json";
-import { BsLinkedin } from 'react-icons/bs'
+import { BsLinkedin } from 'react-icons/bs';
+import { useTranslation } from "react-i18next";
 
 // import RightArrow from '../../../../public/img/Arrow_rigth.png'
 // import LeftArrow from '../../../../public/img/Arrow_left.png';
@@ -14,6 +15,7 @@ interface cardItemType {
 }
 
 const SliderComents = () => {
+  const { t } = useTranslation();
     // const renderArrows = () => {
     //     return (
     //       <div className="slider-arrow">
@@ -79,7 +81,7 @@ const SliderComents = () => {
                 <img className={style.imageCardComent} src={item.img} alt="Coment Images" />
                 <hr className={style.lineCardComent} />
                 <div>
-                    <p className={style.textCardComent}>{item.text}</p>
+                    <p className={style.textCardComent}>{t(item.text)}</p>
                 </div>
                 <hr className={style.secondlineCardComent} />
                 <div>

@@ -1,24 +1,24 @@
 {
     "data": [
         {
-            "img": "https://avatars.githubusercontent.com/u/66796237?v=4",
-            "text": "Pedro é um excelente profissional e muito facil de se trabalhar, muitas ideias geniais e pertinentes.",
-            "externalLink": "https://www.linkedin.com/in/rafaelrcamargo/"
+            "img": "./img/guts.jpg",
+            "text": "comment_01",
+            "externalLink": "https://www.linkedin.com/in/gustavo-linhares-11015b214/"
         },
         {
-            "img": "https://avatars.githubusercontent.com/u/4248081?v=4",
-            "text": "Pedro é um excelente profissional e muito facil de se trabalhar, muitas ideias geniais e pertinentes.",
-            "externalLink": "https://www.linkedin.com/in/rafaelrcamargo/"
+            "img": "./img/matheusViana.jpg",
+            "text": "comment_02",
+            "externalLink": "https://www.linkedin.com/in/mattvianna/"
         },
         {
-            "img": "https://avatars.githubusercontent.com/u/49345118?v=4",
-            "text": "Pedro é um excelente profissional e muito facil de se trabalhar, muitas ideias geniais e pertinentes.",
-            "externalLink": "https://www.linkedin.com/in/rafaelrcamargo/"
+            "img": "./img/samuel.jpg",
+            "text": "comment_03",
+            "externalLink": "https://www.linkedin.com/in/samuel-braga-gomes-foga%C3%A7a-0702bb1ab/"
         },
         {
-            "img": "https://avatars.githubusercontent.com/u/38796439?v=4",
-            "text": "Pedro é um excelente profissional e muito facil de se trabalhar, muitas ideias geniais e pertinentes.",
-            "externalLink": "https://www.linkedin.com/in/rafaelrcamargo/"
+            "img": "./img/nicolas.jpg",
+            "text": "comment_04",
+            "externalLink": "https://www.linkedin.com/in/nicolas-weber-b272801a0/"
         }
     ]
 }
