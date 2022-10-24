@@ -13,20 +13,31 @@
   width: 28%;
   padding: 30px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s ease-in-out;
 }
 
-/* .containerServiceCards :hover {
-  background-color: #ff7897 !important;
-  color: #fff;
-} */
-
-.serviceCard h3 {
-  color:#ff7897;
+.serviceCard > h3 {
+    color:#ff7897;
 }
 
-.serviceCard p {
-  color:#2C2C2C;
+.serviceCard > p {
+    color:#2C2C2C;
+}
+
+.serviceCard:hover {
+  background-color: #ff7897;
+}
+
+.serviceCard:hover > h3 {
+  color:#ffffff;
+}
+
+.serviceCard:hover > p {
+  color:#f0f0f0;
+}
+
+.serviceCard:hover > svg {
+  color:#ffffff !important;
 }
 
 .containerServices {
@@ -45,4 +56,18 @@
   margin: 0;
   font-size: 50px;
   color: #ff7897;
+}
+
+@media screen and (max-width: 1200px) {
+  .containerServiceCards {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .serviceCard {
+    width: 80%;
+    margin: 30px auto 0 auto;
+  }
 }

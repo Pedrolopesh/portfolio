@@ -37,11 +37,11 @@ const Services = () => {
             <div className={style.containerServiceCards}>
                 {servicesData.map((service, index) => {
                     return (
-                        <Card>
+                        <div className={style.serviceCard} key={index}>
                             {service.icon}
                             <h3>{t(service.title)}</h3>
                             <p>{t(service.text)}</p>
-                        </Card>
+                        </div>
                     )
                 })}
             </div>

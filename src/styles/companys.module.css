@@ -1,5 +1,6 @@
 .containerCompanys {
     display: flex;
+    flex-wrap: wrap;
     max-width: 100%;
     width: 90%;
     justify-content: space-around;

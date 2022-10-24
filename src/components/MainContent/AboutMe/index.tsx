@@ -5,6 +5,10 @@ import { useTranslation } from "react-i18next";
 const AboutMe = () => {
     const { t } = useTranslation();
 
+    const redirectTo = (path: string) => {
+        window.open(path, '_blank');
+    }
+
     return (
         <div className={style.containerAboutMe}>
             <div className={style.containerImage}>
@@ -24,11 +28,11 @@ const AboutMe = () => {
                 <p>{t('about_me_text_2')}</p>
             
                 <div className={style.containerAction}>
-                    <button className={style.buttonHireMe}>
+                    <button onClick={() => { redirectTo('https://www.linkedin.com/in/pedro-lopes-50b3b818a/') }} className={style.buttonHireMe}>
                         <p>{t('button_about_me_hire')}</p>
                     </button>
 
-                    <button className={style.buttonAboutMe}>
+                    <button onClick={() => { redirectTo('https://github.com/Pedrolopesh') }} className={style.buttonAboutMe}>
                         <p>{t('button_about_me_know_more')}</p>
                     </button>
                 </div>

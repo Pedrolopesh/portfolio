@@ -16,6 +16,10 @@ body {
   width: 100%;
 }
 
+.blackBg {
+  background-color: #000000
+}
+
 .design_bg {
   background-color: #FFE3FC
 }

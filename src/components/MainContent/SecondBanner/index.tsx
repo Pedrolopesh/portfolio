@@ -15,7 +15,7 @@ const SecondBanner = () => {
             </div>
 
             <div>
-            <div className={style.ContainerLeft}>
+                <div className={style.ContainerLeft}>
                     <div className={style.ContainerTexts}>
 
                         {/* <BannerTitle> Pedro Lopes </BannerTitle> */}
@@ -23,7 +23,7 @@ const SecondBanner = () => {
                         <hr className={style.UnderScore} />
                         <p className={style.secondTextDescription}>{t('overview_text_banner')}</p>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
         </div>

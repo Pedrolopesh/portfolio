@@ -63,7 +63,7 @@
 .containerActionsModal {
   display: flex;
   justify-content: space-evenly;
-  padding: 30px;
+  padding: 0px 30px 30px 30px;
   /* margin: 50px 0 0 0; */
 }
 
@@ -89,4 +89,32 @@
 
 .code_button {
   background: #1D1D1D;  
+}
+
+@media screen and (max-width: 800px) {
+  .containerModal {
+    width: 85%;
+    margin: 100px auto 0 auto;
+  }
+
+  .containerTextDisclaimer {
+    width: 95%;
+  }
+
+  .containerActionsModal {
+    flex-direction: column;
+  }
+
+  .design_button {
+    margin: 10px auto;
+  }
+  
+  
+  .code_button {
+    margin: 10px auto;
+  }
+
+  .imgModal {
+    width: 40%;
+  }
 }

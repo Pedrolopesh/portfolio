@@ -72,3 +72,20 @@
 .arrowRight {
     background-color: red;
 }
+
+@media screen and (max-width: 800px) {
+    .itemCardComent {
+        display: block;
+        max-width: 90%;
+        width: 100%;
+    }
+
+    .lineCardComent {
+        width: 150px;
+    }
+
+    .sliderContainer {
+        max-width: 80%;
+        width: 100%;
+    }
+}

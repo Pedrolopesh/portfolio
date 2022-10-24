@@ -9,7 +9,7 @@ export const Card = styled.div`
     width: 28%;
     padding: 30px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s ease-in-out;
 
     h3 {
         color:#ff7897;
@@ -17,5 +17,21 @@ export const Card = styled.div`
 
     p {
         color:#2C2C2C;
+    }
+
+    &:hover {
+        background-color: #ff7897;
+
+        h3 {
+            color:#ffffff;
+        }
+
+        p {
+            color:#e0e0e0;
+        }
+
+        svg {
+            color:#ffffff !important;
+        }
     }
 `
