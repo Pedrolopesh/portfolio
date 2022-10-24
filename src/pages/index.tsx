@@ -2,7 +2,7 @@
 // import Image from 'next/image'
 // import styles from '../styles/Home.module.css'
 import React, { useEffect } from 'react';
-// import ChangeLang from "../components/ChangeLang";
+import ChangeLang from "../components/ChangeLang";
 // import MainContent from "../components/MainContent";
 import MoldalOptionPage from '../components/MoldalOptionPage';
 // import HeadPages from '../components/HeadPages'
@@ -23,9 +23,9 @@ const Home = () => {
     <div>
       {/* <HeadPages /> */}
 
+      <ChangeLang />
       <MoldalOptionPage />
 
-      {/* <ChangeLang /> */}
       {/* <MainContent /> */}
     </div>
   )
