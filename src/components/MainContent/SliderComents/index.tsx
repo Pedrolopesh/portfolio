@@ -37,11 +37,11 @@ const SliderComents = () => {
     //     );
     //   };
     const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-      <img className={style.arrowLeft} src='/img/Arrow_left.png' alt="prevArrow" {...props} />
+      <img id="left-arrow" className={style.arrowLeft} src='/img/Arrow_left.png' alt="prevArrow" {...props} />
     );
   
     const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-      <img className={style.arrowRight} src='/img/Arrow_rigth.png' alt="nextArrow" {...props} />
+      <img id="rigth-arrow" className={style.arrowRight} src='/img/Arrow_rigth.png' alt="nextArrow" {...props} />
     );
 
     
@@ -110,6 +110,8 @@ const SliderComents = () => {
                     })
                 }
             </Slider>
+
+            <div id="slideActionButtons"></div>
         </div>
       </div>
     );
