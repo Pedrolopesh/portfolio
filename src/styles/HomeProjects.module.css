@@ -1,0 +1,72 @@
+.containerShowDescriptions { 
+    display: flex;
+    position: absolute;
+    max-width: 475px;
+    min-height: 475px;
+    text-align: center;
+    transition: 0.5s;
+    background-color: #2c2c2cc7;
+    align-items: center;
+}
+
+.containerHideDescriptions {
+    /* display: none; */
+}
+
+.showTitle {
+    opacity: 1;
+    color: #fff;
+
+    animation-name: animation_showText;
+    animation-duration: 0.7s;
+    /* transform: translate(0px, 0px); */
+}
+
+@keyframes animation_showText {
+    from {
+        transform: translate(0px, -40px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.showDescription {
+    opacity: 1;
+    color: #fff;
+
+    animation-name: animation_showDescription;
+    animation-duration: 0.7s;
+    /* transform: translate(0px, 0px); */
+}
+
+@keyframes animation_showDescription {
+    from {
+        transform: translate(0px, 40px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+.hideText {
+    opacity: 0;
+
+    animation-name: animation_hideTitle;
+    animation-duration: 0.7s;
+}
+
+@keyframes animation_hideTitle {
+    from {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    to {
+        transform: translate(0px, 40px);
+        opacity: 0;
+    }
+}

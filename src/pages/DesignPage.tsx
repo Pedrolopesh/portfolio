@@ -6,6 +6,7 @@ import SecondBanner from '../components/MainContent/SecondBanner';
 import AboutMe from '../components/MainContent/AboutMe';
 import Services from '../components/MainContent/Services';
 import SliderComents from '../components/MainContent/SliderComents';
+import HomeProjects from '../components/MainContent/HomeProjects';
 import Companys from '../components/MainContent/Companys';
 import FooterDesign from '../components/MainContent/FooterDesign';
 
@@ -31,6 +32,7 @@ const DesignPage = () => {
             <Services />
             <Companys />
             <SliderComents />
+            <HomeProjects />
 
             <FooterDesign />
         </div>
