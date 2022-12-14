@@ -1,15 +1,54 @@
-.containerShowDescriptions { 
-    display: flex;
-    position: absolute;
-    max-width: 475px;
-    min-height: 475px;
-    text-align: center;
-    transition: 0.5s;
-    background-color: #2c2c2cc7;
-    align-items: center;
+.mainImageCard, .showImageEffect, .hideImageEffect {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
+.mainTextContainer, .showTextContainer, .hideTextContainer {
+    display: flex;
+    border: 3px solid #fff;
+    min-height: 430px;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.showTextContainer {
+    border: 5px solid #fff;
+    /* border-radius: 0; */
+}
+
+.hideTextContainer {
+    border: 0px solid #fff;
+    /* border-radius: 50%; */
+}
+
+.showImageEffect {
+    transform: scale(1.1);
+}
+
+.hideImageEffect {
+    transform: scale(1);
+}
+
+.mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+    display: flex;
+    position: absolute;
+    max-width: 25%;
+    min-height: 475px;
+}
+
+.containerShowDescriptions { 
+    transition: 0.5s;
+    background-color: #2c2c2cc7;
+}
+
+
 .containerHideDescriptions {
+    max-width: 25% !important;
+    transition: 0.5s;
+    background-color: rgba(255, 0, 0, 0)(0, 0, 0);
     /* display: none; */
 }
 
@@ -53,9 +92,9 @@
     }
 }
 
-.hideText {
+.hideTitle {
     opacity: 0;
-
+    color: #fff;
     animation-name: animation_hideTitle;
     animation-duration: 0.7s;
 }
@@ -66,7 +105,266 @@
         opacity: 1;
     }
     to {
+        transform: translate(0px, -40px);
+        opacity: 0;
+    }
+}
+
+.hideDescription {
+    opacity: 0;
+    color: #fff;
+    animation-name: animation_hideDescription;
+    animation-duration: 0.7s;
+}
+
+@keyframes animation_hideDescription {
+    from {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    to {
         transform: translate(0px, 40px);
         opacity: 0;
     }
 }
+
+@media screen and (max-width: 1700px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 420px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 430px !important;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 400px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 400px !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 390px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 390px !important;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 370px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 370px !important;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 340px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 340px !important;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 330px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 330px !important;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 310px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 310px !important;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 290px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 290px !important;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 270px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 270px !important;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 250px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 250px !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 220px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 220px !important;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 100px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 100px !important;
+    }
+}
+
+/* ================ MAIN MOBILE ================= */
+@media screen and (max-width: 900px) {
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        max-width: 61% !important;
+        min-height: 500px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        max-width: 61% !important;
+    }
+    
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 341px !important;
+    }
+}
+/* ================ MAIN MOBILE ================= */
+
+@media screen and (max-width: 800px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 420px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 420px !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 400px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 400px !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 380px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 380px !important;
+    }
+}
+
+/* ================ MAIN MOBILE ================= */
+@media screen and (max-width: 650px) {
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        max-width: 80% !important;
+        min-height: 460px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        max-width: 80% !important;
+    }
+    
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 460px !important;
+    }
+}
+/* ================ MAIN MOBILE ================= */
+
+@media screen and (max-width: 600px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 430px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 430px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 390px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 390px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 350px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 350px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 340px !important;
+    }
+
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        min-height: 340px !important;
+    }
+}
+
+/* ================ MAIN MOBILE ================= */
+@media screen and (max-width: 400px) {
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        max-width: 95% !important;
+        min-height: 340px !important;
+    }
+    
+    .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+        max-width: 95% !important;
+    }
+    
+    .mainTextContainer, .showTextContainer, .hideTextContainer {
+        min-height: 340px !important;
+    }
+}
+/* ================ MAIN MOBILE ================= */

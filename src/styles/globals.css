@@ -16,6 +16,36 @@ body {
   width: 100%;
 }
 
+h1, h2, h3, h4, h5, span, p, div, button{
+  font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-body-container {
+  max-width: 1700px;
+  width: 100%;
+}
+
 .slick-next {
   right: 45.5%;
 }
@@ -50,31 +80,6 @@ body {
 
  .slick-prev:before, .slick-next:before  {
   content: '' !important;
-}
-
-h1, h2, h3, h4, h5, span, p, div, button{
-  font-family: 'Poppins', sans-serif !important;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
-@keyframes gradient {
-  0% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .ac{
