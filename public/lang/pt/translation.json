@@ -71,6 +71,70 @@
     "comment_01": "Sempre ajudando colegas com dúvidas e disposto a ajudar sua equipe em qualquer situação.",
     "comment_02": "Pedro é um excelente profissional e muito facil de se trabalhar, muitas ideias geniais e pertinentes.",
     "comment_03": "Sempre buscando a melhora em seus projetos e estudando novos métodos e tecnologias constantemente para facilitar suas aplicações.",
-    "comment_04": "Recomendo o Pedro para qualquer tipo de serviço na área de tecnologia, um excelente profissional."
-    
+    "comment_04": "Recomendo o Pedro para qualquer tipo de serviço na área de tecnologia, um excelente profissional.",
+
+
+    "projects": {
+        "triper" : {
+            "title": "Triper: Site de viagens",
+            "fisrtDescription": "Com mais de 100 anos de existência, a Electrolux está presente em 150 países atuando no Brasil desde 1926 e vende mais de 60 milhões de produtos por ano. A marca se posiciona como a única empresa de eletrodomésticos do mundo que fornece soluções completas para consumidores e profissionais.   Com um portfólio extremamente diversificado, a Electrolux […]",
+
+            "projectDate": "20/12/2021",
+
+            "problemTitle": "Desafio",
+            "problemDescription": "BKOBR é um site da Electrolux Brasil exclusivo para os colaboradores da companhia. Basicamente, consiste em uma plataforma em que os funcionários podem solicitar trocas de produtos de acordo com as regras de negócio da mesma. É um sistema interno e, acessá-lo, só é possível para aqueles que têm o link com o domínio myvtex.com – a página não aparece quando pesquisada no Google, por exemplo. Apesar da página já estar funcionando há um tempo, os gestores da Electrolux Brasil sentiam a necessidade de automatizar os processos internos que aconteciam no site. Assim, o time de Desenvolvimento da ACCT Global ficou responsável por criar e implementar esta solução.",
+
+            "solutionTitle": "Solução",
+            "solutionDescription": "Atualmente, o BKOBR está funcionando em VTEX CMS. Após minuciosa análise, foi identificado que a melhor solução para este projeto era o desenvolvimento de um Custom APP, dentro da plataforma myvtex, utilizando a linguagem de programação React, extremamente recomendada quando o objetivo é desenvolver aplicações e websites que interajam com o usuário.",
+
+            "ExampleTitle": "O Projeto",
+            "ExampleDescription": "A loja de produtos alimentícios do Carrefour em VTEX IO continha um número alto de customizações e SKU’S que impactavam no tempo de carregamento do site. A estratégia adotada pelo time de desenvolvimento da VTEX e da ACCT foi migrar a loja para Jamstack, uma arquitetura de desenvolvimento open source focada em performance para lojas com especificações como a do mercado Carrefour.",
+            "ExampleImageAlt": "Project Print",
+
+            "finalTitle": "O que é Jamstack",
+            "finalDescription": "Uma arquitetura moderna para desenvolvimento web, o termo é um acrônimo para o conjunto de JavaScript, API’S e Markup. Enquanto stack na tradução literal é uma analogia a uma “pilha tecnológica” para explicar uma arquitetura. <br><br> O Jamstack nasceu com o objetivo de quebrar o paradigma da forma atual como os sites são desenvolvidos criando a necessidade de desenvolvimento de aplicações web mais robustas e escaláveis."
+        },
+
+        "link_leito" : {
+            "title": "",
+            "fisrtDescription": "",
+
+            "projectDate": "",
+            "urlBanner": "",
+
+            "problemTitle": "",
+            "problemDescription": "",
+
+            "solutionTitle": "",
+            "solutionDescription": "",
+
+            "ExampleTitle": "",
+            "ExampleDescription": "",
+            "ExampleImageAlt": "",
+
+            "finalTitle": "",
+            "finalDescription": ""
+        },
+
+        "pet_system" : {
+            "title": "",
+            "fisrtDescription": "",
+
+            "projectDate": "",
+            "urlBanner": "",
+
+            "problemTitle": "",
+            "problemDescription": "",
+
+            "solutionTitle": "",
+            "solutionDescription": "",
+
+            "ExampleTitle": "",
+            "ExampleDescription": "",
+            "ExampleImageAlt": "",
+
+            "finalTitle": "",
+            "finalDescription": ""
+        }
+    }
 }

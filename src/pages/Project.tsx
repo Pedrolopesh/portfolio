@@ -11,6 +11,10 @@ import {TripperInfo} from '../assets/ProjectContent/Triper'
 
 import type { IProjectInfoItem } from '../typings/IProjectContent'
 
+import HeadPages from '../components/HeadPages'
+import FooterDesign from '../components/MainContent/FooterDesign'
+import ChangeLang from '../components/ChangeLang'
+
 const Project = () => {
   const router = useRouter()
   const [projectParam, setProjectParam] = React.useState<IProjectInfoItem>({
@@ -58,9 +62,8 @@ const Project = () => {
 
   return (
     <div>
-      <h2>Sortable Gallery</h2>
-      <h3>Drag photo to rearrange</h3>
-
+      <HeadPages />
+      <ChangeLang />
       {
         Object.keys(router.query).length === 0 ? 
           <GalleryImagens
@@ -73,6 +76,7 @@ const Project = () => {
           />
         </>
       }
+      <FooterDesign />
     </div>
   );
 }

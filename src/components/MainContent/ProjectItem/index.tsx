@@ -1,7 +1,10 @@
 import React from 'react';
 import type { IProjectInfoItem } from '../../../typings/IProjectContent'
+import { useTranslation } from "react-i18next";
+import style from '../../../styles/mainStyles/ProjectItem.module.css'
 
 const ProjectItem = (props: IProjectInfoItem) => {
+    const { t } = useTranslation();
     
     React.useEffect(() => {
         console.log('aqui? ', props.projectInfo)
@@ -11,56 +14,56 @@ const ProjectItem = (props: IProjectInfoItem) => {
         <>
             {
                 props &&
-                <div>
-                    <div>
-                        <h2>{props.projectInfo.title}</h2>
-                        <p>{props.projectInfo.fisrtDescription}</p>
+                <div className='main-body-container-fit ac'>
+                    <div className={style.containerFirstText}>
+                        <h2>{t(props.projectInfo.title)}</h2>
+                        <p className={style.firstDescription}>{t(props.projectInfo.fisrtDescription)}</p>
                         <p>PUBLICADO EM</p>
-                        <p>{props.projectInfo.projectDate}</p>
+                        <p>{t(props.projectInfo.projectDate)}</p>
                     </div>
 
-                    <div>
+                    <div className={style.containerBanner}>
                         <img src={props.projectInfo.urlBanner} alt="" />
                     </div>
 
-                    <div>
+                    <div className={style.containerContent}>
                         <div className='flex'>
-                            <h3>{props.projectInfo.problemDescription.title}</h3>
+                            <h3 className={style.firstContentTitle}>{t(props.projectInfo.problemDescription.title)}</h3>
                             <hr />
                         </div>
 
-                        <p>{props.projectInfo.problemDescription.description}</p>
+                        <p>{t(props.projectInfo.problemDescription.description)}</p>
                     </div>
 
-                    <div>
+                    <div className={style.containerContent}>
                         <div className='flex'>
-                            <h3>{props.projectInfo.solutionDescription.title}</h3>
+                            <h3 className={style.firstContentTitle}>{t(props.projectInfo.solutionDescription.title)}</h3>
                             <hr />
                         </div>
 
-                        <p>{props.projectInfo.solutionDescription.description}</p>
+                        <p>{t(props.projectInfo.solutionDescription.description)}</p>
                     </div>
 
-                    <div>
+                    <div className={style.containerContent}>
                         <div className='flex'>
-                            <h3>{props.projectInfo.exampleDescription.title}</h3>
+                            <h3 className={style.firstContentTitle}>{t(props.projectInfo.exampleDescription.title)}</h3>
                             <hr />
                         </div>
 
-                        <p>{props.projectInfo.exampleDescription.description}</p>
+                        <p>{t(props.projectInfo.exampleDescription.description)}</p>
 
-                        <div>
-                            <img src={props.projectInfo.exampleDescription.imageUrl} alt="" />
+                        <div className={style.containerLastImageBanner}>
+                            <img className={style.lastImageBanner} src={props.projectInfo.exampleDescription.imageUrl} alt="" />
                         </div>
                     </div>
 
-                    <div>
+                    <div className={style.containerContent}>
                         <div className='flex'>
-                            <h3>{props.projectInfo.finalDescription.title}</h3>
+                            <h3 className={style.firstContentTitle}>{t(props.projectInfo.finalDescription.title)}</h3>
                             <hr />
                         </div>
 
-                        <p>{props.projectInfo.finalDescription.description}</p>
+                        <p>{t(props.projectInfo.finalDescription.description)}</p>
                     </div>
                 </div>
             }

@@ -46,6 +46,11 @@ a {
   width: 100%;
 }
 
+.main-body-container-fit {
+  max-width: 1200px;
+  width: 100%;
+}
+
 .slick-next {
   right: 45.5%;
 }

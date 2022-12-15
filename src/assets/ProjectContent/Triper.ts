@@ -1,25 +1,25 @@
 export const TripperInfo = {
     projectInfo: {
-        title: 'Teste do Titulo',
-        fisrtDescription: '',
-        projectDate: '',
-        urlBanner: '',
+        title: 'projects.triper.title',
+        fisrtDescription: 'projects.triper.fisrtDescription',
+        projectDate: 'projects.triper.projectDate',
+        urlBanner: './img/projects/project_gallery_banner_1.png',
         problemDescription: {
-            title: 'Teste',
-            description: '',
+            title: 'projects.triper.problemTitle',
+            description: 'projects.triper.problemDescription',
         },
         solutionDescription: {
-            title: '',
-            description: '',
+            title: 'projects.triper.solutionTitle',
+            description: 'projects.triper.solutionDescription',
         },
         exampleDescription: {
-            title: '',
-            description: '',
-            imageUrl: '',
+            title: 'projects.triper.ExampleTitle',
+            description: 'projects.triper.ExampleDescription',
+            imageUrl: './img/tripper_web_site.png',
         },
         finalDescription: {
-            title: '',
-            description: '',
+            title: 'projects.triper.finalTitle',
+            description: 'projects.triper.finalDescription',
         }
     }
 }
