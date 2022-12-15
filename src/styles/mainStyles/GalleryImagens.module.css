@@ -1,0 +1,17 @@
+.containerCardsGallery {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+}
+
+.cardGallery {
+    display: flex;
+    max-width: 25%;
+    width: 100%;
+    margin: 20px;
+}
+
+.cardImage {
+
+}

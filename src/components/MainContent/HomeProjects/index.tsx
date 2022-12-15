@@ -9,7 +9,7 @@ import {
 
 const HomeProjects = () => {
     const router = useRouter()
-    const [showAnimation, setShowAnimation] = useState(0)
+    const [showAnimation, setShowAnimation] = useState(-1)
 
     const projectCards = [
         {
