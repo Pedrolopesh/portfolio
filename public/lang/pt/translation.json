@@ -75,6 +75,26 @@
 
 
     "projects": {
+        "electrolux" : {
+            "title": "Engenharia de Software na Electrolux",
+            "fisrtDescription": "A Electrolux contém uma história de 100 anos e durante esse tempo vem acumulando vitórias e conquistas, está presente no brasil desde 1926 e vende milhares de produtos por ano, uma das únicas marcas mundiais que […]",
+
+            "projectDate": "20/12/2021",
+
+            "problemTitle": "Electrolux",
+            "problemDescription": "A Electrolux contém uma história de 100 anos e durante esse tempo vem acumulando vitórias e conquistas, está presente no brasil desde 1926 e vende milhares de produtos por ano, uma das únicas marcas mundiais que oferece produtos de qualidade e soluções completas para clientes e profissionais. <br> <br> Com um coleção de produtos inovadores e cuidadosamente desenvolvidos, a Electrolux tem grande destaque no mercado brasileiro de eletroportáteis, devido a esse histórico de sucesso, a Electrolux Brasil está presente nas casas e na memória de muitos brasileiros e conta com um time sensacional de profissionais seniores para continuar este legado de excelência para o cliente, promovendo uma experiência Electrolux a todos que consomem seus produtos. <br> <br>",
+
+            "solutionTitle": "Desafio",
+            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software do time que atende electrolux foi a migração de uma antiga tecnoliga vtex (CMS) para uma loja online totalmente mais sofisticada e intuitiva com a tecnologia Headless VTEX IO, está migração aconteceu gradativamente, durante todo o processo de transição, houve a caltela e analise das conversões, por exemplo, migrar somente uma ou duas páginas para o VTEX IO e observando a adesão do publico quanto a está nova stack.",
+
+            "ExampleTitle": "A solução",
+            "ExampleDescription": "Por fim, chegamos ao final do processo de migração e tudo correu bem, o novo rosto e corpo da electrolux brasil estava implementado e funcionando para todos os clientes, o objetivo final de ter uma conversão de vendas maior foi alcançado, devido a nova tecnologia a loja online da electrolux se mostrou mais perfomatica e com uma experiência diferenciada de todos no mercado de eletroportateis.",
+            "ExampleImageAlt": "Project Print",
+
+            "finalTitle": "Electrolux Atualmente",
+            "finalDescription": "A Electrolux continua seguindo constantes melhorias em todos os setores de sua Loja, atualmente atuo como engenheiro de software do squad de Web Expirience (Experiência do usuário) atuando em melhorias e constantes ajustes que fazem com que o usuário tenha uma experiência profissional e de conforto para casa do cliente mesmo que esteja visitando a loja e navegando pelos produtos."
+        },
+
         "triper" : {
             "title": "Triper: Site de viagens",
             "fisrtDescription": "Com mais de 100 anos de existência, a Electrolux está presente em 150 países atuando no Brasil desde 1926 e vende mais de 60 milhões de produtos por ano. A marca se posiciona como a única empresa de eletrodomésticos do mundo que fornece soluções completas para consumidores e profissionais.   Com um portfólio extremamente diversificado, a Electrolux […]",
