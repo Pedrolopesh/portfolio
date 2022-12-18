@@ -15,6 +15,7 @@ import type { IProjectInfoItem } from '../typings/IProjectContent'
 import HeadPages from '../components/HeadPages'
 import FooterDesign from '../components/MainContent/FooterDesign'
 import ChangeLang from '../components/ChangeLang'
+import HeaderOptions from '../components/HeaderOptions'
 
 const Project = () => {
   const router = useRouter()
@@ -73,6 +74,7 @@ const Project = () => {
   return (
     <div>
       <HeadPages />
+      <HeaderOptions />
       <ChangeLang />
       {
         Object.keys(router.query).length === 0 ? 

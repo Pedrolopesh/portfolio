@@ -1,4 +1,15 @@
 {
+    "header_options": {
+        "home": "Home",
+        "projects": "Projects",
+        "contact": "Contact",
+        "button_design_option": "Design",
+        "button_code_option": "Dev"
+    },
+    "all_projects": "All Projects",
+    "cases": "Real Cases",
+    "project": "Projects",
+    "andWorks": "amd Works",
     "welcome_to_React": "Welcome to react-i18next",
     "title_banner": "Pedro Lopes",
     "overview_text_banner": "Hello! I'm pedro Lopes, designer and software developer, feel free to read more about me and my projects.",

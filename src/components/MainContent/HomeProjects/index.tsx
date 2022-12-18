@@ -6,6 +6,7 @@ import {
     CardItemProjects,
     ContainerProjectCards,
 } from './style'
+import { t } from "i18next"
 
 const HomeProjects = () => {
     const router = useRouter()
@@ -39,12 +40,10 @@ const HomeProjects = () => {
     return (
         <div>
             <ContainerSectionText className="main-body-container ac">
-                <h3>CASES</h3>
-                <h2><strong>Projetos</strong> e trabalhos</h2>
+                <h3>{t('cases')}</h3>
+                <h2><strong>{t('project')}</strong> {t('andWorks')}</h2>
 
-                <button>
-                    TODOS OS PROJETOS
-                </button>
+                <button onClick={() => {redirectTo('/Project')}}> {t('all_projects')} </button>
             </ContainerSectionText>
 
             <ContainerProjectCards>

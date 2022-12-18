@@ -1,6 +1,10 @@
 export const photos = [
     {
       src: "./img/projects/project_gallery_1.png",
+      title: "projects.electrolux.title",
+      text: "projects.electrolux.banner_description",
+      url: "Project?name=electrolux",
+      alt: "Electrolux alt",
     },
     {
       src: "./img/projects/project_gallery_2.png",
@@ -25,6 +29,15 @@ export const photos = [
     },
     {
       src: "./img/projects/project_gallery_9.png",
+    },
+    {
+      src: "./img/projects/project_gallery_10.png",
+    },
+    {
+      src: "./img/projects/project_gallery_11.png",
+    },
+    {
+      src: "./img/projects/project_gallery_12.png",
     },
 
   ];

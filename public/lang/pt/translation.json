@@ -1,4 +1,15 @@
 {
+    "header_options": {
+        "home": "Home",
+        "projects": "Projetos",
+        "contact": "Contato",
+        "button_design_option": "Design",
+        "button_code_option": "Dev"
+    },
+    "all_projects": "Todos os Projetos",
+    "cases": "Casos Reais",
+    "project": "Projetos",
+    "andWorks": "e Trabalhos",
     "welcome_to_React": "Bem vindo ao react-i18next",
     "title_banner": "Pedro Lopes",
     "overview_text_banner": "Olá, sou pedro Lopes, designer e programador, fique a vontade para conhecer mais sobre mim e mus trabalhos.",
@@ -92,7 +103,9 @@
             "ExampleImageAlt": "Project Print",
 
             "finalTitle": "Electrolux Atualmente",
-            "finalDescription": "A Electrolux continua seguindo constantes melhorias em todos os setores de sua Loja, atualmente atuo como engenheiro de software do squad de Web Expirience (Experiência do usuário) atuando em melhorias e constantes ajustes que fazem com que o usuário tenha uma experiência profissional e de conforto para casa do cliente mesmo que esteja visitando a loja e navegando pelos produtos."
+            "finalDescription": "A Electrolux continua seguindo constantes melhorias em todos os setores de sua Loja, atualmente atuo como engenheiro de software do squad de Web Expirience (Experiência do usuário) atuando em melhorias e constantes ajustes que fazem com que o usuário tenha uma experiência profissional e de conforto para casa do cliente mesmo que esteja visitando a loja e navegando pelos produtos.",
+            
+            "banner_description": "Entenda como foi o desafio da migração de uma das lojas que mais vendem eletroportáteis do Brasil"
         },
 
         "triper" : {

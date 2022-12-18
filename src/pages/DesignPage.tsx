@@ -9,6 +9,7 @@ import SliderComents from '../components/MainContent/SliderComents';
 import HomeProjects from '../components/MainContent/HomeProjects';
 import Companys from '../components/MainContent/Companys';
 import FooterDesign from '../components/MainContent/FooterDesign';
+import HeaderOptions from '../components/HeaderOptions';
 
 const DesignPage = () => {
 
@@ -24,6 +25,7 @@ const DesignPage = () => {
     return (
         <div>
             <HeadPages />
+            <HeaderOptions />
             <ChangeLang />
             {/* <InitialBanner /> */}
             <SecondBanner />

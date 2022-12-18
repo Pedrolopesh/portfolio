@@ -7,7 +7,7 @@ const ProjectItem = (props: IProjectInfoItem) => {
     const { t } = useTranslation();
     
     React.useEffect(() => {
-        console.log('aqui? ', props.projectInfo)
+        // console.log('aqui? ', props.projectInfo)
     }, [props])
 
     return (

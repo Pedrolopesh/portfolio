@@ -1,0 +1,96 @@
+.containerHeaderOptions {
+    background: #ffffff;
+    box-shadow: 1px -5px 60px #999999;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.containerHeaderOptionsContent {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1700px;
+    width: 100%;
+}
+
+.containerLeftHeaderOptions {
+    display: flex;
+    align-items: center;
+    /* max-width: 100%; */
+    /* width: 50%; */
+}
+
+.containerLinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* width: 100%; */
+    /* max-width: 500px; */
+}
+
+.containerLinks > a {
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.logoHeaderOptions {
+    width: 60px;
+    height: 60px;
+    /* margin: 0 0 0 20px; */
+}
+
+.buttonModal, .design_button, .code_button {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #E29869 0%, #25067D 99.03%);
+}
+
+.buttonTextModalOptions {
+    margin: 0 0 0 10px !important;
+}
+
+.code_button {
+    background: #1D1D1D;  
+}
+
+.design_button {
+    background: linear-gradient(90deg, #E29869 0%, #25067D 99.03%);
+}
+
+@media screen and (max-width: 800px) {
+    .containerModal {
+        width: 85%;
+        margin: 100px auto 0 auto;
+    }
+
+    .containerTextDisclaimer {
+        width: 95%;
+    }
+
+    .containerActionsModal {
+        flex-direction: column;
+    }
+
+    .design_button {
+        margin: 10px auto;
+    }
+
+
+    .code_button {
+        margin: 10px auto;
+    }
+
+    .imgModal {
+        width: 40%;
+    }
+}

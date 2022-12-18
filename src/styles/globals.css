@@ -169,6 +169,9 @@ a {
   background: linear-gradient(to right, #3f0058, #47006b);
 }
 
+.mt-content {
+  margin-top: 180px;
+}
 
 @media screen and (max-width: 1000px) {
 
