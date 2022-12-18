@@ -7,6 +7,23 @@
     top: 0;
 }
 
+.selectedPath{ 
+    color: #FF7897;
+    /* font-weight: 600; */
+}
+
+.unSelectedPath {
+    color: #000000;
+}
+
+.contactButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin: 0 40px 0 20px;
+    cursor: pointer;
+}
+
 .containerHeaderOptionsContent {
     display: flex;
     padding: 15px;

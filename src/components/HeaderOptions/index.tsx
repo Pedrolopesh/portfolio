@@ -26,13 +26,30 @@ const HeaderOptions = () => {
                     <div className={style.containerLinks}>
 
                         <Link href={(router.pathname === '/DesignPage' || router.pathname === '/Project') ? "/DesignPage" : "TiPage"}>
-                            <a>{t('header_options.home')}</a>
+                            <a 
+                                className={
+                                    `${
+                                        (router.pathname === '/DesignPage') ? 
+                                        style.selectedPath : 
+                                        style.unSelectedPath
+                                    }`
+                                }
+                                >{t('header_options.home')}</a>
                         </Link>
 
-                        <Link href="/about">
-                            <a>{t('header_options.projects')}</a>
+                        <Link href="/Project">
+                            <a
+                                className={
+                                    `${
+                                        (router.pathname === '/Project') ? 
+                                        style.selectedPath : 
+                                        style.unSelectedPath
+                                    }`
+                                }
+                            >{t('header_options.projects')}</a>
                         </Link>
-                        <a href="">{t('header_options.contact')}</a>
+
+                        <button className={style.contactButton}>{t('header_options.contact')}</button>
                     </div>
                     {
                         (router.pathname === '/DesignPage' || router.pathname === '/Project') ? 
