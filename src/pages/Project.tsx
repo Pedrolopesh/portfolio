@@ -8,6 +8,7 @@ import GalleryImagens from "../components/MainContent/GalleryImagens";
 import ProjectComponent from '../components/MainContent/ProjectItem'
 
 import {TripperInfo} from '../assets/ProjectContent/Triper'
+import {LinkLeitoInfo} from '../assets/ProjectContent/LinkLeito'
 import {EluxInfo} from '../assets/ProjectContent/Electrolux'
 
 import type { IProjectInfoItem } from '../typings/IProjectContent'
@@ -49,7 +50,7 @@ const Project = () => {
 
   const ProjectContentOption = [
     { projectName: 'electrolux', projectInfo: EluxInfo },
-    { projectName: 'link-leito', projectInfo: TripperInfo },
+    { projectName: 'link-leito', projectInfo: LinkLeitoInfo },
     { projectName: 'pet-sytem', projectInfo: TripperInfo },
     { projectName: 'match-coder', projectInfo: TripperInfo },
     { projectName: 'triper', projectInfo: TripperInfo },

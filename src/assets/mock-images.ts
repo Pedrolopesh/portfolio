@@ -8,6 +8,10 @@ export const photos = [
     },
     {
       src: "./img/projects/project_gallery_2.png",
+      title: "projects.link_leito.title",
+      text: "projects.link_leito.banner_description",
+      url: "Project?name=link-leito",
+      alt: "Link Leito alt",
     },
     {
       src: "./img/projects/project_gallery_3.png",
