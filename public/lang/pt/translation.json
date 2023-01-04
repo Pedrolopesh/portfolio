@@ -132,21 +132,20 @@
             "title": "Projeto Link Leito",
             "fisrtDescription": "O projeto link leito foi criado em 2021 quando a pandemia do COVID-19 se espalhou por todo mundo enquanto eu estava estudando no Senai de Florianópolis SC surgiu [...]",
 
-            "projectDate": "",
-            "urlBanner": "",
+            "projectDate": "01/02/2020",
 
-            "problemTitle": "",
-            "problemDescription": "O projeto link leito foi criado em 2021 quando a pandemia do COVID-19 se espalhou por todo mundo enquanto eu estava estudando no Senai de Florianópolis SC surgiu um pedido do hospital infantil Joana Gusmão que também era de Florianópolis, O diretor do hospital estava procura de uma solução tecnológica para agilizar os processos do hospital fazendo com que o tempo de espera de um paciente com leite hospitalar fosse reduzido. ",
+            "problemTitle": "Link Leito app",
+            "problemDescription": "No começo do projeto contamos com a colaboração de todos os funcionários que atuavam na emergência do hospital desde a entrada do paciente até a sua alta do hospital, em constantes validações com equipe que usaria o software que estávamos propondo a criar <br><br> Durante o ano de 2021, com a pandemia já instalada em todo país houveram diversos momentos difíceis de realizar uma comunicação presencial com a equipe devido às medidas de distanciamento social, porém mesmo com as dificuldades realizamos as validações e sempre com objetivo de diminuir o tempo de espera do atendimento de pacientes, E podendo observar pontos do processo de internação do paciente e analisar onde havia erros e demoras excessivas",
 
-            "solutionTitle": "",
-            "solutionDescription": "",
+            "solutionTitle": "Desafios de implementação",
+            "solutionDescription": "Mesmo entendendo todo o processo do hospital ainda assim um dos maiores desafios foi fazer com que aquela tecnologia tivesse adesão dentro do hospital por parte dos funcionários, ao longo da implementação e validações conseguimos observar melhorias constantes fazendo com que o projeto cresce exponencialmente.",
 
-            "ExampleTitle": "",
-            "ExampleDescription": "",
-            "ExampleImageAlt": "",
+            "ExampleTitle": "A Solução Link-Leito",
+            "ExampleDescription": "O link leito propôs a solução definitiva para filas em hospitais no momento que havia superlotação de UTIs, partir da análise do atendimento de diversos pacientes através da captação dos dados durante o processo como, a quantidade de tempo que um paciente demora para ser atendido ou que demora para um leito estar limpo e voltar a estar disponível, através dessas métricas de tempo, construímos um painel administrativo e área de relatórios para que o gestor do hospital observasse todos os dados e conseguisse melhor adaptar a equipe de profissionais.",
+            "ExampleImageAlt": "link leito Project Print",
 
-            "finalTitle": "",
-            "finalDescription": "",
+            "finalTitle": "Link leito atualmente",
+            "finalDescription": "Link leito atualmente se encontra desativado temporariamente pois a equipe do hospital decidiu seguir por outro caminho e a dificuldade de adesão ao software contribuiu para que o projeto fosse engavetado porém nunca será esquecido pois a diversos relatos do Lito Lito na mídia <br><br> E para que este projeto de alguma forma possa seguir em frente, muitos trabalhos e projetos da Universidade que estou cursando no momento possuem algum estudo de caso ou explanação sobre o link leito",
 
             "banner_description": "Conheça um pouco do projeto Link Leito e a solução tecnólogica aplicada a realidade."
         },

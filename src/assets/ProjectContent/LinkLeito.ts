@@ -3,7 +3,7 @@ export const LinkLeitoInfo = {
         title: 'projects.link_leito.title',
         fisrtDescription: 'projects.link_leito.fisrtDescription',
         projectDate: 'projects.link_leito.projectDate',
-        urlBanner: './img/projects/banner/project_gallery_banner_1.png',
+        urlBanner: './img/projects/banner/project_gallery_banner_3.png',
         problemDescription: {
             title: 'projects.link_leito.problemTitle',
             description: 'projects.link_leito.problemDescription',

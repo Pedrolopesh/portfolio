@@ -32,7 +32,7 @@ const ProjectItem = (props: IProjectInfoItem) => {
                             <hr />
                         </div>
 
-                        <p>{t(props.projectInfo.problemDescription.description)}</p>
+                        <p dangerouslySetInnerHTML={{ __html: t(props.projectInfo.problemDescription.description) }}></p>
                     </div>
 
                     <div className={style.containerContent}>
@@ -41,7 +41,7 @@ const ProjectItem = (props: IProjectInfoItem) => {
                             <hr />
                         </div>
 
-                        <p>{t(props.projectInfo.solutionDescription.description)}</p>
+                        <p dangerouslySetInnerHTML={{ __html: t(props.projectInfo.solutionDescription.description) }}></p>
                     </div>
 
                     <div className={style.containerContent}>
@@ -63,7 +63,7 @@ const ProjectItem = (props: IProjectInfoItem) => {
                             <hr />
                         </div>
 
-                        <p>{t(props.projectInfo.finalDescription.description)}</p>
+                        <p dangerouslySetInnerHTML={{ __html: t(props.projectInfo.finalDescription.description) }}></p>
                     </div>
                 </div>
             }
