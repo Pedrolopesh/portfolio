@@ -15,6 +15,10 @@ export const photos = [
     },
     {
       src: "./img/projects/project_gallery_3.png",
+      title: "projects.triper.title",
+      text: "projects.triper.banner_description",
+      url: "Project?name=triper",
+      alt: "triper alt",
     },
     {
       src: "./img/projects/project_gallery_4.png",

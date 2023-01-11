@@ -15,7 +15,7 @@ export const TripperInfo = {
         exampleDescription: {
             title: 'projects.triper.ExampleTitle',
             description: 'projects.triper.ExampleDescription',
-            imageUrl: './img/tripper_web_site.png',
+            imageUrl: '../img/projects/exemple/tripper_web_site.png',
         },
         finalDescription: {
             title: 'projects.triper.finalTitle',

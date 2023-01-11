@@ -51,7 +51,7 @@ const Project = () => {
   const ProjectContentOption = [
     { projectName: 'electrolux', projectInfo: EluxInfo },
     { projectName: 'link-leito', projectInfo: LinkLeitoInfo },
-    { projectName: 'pet-sytem', projectInfo: TripperInfo },
+    { projectName: 'triper', projectInfo: TripperInfo },
     { projectName: 'match-coder', projectInfo: TripperInfo },
     { projectName: 'triper', projectInfo: TripperInfo },
     { projectName: 'triper', projectInfo: TripperInfo },

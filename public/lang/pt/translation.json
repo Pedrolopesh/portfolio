@@ -108,26 +108,6 @@
             "banner_description": "Entenda como foi o desafio da migração de uma das lojas que mais vendem eletroportáteis do Brasil"
         },
 
-        "triper" : {
-            "title": "Triper: Site de viagens",
-            "fisrtDescription": "Com mais de 100 anos de existência, a Electrolux está presente em 150 países atuando no Brasil desde 1926 e vende mais de 60 milhões de produtos por ano. A marca se posiciona como a única empresa de eletrodomésticos do mundo que fornece soluções completas para consumidores e profissionais.   Com um portfólio extremamente diversificado, a Electrolux […]",
-
-            "projectDate": "20/12/2021",
-
-            "problemTitle": "Desafio",
-            "problemDescription": "BKOBR é um site da Electrolux Brasil exclusivo para os colaboradores da companhia. Basicamente, consiste em uma plataforma em que os funcionários podem solicitar trocas de produtos de acordo com as regras de negócio da mesma. É um sistema interno e, acessá-lo, só é possível para aqueles que têm o link com o domínio myvtex.com – a página não aparece quando pesquisada no Google, por exemplo. Apesar da página já estar funcionando há um tempo, os gestores da Electrolux Brasil sentiam a necessidade de automatizar os processos internos que aconteciam no site. Assim, o time de Desenvolvimento da ACCT Global ficou responsável por criar e implementar esta solução.",
-
-            "solutionTitle": "Solução",
-            "solutionDescription": "Atualmente, o BKOBR está funcionando em VTEX CMS. Após minuciosa análise, foi identificado que a melhor solução para este projeto era o desenvolvimento de um Custom APP, dentro da plataforma myvtex, utilizando a linguagem de programação React, extremamente recomendada quando o objetivo é desenvolver aplicações e websites que interajam com o usuário.",
-
-            "ExampleTitle": "O Projeto",
-            "ExampleDescription": "A loja de produtos alimentícios do Carrefour em VTEX IO continha um número alto de customizações e SKU’S que impactavam no tempo de carregamento do site. A estratégia adotada pelo time de desenvolvimento da VTEX e da ACCT foi migrar a loja para Jamstack, uma arquitetura de desenvolvimento open source focada em performance para lojas com especificações como a do mercado Carrefour.",
-            "ExampleImageAlt": "Project Print",
-
-            "finalTitle": "O que é Jamstack",
-            "finalDescription": "Uma arquitetura moderna para desenvolvimento web, o termo é um acrônimo para o conjunto de JavaScript, API’S e Markup. Enquanto stack na tradução literal é uma analogia a uma “pilha tecnológica” para explicar uma arquitetura. <br><br> O Jamstack nasceu com o objetivo de quebrar o paradigma da forma atual como os sites são desenvolvidos criando a necessidade de desenvolvimento de aplicações web mais robustas e escaláveis."
-        },
-
         "link_leito" : {
             "title": "Projeto Link Leito",
             "fisrtDescription": "O projeto link leito foi criado em 2021 quando a pandemia do COVID-19 se espalhou por todo mundo enquanto eu estava estudando no Senai de Florianópolis SC surgiu [...]",
@@ -148,6 +128,28 @@
             "finalDescription": "Link leito atualmente se encontra desativado temporariamente pois a equipe do hospital decidiu seguir por outro caminho e a dificuldade de adesão ao software contribuiu para que o projeto fosse engavetado porém nunca será esquecido pois a diversos relatos do Lito Lito na mídia <br><br> E para que este projeto de alguma forma possa seguir em frente, muitos trabalhos e projetos da Universidade que estou cursando no momento possuem algum estudo de caso ou explanação sobre o link leito",
 
             "banner_description": "Conheça um pouco do projeto Link Leito e a solução tecnólogica aplicada a realidade."
+        },
+
+        "triper" : {
+            "title": "Triper: Site de viagens",
+            "fisrtDescription": "Triper é um website que criei recentemente com o objetivo de melhorar meus conhecimentos em Next.js, animações CSS e habilidades de código limpo. O site foi construído usando o framework Next.js […]",
+
+            "projectDate": "20/12/2021",
+
+            "problemTitle": "Caso de Estudo",
+            "problemDescription": "Triper é um website que criei recentemente com o objetivo de melhorar meus conhecimentos em Next.js, animações CSS e habilidades de código limpo. O site foi construído usando o framework Next.js, que é uma ferramenta poderosa para criar front-end React com renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React. Foi muito interessante aprender essa ferramenta para entender como melhorar a performance de sites e melhorar a experiência do usuário em sua navegação. Durante o desenvolvimento fui também compreendendo diferentes opções de animações CSS para que o site ficasse mais fluido e sua navegação mais suavizada, animações de elementos da página e keyframes para criar movimentos personalizados.",
+
+            "solutionTitle": "Soluções e aplicações",
+            "solutionDescription": "Diante dos desafios da implementação, eu pude seguir as melhores práticas e padrões de organização de código e documentação para entender este cenário aplicado a um projeto em seguida comparar com aplicações do mercado atual. Em seguida pude compreender as diferentes lógicas que poderia aplicar nas animações da página e em quais momentos as animações aconteceriam, este processo exigiu implementar uma mistura do Next com o CSS e o resultado foi sensacional",
+
+            "ExampleTitle": "O Projeto",
+            "ExampleDescription": "Como este projeto foi criado somente para melhorar os conhecimentos nas tecnologias mais recentes e mais visadas do mercado, as informações que contem no site somente são ilustrativas com a finalidade de preenchimento de conteúdo.",
+            "ExampleImageAlt": "Project Print",
+
+            "finalTitle": "Triper atualmente",
+            "finalDescription": "Atualmente neste projeto ocorrem eventuais atualizações, tanto de implementações que podem ficar melhor visualmente e esteticamente, como melhorias de código que são feitas para melhorar performance e navegação, sempre que essas atualizações ocorrem é feito revisões de como foi feito antes e como está atualmente e também faço a utilização dos códigos deste projeto como exemplo para aplicações e dúvidas do dia a dia.",
+
+            "banner_description": "Saiba como aumentei meus conhecimentos nas tecnologias mais utilizadas no mercado atualmente."
         },
 
         "pet_system" : {
