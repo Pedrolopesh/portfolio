@@ -1,11 +1,13 @@
 import React from "react";
 import Link from 'next/link'
 import { AiFillEye } from 'react-icons/ai';
-import { HiOutlineTerminal } from 'react-icons/hi';
+import { HiOutlineTerminal, HiMenu } from 'react-icons/hi';
+import { GrClose } from 'react-icons/gr';
 import { useTranslation } from "react-i18next";
 import style from '../../styles/HeaderOption.module.css'
 import { useRouter } from 'next/router'
-import Logo from '../../assets/icons/logo'
+import Logo from '../../assets/icons/logo';
+import LinkOptions from "./LinkOptions";
 const HeaderOptions = () => {
     const router = useRouter()
     const { t } = useTranslation();
@@ -14,6 +16,8 @@ const HeaderOptions = () => {
         // setVisibleModal(!visibleModal)
         router.push(route)
     }
+
+    const [visibleModal, setVisibleModal] = React.useState(false)
 
     console.log('route header component: ', router)
 
@@ -24,8 +28,8 @@ const HeaderOptions = () => {
 
                 <div className={style.containerLeftHeaderOptions}>
                     <div className={style.containerLinks}>
-
-                        <Link href={(router.pathname === '/DesignPage' || router.pathname === '/Project') ? "/DesignPage" : "TiPage"}>
+                        <LinkOptions routerParam={router} />
+                        {/* <Link href={(router.pathname === '/DesignPage' || router.pathname === '/Project') ? "/DesignPage" : "TiPage"}>
                             <a 
                                 className={
                                     `${
@@ -47,7 +51,7 @@ const HeaderOptions = () => {
                                     }`
                                 }
                             >{t('header_options.projects')}</a>
-                        </Link>
+                        </Link> */}
 
                         <button className={style.contactButton}>{t('header_options.contact')}</button>
                     </div>
@@ -68,6 +72,27 @@ const HeaderOptions = () => {
                         </div>
                     }
                     
+                </div>
+
+                <div className={style.containerMenuMobile}>
+                    <HiMenu 
+                        onClick={() => { setVisibleModal(!visibleModal) }}
+                        size={45} 
+                    />
+                </div>
+            </div>
+
+            <div className={
+                `${style.containerMobileOptions + ' ' + (visibleModal ? style.showMobileOptions : style.hideMobileOptions)}`
+            }>
+
+                <GrClose 
+                    onClick={() => { setVisibleModal(!visibleModal) }}
+                    className={style.closeButton} size={30} 
+                />
+
+                <div className={style.containerMobileLinks}>
+                    <LinkOptions routerParam={router} />
                 </div>
             </div>
         </div>
