@@ -93,6 +93,7 @@ const Project = () => {
         : 
         <>
           <ProjectComponent 
+            returnPage={() => router.push('/Project')}
             projectInfo={projectParam.projectInfo}
           />
         </>

@@ -2,6 +2,7 @@ import React from 'react';
 import type { IProjectInfoItem } from '../../../typings/IProjectContent'
 import { useTranslation } from "react-i18next";
 import style from '../../../styles/mainStyles/ProjectItem.module.css'
+import { BsArrowLeft } from 'react-icons/bs'
 
 const ProjectItem = (props: IProjectInfoItem) => {
     const { t } = useTranslation();
@@ -12,9 +13,15 @@ const ProjectItem = (props: IProjectInfoItem) => {
 
     return (
         <>
+
             {
                 props &&
                 <div className='main-body-container-fit ac'>
+                    <BsArrowLeft
+                        size={50}
+                        className={style.arrowBack} 
+                        onClick={() => props.returnPage()} 
+                    />
                     <div className={style.containerFirstText}>
                         <h2>{t(props.projectInfo.title)}</h2>
                         <p className={style.firstDescription}>{t(props.projectInfo.fisrtDescription)}</p>

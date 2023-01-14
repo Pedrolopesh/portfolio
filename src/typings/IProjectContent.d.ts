@@ -20,6 +20,7 @@ export interface IFinalDescription {
 }
 
 export interface IProjectInfoItem {
+    returnPage?: () => void;
     projectInfo: {
         title: string;
         fisrtDescription: string;

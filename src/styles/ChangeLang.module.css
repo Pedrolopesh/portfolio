@@ -12,16 +12,16 @@
 }
 
 @keyframes animationShow-dropDown {
-    0% { transform: translateX(-150%); } 100% { transform: translateX(0%); }
+    0% { transform: translateX(-250%); } 100% { transform: translateX(0%); }
 }
 
 .hideDropdown{
-    transform: translateX( -150% );
+    transform: translateX( -250% );
     animation: animationHide-dropDown 1s ease;
 }
 
 @keyframes animationHide-dropDown {
-    0% { transform: translateX(0%); } 100% { transform: translateX( -150% ); }
+    0% { transform: translateX(0%); } 100% { transform: translateX( -250% ); }
 }
 
 .DropDownContainer {
@@ -34,8 +34,12 @@
 }
     
 @media screen and (max-width: 800px){
+    .Container {
+        width: 50%;
+    }
+
     .DropDownContainer{ 
-        width: 30%;
+        width: 70%;
     }
 }
 

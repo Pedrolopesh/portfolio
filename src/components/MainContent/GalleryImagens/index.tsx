@@ -47,6 +47,7 @@ const GalleryImagens = ({images}) => {
                                     }
                                 >
                                     <div
+                                        onClick={ () => { redirectTo(image.url) } }
                                         className={
                                             showAnimationImage === index ? 
                                             style.showTextContainer : 
@@ -57,7 +58,6 @@ const GalleryImagens = ({images}) => {
                                         className={style.containerTextHover}
                                         >
                                             <h3
-                                                onClick={ () => { redirectTo(image.url) } }
                                                 className={
                                                     showAnimationImage === index ? 
                                                     style.showTitle : 

@@ -85,6 +85,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    .containerLeftHeaderOptions {
+        display: none;
+    }
+
     .containerModal {
         width: 85%;
         margin: 100px auto 0 auto;

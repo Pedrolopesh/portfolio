@@ -52,6 +52,11 @@
     display: flex;
     align-items: center;
     text-align: center;
+    cursor: pointer;
+}
+
+.hideTextContainer {
+    cursor: pointer;
 }
 
 .containerTextHover {
@@ -62,12 +67,30 @@
 @media screen and (max-width: 900px) {
     .cardGallery {
         width: 61%;
-        margin: 40px auto;
-        min-height: 380px;
+        margin: 15px auto;
+        min-height: 180px;
+        height: 500px;
+    }
+    
+    .showTextContainer {
+        height: 60vh;
+    }
+    
+    .showImageEffect {
+        background-size: 100% 80%;
+        
+    }
+    
+    .hideImageEffect {
+        background-size: 100% 80%;
     }
 }
 
 @media screen and (max-width: 650px) {
+    .containerCardsGallery {
+        width: 100%;
+    }
+
     .cardGallery {
         width: 80%;
         margin: 40px auto;
@@ -147,6 +170,7 @@
     color: #fff;
     animation-name: animation_hideTitle;
     animation-duration: 0.7s;
+    text-align: center;
 }
 
 @keyframes animation_hideTitle {
@@ -165,6 +189,7 @@
     color: #fff;
     animation-name: animation_hideDescription;
     animation-duration: 0.7s;
+    text-align: center;
 }
 
 @keyframes animation_hideDescription {
