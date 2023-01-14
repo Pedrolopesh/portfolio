@@ -15,6 +15,8 @@ import {ComunityAlertInfo} from '../assets/ProjectContent/ComunityAlert'
 import {MatchCoderInfo} from '../assets/ProjectContent/MatchCoder'
 import {PetCaretInfo} from '../assets/ProjectContent/PetCare'
 
+import {TheChatInfo} from '../assets/ProjectContent/TheChat'
+
 import type { IProjectInfoItem } from '../typings/IProjectContent'
 
 import HeadPages from '../components/HeadPages'
@@ -59,7 +61,7 @@ const Project = () => {
     { projectName: 'comunity-alert', projectInfo: ComunityAlertInfo },
     { projectName: 'match-coder', projectInfo: MatchCoderInfo },
     { projectName: 'pet-care', projectInfo: PetCaretInfo },
-    { projectName: 'the-chat', projectInfo: TripperInfo },
+    { projectName: 'the-chat', projectInfo: TheChatInfo },
     { projectName: 'quest-game', projectInfo: TripperInfo },
     { projectName: 'blue-token', projectInfo: TripperInfo },
     { projectName: 'toro-token', projectInfo: TripperInfo },

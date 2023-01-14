@@ -198,15 +198,15 @@
 
         "pet_care" : {
             "title": "Pet Care UX/UI",
-            "fisrtDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e  […]",
+            "fisrtDescription": "Pet care foi um projeto pensado em prototipagem de aplicativos, através das aulas de engenharia de requisitos da faculdade que estou cursando, eu e minha equipe tivemos o desafio de cria protótipos de telas para um sistema de gerenciamento para […]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "Caso de Estudo",
-            "problemDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e empresas pudessem dar um match (assim como no tinder) para conhecer profissionais da TI e incentivar empregos para essa área. Através da análise de persona, eu e a equipe que atuou comigo neste trabalho, conhecemos os usuários que iriam utilizar o aplicativo e compreendi melhor quais componentes deveria utilizar e como ficariam nas telas do mobile.",
+            "problemDescription": "Pet care foi um projeto pensado em prototipagem de aplicativos, através das aulas de engenharia de requisitos da faculdade que estou cursando, eu e minha equipe tivemos o desafio de cria protótipos de telas para um sistema de gerenciamento para ONG’s voltadas ao acolhimento e proteção dos animais e através de reuniões de brainstorming e entendimento de quem seria os usuários do sistema, observamos quais as necessidades do usuário que utilizaria o sistema e pudemos perceber suas dores como um processo de alerta para animais abandonados, e um dos maiores desafios foi entender como realizar um processo de ampla divulgação desses alertas e fazer com que mais pessoas pudessem saber dos animais em situação de risco ou mesmo que foram resgatados e agora podem ser adotados a novas famílias.",
 
             "solutionTitle": "Soluções e aplicações",
-            "solutionDescription": "Este projeto me proporcionou uma visão mais ampla sobre design, durante seu desenvolvimento pude aplicar diferentes conhecimentos de boas práticas aplicadas a protótipos, ensinamentos visuais e estéticos para que os elementos da tela fiquem mais claros e acessíveis para o usuário. Dessa maneira produzi diversas telas que traduzem a necessidade inicial, que foi das empresas encontrarem profissionais que tenham um perfil mais adequado para a vaga de emprego, assim como candidatos da área de T.I. que querem trabalhar em empresas com o seu perfil.",
+            "solutionDescription": "Com o desenvolvimento das telas do sistema, alguns membros da equipe se concentraram na realização de documentos e eu me concentrei em traduzir todas as necessidades do usuário para telas do figma. Através de todos os requisitos levantados por membros da equipe, utilizei de diferentes técnicas de design como “projeção de diálogos que indiquem o fim de uma ação”, “fácil reversão de ações”, redução a carga de memória de curta duração” entre outras técnicas que foram utilizadas para seguir um design intuitivo e fluido, fazendo com a aplicação seja mais interessante para usuários navegar e realizar seus objetivos dentro do aplicativo.",
 
             "ExampleTitle": "O Projeto",
             "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
@@ -217,6 +217,29 @@
             "ExampleImageAlt": "Project Print",
 
             "banner_description": "Estudos e analises sob projetos de design de interface."
+        },
+
+        "the_chat" : {
+            "title": "The chat",
+            "fisrtDescription": "The chat foi um projeto criado para aprendizados em back and tendo um foco maior em lógicas aplicadas a comunicação em tempo real, A partir de algumas pesquisas estudos fui realizando […]",
+
+            "projectDate": "20/12/2021",
+
+            "problemTitle": "O projeto The chat",
+            "problemDescription": "The chat foi um projeto criado para aprendizados em back and tendo um foco maior em lógicas aplicadas a comunicação em tempo real, A partir de algumas pesquisas estudos fui realizando diversas implementações para criar um sistema que fosse capaz de armazenar dados dos usuários e que estes pudessem se logar através de uma interface e acessarem suas mensagens, as lógicas que foram aplicadas pro sistema foram retiradas somente de exemplos visuais do telegram, whatsapp e outros aplicativos de conversa. O sistema é relativamente simples porém diversas tecnologias e métodos foram aplicados para criar um chat de comunicação em tempo real com dois usuários logados simultaneamente",
+
+            "solutionTitle": "Desafios",
+            "solutionDescription": "O maior desafio foi implantar a tecnologia socket.io que foi capaz de criar uma sessão onde dois usuários pudessem participar e trocar mensagens através dessa sessão, além deste método outro desafio foi utilizar o express como Framework pro Node Js para realizar upload de imagens e comunicação com o banco de dados de maneira a proteger as rotas do sistema em todos os momentos através de um token. Mesmo com esses desafios fui capaz de criar um sistema com rotas seguras e com comunicação constante com banco de dados e sessões do socket.io, pode também desenvolver front and onde os usuários pudessem se cadastrar, logar e interagir uns com os outros em tempo real",
+
+            "ExampleTitle": "Intuito do projeto",
+            "ExampleDescription": "Esta aplicação foi desenvolvida somente com o intuito de estudar novas ferramentas e tecnologias que o mercado de desenvolvimento já utiliza, e mesmo que tenha sido para estudo este projeto ainda tem atualizações frequentes tanto em seu front end quanto no seu backend pensando em melhorias para se fazer em diferentes níveis da aplicação protagonizando uma escala cada vez maior. Um dos planos mais recentes para este projeto é criar um website para apresentação do projeto e suas novidades para que novos usuários possam entrar e conhecer um pouco do the chat antes mesmo de precisar se cadastrar",
+
+            "finalTitle": "",
+            "finalDescription": "",
+
+            "ExampleImageAlt": "Project Print",
+
+            "banner_description": "Conheça sobre o aplicativo web senvolvido para trocas de mensagens em tempo real."
         }
     }
 }

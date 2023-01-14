@@ -43,10 +43,10 @@ export const photos = [
     },
     {
       src: "./img/projects/project_gallery_7.png",
-      title: "projects.pet_care.title",
-      text: "projects.pet_care.banner_description",
-      url: "Project?name=pet-care",
-      alt: "pet_care alt",
+      title: "projects.the_chat.title",
+      text: "projects.the_chat.banner_description",
+      url: "Project?name=the-chat",
+      alt: "the_chat alt",
     },
     {
       src: "./img/projects/project_gallery_8.png",
