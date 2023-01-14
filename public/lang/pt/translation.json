@@ -151,26 +151,72 @@
 
             "banner_description": "Saiba como aumentei meus conhecimentos nas tecnologias mais utilizadas no mercado atualmente."
         },
+        
+        "comunity_alert": {
+            "title": "Comunity Alert UX/UI",
+            "fisrtDescription": "O Community Alert foi uma proposta das aulas de projeto e interface da faculdade em que estou cursando, o intuito deste projeto foi criar um design ui/ux de um aplicativo que […]",
 
-        "pet_system" : {
-            "title": "",
-            "fisrtDescription": "",
+            "projectDate": "20/12/2021",
 
-            "projectDate": "",
-            "urlBanner": "",
+            "problemTitle": "Caso de Estudo",
+            "problemDescription": "O Community Alert foi uma proposta das aulas de projeto e interface da faculdade em que estou cursando, o intuito deste projeto foi criar um design ui/ux de um aplicativo que pudesse alertar a comunidade de eventuais catástrofes ecológica, através de algumas reuniões e planejamentos foi feito uma lista para entender quais as necessidades que o aplicativo teria e qual seria o melhor design system para ser utilizado no desenho das telas",
 
-            "problemTitle": "",
-            "problemDescription": "",
+            "solutionTitle": "Soluções e aplicações",
+            "solutionDescription": "Através do entendimento de todas as necessidades do usuário principal foi realizado a produção de algumas telas pensando em aplicativos mobile, todas as telas foram exclusivamente pensadas para a resolução do problema em si. A forma como os componentes estão dispostos na tela e suas devidas posições e aparências até mesmo para causar diferentes impactos no usuário principal, a partir do entendimento sobre as “Regras de Ouro de Shneiderman” entendi alguns conceitos importantes para se aplicar em todas as telas do design",
 
-            "solutionTitle": "",
-            "solutionDescription": "",
-
-            "ExampleTitle": "",
-            "ExampleDescription": "",
-            "ExampleImageAlt": "",
+            "ExampleTitle": "O Projeto",
+            "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
+            "ExampleImageAlt": "Project Print",
 
             "finalTitle": "",
-            "finalDescription": ""
+            "finalDescription": "",
+
+            "banner_description": "Estudos e analises sob projetos de design de interface."
+        },
+
+        "match_coder": {
+            "title": "Match coder UX/UI",
+            "fisrtDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e  […]",
+
+            "projectDate": "20/12/2021",
+
+            "problemTitle": "Caso de Estudo",
+            "problemDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e empresas pudessem dar um match (assim como no tinder) para conhecer profissionais da TI e incentivar empregos para essa área. Através da análise de persona, eu e a equipe que atuou comigo neste trabalho, conhecemos os usuários que iriam utilizar o aplicativo e compreendi melhor quais componentes deveria utilizar e como ficariam nas telas do mobile.",
+
+            "solutionTitle": "Soluções e aplicações",
+            "solutionDescription": "Este projeto me proporcionou uma visão mais ampla sobre design, durante seu desenvolvimento pude aplicar diferentes conhecimentos de boas práticas aplicadas a protótipos, ensinamentos visuais e estéticos para que os elementos da tela fiquem mais claros e acessíveis para o usuário. Dessa maneira produzi diversas telas que traduzem a necessidade inicial, que foi das empresas encontrarem profissionais que tenham um perfil mais adequado para a vaga de emprego, assim como candidatos da área de T.I. que querem trabalhar em empresas com o seu perfil.",
+
+            "ExampleTitle": "O Projeto",
+            "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
+            "ExampleImageAlt": "Project Print",
+
+            "finalTitle": "",
+            "finalDescription": "",
+
+            "banner_description": "Estudos e analises sob projetos de design de interface."
+        },
+
+        "pet_care" : {
+            "title": "Pet Care UX/UI",
+            "fisrtDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e  […]",
+
+            "projectDate": "20/12/2021",
+
+            "problemTitle": "Caso de Estudo",
+            "problemDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e empresas pudessem dar um match (assim como no tinder) para conhecer profissionais da TI e incentivar empregos para essa área. Através da análise de persona, eu e a equipe que atuou comigo neste trabalho, conhecemos os usuários que iriam utilizar o aplicativo e compreendi melhor quais componentes deveria utilizar e como ficariam nas telas do mobile.",
+
+            "solutionTitle": "Soluções e aplicações",
+            "solutionDescription": "Este projeto me proporcionou uma visão mais ampla sobre design, durante seu desenvolvimento pude aplicar diferentes conhecimentos de boas práticas aplicadas a protótipos, ensinamentos visuais e estéticos para que os elementos da tela fiquem mais claros e acessíveis para o usuário. Dessa maneira produzi diversas telas que traduzem a necessidade inicial, que foi das empresas encontrarem profissionais que tenham um perfil mais adequado para a vaga de emprego, assim como candidatos da área de T.I. que querem trabalhar em empresas com o seu perfil.",
+
+            "ExampleTitle": "O Projeto",
+            "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
+
+            "finalTitle": "",
+            "finalDescription": "",
+
+            "ExampleImageAlt": "Project Print",
+
+            "banner_description": "Estudos e analises sob projetos de design de interface."
         }
     }
 }

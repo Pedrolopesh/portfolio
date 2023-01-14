@@ -7,9 +7,13 @@ import { useRouter } from 'next/router'
 import GalleryImagens from "../components/MainContent/GalleryImagens";
 import ProjectComponent from '../components/MainContent/ProjectItem'
 
-import {TripperInfo} from '../assets/ProjectContent/Triper'
-import {LinkLeitoInfo} from '../assets/ProjectContent/LinkLeito'
-import {EluxInfo} from '../assets/ProjectContent/Electrolux'
+import {TripperInfo} from '../assets/ProjectContent/Triper';
+import {LinkLeitoInfo} from '../assets/ProjectContent/LinkLeito';
+import {EluxInfo} from '../assets/ProjectContent/Electrolux';
+
+import {ComunityAlertInfo} from '../assets/ProjectContent/ComunityAlert'
+import {MatchCoderInfo} from '../assets/ProjectContent/MatchCoder'
+import {PetCaretInfo} from '../assets/ProjectContent/PetCare'
 
 import type { IProjectInfoItem } from '../typings/IProjectContent'
 
@@ -52,13 +56,15 @@ const Project = () => {
     { projectName: 'electrolux', projectInfo: EluxInfo },
     { projectName: 'link-leito', projectInfo: LinkLeitoInfo },
     { projectName: 'triper', projectInfo: TripperInfo },
-    { projectName: 'match-coder', projectInfo: TripperInfo },
-    { projectName: 'triper', projectInfo: TripperInfo },
-    { projectName: 'triper', projectInfo: TripperInfo },
-    { projectName: 'triper', projectInfo: TripperInfo },
-    { projectName: 'triper', projectInfo: TripperInfo },
-    { projectName: 'triper', projectInfo: TripperInfo },
-    { projectName: 'triper', projectInfo: TripperInfo }
+    { projectName: 'comunity-alert', projectInfo: ComunityAlertInfo },
+    { projectName: 'match-coder', projectInfo: MatchCoderInfo },
+    { projectName: 'pet-care', projectInfo: PetCaretInfo },
+    { projectName: 'the-chat', projectInfo: TripperInfo },
+    { projectName: 'quest-game', projectInfo: TripperInfo },
+    { projectName: 'blue-token', projectInfo: TripperInfo },
+    { projectName: 'toro-token', projectInfo: TripperInfo },
+    { projectName: 'genesis-bank', projectInfo: TripperInfo },
+    { projectName: 'pet-system', projectInfo: TripperInfo }
   ]
 
   React.useEffect(() => {

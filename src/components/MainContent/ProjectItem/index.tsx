@@ -57,14 +57,19 @@ const ProjectItem = (props: IProjectInfoItem) => {
                         </div>
                     </div>
 
-                    <div className={style.containerContent}>
-                        <div className='flex'>
-                            <h3 className={style.firstContentTitle}>{t(props.projectInfo.finalDescription.title)}</h3>
-                            <hr />
-                        </div>
+                    {
+                        t(props.projectInfo.finalDescription.title) !== '' && 
+                        t(props.projectInfo.finalDescription.description) !== '' &&
 
-                        <p dangerouslySetInnerHTML={{ __html: t(props.projectInfo.finalDescription.description) }}></p>
-                    </div>
+                        <div className={style.containerContent}>
+                            <div className='flex'>
+                                <h3 className={style.firstContentTitle}>{t(props.projectInfo.finalDescription.title)}</h3>
+                                <hr />
+                            </div>
+
+                            <p dangerouslySetInnerHTML={{ __html: t(props.projectInfo.finalDescription.description) }}></p>
+                        </div>
+                    }
                 </div>
             }
         </>
