@@ -20,6 +20,7 @@ export const ToroTokennInfo = {
         finalDescription: {
             title: 'projects.toro_token.finalTitle',
             description: 'projects.toro_token.finalDescription',
-        }
+        },
+        projectLink: 'https://torotoken.io/'
     }
 }

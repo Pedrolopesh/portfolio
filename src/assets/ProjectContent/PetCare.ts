@@ -20,6 +20,7 @@ export const PetCaretInfo = {
         finalDescription: {
             title: 'projects.pet_care.finalTitle',
             description: 'projects.pet_care.finalDescription',
-        }
+        },
+        projectLink: 'https://www.behance.net/gallery/127210829/Pet-care'
     }
 }

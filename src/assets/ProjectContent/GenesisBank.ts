@@ -20,6 +20,7 @@ export const GenesisBanknInfo = {
         finalDescription: {
             title: 'projects.genesis_bank.finalTitle',
             description: 'projects.genesis_bank.finalDescription',
-        }
+        },
+        projectLink: 'https://www.genesisbank.com.br/'
     }
 }

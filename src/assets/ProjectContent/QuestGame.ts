@@ -20,6 +20,7 @@ export const questGameInfo = {
         finalDescription: {
             title: 'projects.quest_game.finalTitle',
             description: 'projects.quest_game.finalDescription',
-        }
+        },
+        projectLink: 'https://quest-game.netlify.app'
     }
 }

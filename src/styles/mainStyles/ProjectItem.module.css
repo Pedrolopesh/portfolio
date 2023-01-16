@@ -28,6 +28,10 @@
     display: flex;
 }
 
+.containerBanner img {
+    max-width: 95%;
+}
+
 
 .containerContent {
     padding: 2em 0em 2em 0em;
@@ -68,6 +72,34 @@
     cursor: pointer;
 }
 
+.containerButtonKnowMore {
+
+}
+
+.buttonKnowMore {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    display: flex;
+    max-width: 100%;
+    border-radius: 30px;
+    align-items: center;
+    margin: 100px auto 0px auto;
+    cursor: pointer;
+    background-color: #FF7897;
+    justify-content: center;
+    border: 1px solid #FF7897;
+    color: #fff;
+    font-size: 18px;
+}
+
+.buttonKnowMore:hover {
+    transition: 0.6s;
+    cursor: pointer;
+    background-color: #fafafa;
+    border: 1px solid #FF7897;
+    color: #FF7897;
+}
 
 @media screen and (max-width: 700px) {
     .containerFirstText {

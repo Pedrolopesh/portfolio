@@ -20,6 +20,7 @@ export const EluxInfo = {
         finalDescription: {
             title: 'projects.electrolux.finalTitle',
             description: 'projects.electrolux.finalDescription',
-        }
+        },
+        projectLink: 'https://loja.electrolux.com.br/'
     }
 }

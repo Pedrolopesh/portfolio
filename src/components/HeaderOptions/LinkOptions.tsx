@@ -32,7 +32,19 @@ const LinkOptions = (routerParam: any) => {
                 >{t('header_options.projects')}</a>
             </Link>
 
-            <button className={style.contactButton}>{t('header_options.contact')}</button>
+            <Link href="/Contact">
+                <a
+                    className={
+                        `${
+                            (router.pathname === '/Contact') ? 
+                            style.selectedPath : 
+                            style.unSelectedPath
+                        }`
+                    }
+                >{t('header_options.contact')}</a>
+            </Link>
+
+            {/* <button className={style.contactButton}>{t('header_options.contact')}</button> */}
         </>
     )
 }

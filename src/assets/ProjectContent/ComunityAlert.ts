@@ -20,6 +20,7 @@ export const ComunityAlertInfo = {
         finalDescription: {
             title: 'projects.comunity_alert.finalTitle',
             description: 'projects.comunity_alert.finalDescription',
-        }
+        },
+        projectLink: 'https://www.behance.net/gallery/127210581/Community-Alert'
     }
 }

@@ -11,6 +11,11 @@ const ProjectItem = (props: IProjectInfoItem) => {
         // console.log('aqui? ', props.projectInfo)
     }, [props])
 
+    const redirectNewTab = (routerPath:string) => {
+        window.open(routerPath,'_blank');
+    }
+
+
     return (
         <>
 
@@ -77,6 +82,10 @@ const ProjectItem = (props: IProjectInfoItem) => {
                             <p dangerouslySetInnerHTML={{ __html: t(props.projectInfo.finalDescription.description) }}></p>
                         </div>
                     }
+
+                    <div className={style.containerButtonKnowMore}>
+                        <button onClick={ () => { redirectNewTab(props.projectInfo.projectLink) } } className={style.buttonKnowMore}> { t('know_more_about_project') } </button>
+                    </div>
                 </div>
             }
         </>

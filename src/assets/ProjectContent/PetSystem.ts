@@ -20,6 +20,7 @@ export const PetSystemInfo = {
         finalDescription: {
             title: 'projects.pet_system.finalTitle',
             description: 'projects.pet_system.finalDescription',
-        }
+        },
+        projectLink: 'https://pet-sytem.netlify.app/pet-system-website/home/home'
     }
 }

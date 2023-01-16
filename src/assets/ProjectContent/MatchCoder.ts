@@ -20,6 +20,7 @@ export const MatchCoderInfo = {
         finalDescription: {
             title: 'projects.match_coder.finalTitle',
             description: 'projects.match_coder.finalDescription',
-        }
+        },
+        projectLink: 'https://www.behance.net/gallery/127211141/Match-Coder'
     }
 }

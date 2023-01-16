@@ -53,7 +53,7 @@ const HeaderOptions = () => {
                             >{t('header_options.projects')}</a>
                         </Link> */}
 
-                        <button className={style.contactButton}>{t('header_options.contact')}</button>
+                        {/* <button className={style.contactButton}>{t('header_options.contact')}</button> */}
                     </div>
                     {
                         (router.pathname === '/DesignPage' || router.pathname === '/Project') ? 

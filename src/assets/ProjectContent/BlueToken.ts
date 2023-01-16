@@ -20,6 +20,7 @@ export const BlueTokenInfo = {
         finalDescription: {
             title: 'projects.blue_token.finalTitle',
             description: 'projects.blue_token.finalDescription',
-        }
+        },
+        projectLink: 'https://bluetoken.io/homepage'
     }
 }

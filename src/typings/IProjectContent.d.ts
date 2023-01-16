@@ -30,5 +30,6 @@ export interface IProjectInfoItem {
         solutionDescription: ISolutionDescription;
         exampleDescription: IExampleDescription;
         finalDescription: IFinalDescription;
+        projectLink: string;
     }
 }

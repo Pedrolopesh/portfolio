@@ -20,6 +20,7 @@ export const LinkLeitoInfo = {
         finalDescription: {
             title: 'projects.link_leito.finalTitle',
             description: 'projects.link_leito.finalDescription',
-        }
+        },
+        projectLink: 'https://linkleitoweb.netlify.app/#/'
     }
 }

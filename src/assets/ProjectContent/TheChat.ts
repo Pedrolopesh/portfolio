@@ -20,6 +20,7 @@ export const TheChatInfo = {
         finalDescription: {
             title: 'projects.the_chat.finalTitle',
             description: 'projects.the_chat.finalDescription',
-        }
+        },
+        projectLink: 'https://thechat-app.netlify.app'
     }
 }
