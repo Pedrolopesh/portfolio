@@ -50,18 +50,38 @@ export const photos = [
     },
     {
       src: "./img/projects/project_gallery_8.png",
+      title: "projects.quest_game.title",
+      text: "projects.quest_game.banner_description",
+      url: "Project?name=quest-game",
+      alt: "quest_game alt",
     },
     {
       src: "./img/projects/project_gallery_9.png",
+      title: "projects.blue_token.title",
+      text: "projects.blue_token.banner_description",
+      url: "Project?name=blue-token",
+      alt: "blue_token alt",
     },
     {
       src: "./img/projects/project_gallery_10.png",
+      title: "projects.toro_token.title",
+      text: "projects.toro_token.banner_description",
+      url: "Project?name=toro-token",
+      alt: "toro_token alt",
     },
     {
       src: "./img/projects/project_gallery_11.png",
+      title: "projects.genesis_bank.title",
+      text: "projects.genesis_bank.banner_description",
+      url: "Project?name=genesis-bank",
+      alt: "genesis_bank alt",
     },
     {
       src: "./img/projects/project_gallery_12.png",
+      title: "projects.pet_system.title",
+      text: "projects.pet_system.banner_description",
+      url: "Project?name=pet-system",
+      alt: "pet_system alt",
     },
 
   ];

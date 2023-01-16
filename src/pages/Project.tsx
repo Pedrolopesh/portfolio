@@ -16,6 +16,12 @@ import {MatchCoderInfo} from '../assets/ProjectContent/MatchCoder'
 import {PetCaretInfo} from '../assets/ProjectContent/PetCare'
 
 import {TheChatInfo} from '../assets/ProjectContent/TheChat'
+import {questGameInfo} from '../assets/ProjectContent/QuestGame'
+import {BlueTokenInfo} from '../assets/ProjectContent/BlueToken'
+
+import {ToroTokennInfo} from '../assets/ProjectContent/ToroToken'
+import {GenesisBanknInfo} from '../assets/ProjectContent/GenesisBank'
+import {PetSystemInfo} from '../assets/ProjectContent/PetSystem'
 
 import type { IProjectInfoItem } from '../typings/IProjectContent'
 
@@ -62,11 +68,11 @@ const Project = () => {
     { projectName: 'match-coder', projectInfo: MatchCoderInfo },
     { projectName: 'pet-care', projectInfo: PetCaretInfo },
     { projectName: 'the-chat', projectInfo: TheChatInfo },
-    { projectName: 'quest-game', projectInfo: TripperInfo },
-    { projectName: 'blue-token', projectInfo: TripperInfo },
-    { projectName: 'toro-token', projectInfo: TripperInfo },
-    { projectName: 'genesis-bank', projectInfo: TripperInfo },
-    { projectName: 'pet-system', projectInfo: TripperInfo }
+    { projectName: 'quest-game', projectInfo: questGameInfo },
+    { projectName: 'blue-token', projectInfo: BlueTokenInfo },
+    { projectName: 'toro-token', projectInfo: ToroTokennInfo },
+    { projectName: 'genesis-bank', projectInfo: GenesisBanknInfo },
+    { projectName: 'pet-system', projectInfo: PetSystemInfo }
   ]
 
   React.useEffect(() => {
