@@ -35,7 +35,7 @@ const ProjectItem = (props: IProjectInfoItem) => {
                     </div>
 
                     <div className={style.containerBanner}>
-                        <img src={props.projectInfo.urlBanner} alt="" />
+                        <img className={style.imageBanner} src={props.projectInfo.urlBanner} alt="" />
                     </div>
 
                     <div className={style.containerContent}>

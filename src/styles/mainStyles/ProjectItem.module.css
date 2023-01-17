@@ -28,8 +28,10 @@
     display: flex;
 }
 
-.containerBanner img {
-    max-width: 95%;
+.imageBanner {
+    display: block;
+    max-width: 95% !important;
+    width: 100% 
 }
 
 

@@ -93,17 +93,17 @@
             "projectDate": "20/12/2021",
 
             "problemTitle": "Electrolux",
-            "problemDescription": "A Electrolux contém uma história de 100 anos e durante esse tempo vem acumulando vitórias e conquistas, está presente no brasil desde 1926 e vende milhares de produtos por ano, uma das únicas marcas mundiais que oferece produtos de qualidade e soluções completas para clientes e profissionais. <br> <br> Com um coleção de produtos inovadores e cuidadosamente dedesenvolvidos, a Electrolux tem grande destaque no mercado brasileiro de eletroportáteis, devido a esse histórico de sucesso, a Electrolux Brasil está presente nas casas e na memória de muitos brasileiros e conta com um time sensacional de profissionais seniores para continuar este legado de excelência para o cliente, promovendo uma experiência Electrolux a todos que consomem seus produtos. <br> <br>",
+            "problemDescription": "A Electrolux contém uma história de 100 anos e durante esse tempo vem acumulando vitórias e conquistas, está presente no brasil desde 1926 e vende milhares de produtos por ano, uma das únicas marcas mundiais que oferece produtos de qualidade e soluções completas para clientes e profissionais. <br> <br> Com um coleção de produtos inovadores e cuidadosamente desenvolvidos, a Electrolux tem grande destaque no mercado brasileiro de eletroportáteis, devido a esse histórico de sucesso, a Electrolux Brasil está presente nas casas e na memória de muitos brasileiros e conta com um time sensacional de profissionais seniores para continuar este legado de excelência para o cliente, promovendo uma experiência Electrolux a todos que consomem seus produtos. <br> <br>",
 
             "solutionTitle": "Desafio",
-            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software do time que atende electrolux foi a migração de uma antiga tecnoliga vtex (CMS) para uma loja online totalmente mais sofisticada e intuitiva com a tecnologia Headless VTEX IO, está migração aconteceu gradativamente, durante todo o processo de transição, houve a caltela e analise das conversões, por exemplo, migrar somente uma ou duas páginas para o VTEX IO e observando a adesão do publico quanto a está nova stack.",
+            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software do time que atende electrolux foi a migração de uma antiga tecnologia vtex (CMS) para uma loja online totalmente mais sofisticada e intuitiva com a tecnologia Headless VTEX IO, está migração aconteceu gradativamente, durante todo o processo de transição, houve a cautela e análise das conversões, por exemplo, migrar somente uma ou duas páginas para o VTEX IO e observando a adesão do público quanto a esta nova stack.",
 
             "ExampleTitle": "A solução",
-            "ExampleDescription": "Por fim, chegamos ao final do processo de migração e tudo correu bem, o novo rosto e corpo da electrolux brasil estava implementado e funcionando para todos os clientes, o objetivo final de ter uma conversão de vendas maior foi alcançado, devido a nova tecnologia a loja online da electrolux se mostrou mais perfomatica e com uma experiência diferenciada de todos no mercado de eletroportateis.",
+            "ExampleDescription": "Por fim, chegamos ao final do processo de migração e tudo correu bem, o novo rosto e corpo da electrolux brasil estava implementado e funcionando para todos os clientes, o objetivo final de ter uma conversão de vendas maior foi alcançado, devido a nova tecnologia a loja online da electrolux se mostrou mais performática e com uma experiência diferenciada de todos no mercado de eletroportáteis.",
             "ExampleImageAlt": "Project Print",
 
             "finalTitle": "Electrolux Atualmente",
-            "finalDescription": "A Electrolux continua seguindo constantes melhorias em todos os setores de sua Loja, atualmente atuo como engenheiro de software do squad de Web Expirience (Experiência do usuário) atuando em melhorias e constantes ajustes que fazem com que o usuário tenha uma experiência profissional e de conforto para casa do cliente mesmo que esteja visitando a loja e navegando pelos produtos.",
+            "finalDescription": "A Electrolux continua seguindo constantes melhorias em todos os setores de sua Loja, atualmente atuo como engenheiro de software do squad de Web Experience (Experiência do usuário) atuando em melhorias e constantes ajustes que fazem com que o usuário tenha uma experiência profissional e de conforto para casa do cliente mesmo que esteja visitando a loja e navegando pelos produtos.",
             
             "banner_description": "Entenda como foi o desafio da migração de uma das lojas que mais vendem eletroportáteis do Brasil"
         },
@@ -127,7 +127,7 @@
             "finalTitle": "Link leito atualmente",
             "finalDescription": "Link leito atualmente se encontra desativado temporariamente pois a equipe do hospital decidiu seguir por outro caminho e a dificuldade de adesão ao software contribuiu para que o projeto fosse engavetado porém nunca será esquecido pois a diversos relatos do Lito Lito na mídia <br><br> E para que este projeto de alguma forma possa seguir em frente, muitos trabalhos e projetos da Universidade que estou cursando no momento possuem algum estudo de caso ou explanação sobre o link leito",
 
-            "banner_description": "Conheça um pouco do projeto Link Leito e a solução tecnólogica aplicada a realidade."
+            "banner_description": "Conheça um pouco do projeto Link Leito e a solução tecnológica aplicada à realidade."
         },
 
         "triper" : {
@@ -266,7 +266,7 @@
         },
 
         "blue_token" : {
-            "title": "Engenheiro Frontend no BLUE",
+            "title": "Desenvolvedor de software no BLUE",
             "fisrtDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta[…]",
 
             "projectDate": "20/12/2021",
@@ -289,18 +289,18 @@
         },
 
         "toro_token" : {
-            "title": "Engenheiro Frontend no BLUE",
+            "title": "Desenvolvedor de software no TORO",
             "fisrtDescription": "TORO é o primeiro portfólio tokenizado desse tipo, programado para seguir estratégias ativas e passivas em benefício de seus detentores como STOP LOSS, STOP BUY, SHORTING e distribuições de rede, O objetivo de TORO é facilitar o processo da construção de […]",
 
             "projectDate": "20/12/2021",
 
-            "problemTitle": "BLUE token.",
+            "problemTitle": "TORO token.",
             "problemDescription": "TORO é o primeiro portfólio tokenizado desse tipo, programado para seguir estratégias ativas e passivas em benefício de seus detentores como STOP LOSS, STOP BUY, SHORTING e distribuições de rede, O objetivo de TORO é facilitar o processo da construção de um portfólio de ativos digitais, buscando ativamente ganhos e mitigando perdas. Os detentores podem participar de um portfólio com recursos avançados de negociação integrados, mantendo um único token: o TORO token.",
 
             "solutionTitle": "Relatos da engenharia.",
             "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou da construção do Toro token foi a criação de seu novo website, com o intuito de uma nova aparência para a marca o website tem o foco de mostrar algumas características do token além de proporcionar uma visão ampla de todas as funcionalidades e benefícios que usuários terão ao adquirir o Toro token.",
 
-            "ExampleTitle": "BLUE token atualmente",
+            "ExampleTitle": "TORO token atualmente",
             "ExampleDescription": "Atualmente o produto está sendo construído por uma equipe de profissionais em estratégias de negociações do mercado de ações e criptomoedas e durante o ano de 2023 promete diversas novidade e diferentes funcionalidades para os uruários que entrar na pré-venda",
 
             "finalTitle": "",
@@ -312,16 +312,16 @@
         },
 
         "genesis_bank" : {
-            "title": "Engenheiro Frontend na genesis bank",
+            "title": "Desenvolvedor mobile na genesis bank",
             "fisrtDescription": "Genesis bank é uma plataforma digital voltado para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é […]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "Genesis Bank.",
-            "problemDescription": "Genesis bank é uma plataforma digital voltado para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é ajudar empresários a se formalizarem dando suporte a todo o processo de abertura de empresa, auxílio com a contabilidade, pagamento de impostos, aconselhamento jurídico e a se bancarizarem.",
+            "problemDescription": "Genesis bank é uma plataforma digital voltada para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro. A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é ajudar empresários a se formalizarem dando suporte a todo o processo de abertura de empresa, auxílio com a contabilidade, pagamento de impostos, aconselhamento jurídico e a se bancarizarem.",
 
             "solutionTitle": "Relatos da engenharia.",
-            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou do projeto da genesis bank foi a reconstrução de seu aplicativo mobile, a partir de um design proposto pelo time de UX/UI comecei a construção das páginas iniciais como, login, cadastro e dashboard, passando até pelo momento de pagamento dentro do aplicativo, a nova interface permitiu mais acessibilidade e uma melhores simetrias visuais para que os usuários se sentissem bem ao utilizar a ferramenta..",
+            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou do projeto da genesis bank foi a reconstrução de seu aplicativo mobile, a partir de um design proposto pelo time de UX/UI comecei a construção das páginas iniciais como, login, cadastro e dashboard, passando até pelo momento de pagamento dentro do aplicativo, a nova interface permitiu mais acessibilidade e uma melhores simetrias visuais para que os usuários se sentissem bem ao utilizar a ferramenta.",
 
             "ExampleTitle": "Genesis Bank atualmente",
             "ExampleDescription": "Atualmente o produto está sendo constantemente atualizado e mantido por uma equipe de desenvolvimento e profissionais em estratégias de negociações com empresários do ramo.",
@@ -354,7 +354,7 @@
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Conhecça mais do primeiro projeto que fiz para aprender sobre programação web."
+            "banner_description": "Conheça mais do primeiro projeto que fiz para aprender sobre programação web."
         }
     },
 

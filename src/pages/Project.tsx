@@ -54,7 +54,8 @@ const Project = () => {
       finalDescription: {
           title: '',
           description: '',
-      }
+      },
+      projectLink: ''
     }
   })
 

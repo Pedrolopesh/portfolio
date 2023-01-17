@@ -20,6 +20,7 @@ export const TripperInfo = {
         finalDescription: {
             title: 'projects.triper.finalTitle',
             description: 'projects.triper.finalDescription',
-        }
+        },
+        projectLink: 'https://tripper-landing.netlify.app'
     }
 }
