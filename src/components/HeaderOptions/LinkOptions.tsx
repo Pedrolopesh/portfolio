@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
 import style from '../../styles/HeaderOption.module.css'
 import { useTranslation } from "react-i18next";
@@ -6,9 +6,27 @@ import { useTranslation } from "react-i18next";
 const LinkOptions = (routerParam: any) => {
     const { t } = useTranslation();
     const router = routerParam.routerParam
+    const [sourceRoute, setSourceRoute] = useState('')
+    
+    
+    const checkPath = () => {
+        if(sourceRoute === '/DesignPage') {
+            return '/DesignPage'
+        }
+        else {
+            return '/TiPage'
+        }
+    }
+    
+    useEffect(() => {
+        const sourceRoute = localStorage.getItem('sourceRoute')
+        setSourceRoute(sourceRoute)
+    }, [sourceRoute])
+
     return (
         <>
-            <Link href={(router.pathname === '/DesignPage' || router.pathname === '/Project') ? "/DesignPage" : "TiPage"}>
+            {/* <Link href={(router.pathname === '/DesignPage' || router.pathname === '/Project') ? "/DesignPage" : "TiPage"}> */}
+            <Link href={checkPath()}>
                 <a 
                     className={
                         `${

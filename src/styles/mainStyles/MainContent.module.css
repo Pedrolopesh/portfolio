@@ -1,5 +1,12 @@
-.Container{
+.mainITContainer{
     display: block;
     max-width: 100%;
     width: 100%;
+    margin: 4% 0 0 0;
+}
+
+@media screen and (max-width: 900px) {   
+    .mainITContainer{
+        margin: 11.5% 0 0 0;
+    }
 }

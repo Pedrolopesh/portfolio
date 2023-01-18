@@ -10,16 +10,24 @@ import HomeProjects from '../components/MainContent/HomeProjects';
 import Companys from '../components/MainContent/Companys';
 import FooterDesign from '../components/MainContent/FooterDesign';
 import HeaderOptions from '../components/HeaderOptions';
+import { useRouter } from 'next/router';
 
 const DesignPage = () => {
+
+    const router = useRouter()
+    const handlePath = (currentPath: string) => {
+      localStorage.setItem('sourceRoute', currentPath)
+    }
 
     const setbodyBg = () => {
         const body = document.querySelector('body');
         body.classList.add('design_bg');
+        body.classList.remove('it_bg');
       }
     
       useEffect(() => {
         setbodyBg();
+        handlePath(router.pathname);
       }, [])
 
     return (

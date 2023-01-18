@@ -89,6 +89,7 @@
 }
 
 .hideMobileOptions {
+    opacity: 0;
     animation: animationHideMobileOptions 1s ease;
     transform: translateY(-150%);
 }
@@ -98,6 +99,7 @@
 }
 
 .showMobileOptions {
+    opacity: 1;
     animation: animationShowMobileOptions 1s ease;
     transform: translateY(0%);
 }

@@ -8,7 +8,7 @@ import Style from '../../styles/mainStyles/MainContent.module.css'
 const MainContent = () => {
     return (
         <>
-            <div className={Style.Container}>
+            <div className={Style.mainITContainer}>
                 <InitialBanner/>
                 <CardInfos />
                 <WorkSection />

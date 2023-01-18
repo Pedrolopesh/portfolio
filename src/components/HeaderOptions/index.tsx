@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from 'next/link'
 import { AiFillEye } from 'react-icons/ai';
 import { HiOutlineTerminal, HiMenu } from 'react-icons/hi';
@@ -11,6 +11,7 @@ import LinkOptions from "./LinkOptions";
 const HeaderOptions = () => {
     const router = useRouter()
     const { t } = useTranslation();
+    const [sourceRoute, setSourceRoute] = useState('')
 
     const handleClick = (route: string) => {
         // setVisibleModal(!visibleModal)
@@ -19,7 +20,19 @@ const HeaderOptions = () => {
 
     const [visibleModal, setVisibleModal] = React.useState(false)
 
-    console.log('route header component: ', router)
+    const checkPath = () => {
+        if(sourceRoute === '/DesignPage') {
+            return '/DesignPage'
+        }
+        else {
+            return '/TiPage'
+        }
+    }
+    
+    useEffect(() => {
+        const sourceRoute = localStorage.getItem('sourceRoute')
+        setSourceRoute(sourceRoute)
+    }, [sourceRoute])
 
     return (
         <div className={style.containerHeaderOptions}>
@@ -56,7 +69,7 @@ const HeaderOptions = () => {
                         {/* <button className={style.contactButton}>{t('header_options.contact')}</button> */}
                     </div>
                     {
-                        (router.pathname === '/DesignPage' || router.pathname === '/Project') ? 
+                        (checkPath() === '/DesignPage') ? 
                         <div>
                             <button onClick={() => { handleClick('TiPage') }} className={style.code_button}>
                                 <HiOutlineTerminal size={30} />
