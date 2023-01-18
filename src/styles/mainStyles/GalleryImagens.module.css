@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -15,7 +15,7 @@
     overflow: hidden;
     width: 30%;
     display: flex;
-    margin: 20px;
+    margin: 20px auto;
     align-items: center;
     transition: 0.6s;
     display: flex;
@@ -62,6 +62,40 @@
 .containerTextHover {
     max-width: 80%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 3000px) {
+    .cardGallery {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 2400px) {
+    .cardGallery {
+        width: 23%;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    .cardGallery {
+        width: 26%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .cardGallery {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .containerCardsGallery {
+        width: 90%;
+    }
+
+    .cardGallery {
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 900px) {

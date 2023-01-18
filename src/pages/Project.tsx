@@ -90,6 +90,12 @@ const Project = () => {
     body.classList.remove('it_bg');
   }
 
+  const returnPage = () => {
+    // if (router.components['/DesignPage'].initial) {     )
+    // router.push('/projects')
+    router.back()
+  }
+
   useEffect(() => {
     setbodyBg();
   }, [router])
@@ -107,7 +113,7 @@ const Project = () => {
         : 
         <>
           <ProjectComponent 
-            returnPage={() => router.push('/Project')}
+            returnPage={() => returnPage()}
             projectInfo={projectParam.projectInfo}
           />
         </>

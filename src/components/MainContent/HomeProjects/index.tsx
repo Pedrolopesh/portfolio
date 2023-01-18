@@ -1,11 +1,6 @@
 import React, { useState } from "react"
 import style from '../../../styles/HomeProjects.module.css'
 import { useRouter } from 'next/router'
-import {
-    ContainerSectionText,
-    CardItemProjects,
-    ContainerProjectCards,
-} from './style'
 import { t } from "i18next"
 
 const HomeProjects = () => {
@@ -15,21 +10,21 @@ const HomeProjects = () => {
     const projectCards = [
         {
             image: './img/projects/project_1.png',
-            title: "Project 1",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia.",
-            url: '/Project?name=the-chat'
+            title: "projects.electrolux.title",
+            description: "projects.electrolux.banner_description",
+            url: '/Project?name=electrolux'
         },
         {
             image: './img/projects/project_2.png',
-            title: "Project 2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia.",
-            url: '/Project?name=link-leito'
+            title: "projects.the_chat.title",
+            description: "projects.the_chat.banner_description",
+            url: '/Project?name=the-chat'
         },
         {
             image: './img/projects/project_3.png',
-            title: "Project 3",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia.",
-            url: '/Project?name=triper'
+            title: "projects.link_leito.title",
+            description: "projects.link_leito.banner_description",
+            url: '/Project?name=link-leito'
         },
     ]
 
@@ -39,19 +34,22 @@ const HomeProjects = () => {
 
     return (
         <div>
-            <ContainerSectionText className="main-body-container ac">
+            <div className={`${style.ContainerSectionText} main-body-container ac`}>
                 <h3>{t('cases')}</h3>
                 <h2><strong>{t('project')}</strong> {t('andWorks')}</h2>
 
                 <button onClick={() => {redirectTo('/Project')}}> {t('all_projects')} </button>
-            </ContainerSectionText>
+            </div>
 
-            <ContainerProjectCards>
+            <div className={`${style.ContainerProjectCards}`}>
                 {projectCards.map((card, index) => (
-                    <CardItemProjects 
+                    <div
+                        className={style.CardItemProjects} 
                         onMouseOver={() => { setShowAnimation(index) }} 
                         onMouseOut={() => { setShowAnimation(-1) }}
-                        onClick={() => { setShowAnimation(index) }}
+                        // onClick={() => { setShowAnimation(index) }}
+                        // eslint-disable-next-line react/jsx-no-duplicate-props
+                        onClick={ () => { redirectTo(card.url) } }
                         key={index}
                     >
                         <img
@@ -78,13 +76,12 @@ const HomeProjects = () => {
                                 }>
                                     <div>
                                         <h3
-                                            onClick={ () => { redirectTo(card.url) } }
                                             className={
                                                 showAnimation === index ? 
                                                 style.showTitle : 
                                                 style.hideTitle
                                             }
-                                        >{card.title}</h3>
+                                        >{t(card.title)}</h3>
 
                                         <p
                                             className={
@@ -92,16 +89,16 @@ const HomeProjects = () => {
                                                 style.showDescription :
                                                 style.hideDescription
                                             }
-                                        >{card.description}</p>
+                                        >{t(card.description)}</p>
                                     </div>
                                 </div>
                         </div>
 
                         {/* <h3>{card.title}</h3> */}
                         {/* <p>{card.description}</p> */}
-                    </CardItemProjects>
+                    </div>
                 ))}
-            </ContainerProjectCards>
+            </div>
 
         </div>
     )
