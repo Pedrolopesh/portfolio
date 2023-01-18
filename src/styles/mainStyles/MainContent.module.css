@@ -10,3 +10,9 @@
         margin: 11.5% 0 0 0;
     }
 }
+
+@media screen and (max-width: 600px) {   
+    .mainITContainer{
+        margin: 23% 0 0 0;
+    }
+}

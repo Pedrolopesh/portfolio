@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { photos } from '../assets/mock-images';
 import { useRouter } from 'next/router'
@@ -59,7 +59,6 @@ const Project = () => {
     }
   })
 
-  console.log(router.query.name)
 
   const ProjectContentOption = [
     { projectName: 'electrolux', projectInfo: EluxInfo },
@@ -79,13 +78,21 @@ const Project = () => {
   React.useEffect(() => {
     if (router.query.name !== undefined) {
       const findProject = ProjectContentOption.find((project) => {
-        console.log(project)
         return project.projectName === router.query.name
       })
-      // console.log('aqui aqui: ', findProject.projectInfo.projectInfo)
       setProjectParam(findProject.projectInfo)
     }
   }, [router.query.name])
+
+  const setbodyBg = () => {
+    const body = document.querySelector('body');
+    body.classList.add('design_bg');
+    body.classList.remove('it_bg');
+  }
+
+  useEffect(() => {
+    setbodyBg();
+  }, [router])
 
   return (
     <div>

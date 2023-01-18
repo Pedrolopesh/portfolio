@@ -142,8 +142,16 @@
 }
 
 @media screen and (max-width: 800px) {
-    .containerLeftHeaderOptions {
+    .containerDesktop {
         display: none;
+    }
+
+    .containerLeftHeaderOptions {
+        display: block;
+    }
+
+    .containerLinks {
+        display: block;
     }
 
     .containerMenuMobile {
@@ -180,4 +188,10 @@
     .imgModal {
         width: 40%;
     }
+
+    .containerMobileOptions button {
+        display: flex;
+        padding: 5px 15px;
+    }
+
 }

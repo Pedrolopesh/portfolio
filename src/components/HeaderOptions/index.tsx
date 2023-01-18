@@ -38,53 +38,8 @@ const HeaderOptions = () => {
         <div className={style.containerHeaderOptions}>
             <div className={style.containerHeaderOptionsContent}>
                 <Logo classParam={style.logoHeaderOptions}/>
-
-                <div className={style.containerLeftHeaderOptions}>
-                    <div className={style.containerLinks}>
-                        <LinkOptions routerParam={router} />
-                        {/* <Link href={(router.pathname === '/DesignPage' || router.pathname === '/Project') ? "/DesignPage" : "TiPage"}>
-                            <a 
-                                className={
-                                    `${
-                                        (router.pathname === '/DesignPage') ? 
-                                        style.selectedPath : 
-                                        style.unSelectedPath
-                                    }`
-                                }
-                                >{t('header_options.home')}</a>
-                        </Link>
-
-                        <Link href="/Project">
-                            <a
-                                className={
-                                    `${
-                                        (router.pathname === '/Project') ? 
-                                        style.selectedPath : 
-                                        style.unSelectedPath
-                                    }`
-                                }
-                            >{t('header_options.projects')}</a>
-                        </Link> */}
-
-                        {/* <button className={style.contactButton}>{t('header_options.contact')}</button> */}
-                    </div>
-                    {
-                        (checkPath() === '/DesignPage') ? 
-                        <div>
-                            <button onClick={() => { handleClick('TiPage') }} className={style.code_button}>
-                                <HiOutlineTerminal size={30} />
-                                <p className={style.buttonTextModalOptions}> {t('header_options.button_code_option')} </p>
-                            </button>
-                        </div> :
-                        <div>
-                            <button onClick={() => { handleClick('DesignPage') }} className={style.design_button}>
-                                <AiFillEye size={30} />
-                                <p className={style.buttonTextModalOptions}> {t('header_options.button_design_option')} </p>
-                            </button>
-
-                        </div>
-                    }
-                    
+                <div className={style.containerDesktop}>
+                    <LinkOptions routerParam={router} />
                 </div>
 
                 <div className={style.containerMenuMobile}>
