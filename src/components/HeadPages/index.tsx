@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 const HeadPages = () => {
     return (
-        <Head>
+      <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet" />
@@ -18,8 +18,8 @@ const HeadPages = () => {
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
         {/* <!-- Primary Meta Tags --> */}
-        <title>Meta Tags — Preview, Edit and Generate</title>
-        <meta name="title" content="Meta Tags — Preview, Edit and Generate" />
+        <title>Pedro Lopes Tech - Portfolio</title>
+        <meta name="title" content="Pedro Lopes Tech - Portfolio" />
         <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!" />
 
         {/* <!-- Open Graph / Facebook --> */}
