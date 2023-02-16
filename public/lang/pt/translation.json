@@ -10,7 +10,6 @@
     "cases": "Casos Reais",
     "project": "Projetos",
     "andWorks": "e Trabalhos",
-    "welcome_to_React": "Bem vindo ao react-i18next",
     "title_banner": "Pedro Lopes",
     "overview_text_banner": "Olá, sou pedro Lopes, designer e programador, fique a vontade para conhecer mais sobre mim e mus trabalhos.",
     "first_section_title":"Quem sou eu?",
@@ -84,6 +83,7 @@
     "comment_03": "Sempre buscando a melhora em seus projetos e estudando novos métodos e tecnologias constantemente para facilitar suas aplicações.",
     "comment_04": "Recomendo o Pedro para qualquer tipo de serviço na área de tecnologia, um excelente profissional.",
 
+    "project_clients": "Projetos e Clientes",
 
     "projects": {
         "electrolux" : {

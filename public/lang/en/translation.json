@@ -9,8 +9,7 @@
     "all_projects": "All Projects",
     "cases": "Real Cases",
     "project": "Projects",
-    "andWorks": "amd Works",
-    "welcome_to_React": "Welcome to react-i18next",
+    "andWorks": "and Works",
     "title_banner": "Pedro Lopes",
     "overview_text_banner": "Hello! I'm pedro Lopes, designer and software developer, feel free to read more about me and my projects.",
     "first_section_title":"Who am I?",
@@ -84,6 +83,8 @@
     "comment_03": "Always looking for improvement in their projects and constantly studying new methods and technologies to facilitate their applications.",
     "comment_04": "I recommend Pedro for any type of service in the technology area, an excellent professional.",
 
+    "project_clients": "Projects and Clients",
+
     "projects": {
         "electrolux" : {
             "title": "Software engineering at Electrolux",
@@ -130,230 +131,230 @@
         },
 
         "triper" : {
-            "title": "Triper: Site de viagens",
-            "fisrtDescription": "Triper é um website que criei recentemente com o objetivo de melhorar meus conhecimentos em Next.js, animações CSS e habilidades de código limpo. O site foi construído usando o framework Next.js […]",
+            "title": "Triper: Travel Website",
+            "fisrtDescription": "Triper is a website that I recently created with the goal of improving my knowledge of Next.js, CSS animations, and clean coding skills. The site was built using […]",
 
             "projectDate": "20/12/2021",
 
-            "problemTitle": "Caso de Estudo",
-            "problemDescription": "Triper é um website que criei recentemente com o objetivo de melhorar meus conhecimentos em Next.js, animações CSS e habilidades de código limpo. O site foi construído usando o framework Next.js, que é uma ferramenta poderosa para criar front-end React com renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React. Foi muito interessante aprender essa ferramenta para entender como melhorar a performance de sites e melhorar a experiência do usuário em sua navegação. Durante o desenvolvimento fui também compreendendo diferentes opções de animações CSS para que o site ficasse mais fluido e sua navegação mais suavizada, animações de elementos da página e keyframes para criar movimentos personalizados.",
+            "problemTitle": "Study Case",
+            "problemDescription": "Triper is a website that I recently created with the goal of improving my knowledge of Next.js, CSS animations, and clean coding skills. The site was built using the Next.js framework, which is a powerful tool for creating server-side rendered React front-ends and generating static sites for React-based web applications. It was very interesting to learn this tool and understand how to improve site performance and enhance user experience in their navigation. During development, I also learned about different options for CSS animations to make the site smoother, with more fluid navigation, page element animations, and custom keyframe movements.",
 
-            "solutionTitle": "Soluções e aplicações",
-            "solutionDescription": "Diante dos desafios da implementação, eu pude seguir as melhores práticas e padrões de organização de código e documentação para entender este cenário aplicado a um projeto em seguida comparar com aplicações do mercado atual. Em seguida pude compreender as diferentes lógicas que poderia aplicar nas animações da página e em quais momentos as animações aconteceriam, este processo exigiu implementar uma mistura do Next com o CSS e o resultado foi sensacional",
+            "solutionTitle": "Solutions and Applications",
+            "solutionDescription": "Faced with the challenges of implementation, I followed best practices and code organization standards and documentation to understand this scenario applied to a project and compared it with current market applications. I understood the different logics that I could apply to page animations and the moments when the animations would occur. This process required a combination of Next.js and CSS, and the result was sensational.",
 
-            "ExampleTitle": "O Projeto",
-            "ExampleDescription": "Como este projeto foi criado somente para melhorar os conhecimentos nas tecnologias mais recentes e mais visadas do mercado, as informações que contem no site somente são ilustrativas com a finalidade de preenchimento de conteúdo.",
+            "ExampleTitle": "The Project",
+            "ExampleDescription": "Since this project was created solely to improve my knowledge of the latest and most sought-after technologies in the market, the information on the site is only illustrative for content-filling purposes.",
             "ExampleImageAlt": "Project Print",
 
-            "finalTitle": "Triper atualmente",
-            "finalDescription": "Atualmente neste projeto ocorrem eventuais atualizações, tanto de implementações que podem ficar melhor visualmente e esteticamente, como melhorias de código que são feitas para melhorar performance e navegação, sempre que essas atualizações ocorrem é feito revisões de como foi feito antes e como está atualmente e também faço a utilização dos códigos deste projeto como exemplo para aplicações e dúvidas do dia a dia.",
+            "finalTitle": "Triper Currently",
+            "finalDescription": "Occasional updates occur in this project for both visual and aesthetic improvements, and for code improvements made to enhance performance and navigation. Whenever these updates occur, I review how it was done previously and currently, and I also use the codes from this project as an example for everyday applications and questions.",
 
-            "banner_description": "Saiba como aumentei meus conhecimentos nas tecnologias mais utilizadas no mercado atualmente."
+            "banner_description": "Find out how I increased my knowledge in the most used technologies in the market today."
         },
         
         "comunity_alert": {
             "title": "Comunity Alert UX/UI",
-            "fisrtDescription": "O Community Alert foi uma proposta das aulas de projeto e interface da faculdade em que estou cursando, o intuito deste projeto foi criar um design ui/ux de um aplicativo que […]",
+            "fisrtDescription": "Community Alert was a proposal from my college's interface design classes. The purpose of this project was to create a UI/UX design for […]",
 
             "projectDate": "20/12/2021",
 
-            "problemTitle": "Caso de Estudo",
-            "problemDescription": "O Community Alert foi uma proposta das aulas de projeto e interface da faculdade em que estou cursando, o intuito deste projeto foi criar um design ui/ux de um aplicativo que pudesse alertar a comunidade de eventuais catástrofes ecológica, através de algumas reuniões e planejamentos foi feito uma lista para entender quais as necessidades que o aplicativo teria e qual seria o melhor design system para ser utilizado no desenho das telas",
+            "problemTitle": "Study Case",
+            "problemDescription": "Community Alert was a proposal from my college's interface design classes. The purpose of this project was to create a UI/UX design for an application that could alert the community of potential ecological disasters. Through meetings and planning, a list was made to understand the needs that the application would have and what would be the best design system to use in creating the screens.",
 
             "solutionTitle": "Soluções e aplicações",
-            "solutionDescription": "Através do entendimento de todas as necessidades do usuário principal foi realizado a produção de algumas telas pensando em aplicativos mobile, todas as telas foram exclusivamente pensadas para a resolução do problema em si. A forma como os componentes estão dispostos na tela e suas devidas posições e aparências até mesmo para causar diferentes impactos no usuário principal, a partir do entendimento sobre as “Regras de Ouro de Shneiderman” entendi alguns conceitos importantes para se aplicar em todas as telas do design",
+            "solutionDescription": "By understanding all of the main user's needs, some screens were produced with mobile applications in mind, and all screens were exclusively designed to solve the problem at hand. The way components are arranged on the screen, their proper positions, and appearances are all carefully considered, even to cause different impacts on the main user. By understanding 'Shneiderman's Golden Rules,' some important concepts were grasped to apply to all the screens in the design.",
 
-            "ExampleTitle": "O Projeto",
-            "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
+            "ExampleTitle": "The Project",
+            "ExampleDescription": "This project was made solely in Figma as UI screens with the purpose of practicing good design practices and understanding the best ways to achieve good UX. It also provided knowledge in different areas that involve the daily life of a software engineer in high-performance environments, allowing for going through the first process, which is creating new products, and the studies and analysis that are made solely by looking at the design of these products.",
             "ExampleImageAlt": "Project Print",
 
             "finalTitle": "",
             "finalDescription": "",
 
-            "banner_description": "Estudos e analises sobre projetos de design de interface."
+            "banner_description": "Studies and analyses of interface design projects."
         },
 
         "match_coder": {
             "title": "Match coder UX/UI",
-            "fisrtDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e  […]",
+            "fisrtDescription": "Match Coder was a design project created during software requirements engineering classes. The goal of this design was to propose a mobile application where […]",
 
             "projectDate": "20/12/2021",
 
-            "problemTitle": "Caso de Estudo",
-            "problemDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e empresas pudessem dar um match (assim como no tinder) para conhecer profissionais da TI e incentivar empregos para essa área. Através da análise de persona, eu e a equipe que atuou comigo neste trabalho, conhecemos os usuários que iriam utilizar o aplicativo e compreendi melhor quais componentes deveria utilizar e como ficariam nas telas do mobile.",
+            "problemTitle": "Study Case",
+            "problemDescription": "Match Coder was a design project created during software requirements engineering classes. The goal of this design was to propose a mobile application where software developers and companies could match (similar to Tinder) to meet IT professionals and encourage jobs in this area. Through persona analysis, my team and I got to know the users who would use the app and understood better which components to use and how they would be displayed on the mobile screens.",
 
-            "solutionTitle": "Soluções e aplicações",
-            "solutionDescription": "Este projeto me proporcionou uma visão mais ampla sobre design, durante seu desenvolvimento pude aplicar diferentes conhecimentos de boas práticas aplicadas a protótipos, ensinamentos visuais e estéticos para que os elementos da tela fiquem mais claros e acessíveis para o usuário. Dessa maneira produzi diversas telas que traduzem a necessidade inicial, que foi das empresas encontrarem profissionais que tenham um perfil mais adequado para a vaga de emprego, assim como candidatos da área de T.I. que querem trabalhar em empresas com o seu perfil.",
+            "solutionTitle": "Solutions and Applications",
+            "solutionDescription": "This project provided me with a broader vision of design. During its development, I was able to apply different knowledge of good practices applied to prototypes, and visual and aesthetic teachings to make the screen elements clearer and more accessible to the user. In this way, I produced various screens that translate the initial need, which was for companies to find professionals who have a more suitable profile for the job, as well as IT candidates who want to work in companies with their profile.",
 
-            "ExampleTitle": "O Projeto",
-            "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
+            "ExampleTitle": "The Project",
+            "ExampleDescription": "This project was made only in Figma as UI screens with the purpose of practicing good design practices and understanding the best paths for a good UX. It also provided knowledge in different areas that involve the day-to-day of a software engineer in high-performance environments, being able to go through the first process, which is the preparation of new products and studies and analyses that are only done by looking at the design of these products.",
             "ExampleImageAlt": "Project Print",
 
             "finalTitle": "",
             "finalDescription": "",
 
-            "banner_description": "Estudos e analises sobre projetos de design de interface."
+            "banner_description": "Studies and analyses on interface design projects."
         },
 
         "pet_care" : {
             "title": "Pet Care UX/UI",
-            "fisrtDescription": "Pet care foi um projeto pensado em prototipagem de aplicativos, através das aulas de engenharia de requisitos da faculdade que estou cursando, eu e minha equipe tivemos o desafio de cria protótipos de telas para um sistema de gerenciamento para […]",
+            "fisrtDescription": "Pet care was a project thought out in prototyping apps, through the requirements engineering classes I am taking in college, my team and I had the challenge of […]",
 
             "projectDate": "20/12/2021",
 
-            "problemTitle": "Caso de Estudo",
-            "problemDescription": "Pet care foi um projeto pensado em prototipagem de aplicativos, através das aulas de engenharia de requisitos da faculdade que estou cursando, eu e minha equipe tivemos o desafio de cria protótipos de telas para um sistema de gerenciamento para ONG’s voltadas ao acolhimento e proteção dos animais e através de reuniões de brainstorming e entendimento de quem seria os usuários do sistema, observamos quais as necessidades do usuário que utilizaria o sistema e pudemos perceber suas dores como um processo de alerta para animais abandonados, e um dos maiores desafios foi entender como realizar um processo de ampla divulgação desses alertas e fazer com que mais pessoas pudessem saber dos animais em situação de risco ou mesmo que foram resgatados e agora podem ser adotados a novas famílias.",
+            "problemTitle": "Case Study",
+            "problemDescription": "Pet care was a project thought out in prototyping apps, through the requirements engineering classes I am taking in college, my team and I had the challenge of creating screen prototypes for a management system for NGOs focused on the accommodation and protection of animals and through brainstorming meetings and understanding of who the users of the system would be, we observed the user's needs and were able to realize their pain points, such as a process for alerting abandoned animals, and one of the biggest challenges was understanding how to perform a process of wide dissemination of these alerts and make more people aware of animals in danger or even that were rescued and now can be adopted by new families.",
 
-            "solutionTitle": "Soluções e aplicações",
-            "solutionDescription": "Com o desenvolvimento das telas do sistema, alguns membros da equipe se concentraram na realização de documentos e eu me concentrei em traduzir todas as necessidades do usuário para telas do figma. Através de todos os requisitos levantados por membros da equipe, utilizei de diferentes técnicas de design como “projeção de diálogos que indiquem o fim de uma ação”, “fácil reversão de ações”, redução a carga de memória de curta duração” entre outras técnicas que foram utilizadas para seguir um design intuitivo e fluido, fazendo com a aplicação seja mais interessante para usuários navegar e realizar seus objetivos dentro do aplicativo.",
+            "solutionTitle": "Solutions and Applications",
+            "solutionDescription": "With the development of the system's screens, some team members focused on creating documents and I focused on translating all user needs into Figma screens. Through all the requirements raised by team members, I used different design techniques such as 'dialog projection indicating the end of an action', 'easy reversal of actions', and 'reduction of short-term memory load' among other techniques that were used to follow an intuitive and fluid design, making the application more interesting for users to navigate and accomplish their goals within the app.",
 
-            "ExampleTitle": "O Projeto",
-            "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
+            "ExampleTitle": "The Project",
+            "ExampleDescription": "This project was done only in Figma as UI screens with the purpose of practicing good design practices and understanding the best paths for a good ux, in addition to providing knowledge in different areas that involve the daily life of a software engineer in high-performance environments, being able to go through the first process which is the creation of new products and the studies and analyses that are only done by looking at the design of these products.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Estudos e analises sobre projetos de design de interface."
+            "banner_description": "Studies and analyses on interface design projects."
         },
 
         "the_chat" : {
-            "title": "The chat",
-            "fisrtDescription": "The chat foi um projeto criado para aprendizados em back and tendo um foco maior em lógicas aplicadas a comunicação em tempo real, A partir de algumas pesquisas estudos fui realizando […]",
+            "title": "The Chat project",
+            "fisrtDescription": "The Chat was a project created for learning in back-end and having a greater focus on logic applied to real-time communication. From some research and studies, I […]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "O projeto The chat",
-            "problemDescription": "The chat foi um projeto criado para aprendizados em back and tendo um foco maior em lógicas aplicadas a comunicação em tempo real, A partir de algumas pesquisas estudos fui realizando diversas implementações para criar um sistema que fosse capaz de armazenar dados dos usuários e que estes pudessem se logar através de uma interface e acessarem suas mensagens, as lógicas que foram aplicadas pro sistema foram retiradas somente de exemplos visuais do telegram, whatsapp e outros aplicativos de conversa. O sistema é relativamente simples porém diversas tecnologias e métodos foram aplicados para criar um chat de comunicação em tempo real com dois usuários logados simultaneamente",
+            "problemDescription": "The Chat was a project created for learning in back-end and having a greater focus on logic applied to real-time communication. From some research and studies, I carried out various implementations to create a system that could store user data and that these users could log in through an interface and access their messages. The logic applied to the system was taken only from visual examples of Telegram, WhatsApp, and other messaging apps. The system is relatively simple, but various technologies and methods were applied to create a real-time chat communication system with two users logged in simultaneously.",
 
-            "solutionTitle": "Desafios",
-            "solutionDescription": "O maior desafio foi implantar a tecnologia socket.io que foi capaz de criar uma sessão onde dois usuários pudessem participar e trocar mensagens através dessa sessão, além deste método outro desafio foi utilizar o express como Framework pro Node Js para realizar upload de imagens e comunicação com o banco de dados de maneira a proteger as rotas do sistema em todos os momentos através de um token. Mesmo com esses desafios fui capaz de criar um sistema com rotas seguras e com comunicação constante com banco de dados e sessões do socket.io, pode também desenvolver front and onde os usuários pudessem se cadastrar, logar e interagir uns com os outros em tempo real",
+            "solutionTitle": "Challenges",
+            "solutionDescription": "The biggest challenge was implementing the socket.io technology, which was able to create a session where two users could participate and exchange messages through this session. In addition to this method, another challenge was using the express as a framework for Node Js to upload images and communicate with the database in a way to protect the system routes at all times through a token. Despite these challenges, I was able to create a system with secure routes and constant communication with the database and socket.io sessions, and also develop front-end where users could register, log in, and interact with each other in real-time.",
 
-            "ExampleTitle": "Intuito do projeto",
-            "ExampleDescription": "Esta aplicação foi desenvolvida somente com o intuito de estudar novas ferramentas e tecnologias que o mercado de desenvolvimento já utiliza, e mesmo que tenha sido para estudo este projeto ainda tem atualizações frequentes tanto em seu front end quanto no seu backend pensando em melhorias para se fazer em diferentes níveis da aplicação protagonizando uma escala cada vez maior. Um dos planos mais recentes para este projeto é criar um website para apresentação do projeto e suas novidades para que novos usuários possam entrar e conhecer um pouco do the chat antes mesmo de precisar se cadastrar",
+            "ExampleTitle": "Intent of the project",
+            "ExampleDescription": "This application was developed solely with the intent of studying new tools and technologies that the development market already uses, and even though it was for study, this project still has frequent updates both in its front-end and in its back-end thinking about improvements to be made at different levels of the application, leading to a growing scale. One of the most recent plans for this project is to create a website for the presentation of the project and its news so that new users can enter and learn about The Chat before even having to register.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Conheça sobre o aplicativo web desenvolvido para trocas de mensagens em tempo real."
+            "banner_description": "Learn about the web application developed for real-time messaging exchanges."
         },
 
         "quest_game" : {
             "title": "Quest Game",
-            "fisrtDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta[…]",
+            "fisrtDescription": "The Quest app game was developed for my current software engineering college class. It features a question and answer system where […]",
 
             "projectDate": "20/12/2021",
 
-            "problemTitle": "O projeto The chat",
-            "problemDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta certa que o usuário consegue pontos para melhor se encaixar no ranking, não é necessário possuir um cadastro prévio, somente com o nickname é possível já ter acesso ao sistema e começar a responder às diversas perguntas que existem.",
+            "problemTitle": "The Quest app game",
+            "problemDescription": "The Quest app game was developed for my current software engineering college class. It features a question and answer system where users earn points for correct answers, ranking them accordingly. No prior registration is required; users can simply use a nickname to access the system and start answering questions.",
 
-            "solutionTitle": "Desafios",
-            "solutionDescription": "Um dos maiores desafios na construção desse projeto foi desenvolver um sistema onde cada resposta correta acumulasse uma determinada pontuação e pudesse dar essa pontuação para usuário, além de criar pontuações diferentes para perguntas de níveis diferentes portanto criei um sistema que quanto maior a dificuldade mais pontos o jogador ganharia caso respondesse a resposta certa. O frontend deste projeto foi criado em vue js e o backend foi feito utilizando node js com express.",
+            "solutionTitle": "Challenges",
+            "solutionDescription": "One of the main challenges in building this project was to develop a system where each correct answer would accumulate a certain score and be attributed to the user. We also had to create different scores for different levels of questions. To solve this, we implemented a system where the higher the difficulty, the more points the player would earn for a correct answer. The frontend of this project was built using Vue.js, while the backend was built using Node.js with Express.",
 
-            "ExampleTitle": "Intuito do projeto",
-            "ExampleDescription": "Conforme as informações que foram enviadas previamente a partir de um documento de requisitos para Construção do software criamos um modelo competitivo de perguntas e respostas no qual foi solicitado durante as aulas, atualmente o sistema continua em funcionamento e disponível de forma gratuita na internet.",
+            "ExampleTitle": "Project's aim",
+            "ExampleDescription": "Based on the information provided in a previously sent software requirements document, we created a competitive question and answer model as requested during classes. The system is currently operational and available for free on the internet.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Conheça sobre o jogo de perguntas e respostas web desenvolvido para universitários que querem prestar para provas do vestibular."
+            "banner_description": "Learn about a web-based question and answer game that was developed for university students preparing for entrance exams."
         },
 
         "blue_token" : {
-            "title": "Desenvolvedor de software no BLUE",
+            "title": "Software Developer at BLUE",
             "fisrtDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta[…]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "BLUE token.",
-            "problemDescription": "O BLUE é um token digital que representa uma cesta de criptomoedas, que permite o acesso às melhores criptomoedas do mercado, o BLUE, assim como outros tokens digitais, foi criado numa blockchain com um conjunto específico de regras. O BLUE usa o Binance Smart Chain (BSC) blockchain e permite que seus usuários tenham várias criptomoedas ao mesmo tempo, mantendo apenas um token, proporcionando aos usuários conveniência e diversificação.",
+            "problemDescription": "BLUE is a digital token that represents a basket of cryptocurrencies, providing access to the best cryptocurrencies in the market. Like other digital tokens, BLUE was created on a blockchain with a specific set of rules. BLUE uses the Binance Smart Chain (BSC) blockchain and enables its users to hold multiple cryptocurrencies at the same time while maintaining only one token, providing convenience and diversification.",
 
-            "solutionTitle": "Relatos da engenharia.",
-            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software que participou da construção do token blue foi a criação de seu novo website, com o intuito de uma nova aparência para a marca o website tem o foco de mostrar algumas caracteristicas do token além de proporcionar uma visão ampla de todas as funcionalidades e beneficios que usuários terão ao adquirir BLUE’s",
+            "solutionTitle": "Engineering Reports",
+            "solutionDescription": "As a software engineer who participated in the construction of the BLUE token, one of the significant reports I bring is the creation of its new website, which aims to present a new brand appearance. The website focuses on displaying some of the token's characteristics and providing a comprehensive view of all the features and benefits that users will have when acquiring BLUE.",
 
-            "ExampleTitle": "BLUE token atualmente",
-            "ExampleDescription": "Atualmente a empresa continuar a manter o produto com uma das maiores performances do mercado de cripta moedas, um exemplo perfeito disso são atualizações de como o mercado está performance durante um trimestre, essas informações são coletadas pelos profissionais que atuam no BLUE e criam reports trimestrais sempre mantendo todos os usuários atualizados dos seus investimentos",
+            "ExampleTitle": "Current Status of BLUE Token",
+            "ExampleDescription": "Currently, the company maintains the product with one of the highest performances in the cryptocurrency market. An excellent example of this is updates on how the market is performing during a quarter, which is collected by professionals working on BLUE to create quarterly reports, keeping all users updated on their investments.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Entenda como foi a reconstrução de um novo website para o token blue."
+            "banner_description": "Learn about the rebuilding of the new website for the BLUE token."
         },
 
         "toro_token" : {
-            "title": "Desenvolvedor de software no TORO",
+            "title": "Software developer at TORO",
             "fisrtDescription": "TORO é o primeiro portfólio tokenizado desse tipo, programado para seguir estratégias ativas e passivas em benefício de seus detentores como STOP LOSS, STOP BUY, SHORTING e distribuições de rede, O objetivo de TORO é facilitar o processo da construção de […]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "TORO token.",
-            "problemDescription": "TORO é o primeiro portfólio tokenizado desse tipo, programado para seguir estratégias ativas e passivas em benefício de seus detentores como STOP LOSS, STOP BUY, SHORTING e distribuições de rede, O objetivo de TORO é facilitar o processo da construção de um portfólio de ativos digitais, buscando ativamente ganhos e mitigando perdas. Os detentores podem participar de um portfólio com recursos avançados de negociação integrados, mantendo um único token: o TORO token.",
+            "problemDescription": "TORO is the first tokenized portfolio of its kind, programmed to follow both active and passive investment strategies for the benefit of its holders, such as STOP LOSS, STOP BUY, SHORTING, and network distributions. The goal of TORO is to facilitate the process of building a portfolio of digital assets, actively seeking gains, and mitigating losses. Holders can participate in a portfolio with advanced trading features integrated, maintaining only one token: the TORO token.",
 
-            "solutionTitle": "Relatos da engenharia.",
-            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou da construção do Toro token foi a criação de seu novo website, com o intuito de uma nova aparência para a marca o website tem o foco de mostrar algumas características do token além de proporcionar uma visão ampla de todas as funcionalidades e benefícios que usuários terão ao adquirir o Toro token.",
+            "solutionTitle": "Engineering report",
+            "solutionDescription": "As a frontend software engineer who participated in the construction of the TORO token, one of the major tasks was to create a new website to refresh the brand's appearance. The website focuses on showcasing some of the token's features and providing a comprehensive view of all the functionalities and benefits that users can enjoy when they acquire the TORO token.",
 
-            "ExampleTitle": "TORO token atualmente",
-            "ExampleDescription": "Atualmente o produto está sendo construído por uma equipe de profissionais em estratégias de negociações do mercado de ações e criptomoedas e durante o ano de 2023 promete diversas novidade e diferentes funcionalidades para os uruários que entrar na pré-venda",
+            "ExampleTitle": "TORO token at present",
+            "ExampleDescription": "Currently, a team of professionals in stock and cryptocurrency trading strategies is developing the product. Throughout 2023, it promises to offer several new features and functionalities for users who enter the pre-sale.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Entenda como foi a construção de um novo website para o TORO token."
+            "banner_description": "Know more about how the new website for the TORO token was constructed."
         },
 
         "genesis_bank" : {
-            "title": "Desenvolvedor mobile na genesis bank",
-            "fisrtDescription": "Genesis bank é uma plataforma digital voltado para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é […]",
+            "title": "Mobile Developer at Genesis Bank",
+            "fisrtDescription": "Genesis Bank is a B2B digital platform designed to connect companies with the financial world. Access to the platform is not open to the public, and companies can only operate with […]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "Genesis Bank.",
-            "problemDescription": "Genesis bank é uma plataforma digital voltada para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro. A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é ajudar empresários a se formalizarem dando suporte a todo o processo de abertura de empresa, auxílio com a contabilidade, pagamento de impostos, aconselhamento jurídico e a se bancarizarem.",
+            "problemDescription": "Genesis Bank is a B2B digital platform designed to connect companies with the financial world. Access to the platform is not open to the public, and companies can only operate with Genesis Bank through an invitation. The platform's goal is to help entrepreneurs formalize their business by providing support throughout the process of opening a company, accounting assistance, tax payment, legal advice, and banking services.",
 
-            "solutionTitle": "Relatos da engenharia.",
-            "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou do projeto da genesis bank foi a reconstrução de seu aplicativo mobile, a partir de um design proposto pelo time de UX/UI comecei a construção das páginas iniciais como, login, cadastro e dashboard, passando até pelo momento de pagamento dentro do aplicativo, a nova interface permitiu mais acessibilidade e uma melhores simetrias visuais para que os usuários se sentissem bem ao utilizar a ferramenta.",
+            "solutionTitle": "Engineering Reports",
+            "solutionDescription": "As a frontend software engineer who participated in the Genesis Bank project, one of my main responsibilities was the reconstruction of its mobile application. Based on a design proposed by the UX/UI team, I began building the initial pages such as login, registration, dashboard, and even the payment process within the application. The new interface allowed for more accessibility and better visual symmetry, enabling users to feel comfortable using the tool.",
 
             "ExampleTitle": "Genesis Bank atualmente",
-            "ExampleDescription": "Atualmente o produto está sendo constantemente atualizado e mantido por uma equipe de desenvolvimento e profissionais em estratégias de negociações com empresários do ramo.",
+            "ExampleDescription": "Currently, the product is continuously updated and maintained by a team of developers and professionals in business strategy who work closely with entrepreneurs in the field.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Entenda como foi a reconstrução de um aplicativo mobile para uma startup de tecnologia bancárias."
+            "banner_description": "Learn about the reconstruction of a mobile application for a fintech startup."
         },
 
         "pet_system" : {
             "title": "PetSystem",
-            "fisrtDescription": "PetSystem é o meu primeiro projeto desenvolvido para aprender conceitos de programação html e CSS, o projeto conta com tecnologias utilizadas na web sem a utilização de frameworks, quando este projeto foi feito […]",
+            "fisrtDescription": "PetSystem was my first project, developed to learn concepts of HTML and CSS programming, using web technologies without the use of frameworks. When I developed this project […]",
 
             "projectDate": "20/12/2021",
 
             "problemTitle": "PetSystem.",
-            "problemDescription": "PetSystem é o meu primeiro projeto desenvolvido para aprender conceitos de programação html e CSS, o projeto conta com tecnologias utilizadas na web sem a utilização de frameworks, quando este projeto foi feito eu ainda estava estudando as tecnologias do mercado e entendendo como o mundo de desenvolvimento funcionava, por tanto não utilizei frameworks de mercado mais atuais mas me concentrei nos ensinamentos básicos sobre programação e estilização.",
+            "problemDescription": "PetSystem was my first project, developed to learn concepts of HTML and CSS programming, using web technologies without the use of frameworks. When I developed this project, I was still studying the technologies used in the market and understanding how the development world worked. Therefore, I did not use more current market frameworks but focused on basic programming and styling concepts.",
 
-            "solutionTitle": "Relatos da engenharia.",
-            "solutionDescription": "Basicamente este projeto tem o intuito de gerar um sistema ERP para pet shop onde é possível o dono do pet shop realizar cadastro de produtos suas compras vendas e outras funcionalidades que permite o controle de um pet shop. Todas as informações que são cadastradas dentro do sistema somente ficam disponíveis no navegador, este projeto não possui um banco de dados por trás fazendo com que as informações que são cadastradas no sistema fiquem somente durante determinado período e depois são excluídas.",
+            "solutionTitle": "Engineering Reports.",
+            "solutionDescription": "The project aims to generate an ERP system for pet shops, where the pet shop owner can register products, make purchases, sales, and perform other functions that allow control of the business. All the information registered within the system is only available in the browser. This project does not have a database behind it, making the information that is registered in the system available only for a certain period and then deleted.",
 
-            "ExampleTitle": "PetSystem atualmente",
-            "ExampleDescription": "Atualmente este projeto não possui uma continuação ou mesmo atualizações devido a grande complexidade do que foi implementado, porém este projeto ainda serve de muita consulta de boas práticas de código ou mesmo de funcionalidades que foram implementadas e podem ser reutilizadas em projetos do dia a dia.",
+            "ExampleTitle": "PetSystem Currently",
+            "ExampleDescription": "Currently, this project is not being continued or updated due to the complexity of what was implemented. However, this project still serves as a great reference for good coding practices or functionalities that were implemented and can be reused in day-to-day projects.",
 
             "finalTitle": "",
             "finalDescription": "",
 
             "ExampleImageAlt": "Project Print",
 
-            "banner_description": "Conheça mais do primeiro projeto que fiz para aprender sobre programação web."
+            "banner_description": "Learn more about the first project I did to learn about web programming."
         }
     },
 

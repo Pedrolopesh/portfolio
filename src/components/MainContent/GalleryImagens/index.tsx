@@ -16,7 +16,7 @@ const GalleryImagens = ({images}) => {
 
     return (
         <div>
-            <h1 className={style.titleCardsGallery}> Projetos e Clientes</h1>
+            <h1 className={style.titleCardsGallery}>{ t('project_clients')}</h1>
 
             <div className={style.containerCardsGallery}>
 

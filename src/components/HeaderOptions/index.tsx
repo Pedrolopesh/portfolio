@@ -37,7 +37,9 @@ const HeaderOptions = () => {
     return (
         <div className={style.containerHeaderOptions}>
             <div className={style.containerHeaderOptionsContent}>
-                <Logo classParam={style.logoHeaderOptions}/>
+                <a href={checkPath()}>
+                    <Logo classParam={style.logoHeaderOptions}/>
+                </a>
                 <div className={style.containerDesktop}>
                     <LinkOptions routerParam={router} />
                 </div>
