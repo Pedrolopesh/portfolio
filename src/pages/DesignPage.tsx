@@ -9,6 +9,7 @@ import SliderComents from '../components/MainContent/SliderComents';
 import HomeProjects from '../components/MainContent/HomeProjects';
 import Companys from '../components/MainContent/Companys';
 import FooterDesign from '../components/MainContent/FooterDesign';
+import CircleTechProfile from '../components/CircleTechProfile';
 import HeaderOptions from '../components/HeaderOptions';
 import { useRouter } from 'next/router';
 
@@ -37,6 +38,7 @@ const DesignPage = () => {
             <ChangeLang />
             {/* <InitialBanner /> */}
             <SecondBanner />
+            <CircleTechProfile />
 
             <AboutMe />
             <Services />

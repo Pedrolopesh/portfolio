@@ -62,7 +62,7 @@ const HomeProjects = () => {
                             alt=""
                         />
 
-                        <div 
+                        <div
                             className={
                                 showAnimation === index ? 
                                 style.containerShowDescriptions :
