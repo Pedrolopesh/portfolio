@@ -329,3 +329,52 @@
       width: 90%;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    .orbit li:nth-child(1) {
+      transform: translate(6rem, 0rem);
+    }
+    .orbit li:nth-child(2) {
+      transform: translate(5rem, 5rem);
+    }
+    .orbit li:nth-child(3) {
+      transform: translate(0, 6rem);
+    }
+    .orbit li:nth-child(4) {
+      transform: translate(-5rem, 5rem);
+    }
+    .orbit li:nth-child(5) {
+      transform: translate(-6rem, 0rem);
+    }
+    .orbit li:nth-child(6) {
+      transform: translate(-5rem, -5rem);
+    }
+    .orbit li:nth-child(7) {
+      transform: translate(0, -6rem);
+    }
+    .orbit li:nth-child(8) {
+      transform: translate(5rem, -5rem);
+    }
+
+    .imageCenter {
+      width: 100px;
+      height: 100px;
+    }
+
+  .orbit {
+    --size: 6rem;
+  }
+
+  .orbit li {
+    width: 4rem;
+  }
+
+  .buttonTechIcons {
+    width: 50%;
+    height: 50%;
+  }
+
+  .containerTechIcons img {
+    width: 50px;
+  }
+}
