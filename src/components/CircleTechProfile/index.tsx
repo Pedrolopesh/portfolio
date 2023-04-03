@@ -91,6 +91,23 @@ const CircleTechProfile = () => {
         router.push(findProject.url)
     }
 
+    const setSelectedStackFunc = (stack: ISelectedStack) => {
+        const body = document.querySelector('body')
+        body.style.overflow = 'hidden'
+        setSelectedStack(stack)
+    }
+
+    const closeModal = () => {
+        const body = document.querySelector('body')
+        body.style.overflow = 'auto'
+        setSelectedStack({
+            name: '',
+            image: '',
+            colors: [],
+            usedStacks: [],
+        })
+    }
+
     useEffect(() => {
         const locateModal: any = document.querySelector('#stackModalContainer')
         locateModal.style.display = 'none';
@@ -112,7 +129,9 @@ const CircleTechProfile = () => {
                         return (
                             <li 
                                 key={index} 
-                                onClick={() => {setSelectedStack(stack)}}
+                                onClick={() => {
+                                    setSelectedStackFunc(stack)
+                                }}
                             >
                                 <button className={style.buttonTechIcons}>
                                     <img src={stack.image} alt={stack.name} />
@@ -134,7 +153,7 @@ const CircleTechProfile = () => {
                             <button
                                 className={style.closeModalStackButton}
                                 onClick={() => {
-                                    setSelectedStack({name: '', image: '', colors: [], usedStacks: []})
+                                    closeModal()
                                 }}
                             >
                                 <AiOutlineClose size={20} />

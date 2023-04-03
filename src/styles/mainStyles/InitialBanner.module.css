@@ -266,9 +266,27 @@
 }
 
 @media screen and (max-width: 1300px){
+    .ContainerSecondBanner{
+        flex-direction: column;
+    }
+
     .ComputerAnimation{        
         width: 55%;
         margin: 0px 20px 0px auto;
+    }
+
+    .containerAnimation {
+        width: 100%;
+    }
+
+    .animationBanner {
+        width: 40%;
+        margin: 20px auto;
+    }
+
+    .ContainerTexts{
+        margin: 0px 50px 270px 50px !important;
+        width: 90%;
     }
 }
 
@@ -286,10 +304,6 @@
 
     .ContainerRigth{
         width: 100%;
-    }
-
-    .ContainerSecondBanner{
-        flex-direction: column;
     }
 
     .ContainerTexts{
@@ -311,7 +325,7 @@
 
     .containerAnimation {
         margin: 0 auto;
-        width: 70%;
+        width: 100%;
     }
 
     .SecondBannerTitle {
