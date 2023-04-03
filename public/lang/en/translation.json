@@ -358,5 +358,24 @@
         }
     },
 
+    "stack": {
+        
+        "Docker": "Over 3 years, I utilized Docker to create, deploy, and manage containers in projects such as The Chat, Quest Game, and Link Leito, providing greater flexibility and scalability to the applications.",
+
+        "Java": "With a 2-year experience in Java, I acquired skills in object-oriented programming and data structure, applying this knowledge in projects and academic activities.",
+
+        "Typescript": "With a 3-year experience in Typescript, I developed skills in static typing, interfaces, and other Typescript features, applying them in projects such as the Tripper website and at companies such as Electrolux and Genesis Bank.",
+
+        "Node": "I have 4 years of experience using Node, with good knowledge in backend development with Node and frameworks that use it. I have applied it in projects such as The Chat and Quest Game, as well as having worked with Node at Electrolux.",
+
+        "Python": "With approximately 1 year of experience in Python, I gained knowledge of libraries such as Flask and SocketIO, allowing me to apply them in projects such as The Chat, creating a real-time communication system between different users.",
+        
+        "React": "With 5 years of experience in React, focusing mostly on creating user interfaces, applying concepts such as componentization, state management, and declarative programming in projects such as Tripper and companies like Electrolux.",
+
+        "SQL": "With 5 years of experience in SQL and NoSQL, I developed skills in data modeling, querying, and performance optimization, applying this knowledge in projects such as Link Leito, The Chat, Quest Game, academic work, and activities, which contributed to the creation of scalable and efficient web applications.",
+
+        "Vue": "With 5 years of experience in Vue.js, I was able to apply concepts such as componentization, state management with VueX, and declarative programming in projects such as Link Leito, The Chat, Quest Game, and companies like Blue Token and Toro Token."
+    },
+    "click_know_more": "Click to know More",
     "know_more_about_project": "learn more about this project"
 }

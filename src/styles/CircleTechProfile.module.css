@@ -3,7 +3,6 @@
     --speed: 120s;
     justify-content: center;
     display: flex;
-    margin: 0px auto 290px auto;
 }
 
   .centerImage {
@@ -17,10 +16,12 @@
     width: 190px;
     position: relative;
     z-index: 10;
+    height: 190px;
   }
 
   .containerTechIcons img {
-    width: 100px;
+    width: 90px;
+    transition: 0.5s;
   }
 
   .centerImage img {
@@ -59,6 +60,7 @@
     line-height: 1;
     display: grid;
     place-items: center;
+    cursor: pointer;
   }
   .orbit li:hover {
     --throb-play-state: paused;
@@ -97,14 +99,16 @@
     animation: orbit var(--speed) linear reverse infinite, throb 1s var(--throb-delay) ease-in-out infinite alternate;
     animation-play-state: var(--orbit-play-state, running), var(--throb-play-state, running);
   }
-  .orbit li > div {
-    background-color: var(--icon-bg);
-  }
   .orbit li > p {
     background: var(--text-bg);
     transition: opacity 500ms;
     opacity: 0;
   }
+  .orbit li:hover > button > img{
+    transition: 0.5s;
+    width: 110px !important;
+  }
+  
   .orbit li:hover > p {
     opacity: 1;
   }
@@ -174,12 +178,154 @@
 
 
   .stackModalContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .stackModalBg {
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999999999;
+    top: 0;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    opacity: 1;
+  }
+
+  .showStackModalBg {
+  	transition: 1s;    
+    opacity: 1;
+  }
+  
+  .hidestackModalBg {
+  	transition: 1s;    
     opacity: 0;
-    display: block !important;
-    background-color: red !important;
-    padding: 20px !important;
-    border-radius: 10px !important;
-    position: absolute !important;
-    width: 200px !important;
-    height: 200px !important;
+    animation: hideStackModal-animation;
+    transform: scale(0);
+  }
+
+  @keyframes hideStackModal-animation {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  .stackModalBox {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border-radius: 20px;
+    width: 35%;
+    position: absolute;
+    top: 10%;
+    border: 4px solid transparent;
+  }
+
+  .headerStackModa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .headerStackModa > h2 {
+    margin: 0;
+  }
+
+  .dockerStyle {
+    /* background: linear-gradient(white, white) padding-box, linear-gradient(to right, #2497ED, rgb(167, 246, 255)) border-box; */
+  }
+
+  .hideStackModal {
+    opacity: 0;
+    transition: 0.6s;
+    transition-delay: 0.5s;
+    transform: translateY(-200%);
+  }
+  
+  .showStackModal {
+    opacity: 1;
+    transition: 0.6s;
+    transition-delay: 0.5s;
+    transform: translateY(0);
+  }
+
+  .closeModalStackButton {
+    display: flex;
+    font-size: 3rem;
+    background: none !important;
+    border: none;
+    font-family: 'Poppins', sans-serif !important;
+    cursor: pointer;
+  }
+
+  .containerStackButton {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonTechIcons {
+    cursor: pointer;
+    border: 1px solid #ff000000;
+    background: none;
+  }
+
+  .boxStackButton {
+    margin: 10px 20px;
+  }
+
+  .stackButton {
+    display: flex;
+    width: 200px;
+    height: 110px;
+    margin: 10px auto;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+
+  .stackButton:hover {
+    transform: scale(1.1);
+    transition: 0.6s;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .stackModalBox {
+      width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .stackModalBox {
+      width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .stackModalBox {
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .stackModalBox {
+      width: 90%;
+    }
   }

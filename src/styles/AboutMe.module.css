@@ -1,5 +1,6 @@
 .containerAboutMe {
     display: flex;
+    margin: 290px auto 0 auto;
 }
 
 .containerImage {
@@ -18,8 +19,9 @@
 .containerAboutMeTexts {
     display: block;
     max-width: 100%;
-    width: 30%;
+    width: 45%;
     color: #030104;
+    margin: 0 auto;
 }
 
 .containerAboutMeTexts h2 {

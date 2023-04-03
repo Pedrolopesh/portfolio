@@ -11,13 +11,13 @@ const AboutMe = () => {
 
     return (
         <div className={style.containerAboutMe}>
-            <div className={style.containerImage}>
+            {/* <div className={style.containerImage}>
                 <img 
                     className={style.imgAboutMe}
                     src="/img/pedro-img1.jpg" 
                     alt="about me image" 
                 />
-            </div>
+            </div> */}
 
             <div className={style.containerAboutMeTexts}>
                 <h2>{t('about_me_title')}</h2>

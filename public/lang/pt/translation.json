@@ -358,5 +358,26 @@
         }
     },
 
+    "stack": {
+        
+        "Docker": "Durante 3 anos utilizei Docker na criação, implantação e gerenciamento de contêineres em projetos como The Chat, Quest Game e Link Leito, proporcionando maior flexibilidade e escalabilidade aos aplicativos.",
+
+        "Java": "Com uma experiência de 2 anos com Java, adquiri habilidades em programação orientada a objetos e estrutura de dados, aplicando esses conhecimentos em projetos e atividades acadêmicas.",
+
+        "Typescript": "Com uma experiência de 3 anos em Typescript, desenvolvi habilidades em tipagem estática, interfaces e outras funcionalidades do Typescript, aplicando-as em projetos como o website Tripper e em empresas como Electrolux e Genesis Bank.",
+
+        "Node": "Conto com uma experiência de 4 anos utilizando Node tendo bons conhecimentos em desenvolvimento de backend com Node e frameworks que o utilizam, pude aplicar em projetos como The Chat e Quest Game, além de ter trabalhado com Node na empresa Electrolux.",
+
+        "Python": "Com uma experiência de aproximadamente 1 ano em Python, conhecer mais de bibliotecas como Flask e SocketIO, podendo aplicar em projetos como o The Chat, criando um sistem de comunicação em tempo real entre diferentes usuários.",
+        
+        "React": "Com uma experiência de 5 anos em React, focando mais na criação de interfaces de usuário, aplicando conceitos como componentização, gerenciamento de estado e programação declarativa em projetos como o Tripper e em empresas como Electrolux.",
+
+        "SQL": "Com uma experiência de 5 anos em SQL e NoSQL, desenvolvi habilidades em modelagem de dados, consultas e otimização de desempenho, aplicando esses conhecimentos em projetos como o Link Leito, The Chat, Quest Game, trabalhos e atividades acadêmicas, o que contribuiu para a criação de aplicações web escaláveis e eficientes.",
+
+        "Vue": "Com uma experiência de 5 anos em Vue.js, pude aplicar conceitos como componentização, gerenciamento de estado com VueX e programação declarativa em projetos como o Link Leito, The Chat, Quest Game e em empresas como Blue Token e Toro Token."
+    },
+
+
+    "click_know_more": "Clique para saber mais",
     "know_more_about_project": "saiba mais deste projeto"
 }
