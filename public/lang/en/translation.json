@@ -11,7 +11,7 @@
     "project": "Projects",
     "andWorks": "and Works",
     "title_banner": "Pedro Lopes",
-    "overview_text_banner": "Hello! I'm pedro Lopes, designer and software developer, feel free to read more about me and my projects.",
+    "overview_text_banner": "Hello! I'm Pedro Lopes, Software Engineer with 5 years of experience in IT, feel free to read more about me and my projects.",
     "first_section_title":"Who am I?",
     "first_modal_title":"Personal trajectory",
     "first_terminal_path_source":"personal",
@@ -377,5 +377,6 @@
         "Vue": "With 5 years of experience in Vue.js, I was able to apply concepts such as componentization, state management with VueX, and declarative programming in projects such as Link Leito, The Chat, Quest Game, and companies like Blue Token and Toro Token."
     },
     "click_know_more": "Click to know More",
-    "know_more_about_project": "learn more about this project"
+    "know_more_about_project": "learn more about this project",
+    "building_web_site": "I am developing new features for The Chat using Python and other frameworks! Soon we will have amazing news! Follow my GitHub to stay updated!"
 }

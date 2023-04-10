@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import style from '../../styles/CircleTechProfile.module.css';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiFillGithub } from 'react-icons/ai';
 import { photos } from '../../assets/mock-images';
 import { useRouter } from 'next/router';
 import { useTranslation } from "react-i18next";
@@ -163,20 +163,42 @@ const CircleTechProfile = () => {
                         <div>
                             <p>{t(`stack.${selectedStack.name}`)}</p>
                             <hr />
-                            <p className='text-center'>{t('click_know_more')}</p>
+                            
+                            {selectedStack.name !== 'Python' && <p className='text-center'>{t('click_know_more')}</p>}
+
                             <div className={style.containerStackButton}>
                                 {selectedStack.usedStacks.map((stacksArray, index) => {
                                     return (
-                                     <div key={index*5} className={style.boxStackButton}>
-                                        <button
-                                            key={index}
-                                            style={{ backgroundImage: `url(${findStackImg(stacksArray)})` }}
-                                            onClick={() => {
-                                                redirectToProjectPage(stacksArray)
-                                            }}
-                                            className={style.stackButton}
-                                        >
-                                        </button>
+                                        <div key={index*5} className={style.boxStackButton}>
+                                        {/* <p>{selectedStack.name}</p> */}
+                                        {selectedStack.name !== 'Python' ?
+                                            <div>
+                                                <button
+                                                    key={index}
+                                                    style={{ backgroundImage: `url(${findStackImg(stacksArray)})` }}
+                                                    onClick={() => {
+                                                        redirectToProjectPage(stacksArray)
+                                                    }}
+                                                    className={style.stackButton}
+                                                    >
+                                                </button>
+                                            </div>
+                                            :
+                                            <div className={style.containerBuildingGif}>
+                                                <p>{t('building_web_site')}</p>
+                                                <a
+                                                    href='https://github.com/Pedrolopesh?tab=repositories&q=the+chat&type=&language=&sort=' 
+                                                    target='_blank' rel="noreferrer"
+                                                >
+                                                    <AiFillGithub size={40} />
+                                                </a>
+                                                <img 
+                                                    src="/animations/building.gif" 
+                                                    alt="" 
+                                                    className={style.buildingGif}
+                                                />
+                                            </div>
+                                        }
                                      </div>   
                                     )
                                 })}

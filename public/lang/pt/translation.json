@@ -11,7 +11,7 @@
     "project": "Projetos",
     "andWorks": "e Trabalhos",
     "title_banner": "Pedro Lopes",
-    "overview_text_banner": "Olá, sou pedro Lopes, designer e programador, fique a vontade para conhecer mais sobre mim e mus trabalhos.",
+    "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos.",
     "first_section_title":"Quem sou eu?",
     "first_modal_title":"Trajetória pessoal",
     "first_terminal_path_source":"pessoal",
@@ -379,5 +379,6 @@
 
 
     "click_know_more": "Clique para saber mais",
-    "know_more_about_project": "saiba mais deste projeto"
+    "know_more_about_project": "saiba mais deste projeto",
+    "building_web_site": "Estou desenvolvendo novas funcionalidades para o The Chat com Python e outros frameworks! Em breve teremos novidades incríveis! Acompanhe meu GitHub para ficar por dentro!"
 }

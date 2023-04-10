@@ -384,3 +384,26 @@
   }
 
 }
+
+
+.containerBuildingGif {
+  display: block;
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.containerBuildingGif > p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.containerBuildingGif > img {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.containerBuildingGif > svg {
+  margin: 35px 0 0 0 !important;
+}
