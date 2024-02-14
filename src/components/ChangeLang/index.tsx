@@ -13,7 +13,6 @@ const ChangeLang = () => {
     const [visibleDropdown, setVisibleDropdown] = useState(true)
 
     const changeLangFunc = (newLang: string) => {
-        // console.log(newLang)
         i18next.changeLanguage(newLang)
         setVisibleDropdown(!visibleDropdown)
     }
