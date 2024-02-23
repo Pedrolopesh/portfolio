@@ -1,6 +1,6 @@
 import React from 'react';
 
-const logo = ({classParam}) => {
+const logo = ({classParam} : {classParam?: string}) => {
     return (
         <svg className={classParam} version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.000000 400.000000"
             preserveAspectRatio="xMidYMid meet">

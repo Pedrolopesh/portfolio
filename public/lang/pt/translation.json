@@ -6,378 +6,264 @@
         "button_design_option": "Design",
         "button_code_option": "Dev"
     },
+    "homeBanner": {
+        "title_banner": "Web",
+        "title_typing_0": "Design",
+        "title_typing_1": "Services",
+        "title_typing_2": "Architecture",
+        "title_typing_3": "Analitics",
+        "title_typing_4": "Performance"
+    },
     "all_projects": "Todos os Projetos",
     "cases": "Casos Reais",
     "project": "Projetos",
     "andWorks": "e Trabalhos",
     "title_banner": "Pedro Lopes",
     "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos.",
-    "first_section_title":"Quem sou eu?",
-    "first_modal_title":"Trajetória pessoal",
-    "first_terminal_path_source":"pessoal",
-    "first_terminal_description_0":" Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular.",
-    "first_terminal_description_1":"Em paralelo estudando ferramentas ágeis para aprimorar nos processos e gerenciamento do tempo, em seguida estudei linguagens e frameworks backend como o node js, express, nest js e loopback 4, por fim, junto a este conhecimentos em API's fiz a criação de alguns esquemas e funcionalidades em banco de dados NOSQL e MYSQL.",
-    
-    "second_modal_title":"Experiência profissional",
-    "second_terminal_path_source":"profissional",
-    "second_terminal_description_0":" Atualmente atuo como desenvolvedor FullStack, estou cursando graduação em engenharia de software na UDESC (Universidade estadual de Santa Catarina) e possuo 3 anos de experiência em desenvolvimento frontend e 2 ano e meio de conhecimento em backend, realizei projetos pessoais utilizando frameworks javascripts buscando sempre uma melhor qualificação.",
-    "second_terminal_description_1":"Obtive certificação em design gráfico, me ajudando a desenvolver minhas soft skills e a ter um conhecimento diversificado, isto tem me favorecido com relação ao visual e experiência do usuário. Atualmente sigo estudando mais ferramentas de design e ênfase com a experiÊncia do usuário.",
-
-    "skills_modal_title":"Software Skills",
-
-    "button_work_text_0":"Trabalhos Design",
-    "button_work_text_1":"Trabalhos Web",
-    "button_work_text_2":"Trabalhos Backend",
-
-    "ux_project_description_0":"O UX/UI desse projeto foi feito a partir de uma atividade da aula de processos de software da faculdade, propõe um app para ajudar animais que estão em situações de rua ou mesmo que correm algum perigo ...",
-    "ux_project_description_1":"Match Coder é um projeto de UX/UI feito de uma atividade da aula de processos de software da faculdade, a ideia desse software é fazer um sistema de relacionamento entre empresa e canditado da área de software ...",
-    "ux_project_description_2":"Esse projeto UX/UI foi criado a partir de uma lista de re4quisitos proposta pelo professor de Projetos de interface da faculdade, tem a ideia de avisar a população de desastres naturais que poderm estar acontecendo ...",
-    "ux_project_description_3":"Educa Cred é um projeto de UX/UI feito de um desafio proposto pelo SERASA para propor uma solução financeira para a população, baseado em alguns requisitos porpóstos pelo coordenador da vaga ...",
-    
-    "web_project_description_0":"Link Leito é um aplicativo que consiste em uma gama de utilidades para atender a pacientes de um hospital de maneira mais eficiente e rápida permitindo todos os profissionais visualizem e interagam com o processo do paciente...",
-    "web_project_description_1":"The chat app é um aplicativo de mensagens por chat, esse projeto foi dedesenvolvido com tecnologia web como vue js, node js, e socket io para uma comunicação em tempo real e um banco de dados em mongo DB...",
-    "web_project_description_2":"Quizz Game é um aplicativo idealizado através de uma atividade da matéria de introdução a engenharia de software, o aplicativo propõe um jogo com matérias voltadas para vestibulares do brasil, dedesenvolvido com tecnologias web mais atuais...",
-    "web_project_description_3":"Pet System é um sistema que foi dedesenvolvido para gestão de um pet shop, esse sistema foi criado com HTML, CSS e javascript puro sem a utlização de nenhum Framework... ",
-    "web_project_description_4":"AdmitOne é um projeto a partir de um desafio para uma vaga como desenvolvedor frontend, o desafio propõe recriar a página do site da empresa https://admitone.com/ ...",
-
-    "backend_project_description_0":"Esse projeto foi dedesenvolvido com node js, mongo DB utilizando express como um facilitador para a construção da aplicação, neste projeto existe também a implementação de testes unitários...",
-    "backend_project_description_1":"Essa API foi desenvolvida com node js, express, cloudinary para uploads, mongo DB como banco de dados e socket io para comunicação em tempo real, neste projeto existe também a implementação de testes unitários... ",
-    "backend_project_description_2":"Essa API foi desenvolvida com node js, express, cloudinary para uploads e nodemailer para envio de emails, neste projeto existe também a implementação de testes unitários...",
-    "backend_project_description_3":"Essa API foi desenvolvida com java com spring boot, neste projeto consiste em recriar as funcionalidades do link leito para controle de um hospital...",
-
-    "button_work_show_more":"Ver mais",
-
-    "footer_section_title":"Entre em contato",
-
-    "footer_button_home":"Voltar ao inicio",
-    
-    "modal_option_text":"Antes de entrar neste site, quero que você tenha a melhor experiência possivel, então me conta...",
-    "button_design_option":"Só estou de olho",
-    "button_code_option":"Sou da TI",
-
+    "first_section_title": "Quem sou eu?",
+    "first_modal_title": "Trajetória pessoal",
+    "first_terminal_path_source": "pessoal",
+    "first_terminal_description_0": " Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular.",
+    "first_terminal_description_1": "Em paralelo estudando ferramentas ágeis para aprimorar nos processos e gerenciamento do tempo, em seguida estudei linguagens e frameworks backend como o node js, express, nest js e loopback 4, por fim, junto a este conhecimentos em API's fiz a criação de alguns esquemas e funcionalidades em banco de dados NOSQL e MYSQL.",
+    "second_modal_title": "Experiência profissional",
+    "second_terminal_path_source": "profissional",
+    "second_terminal_description_0": " Atualmente atuo como desenvolvedor FullStack, estou cursando graduação em engenharia de software na UDESC (Universidade estadual de Santa Catarina) e possuo 3 anos de experiência em desenvolvimento frontend e 2 ano e meio de conhecimento em backend, realizei projetos pessoais utilizando frameworks javascripts buscando sempre uma melhor qualificação.",
+    "second_terminal_description_1": "Obtive certificação em design gráfico, me ajudando a desenvolver minhas soft skills e a ter um conhecimento diversificado, isto tem me favorecido com relação ao visual e experiência do usuário. Atualmente sigo estudando mais ferramentas de design e ênfase com a experiÊncia do usuário.",
+    "skills_modal_title": "Software Skills",
+    "button_work_text_0": "Trabalhos Design",
+    "button_work_text_1": "Trabalhos Web",
+    "button_work_text_2": "Trabalhos Backend",
+    "ux_project_description_0": "O UX/UI desse projeto foi feito a partir de uma atividade da aula de processos de software da faculdade, propõe um app para ajudar animais que estão em situações de rua ou mesmo que correm algum perigo ...",
+    "ux_project_description_1": "Match Coder é um projeto de UX/UI feito de uma atividade da aula de processos de software da faculdade, a ideia desse software é fazer um sistema de relacionamento entre empresa e canditado da área de software ...",
+    "ux_project_description_2": "Esse projeto UX/UI foi criado a partir de uma lista de re4quisitos proposta pelo professor de Projetos de interface da faculdade, tem a ideia de avisar a população de desastres naturais que poderm estar acontecendo ...",
+    "ux_project_description_3": "Educa Cred é um projeto de UX/UI feito de um desafio proposto pelo SERASA para propor uma solução financeira para a população, baseado em alguns requisitos porpóstos pelo coordenador da vaga ...",
+    "web_project_description_0": "Link Leito é um aplicativo que consiste em uma gama de utilidades para atender a pacientes de um hospital de maneira mais eficiente e rápida permitindo todos os profissionais visualizem e interagam com o processo do paciente...",
+    "web_project_description_1": "The chat app é um aplicativo de mensagens por chat, esse projeto foi dedesenvolvido com tecnologia web como vue js, node js, e socket io para uma comunicação em tempo real e um banco de dados em mongo DB...",
+    "web_project_description_2": "Quizz Game é um aplicativo idealizado através de uma atividade da matéria de introdução a engenharia de software, o aplicativo propõe um jogo com matérias voltadas para vestibulares do brasil, dedesenvolvido com tecnologias web mais atuais...",
+    "web_project_description_3": "Pet System é um sistema que foi dedesenvolvido para gestão de um pet shop, esse sistema foi criado com HTML, CSS e javascript puro sem a utlização de nenhum Framework... ",
+    "web_project_description_4": "AdmitOne é um projeto a partir de um desafio para uma vaga como desenvolvedor frontend, o desafio propõe recriar a página do site da empresa https://admitone.com/ ...",
+    "backend_project_description_0": "Esse projeto foi dedesenvolvido com node js, mongo DB utilizando express como um facilitador para a construção da aplicação, neste projeto existe também a implementação de testes unitários...",
+    "backend_project_description_1": "Essa API foi desenvolvida com node js, express, cloudinary para uploads, mongo DB como banco de dados e socket io para comunicação em tempo real, neste projeto existe também a implementação de testes unitários... ",
+    "backend_project_description_2": "Essa API foi desenvolvida com node js, express, cloudinary para uploads e nodemailer para envio de emails, neste projeto existe também a implementação de testes unitários...",
+    "backend_project_description_3": "Essa API foi desenvolvida com java com spring boot, neste projeto consiste em recriar as funcionalidades do link leito para controle de um hospital...",
+    "button_work_show_more": "Ver mais",
+    "footer_section_title": "Entre em contato",
+    "footer_button_home": "Voltar ao inicio",
+    "modal_option_text": "Antes de entrar neste site, quero que você tenha a melhor experiência possivel, então me conta...",
+    "button_design_option": "Só estou de olho",
+    "button_code_option": "Sou da TI",
     "about_me_title": "Sobre",
-    
     "about_me_subtitle_1": "O começo",
     "about_me_text_1": "Meu inicio na tecnologia foi através do trabalho em qualidade de softwares fazendo testes em produtos financeiros, após implementar manutenção no frontend desses produtos, neste momento aprendo alguns frameworks javascript como vue.js, react, react-native e angular.",
-
     "about_me_subtitle_2": "Contato",
     "about_me_text_2": "Você pode entrar em contato comigo por e-mail ou rede social, eu costumo responder em 3 dias",
-    
     "button_about_me_hire": "CONTRATE-ME",
     "button_about_me_know_more": "SAIBA MAIS",
-
     "pretitle_services": "O QUE EU FAREI POR VOCÊ",
     "title_services": "Serviços",
-
     "services_ux_ui": "UX/UI",
     "services_ux_ui_text": "Crio planos de projeto, wireframes, testes de conceito, guia de estilo, responsividade, interface de teste do usuário.",
-
     "services_web_dev": "Desenvolvimento Web",
     "services_web_dev_text": "Crio sites e aplicativos com base em projetos ux/ui, responsividade, multiplataforma e funcionalidades de usabilidade.",
-
     "services_software_engineer": "Engenheiro de software",
     "services_software_engineer_text": "Crio aplicações como API's e severs, implantação CI/CD, DevOps e solução de tecnologia.",
-
     "comment_01": "Sempre ajudando colegas com dúvidas e disposto a ajudar sua equipe em qualquer situação.",
     "comment_02": "Pedro é um excelente profissional e muito facil de se trabalhar, muitas ideias geniais e pertinentes.",
     "comment_03": "Sempre buscando a melhora em seus projetos e estudando novos métodos e tecnologias constantemente para facilitar suas aplicações.",
     "comment_04": "Recomendo o Pedro para qualquer tipo de serviço na área de tecnologia, um excelente profissional.",
-
     "project_clients": "Projetos e Clientes",
-
     "projects": {
-        "electrolux" : {
+        "electrolux": {
             "title": "Engenharia de Software na Electrolux",
             "fisrtDescription": "A Electrolux contém uma história de 100 anos e durante esse tempo vem acumulando vitórias e conquistas, está presente no brasil desde 1926 e vende milhares de produtos por ano, uma das únicas marcas mundiais que […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "Electrolux",
             "problemDescription": "A Electrolux contém uma história de 100 anos e durante esse tempo vem acumulando vitórias e conquistas, está presente no brasil desde 1926 e vende milhares de produtos por ano, uma das únicas marcas mundiais que oferece produtos de qualidade e soluções completas para clientes e profissionais. <br> <br> Com um coleção de produtos inovadores e cuidadosamente desenvolvidos, a Electrolux tem grande destaque no mercado brasileiro de eletroportáteis, devido a esse histórico de sucesso, a Electrolux Brasil está presente nas casas e na memória de muitos brasileiros e conta com um time sensacional de profissionais seniores para continuar este legado de excelência para o cliente, promovendo uma experiência Electrolux a todos que consomem seus produtos. <br> <br>",
-
             "solutionTitle": "Desafio",
             "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software do time que atende electrolux foi a migração de uma antiga tecnologia vtex (CMS) para uma loja online totalmente mais sofisticada e intuitiva com a tecnologia Headless VTEX IO, está migração aconteceu gradativamente, durante todo o processo de transição, houve a cautela e análise das conversões, por exemplo, migrar somente uma ou duas páginas para o VTEX IO e observando a adesão do público quanto a esta nova stack.",
-
             "ExampleTitle": "A solução",
             "ExampleDescription": "Por fim, chegamos ao final do processo de migração e tudo correu bem, o novo rosto e corpo da electrolux brasil estava implementado e funcionando para todos os clientes, o objetivo final de ter uma conversão de vendas maior foi alcançado, devido a nova tecnologia a loja online da electrolux se mostrou mais performática e com uma experiência diferenciada de todos no mercado de eletroportáteis.",
             "ExampleImageAlt": "Project Print",
-
             "finalTitle": "Electrolux Atualmente",
             "finalDescription": "A Electrolux continua seguindo constantes melhorias em todos os setores de sua Loja, atualmente atuo como engenheiro de software do squad de Web Experience (Experiência do usuário) atuando em melhorias e constantes ajustes que fazem com que o usuário tenha uma experiência profissional e de conforto para casa do cliente mesmo que esteja visitando a loja e navegando pelos produtos.",
-            
             "banner_description": "Entenda como foi o desafio da migração de uma das lojas que mais vendem eletroportáteis do Brasil"
         },
-
-        "link_leito" : {
+        "link_leito": {
             "title": "Projeto Link Leito",
             "fisrtDescription": "O projeto link leito foi criado em 2021 quando a pandemia do COVID-19 se espalhou por todo mundo enquanto eu estava estudando no Senai de Florianópolis SC surgiu [...]",
-
             "projectDate": "01/02/2020",
-
             "problemTitle": "Link Leito app",
             "problemDescription": "No começo do projeto contamos com a colaboração de todos os funcionários que atuavam na emergência do hospital desde a entrada do paciente até a sua alta do hospital, em constantes validações com equipe que usaria o software que estávamos propondo a criar <br><br> Durante o ano de 2021, com a pandemia já instalada em todo país houveram diversos momentos difíceis de realizar uma comunicação presencial com a equipe devido às medidas de distanciamento social, porém mesmo com as dificuldades realizamos as validações e sempre com objetivo de diminuir o tempo de espera do atendimento de pacientes, E podendo observar pontos do processo de internação do paciente e analisar onde havia erros e demoras excessivas",
-
             "solutionTitle": "Desafios de implementação",
             "solutionDescription": "Mesmo entendendo todo o processo do hospital ainda assim um dos maiores desafios foi fazer com que aquela tecnologia tivesse adesão dentro do hospital por parte dos funcionários, ao longo da implementação e validações conseguimos observar melhorias constantes fazendo com que o projeto cresce exponencialmente.",
-
             "ExampleTitle": "A Solução Link-Leito",
             "ExampleDescription": "O link leito propôs a solução definitiva para filas em hospitais no momento que havia superlotação de UTIs, partir da análise do atendimento de diversos pacientes através da captação dos dados durante o processo como, a quantidade de tempo que um paciente demora para ser atendido ou que demora para um leito estar limpo e voltar a estar disponível, através dessas métricas de tempo, construímos um painel administrativo e área de relatórios para que o gestor do hospital observasse todos os dados e conseguisse melhor adaptar a equipe de profissionais.",
             "ExampleImageAlt": "link leito Project Print",
-
             "finalTitle": "Link leito atualmente",
             "finalDescription": "Link leito atualmente se encontra desativado temporariamente pois a equipe do hospital decidiu seguir por outro caminho e a dificuldade de adesão ao software contribuiu para que o projeto fosse engavetado porém nunca será esquecido pois a diversos relatos do Lito Lito na mídia <br><br> E para que este projeto de alguma forma possa seguir em frente, muitos trabalhos e projetos da Universidade que estou cursando no momento possuem algum estudo de caso ou explanação sobre o link leito",
-
             "banner_description": "Conheça um pouco do projeto Link Leito e a solução tecnológica aplicada à realidade."
         },
-
-        "triper" : {
+        "triper": {
             "title": "Triper: Site de viagens",
             "fisrtDescription": "Triper é um website que criei recentemente com o objetivo de melhorar meus conhecimentos em Next.js, animações CSS e habilidades de código limpo. O site foi construído usando o framework Next.js […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "Caso de Estudo",
             "problemDescription": "Triper é um website que criei recentemente com o objetivo de melhorar meus conhecimentos em Next.js, animações CSS e habilidades de código limpo. O site foi construído usando o framework Next.js, que é uma ferramenta poderosa para criar front-end React com renderização do lado do servidor e geração de sites estáticos para aplicativos da web baseados em React. Foi muito interessante aprender essa ferramenta para entender como melhorar a performance de sites e melhorar a experiência do usuário em sua navegação. Durante o desenvolvimento fui também compreendendo diferentes opções de animações CSS para que o site ficasse mais fluido e sua navegação mais suavizada, animações de elementos da página e keyframes para criar movimentos personalizados.",
-
             "solutionTitle": "Soluções e aplicações",
             "solutionDescription": "Diante dos desafios da implementação, eu pude seguir as melhores práticas e padrões de organização de código e documentação para entender este cenário aplicado a um projeto em seguida comparar com aplicações do mercado atual. Em seguida pude compreender as diferentes lógicas que poderia aplicar nas animações da página e em quais momentos as animações aconteceriam, este processo exigiu implementar uma mistura do Next com o CSS e o resultado foi sensacional",
-
             "ExampleTitle": "O Projeto",
             "ExampleDescription": "Como este projeto foi criado somente para melhorar os conhecimentos nas tecnologias mais recentes e mais visadas do mercado, as informações que contem no site somente são ilustrativas com a finalidade de preenchimento de conteúdo.",
             "ExampleImageAlt": "Project Print",
-
             "finalTitle": "Triper atualmente",
             "finalDescription": "Atualmente neste projeto ocorrem eventuais atualizações, tanto de implementações que podem ficar melhor visualmente e esteticamente, como melhorias de código que são feitas para melhorar performance e navegação, sempre que essas atualizações ocorrem é feito revisões de como foi feito antes e como está atualmente e também faço a utilização dos códigos deste projeto como exemplo para aplicações e dúvidas do dia a dia.",
-
             "banner_description": "Saiba como aumentei meus conhecimentos nas tecnologias mais utilizadas no mercado atualmente."
         },
-        
         "comunity_alert": {
             "title": "Comunity Alert UX/UI",
             "fisrtDescription": "O Community Alert foi uma proposta das aulas de projeto e interface da faculdade em que estou cursando, o intuito deste projeto foi criar um design ui/ux de um aplicativo que […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "Caso de Estudo",
             "problemDescription": "O Community Alert foi uma proposta das aulas de projeto e interface da faculdade em que estou cursando, o intuito deste projeto foi criar um design ui/ux de um aplicativo que pudesse alertar a comunidade de eventuais catástrofes ecológica, através de algumas reuniões e planejamentos foi feito uma lista para entender quais as necessidades que o aplicativo teria e qual seria o melhor design system para ser utilizado no desenho das telas",
-
             "solutionTitle": "Soluções e aplicações",
             "solutionDescription": "Através do entendimento de todas as necessidades do usuário principal foi realizado a produção de algumas telas pensando em aplicativos mobile, todas as telas foram exclusivamente pensadas para a resolução do problema em si. A forma como os componentes estão dispostos na tela e suas devidas posições e aparências até mesmo para causar diferentes impactos no usuário principal, a partir do entendimento sobre as “Regras de Ouro de Shneiderman” entendi alguns conceitos importantes para se aplicar em todas as telas do design",
-
             "ExampleTitle": "O Projeto",
             "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
             "ExampleImageAlt": "Project Print",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "banner_description": "Estudos e analises sobre projetos de design de interface."
         },
-
         "match_coder": {
             "title": "Match coder UX/UI",
             "fisrtDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e  […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "Caso de Estudo",
             "problemDescription": "Match coder foi um projeto de design criado durante as aulas de engenharia de requisitos de software, o objetivo da criação desse design foi propor uma aplicação mobile que desenvolvedores de software e empresas pudessem dar um match (assim como no tinder) para conhecer profissionais da TI e incentivar empregos para essa área. Através da análise de persona, eu e a equipe que atuou comigo neste trabalho, conhecemos os usuários que iriam utilizar o aplicativo e compreendi melhor quais componentes deveria utilizar e como ficariam nas telas do mobile.",
-
             "solutionTitle": "Soluções e aplicações",
             "solutionDescription": "Este projeto me proporcionou uma visão mais ampla sobre design, durante seu desenvolvimento pude aplicar diferentes conhecimentos de boas práticas aplicadas a protótipos, ensinamentos visuais e estéticos para que os elementos da tela fiquem mais claros e acessíveis para o usuário. Dessa maneira produzi diversas telas que traduzem a necessidade inicial, que foi das empresas encontrarem profissionais que tenham um perfil mais adequado para a vaga de emprego, assim como candidatos da área de T.I. que querem trabalhar em empresas com o seu perfil.",
-
             "ExampleTitle": "O Projeto",
             "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
             "ExampleImageAlt": "Project Print",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "banner_description": "Estudos e analises sobre projetos de design de interface."
         },
-
-        "pet_care" : {
+        "pet_care": {
             "title": "Pet Care UX/UI",
             "fisrtDescription": "Pet care foi um projeto pensado em prototipagem de aplicativos, através das aulas de engenharia de requisitos da faculdade que estou cursando, eu e minha equipe tivemos o desafio de cria protótipos de telas para um sistema de gerenciamento para […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "Caso de Estudo",
             "problemDescription": "Pet care foi um projeto pensado em prototipagem de aplicativos, através das aulas de engenharia de requisitos da faculdade que estou cursando, eu e minha equipe tivemos o desafio de cria protótipos de telas para um sistema de gerenciamento para ONG’s voltadas ao acolhimento e proteção dos animais e através de reuniões de brainstorming e entendimento de quem seria os usuários do sistema, observamos quais as necessidades do usuário que utilizaria o sistema e pudemos perceber suas dores como um processo de alerta para animais abandonados, e um dos maiores desafios foi entender como realizar um processo de ampla divulgação desses alertas e fazer com que mais pessoas pudessem saber dos animais em situação de risco ou mesmo que foram resgatados e agora podem ser adotados a novas famílias.",
-
             "solutionTitle": "Soluções e aplicações",
             "solutionDescription": "Com o desenvolvimento das telas do sistema, alguns membros da equipe se concentraram na realização de documentos e eu me concentrei em traduzir todas as necessidades do usuário para telas do figma. Através de todos os requisitos levantados por membros da equipe, utilizei de diferentes técnicas de design como “projeção de diálogos que indiquem o fim de uma ação”, “fácil reversão de ações”, redução a carga de memória de curta duração” entre outras técnicas que foram utilizadas para seguir um design intuitivo e fluido, fazendo com a aplicação seja mais interessante para usuários navegar e realizar seus objetivos dentro do aplicativo.",
-
             "ExampleTitle": "O Projeto",
             "ExampleDescription": "Este projeto foi feito somente no figma como telas UI com a finalidade de praticar boas práticas de design e entender os melhores caminhos para um bom ux, além de proporcionar um conhecimento em diferentes áreas que envolvem o dia a dia de um engenheiro de software em ambientes de alta performance, podendo passar pelo primeiro processo que é a confecção de novos produtos e nos estudos e análises que são feitas somente olhando para o design desses produtos.",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Estudos e analises sobre projetos de design de interface."
         },
-
-        "the_chat" : {
+        "the_chat": {
             "title": "The chat",
             "fisrtDescription": "The chat foi um projeto criado para aprendizados em back and tendo um foco maior em lógicas aplicadas a comunicação em tempo real, A partir de algumas pesquisas estudos fui realizando […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "O projeto The chat",
             "problemDescription": "The chat foi um projeto criado para aprendizados em back and tendo um foco maior em lógicas aplicadas a comunicação em tempo real, A partir de algumas pesquisas estudos fui realizando diversas implementações para criar um sistema que fosse capaz de armazenar dados dos usuários e que estes pudessem se logar através de uma interface e acessarem suas mensagens, as lógicas que foram aplicadas pro sistema foram retiradas somente de exemplos visuais do telegram, whatsapp e outros aplicativos de conversa. O sistema é relativamente simples porém diversas tecnologias e métodos foram aplicados para criar um chat de comunicação em tempo real com dois usuários logados simultaneamente",
-
             "solutionTitle": "Desafios",
             "solutionDescription": "O maior desafio foi implantar a tecnologia socket.io que foi capaz de criar uma sessão onde dois usuários pudessem participar e trocar mensagens através dessa sessão, além deste método outro desafio foi utilizar o express como Framework pro Node Js para realizar upload de imagens e comunicação com o banco de dados de maneira a proteger as rotas do sistema em todos os momentos através de um token. Mesmo com esses desafios fui capaz de criar um sistema com rotas seguras e com comunicação constante com banco de dados e sessões do socket.io, pode também desenvolver front and onde os usuários pudessem se cadastrar, logar e interagir uns com os outros em tempo real",
-
             "ExampleTitle": "Intuito do projeto",
             "ExampleDescription": "Esta aplicação foi desenvolvida somente com o intuito de estudar novas ferramentas e tecnologias que o mercado de desenvolvimento já utiliza, e mesmo que tenha sido para estudo este projeto ainda tem atualizações frequentes tanto em seu front end quanto no seu backend pensando em melhorias para se fazer em diferentes níveis da aplicação protagonizando uma escala cada vez maior. Um dos planos mais recentes para este projeto é criar um website para apresentação do projeto e suas novidades para que novos usuários possam entrar e conhecer um pouco do the chat antes mesmo de precisar se cadastrar",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Conheça sobre o aplicativo web desenvolvido para trocas de mensagens em tempo real."
         },
-
-        "quest_game" : {
+        "quest_game": {
             "title": "Quest Game",
             "fisrtDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta[…]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "O projeto The chat",
             "problemDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta certa que o usuário consegue pontos para melhor se encaixar no ranking, não é necessário possuir um cadastro prévio, somente com o nickname é possível já ter acesso ao sistema e começar a responder às diversas perguntas que existem.",
-
             "solutionTitle": "Desafios",
             "solutionDescription": "Um dos maiores desafios na construção desse projeto foi desenvolver um sistema onde cada resposta correta acumulasse uma determinada pontuação e pudesse dar essa pontuação para usuário, além de criar pontuações diferentes para perguntas de níveis diferentes portanto criei um sistema que quanto maior a dificuldade mais pontos o jogador ganharia caso respondesse a resposta certa. O frontend deste projeto foi criado em vue js e o backend foi feito utilizando node js com express.",
-
             "ExampleTitle": "Intuito do projeto",
             "ExampleDescription": "Conforme as informações que foram enviadas previamente a partir de um documento de requisitos para Construção do software criamos um modelo competitivo de perguntas e respostas no qual foi solicitado durante as aulas, atualmente o sistema continua em funcionamento e disponível de forma gratuita na internet.",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Conheça sobre o jogo de perguntas e respostas web desenvolvido para universitários que querem prestar para provas do vestibular."
         },
-
-        "blue_token" : {
+        "blue_token": {
             "title": "Desenvolvedor de software no BLUE",
             "fisrtDescription": "O jogo quest app foi feito para as aulas de engenharia de software da faculdade que estou cursando atualmente, ele conta com um sistema de perguntas e respostas onde cada resposta[…]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "BLUE token.",
             "problemDescription": "O BLUE é um token digital que representa uma cesta de criptomoedas, que permite o acesso às melhores criptomoedas do mercado, o BLUE, assim como outros tokens digitais, foi criado numa blockchain com um conjunto específico de regras. O BLUE usa o Binance Smart Chain (BSC) blockchain e permite que seus usuários tenham várias criptomoedas ao mesmo tempo, mantendo apenas um token, proporcionando aos usuários conveniência e diversificação.",
-
             "solutionTitle": "Relatos da engenharia.",
             "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software que participou da construção do token blue foi a criação de seu novo website, com o intuito de uma nova aparência para a marca o website tem o foco de mostrar algumas caracteristicas do token além de proporcionar uma visão ampla de todas as funcionalidades e beneficios que usuários terão ao adquirir BLUE’s",
-
             "ExampleTitle": "BLUE token atualmente",
             "ExampleDescription": "Atualmente a empresa continuar a manter o produto com uma das maiores performances do mercado de cripta moedas, um exemplo perfeito disso são atualizações de como o mercado está performance durante um trimestre, essas informações são coletadas pelos profissionais que atuam no BLUE e criam reports trimestrais sempre mantendo todos os usuários atualizados dos seus investimentos",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Entenda como foi a reconstrução de um novo website para o token blue."
         },
-
-        "toro_token" : {
+        "toro_token": {
             "title": "Desenvolvedor de software no TORO",
             "fisrtDescription": "TORO é o primeiro portfólio tokenizado desse tipo, programado para seguir estratégias ativas e passivas em benefício de seus detentores como STOP LOSS, STOP BUY, SHORTING e distribuições de rede, O objetivo de TORO é facilitar o processo da construção de […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "TORO token.",
             "problemDescription": "TORO é o primeiro portfólio tokenizado desse tipo, programado para seguir estratégias ativas e passivas em benefício de seus detentores como STOP LOSS, STOP BUY, SHORTING e distribuições de rede, O objetivo de TORO é facilitar o processo da construção de um portfólio de ativos digitais, buscando ativamente ganhos e mitigando perdas. Os detentores podem participar de um portfólio com recursos avançados de negociação integrados, mantendo um único token: o TORO token.",
-
             "solutionTitle": "Relatos da engenharia.",
             "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou da construção do Toro token foi a criação de seu novo website, com o intuito de uma nova aparência para a marca o website tem o foco de mostrar algumas características do token além de proporcionar uma visão ampla de todas as funcionalidades e benefícios que usuários terão ao adquirir o Toro token.",
-
             "ExampleTitle": "TORO token atualmente",
             "ExampleDescription": "Atualmente o produto está sendo construído por uma equipe de profissionais em estratégias de negociações do mercado de ações e criptomoedas e durante o ano de 2023 promete diversas novidade e diferentes funcionalidades para os uruários que entrar na pré-venda",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Entenda como foi a construção de um novo website para o TORO token."
         },
-
-        "genesis_bank" : {
+        "genesis_bank": {
             "title": "Desenvolvedor mobile na genesis bank",
             "fisrtDescription": "Genesis bank é uma plataforma digital voltado para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "Genesis Bank.",
             "problemDescription": "Genesis bank é uma plataforma digital voltada para operações B2B, seu principal objetivo é conectar empresas ao mundo financeiro. A adesão não está aberta para o público e somente com convite uma empresa pode operar com a genesis bank. O intuito da plataforma é ajudar empresários a se formalizarem dando suporte a todo o processo de abertura de empresa, auxílio com a contabilidade, pagamento de impostos, aconselhamento jurídico e a se bancarizarem.",
-
             "solutionTitle": "Relatos da engenharia.",
             "solutionDescription": "Um dos maiores relatos que trago como engenheiro de software frontend que participou do projeto da genesis bank foi a reconstrução de seu aplicativo mobile, a partir de um design proposto pelo time de UX/UI comecei a construção das páginas iniciais como, login, cadastro e dashboard, passando até pelo momento de pagamento dentro do aplicativo, a nova interface permitiu mais acessibilidade e uma melhores simetrias visuais para que os usuários se sentissem bem ao utilizar a ferramenta.",
-
             "ExampleTitle": "Genesis Bank atualmente",
             "ExampleDescription": "Atualmente o produto está sendo constantemente atualizado e mantido por uma equipe de desenvolvimento e profissionais em estratégias de negociações com empresários do ramo.",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Entenda como foi a reconstrução de um aplicativo mobile para uma startup de tecnologia bancárias."
         },
-
-        "pet_system" : {
+        "pet_system": {
             "title": "PetSystem",
             "fisrtDescription": "PetSystem é o meu primeiro projeto desenvolvido para aprender conceitos de programação html e CSS, o projeto conta com tecnologias utilizadas na web sem a utilização de frameworks, quando este projeto foi feito […]",
-
             "projectDate": "20/12/2021",
-
             "problemTitle": "PetSystem.",
             "problemDescription": "PetSystem é o meu primeiro projeto desenvolvido para aprender conceitos de programação html e CSS, o projeto conta com tecnologias utilizadas na web sem a utilização de frameworks, quando este projeto foi feito eu ainda estava estudando as tecnologias do mercado e entendendo como o mundo de desenvolvimento funcionava, por tanto não utilizei frameworks de mercado mais atuais mas me concentrei nos ensinamentos básicos sobre programação e estilização.",
-
             "solutionTitle": "Relatos da engenharia.",
             "solutionDescription": "Basicamente este projeto tem o intuito de gerar um sistema ERP para pet shop onde é possível o dono do pet shop realizar cadastro de produtos suas compras vendas e outras funcionalidades que permite o controle de um pet shop. Todas as informações que são cadastradas dentro do sistema somente ficam disponíveis no navegador, este projeto não possui um banco de dados por trás fazendo com que as informações que são cadastradas no sistema fiquem somente durante determinado período e depois são excluídas.",
-
             "ExampleTitle": "PetSystem atualmente",
             "ExampleDescription": "Atualmente este projeto não possui uma continuação ou mesmo atualizações devido a grande complexidade do que foi implementado, porém este projeto ainda serve de muita consulta de boas práticas de código ou mesmo de funcionalidades que foram implementadas e podem ser reutilizadas em projetos do dia a dia.",
-
             "finalTitle": "",
             "finalDescription": "",
-
             "ExampleImageAlt": "Project Print",
-
             "banner_description": "Conheça mais do primeiro projeto que fiz para aprender sobre programação web."
         }
     },
-
     "stack": {
-        
         "Docker": "Durante 3 anos utilizei Docker na criação, implantação e gerenciamento de contêineres em projetos como The Chat, Quest Game e Link Leito, proporcionando maior flexibilidade e escalabilidade aos aplicativos.",
-
         "Java": "Com uma experiência de 2 anos com Java, adquiri habilidades em programação orientada a objetos e estrutura de dados, aplicando esses conhecimentos em projetos e atividades acadêmicas.",
-
         "Typescript": "Com uma experiência de 3 anos em Typescript, desenvolvi habilidades em tipagem estática, interfaces e outras funcionalidades do Typescript, aplicando-as em projetos como o website Tripper e em empresas como Electrolux e Genesis Bank.",
-
         "Node": "Conto com uma experiência de 4 anos utilizando Node tendo bons conhecimentos em desenvolvimento de backend com Node e frameworks que o utilizam, pude aplicar em projetos como The Chat e Quest Game, além de ter trabalhado com Node na empresa Electrolux.",
-
         "Python": "Com uma experiência de aproximadamente 1 ano em Python, conhecer mais de bibliotecas como Flask e SocketIO, podendo aplicar em projetos como o The Chat, criando um sistem de comunicação em tempo real entre diferentes usuários.",
-        
         "React": "Com uma experiência de 5 anos em React, focando mais na criação de interfaces de usuário, aplicando conceitos como componentização, gerenciamento de estado e programação declarativa em projetos como o Tripper e em empresas como Electrolux.",
-
         "SQL": "Com uma experiência de 5 anos em SQL e NoSQL, desenvolvi habilidades em modelagem de dados, consultas e otimização de desempenho, aplicando esses conhecimentos em projetos como o Link Leito, The Chat, Quest Game, trabalhos e atividades acadêmicas, o que contribuiu para a criação de aplicações web escaláveis e eficientes.",
-
         "Vue": "Com uma experiência de 5 anos em Vue.js, pude aplicar conceitos como componentização, gerenciamento de estado com VueX e programação declarativa em projetos como o Link Leito, The Chat, Quest Game e em empresas como Blue Token e Toro Token."
     },
-
-
     "click_know_more": "Clique para saber mais",
     "know_more_about_project": "saiba mais deste projeto",
     "building_web_site": "Estou desenvolvendo novas funcionalidades para o The Chat com Python e outros frameworks! Em breve teremos novidades incríveis! Acompanhe meu GitHub para ficar por dentro!"
