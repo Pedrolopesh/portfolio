@@ -10,7 +10,8 @@
   border: 3px solid #ff7897;
   border-radius: 10px;
   max-width: 95%;
-  width: 28%;
+  width: 25%;
+  height: 350px;
   padding: 30px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -41,7 +42,7 @@
 }
 
 .containerServices {
-  margin: 150px 0 0 0;
+  margin: 150px 0 400px 0;
 }
 
 .preTitleServices {

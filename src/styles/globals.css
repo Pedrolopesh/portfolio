@@ -72,6 +72,10 @@ a {
   background-color: #ffffff
 }
 
+.darken_blue_bg {
+  background-color: #0A101E
+}
+
 .it_bg {
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
   background-size: 300% 300%;
@@ -121,12 +125,12 @@ a {
       opacity: 0;
       transform: translatey(-130%);
   }
-  
+
   100% {
       opacity: 1;
       transform: translatey(0%);
   }
-      
+
 } */
 
 .hide-modal {
@@ -178,11 +182,11 @@ a {
   .slick-next {
     right: 40.5%;
   }
-  
+
   .slick-prev {
     left: 40.5%;
   }
-  
+
 }
 
 @media screen and (max-width: 600px) {
@@ -190,11 +194,11 @@ a {
   .slick-next {
     right: 35.5%;
   }
-  
+
   .slick-prev {
     left: 35.5%;
   }
-  
+
 }
 
 .text-center {
