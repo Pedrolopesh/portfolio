@@ -14,13 +14,17 @@
     "title_typing_3": "Analitics",
     "title_typing_4": "Performance"
   },
-  "homeServices": {
-    "title_banner": "Web",
-    "title_typing_0": "Design",
-    "title_typing_1": "Services",
-    "title_typing_2": "Architecture",
-    "title_typing_3": "Analitics",
-    "title_typing_4": "Performance"
+  "homeServicesInfo": {
+    "title_left": "Atuação em diversos projetos",
+    "text_left": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel porro asperiores ea soluta atque libero laboriosam ut tempore fugit illum?",
+    "title_rigth": "Algum titulo bom que traga as pessoas para ler ele aqui.",
+    "text_rigth_0": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel porro asperiores ea soluta atque libero laboriosam ut tempore fugit illum?",
+    "text_rigth_1": "anos de experiência",
+    "text_rigth_2": "Projetos Concluidos",
+    "title_box_service_0": "UX/UI",
+    "title_box_service_1": "Web Implementation",
+    "title_box_service_2": "Software Engineering",
+    "text_box_service_foot": "visistar projetos e trabalhos"
   },
   "all_projects": "Todos os Projetos",
   "cases": "Casos Reais",

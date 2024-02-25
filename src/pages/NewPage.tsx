@@ -1,19 +1,9 @@
 import React, { useEffect } from "react";
 import HeadPages from "../components/HeadPages";
 import ChangeLang from "../components/ChangeLang";
-// import InitialBanner from '../components/MainContent/InitialBanner';
-// import SecondBanner from '../components/MainContent/SecondBanner';
-// import AboutMe from '../components/MainContent/AboutMe';
-// import Services from '../components/MainContent/Services';
-// import SliderComents from '../components/MainContent/SliderComents';
-// import HomeProjects from '../components/MainContent/HomeProjects';
-// import Companys from '../components/MainContent/Companys';
-// import FooterDesign from '../components/MainContent/FooterDesign';
-// import CircleTechProfile from '../components/CircleTechProfile';
 import HomeBanner from "../components/Home/HomeBanner";
-import HeaderOptions from "../components/HeaderOptions";
 import { useRouter } from "next/router";
-import Services from "../components/MainContent/Services";
+import ServiceInfo from "../components/Home/ServiceInfo";
 
 const DesignPage = () => {
   const router = useRouter();
@@ -38,7 +28,7 @@ const DesignPage = () => {
       <ChangeLang />
       {/* <InitialBanner /> */}
       <HomeBanner />
-      <Services />
+      <ServiceInfo />
       {/* <SecondBanner />
             <CircleTechProfile />
 

@@ -1,14 +1,8 @@
 import React, { useEffect, useRef } from "react";
 // import style from 'SecondBanner.module.css'
 import { useTranslation } from "react-i18next";
-import {
-  ContainerContentBanner,
-  ContainerHomeBanner,
-  ContainerLogo,
-  ContentHomeBannerBlock,
-} from "./styles";
 import Logo from "../../../assets/icons/logo";
-import style from "../../../styles/Home/HomeBanner.module.css";
+import style from "./HomeBanner.module.css";
 import { Typewriter } from "react-simple-typewriter";
 import CustomDivider from "../../../assets/icons/CustomDivider";
 

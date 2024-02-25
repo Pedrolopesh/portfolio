@@ -78,3 +78,14 @@
 .CustomDividerBlock svg {
     max-width: 100%;
 }
+
+
+@media screen and (max-width: 1500px) {
+  .ContainerHomeBanner video {
+    margin-top: -100px;
+  }
+
+  .ContentHomeBannerBlock {
+    margin: 220px auto 0 auto;
+  }
+}
