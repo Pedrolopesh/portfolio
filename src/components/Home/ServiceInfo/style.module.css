@@ -101,10 +101,32 @@
   background-color: #1D263C;
   margin: 0 30px 200px 30px ;
   padding: 15px;
+  transition: 0.5s;
+}
+
+.blockServiceCard:hover {
+  background-color: #00538F;
+}
+
+.titleCardBlock {
+  display: flex;
+  align-items: center;
+}
+
+.containerFootCardLink {
+  margin: 100px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.firstContainerFootCardLink{
+  display: flex;
+  align-items: center;
+  margin: 126px 0 0 0;
 }
 
 .blockServiceCard h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .blockServiceCard div {
@@ -112,5 +134,5 @@
 }
 
 .blockServiceCard svg {
-  margin-left: 10px;
+  margin: 0 15px 0 10px;
 }

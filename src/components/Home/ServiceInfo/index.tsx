@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { BsArrowRight, BsCodeSquare } from "react-icons/bs";
 import style from "./style.module.css";
-import { HiDesktopComputer, HiOutlineLightBulb } from "react-icons/hi";
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { LuComputer } from "react-icons/lu";
 
 const ServiceInfo = () => {
   const { t } = useTranslation();
@@ -53,10 +54,10 @@ const ServiceInfo = () => {
       <div className={style.containerServiceBlocks}>
         <div className={style.blockServiceCard}>
           <div className={style.titleCardBlock}>
-            <HiOutlineLightBulb size={40} color={"#fff"} />
+            <HiOutlineLightBulb size={70} color={"#fff"} />
             <h3>{t("homeServicesInfo.title_box_service_0")}</h3>
           </div>
-          <div>
+          <div className={style.firstContainerFootCardLink}>
             <p>{t("homeServicesInfo.text_box_service_foot")}</p>
             <BsArrowRight size={20} />
           </div>
@@ -64,10 +65,10 @@ const ServiceInfo = () => {
 
         <div className={style.blockServiceCard}>
           <div className={style.titleCardBlock}>
-            <HiDesktopComputer size={40} color={"#fff"} />
+            <LuComputer size={60} color={"#fff"} />
             <h3>{t("homeServicesInfo.title_box_service_1")}</h3>
           </div>
-          <div>
+          <div className={style.containerFootCardLink}>
             <p>{t("homeServicesInfo.text_box_service_foot")}</p>
             <BsArrowRight size={20} />
           </div>
@@ -75,10 +76,10 @@ const ServiceInfo = () => {
 
         <div className={style.blockServiceCard}>
           <div className={style.titleCardBlock}>
-            <BsCodeSquare size={40} color={"#fff"} />
+            <BsCodeSquare size={60} color={"#fff"} />
             <h3>{t("homeServicesInfo.title_box_service_2")}</h3>
           </div>
-          <div>
+          <div className={style.containerFootCardLink}>
             <p>{t("homeServicesInfo.text_box_service_foot")}</p>
             <BsArrowRight size={20} />
           </div>
