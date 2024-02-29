@@ -1,0 +1,7 @@
+.containerWazes {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  left: 0;
+  margin-top: -60vh;
+}
