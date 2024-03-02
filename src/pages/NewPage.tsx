@@ -4,6 +4,7 @@ import ChangeLang from "../components/ChangeLang";
 import HomeBanner from "../components/Home/HomeBanner";
 import { useRouter } from "next/router";
 import ServiceInfo from "../components/Home/ServiceInfo";
+import ProjectsAndWorks from "../components/Home/ProjectsAndWorks";
 
 const DesignPage = () => {
   const router = useRouter();
@@ -19,26 +20,16 @@ const DesignPage = () => {
   useEffect(() => {
     setbodyBg();
     handlePath(router.pathname);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div>
       <HeadPages />
-      {/* <HeaderOptions /> */}
       <ChangeLang />
-      {/* <InitialBanner /> */}
       <HomeBanner />
       <ServiceInfo />
-      {/* <SecondBanner />
-            <CircleTechProfile />
-
-            <AboutMe />
-            <Services />
-            <Companys />
-            <SliderComents />
-            <HomeProjects />
-
-            <FooterDesign /> */}
+      <ProjectsAndWorks />
     </div>
   );
 };
