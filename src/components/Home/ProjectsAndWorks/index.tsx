@@ -23,98 +23,15 @@ const ProjectsAndWorks = () => {
     showAnimation,
   } = useProjectWorks();
 
-  const CardWorkMemo = useCallback(
-    () => {
-      const selectedSectionIndex = projectAndWorks.findIndex(
-        (section) => section.name === selectedSection
-      );
-
-      return (
-        <>
-          {projectAndWorks[selectedSectionIndex]?.projects.map(
-            (card, index) => (
-              <div key={index} className={`${style.ContainerProjectCards}`}>
-                <div
-                  className={style.CardItemProjects}
-                  onMouseOver={() => {
-                    setShowAnimation(index);
-                  }}
-                  onMouseOut={() => {
-                    setShowAnimation(-1);
-                  }}
-                  // onClick={() => { setShowAnimation(index) }}
-                  // eslint-disable-next-line react/jsx-no-duplicate-props
-                  onClick={() => {
-                    redirectTo(card.url);
-                  }}
-                  key={index}
-                >
-                  <img
-                    className={
-                      showAnimation === index
-                        ? style.showImageEffect
-                        : style.hideImageEffect
-                    }
-                    src={card.image}
-                    alt=""
-                  />
-
-                  <div
-                    className={
-                      showAnimation === index
-                        ? style.containerShowDescriptions
-                        : style.containerHideDescriptions
-                    }
-                  >
-                    <div
-                      className={
-                        showAnimation === index
-                          ? style.showTextContainer
-                          : style.hideTextContainer
-                      }
-                    >
-                      <div>
-                        <h3
-                          className={
-                            showAnimation === index
-                              ? style.showTitle
-                              : style.hideTitle
-                          }
-                        >
-                          {t(card.title)}
-                        </h3>
-
-                        <p
-                          className={
-                            showAnimation === index
-                              ? style.showDescription
-                              : style.hideDescription
-                          }
-                        >
-                          {t(card.description)}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* <h3>{card.title}</h3> */}
-                  {/* <p>{card.description}</p> */}
-                </div>
-              </div>
-            )
-          )}
-        </>
-      );
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [showAnimation, selectedSection]
+  const selectedSectionIndex = projectAndWorks.findIndex(
+    (section) => section.name === selectedSection
   );
 
   return (
-    <div>
+    <div className={style.containerWorkAndProjects}>
       <h1>Works and Projects</h1>
 
-      <div>
+      <div className={style.containerWorkLinks}>
         {projectAndWorks.map((section, index) => (
           <div key={index}>
             <button onClick={() => setSelectedSection(section.name)}>
@@ -124,8 +41,86 @@ const ProjectsAndWorks = () => {
         ))}
       </div>
 
-      <div>
-        <CardWorkMemo />
+      <div className={style.containerCards}>
+        <>
+          {projectAndWorks[selectedSectionIndex]?.projects.map(
+            (card, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`${style.ContainerProjectCards}`}
+                  onMouseOver={() => {
+                    setShowAnimation(index);
+                  }}
+                  onMouseLeave={() => {
+                    setShowAnimation(-1);
+                  }}
+                >
+                  <div
+                    className={style.CardItemProjects}
+                    // onClick={() => { setShowAnimation(index) }}
+                    // eslint-disable-next-line react/jsx-no-duplicate-props
+                    onClick={() => {
+                      redirectTo(card.url);
+                    }}
+                    key={index}
+                  >
+                    <img
+                      className={
+                        showAnimation === index
+                          ? style.showImageEffect
+                          : style.hideImageEffect
+                      }
+                      src={card.image}
+                      alt=""
+                    />
+
+                    <div
+                      className={
+                        showAnimation === index
+                          ? style.containerShowDescriptions
+                          : style.containerHideDescriptions
+                      }
+                    >
+                      <div
+                        className={
+                          showAnimation === index
+                            ? style.showTextContainer
+                            : style.hideTextContainer
+                        }
+                      >
+                        <div>
+                          <h3
+                            className={
+                              showAnimation === index
+                                ? style.showTitle
+                                : style.hideTitle
+                            }
+                          >
+                            {t(card.title)}
+                          </h3>
+
+                          <p
+                            className={
+                              showAnimation === index
+                                ? style.showDescription
+                                : style.hideDescription
+                            }
+                          >
+                            {t(card.description)}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* <h3>{card.title}</h3> */}
+                    {/* <p>{card.description}</p> */}
+                  </div>
+                </div>
+              );
+            }
+          )}
+        </>
       </div>
     </div>
   );
