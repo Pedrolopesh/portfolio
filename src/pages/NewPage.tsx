@@ -5,6 +5,7 @@ import HomeBanner from "../components/Home/HomeBanner";
 import { useRouter } from "next/router";
 import ServiceInfo from "../components/Home/ServiceInfo";
 import ProjectsAndWorks from "../components/Home/ProjectsAndWorks";
+import EmailMe from "../components/Home/EmailMe";
 
 const DesignPage = () => {
   const router = useRouter();
@@ -30,6 +31,7 @@ const DesignPage = () => {
       <HomeBanner />
       <ServiceInfo />
       <ProjectsAndWorks />
+      <EmailMe />
     </div>
   );
 };

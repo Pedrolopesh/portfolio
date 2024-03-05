@@ -1,0 +1,71 @@
+.containerEmailMe {
+  display: block;
+  max-width: 80%;
+  color: white;
+  text-align: center;
+  margin: 30vh auto 10vh auto;
+}
+
+.containerEmailMe h3 {
+  color: white;
+  font-size: 2.4rem;
+}
+
+.containerEmailMe h3:nth-child(2) {
+  color: #0086D1;
+}
+
+.titleEmailMe {
+  margin: 20px 0 20px 0;
+}
+
+.subTitleEmailMe {
+  margin: 0 0 50px 0;
+}
+
+.containerInputEmailMe {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+}
+
+.boerderInputEmailMe {
+  display: flex;
+  border-radius: 100px;
+  border: 1px solid #0086D1;
+  padding: 10px;
+  max-width: 100%;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.boerderInputEmailMe input {
+  background: none;
+  border: none;
+  color: white;
+  max-width: 85%;
+  width: 100%;
+}
+
+.emailIconEmailMe {
+  background-color: #0086D1;
+  color: white;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin: 0 20px 0 0;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonSendEmailMe button {
+  background-color: #0086D1;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 100px;
+  margin: 0 0 0 auto;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
