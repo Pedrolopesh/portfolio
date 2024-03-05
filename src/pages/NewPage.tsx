@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import ServiceInfo from "../components/Home/ServiceInfo";
 import ProjectsAndWorks from "../components/Home/ProjectsAndWorks";
 import EmailMe from "../components/Home/EmailMe";
+import AboutMe from "../components/Home/AboutMe";
 
 const DesignPage = () => {
   const router = useRouter();
@@ -32,6 +33,7 @@ const DesignPage = () => {
       <ServiceInfo />
       <ProjectsAndWorks />
       <EmailMe />
+      <AboutMe />
     </div>
   );
 };

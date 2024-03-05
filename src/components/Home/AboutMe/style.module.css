@@ -1,0 +1,99 @@
+.containerAboutMeBg {
+  background-color: #273454;
+  color: white;
+  margin-bottom: 400px;
+}
+
+.containerAboutMe {
+  display: block;
+  background-color: #273454;
+  max-width: 85%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.containerCompanys {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imageCompany {
+  display: flex;
+}
+
+.containerCompanys {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerFirstTextAboutMe {
+  display: flex;
+}
+
+.aboutMeIcon {
+  display: flex;
+}
+
+.containerRightAboutMe, .containerLeftAboutMe {
+  display: flex;
+  align-items: center;
+}
+
+.containerRightAboutMe {
+  max-width: 60%;
+  margin: 0 0 0 auto;
+}
+
+.containerRightAboutMe, .containerLeftAboutMe h3 {
+  font-size: 2rem;
+}
+
+.containerRightAboutMe, .containerLeftAboutMe p {
+  font-size: 1.3rem;
+}
+
+.containerTextLeftAboutMe {
+  max-width: 70%;
+}
+
+.containerLeftAboutMe {
+  margin: 70px 50px 0 0;
+  max-width: 100%;
+}
+
+.containerAboutMeActions {
+  display: flex;
+  align-items: center;
+  margin: 30px auto 0 auto;
+}
+
+.buttonActions {
+  display: flex;
+}
+
+.buttonActions button {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.buttonActions button:first-child {
+  background-color: #1573FF;
+  font-weight: 700;
+  border: none;
+}
+
+
+.buttonActions button:nth-child(2) {
+  border: 2px solid #fff;
+  background: none;
+}
+
