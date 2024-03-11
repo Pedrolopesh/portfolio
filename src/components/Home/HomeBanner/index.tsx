@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 // import style from 'SecondBanner.module.css'
 import { useTranslation } from "react-i18next";
 import Logo from "../../../assets/icons/logo";
@@ -9,13 +9,18 @@ import CustomDivider from "../../../assets/icons/CustomDivider";
 const HomeBanner = () => {
   const { t } = useTranslation();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentVideo, setCurrentVideo] = useState("videos/particles.mp4");
 
   useEffect(() => {
+    if (window.innerWidth <= 900) {
+      setCurrentVideo("videos/particles_mobile.mp4");
+    }
+
     videoRef.current.playbackRate = 0.9;
   }, []);
 
-  return (
-    <div className={style.ContainerHomeBanner}>
+  const VideoBanner = useCallback(() => {
+    return (
       <video
         id="homebanner-video-bg"
         autoPlay
@@ -24,10 +29,17 @@ const HomeBanner = () => {
         ref={videoRef}
         width={"100%"}
       >
-        <source src="videos/particles.mp4" type="video/mp4" />
-        {/* <source src="meu-video.webm" type="video/webm" /> */}
+        <source src={currentVideo} type="video/mp4" />
         Desculpe, seu navegador não suporta vídeos HTML5.
       </video>
+    );
+  }, [currentVideo]);
+
+  return (
+    <div className={style.ContainerHomeBanner}>
+      <div className={style.ContentVideoBanner}>
+        <VideoBanner />
+      </div>
       <div className={style.ContainerContentBannerBG}></div>
       <div className={style.ContainerContentBanner}>
         <div className={style.ContentHomeBannerBlock}>
@@ -52,7 +64,7 @@ const HomeBanner = () => {
                 delaySpeed={3000}
               />
             </div>
-            <p>{t("overview_text_banner")}</p>
+            <p>{t("homeBanner.overview_text_banner")}</p>
           </div>
         </div>
       </div>

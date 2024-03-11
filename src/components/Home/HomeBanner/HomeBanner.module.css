@@ -1,10 +1,14 @@
 
 .ContainerHomeBanner {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-.ContainerHomeBanner video {
+.ContentVideoBanner {
+  display: flex;
+}
+
+.ContentVideoBanner video {
     margin-top: -80px;
 }
 
@@ -71,7 +75,7 @@
 }
 
 .CustomDividerBlock {
-    margin-top: -180px;
+    margin-top: -20vh;
     max-width: 100%;
 }
 
@@ -82,10 +86,76 @@
 
 @media screen and (max-width: 1500px) {
   .ContainerHomeBanner video {
-    margin-top: -100px;
+    margin-top: -70px;
   }
 
   .ContentHomeBannerBlock {
     margin: 220px auto 0 auto;
   }
+
+  .CustomDividerBlock {
+    margin-top: -15vh;
+  }
 }
+
+@media screen and (max-width: 1200px) {
+  .ContainerHomeBanner video {
+    margin-top: -60px;
+  }
+
+  .ContentVideoBanner {
+    display: flex;
+  }
+
+  .ContentHomeBannerBlock {
+    margin: 140px auto 0 auto;
+  }
+
+  .CustomDividerBlock {
+    margin-top: -20vh;
+    max-width: 100%;
+}
+}
+
+@media screen and (max-width: 900px) {
+
+  .ContentHomeBannerBlock {
+    width: 80%;
+    margin: 20vh auto 0 auto;
+    font-size: 1rem;
+  }
+
+  .CustomDividerBlock {
+    margin-top: -18vh;
+    z-index: 99;
+  }
+
+  .ContentVideoBanner video {
+    margin-top: 0;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  .ContainerHomeBanner {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .ContainerHomeBanner video {
+    position: absolute;
+    width: 350%;
+    margin: 10px auto;
+  }
+
+  .ContentHomeBannerBlock {
+    width: 95%;
+    margin: 35vh auto 0 auto;
+  }
+
+  .CustomDividerBlock {
+    margin-top: 75vh;
+    z-index: 99;
+  }
+} */

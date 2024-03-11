@@ -9,10 +9,11 @@
   "homeBanner": {
     "title_banner": "Web",
     "title_typing_0": "Design",
-    "title_typing_1": "Services",
-    "title_typing_2": "Architecture",
-    "title_typing_3": "Analitics",
-    "title_typing_4": "Performance"
+    "title_typing_1": "Serviços",
+    "title_typing_2": "Arquitetura",
+    "title_typing_3": "Análises",
+    "title_typing_4": "Performance",
+    "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos."
   },
   "homeServicesInfo": {
     "title_left": "Atuação em diversos projetos",
@@ -31,7 +32,6 @@
   "project": "Projetos",
   "andWorks": "e Trabalhos",
   "title_banner": "Pedro Lopes",
-  "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos.",
   "first_section_title": "Quem sou eu?",
   "first_modal_title": "Trajetória pessoal",
   "first_terminal_path_source": "pessoal",
