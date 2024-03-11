@@ -143,3 +143,45 @@
   display: flex;
   margin-top: -20vh;
 }
+
+@media screen and (max-width: 900px) {
+  .containerServiceBlocks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .blockTextFoot {
+    flex-direction: column;
+  }
+
+  .blockServiceCard {
+    margin: 15px 15px 0 0;
+  }
+
+  .blockTextFootInfo {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .containerServiceInfo_Cards_Blocks {
+    margin:-10vh auto 0 auto;
+  }
+
+  .containerServiceInfo {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .containerService {
+    margin: 20px 0 70px 0;
+  }
+
+  .containerLeftBlock, .containerRightBlock {
+    max-width: 100%;
+  }
+
+  .blockTextFoot {
+    flex-direction: row;
+  }
+}

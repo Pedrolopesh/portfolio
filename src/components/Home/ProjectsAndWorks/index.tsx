@@ -37,6 +37,13 @@ const ProjectsAndWorks = () => {
             <button onClick={() => setSelectedSection(section.name)}>
               <p>{section.name}</p>
             </button>
+            <span
+              className={`${
+                selectedSectionIndex === index
+                  ? style.showSelectionLink
+                  : style.hideSelectionLink
+              } ${style.selectionLink}`}
+            ></span>
           </div>
         ))}
       </div>

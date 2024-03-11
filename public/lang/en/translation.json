@@ -15,6 +15,18 @@
     "title_typing_4": "Performance",
     "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos."
   },
+  "homeServicesInfo": {
+    "title_left": "Innovation that Drives: Explore Different Services and See What We Can Do for You",
+    "text_left": "Whether you're a startup looking to revolutionize the market or an established company striving to stay ahead of the competition, our custom software services are the key to your success. Explore our portfolio to see examples of how we turn ideas into reality for my clients and companies I've worked with.",
+    "title_rigth": "16 Innovative Projects, 5 Years of Excellence: Turning Ideas into Reality",
+    "text_rigth_0": "My approach and experience have been the key to the success of 16 projects over the years. I work very closely with the client to understand their needs and turn them into innovative digital solutions.",
+    "text_rigth_1": "years of experience",
+    "text_rigth_2": "Completed Projects",
+    "title_box_service_0": "UX/UI",
+    "title_box_service_1": "Web Implementation",
+    "title_box_service_2": "Software Engineering",
+    "text_box_service_foot": "visit projects and works"
+  },
   "all_projects": "All Projects",
   "cases": "Real Cases",
   "project": "Projects",

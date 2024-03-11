@@ -31,8 +31,8 @@ const DesignPage = () => {
       <ChangeLang />
       <HomeBanner />
       <ServiceInfo />
-      {/* <ProjectsAndWorks />
-      <EmailMe />
+      <ProjectsAndWorks />
+      {/* <EmailMe />
       <AboutMe /> */}
     </div>
   );
