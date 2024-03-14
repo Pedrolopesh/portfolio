@@ -57,6 +57,7 @@
   align-items: center;
   cursor: pointer;
   transition: 0.3s;
+  justify-content: center;
 }
 
 
@@ -120,10 +121,12 @@
   height: 5px;
   width: 100px;
   border-radius: 50px;
+  transition: 1s;
+  transform: translateY(0px);
 }
 
 .showSelectionLink {
-  transition: 1s;
+  transform: translateY(0px);
   opacity: 1;
   animation-name: animation_showSelectionLink;
 }
@@ -140,6 +143,7 @@
 }
 
 .hideSelectionLink {
+  transform: translateY(20px);
   opacity: 0;
   animation-name: animation_hideSelectionLink;
 }
@@ -234,8 +238,28 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+  .mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .containerWorkAndProjects {
     margin: 20vh auto 0 auto;
+  }
+
+  .containerWorkLinks {
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin: 10px auto 30px auto;
+  }
+
+  .containerWorkLinks button {
+    margin: 20px 0 0 0;
+  }
+
+  .CardItemProjects {
+    margin: 5px;
   }
 }

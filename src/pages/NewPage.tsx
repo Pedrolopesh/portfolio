@@ -32,8 +32,8 @@ const DesignPage = () => {
       <HomeBanner />
       <ServiceInfo />
       <ProjectsAndWorks />
-      {/* <EmailMe />
-      <AboutMe /> */}
+      <EmailMe />
+      <AboutMe />
     </div>
   );
 };

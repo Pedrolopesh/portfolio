@@ -1,6 +1,7 @@
 .containerEmailMe {
   display: block;
-  max-width: 80%;
+  max-width: 100%;
+  width: 80%;
   color: white;
   text-align: center;
   margin: 20vh auto 20vh auto;
@@ -68,4 +69,15 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px){
+  .containerEmailMe {
+    width: 95%;
+  }
+
+  .boerderInputEmailMe {
+    width: 100%;
+    margin: 20px auto;
+  }
 }
