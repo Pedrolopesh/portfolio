@@ -27,6 +27,19 @@
     "title_box_service_2": "Engenharia de Software",
     "text_box_service_foot": "visistar projetos e trabalhos"
   },
+  "home_footer": {
+    "thanks_visit": "Obrigado pela visita!",
+    "footer_link_title_01": "Projetos de destaque",
+    "footer_sub_link_01": "Trabalho ee Electrolux",
+    "footer_sub_link_02": "Projeto Triper",
+    "footer_sub_link_03": "Projeto The Chat",
+    "footer_sub_link_04": "Projeto Link Leito",
+    "footer_link_title_02": "Projetos Recentes",
+    "footer_sub_link_05": "Trabalho em Ufund",
+    "footer_sub_link_06": "Projeto Triper",
+    "footer_sub_link_07": "Projeto The Chat",
+    "footer_sub_link_08": "Projeto Link Leito"
+  },
   "all_projects": "Todos os Projetos",
   "cases": "Casos Reais",
   "project": "Projetos",

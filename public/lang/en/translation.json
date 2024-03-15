@@ -27,6 +27,9 @@
     "title_box_service_2": "Software Engineering",
     "text_box_service_foot": "visit projects and works"
   },
+  "home_footer": {
+    "thanks_visit": "thanks for the visit!"
+  },
   "all_projects": "All Projects",
   "cases": "Real Cases",
   "project": "Projects",
