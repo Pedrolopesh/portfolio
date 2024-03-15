@@ -1,0 +1,81 @@
+.continerFooter {
+  display: block;
+
+}
+
+.continerFloatText {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 50px 0;
+}
+
+.continerFloatText p {
+  margin-right: 15px;
+}
+
+.continerFooterLinks {
+  display: flex;
+  background-color: #00538F;
+  padding: 50px 20px ;
+  color: #fff;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.contentFooterLinks {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.footerBlockLinks {
+  display: block;
+}
+
+.footerBlockLinks p {
+  display: block;
+  font-size: 22px;
+  margin: 0 0 20px 0;
+}
+
+.footerBlockLinks a {
+  display: block;
+  margin: 0 0 20px 0;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #BBBBBB;
+}
+
+.footerBlockLinks a:hover {
+  display: block;
+  color: #1596ff;
+  text-decoration: underline;
+}
+
+.footerBlockIconsAndLinks button {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 20px 0 0;
+}
+
+.footerBlockIconsAndLinks > div {
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .contentFooterLinks {
+    flex-wrap: wrap;
+  }
+
+  .contentFooterLinks div {
+    margin: 20px auto 20px 0;
+  }
+
+}

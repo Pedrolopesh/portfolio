@@ -7,14 +7,14 @@
     "button_code_option": "Dev"
   },
   "homeBanner": {
-    "title_banner": "Web",
+    "home_title_banner": "Web",
     "title_typing_0": "Design",
     "title_typing_1": "Serviços",
     "title_typing_2": "Arquitetura",
     "title_typing_3": "Análises",
-    "title_typing_4": "Performance",
-    "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos."
+    "title_typing_4": "Performance"
   },
+  "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos.",
   "homeServicesInfo": {
     "title_left": "Inovação que Impulsiona: Conheça os diferentes Serviços e Veja o que Podemos Fazer por Você",
     "text_left": "Seja você uma startup buscando revolucionar o mercado ou uma empresa consolidada buscando se manter à frente da concorrência, nossos serviços de software personalizados são a chave para o seu sucesso. Explore nosso portfólio para ver exemplos de como transformamo ideias em realidade para meus clientes e empresas por onde passei.",
@@ -27,10 +27,16 @@
     "title_box_service_2": "Engenharia de Software",
     "text_box_service_foot": "visistar projetos e trabalhos"
   },
+  "home_about_me": {
+    "about_me_title": "Sobre",
+    "bout_me_description": "Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular.",
+    "contact_me_title": "Entre em contato",
+    "contact_me_text": "Você pode entrar em contato comigo por e-mail ou rede social, eu costumo responder em 1 dia"
+  },
   "home_footer": {
     "thanks_visit": "Obrigado pela visita!",
     "footer_link_title_01": "Projetos de destaque",
-    "footer_sub_link_01": "Trabalho ee Electrolux",
+    "footer_sub_link_01": "Trabalho em Electrolux",
     "footer_sub_link_02": "Projeto Triper",
     "footer_sub_link_03": "Projeto The Chat",
     "footer_sub_link_04": "Projeto Link Leito",
@@ -38,7 +44,8 @@
     "footer_sub_link_05": "Trabalho em Ufund",
     "footer_sub_link_06": "Projeto Triper",
     "footer_sub_link_07": "Projeto The Chat",
-    "footer_sub_link_08": "Projeto Link Leito"
+    "footer_sub_link_08": "Projeto Link Leito",
+    "footer_contact_title": "Entre em contato"
   },
   "all_projects": "Todos os Projetos",
   "cases": "Casos Reais",

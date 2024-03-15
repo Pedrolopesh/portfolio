@@ -51,7 +51,7 @@
 .CardItemProjects {
   overflow: hidden;
   width: 100%;
-  min-height: 480px;
+  min-height: 470px;
   display: flex;
   margin: 40px;
   align-items: center;
@@ -94,11 +94,11 @@
   transform: scale(1);
 }
 
-.mainContainerCards, .containerShowDescriptions, .containerHideDescriptions {
+.mainContainerCards, .containerShowDescriptions {
   display: flex;
   position: absolute;
-  max-width: 25%;
-  min-height: 475px;
+  max-width: 470px;
+  min-height: 470px;
 }
 
 .containerShowDescriptions {
@@ -109,8 +109,11 @@
 
 
 .containerHideDescriptions {
-  max-width: 25% !important;
+  display: flex;
+  position: absolute;
+  max-width: 470px !important;
   transition: 0.5s;
+  min-height: 470px;
   background-color: rgba(255, 0, 0, 0)(0, 0, 0);
   /* display: none; */
 }

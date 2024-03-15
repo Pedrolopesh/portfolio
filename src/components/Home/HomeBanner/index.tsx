@@ -48,7 +48,7 @@ const HomeBanner = () => {
           </div>
           <div>
             <div className={style.ContainerTypingTitle}>
-              <h1> {t("homeBanner.title_banner")} </h1>
+              <h1> WEB </h1>
               <Typewriter
                 words={[
                   `${t("homeBanner.title_typing_0")}`,
@@ -64,7 +64,7 @@ const HomeBanner = () => {
                 delaySpeed={3000}
               />
             </div>
-            <p>{t("homeBanner.overview_text_banner")}</p>
+            <p>{t("overview_text_banner")}</p>
           </div>
         </div>
       </div>

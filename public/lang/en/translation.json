@@ -7,14 +7,14 @@
     "button_code_option": "Dev"
   },
   "homeBanner": {
-    "title_banner": "Web",
+    "home_title_banner": "Web",
     "title_typing_0": "Design",
     "title_typing_1": "Services",
     "title_typing_2": "Architecture",
     "title_typing_3": "Analitics",
-    "title_typing_4": "Performance",
-    "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos."
+    "title_typing_4": "Performance"
   },
+  "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software com 5 anos de experiência no mercado de TI, fique a vontade para conhecer mais sobre mim e meus trabalhos.",
   "homeServicesInfo": {
     "title_left": "Innovation that Drives: Explore Different Services and See What We Can Do for You",
     "text_left": "Whether you're a startup looking to revolutionize the market or an established company striving to stay ahead of the competition, our custom software services are the key to your success. Explore our portfolio to see examples of how we turn ideas into reality for my clients and companies I've worked with.",
@@ -27,8 +27,25 @@
     "title_box_service_2": "Software Engineering",
     "text_box_service_foot": "visit projects and works"
   },
+  "home_about_me": {
+    "about_me_title": "About Me",
+    "bout_me_description": " I start at tecnology through Quality and assurance job doing tests in financial products, after I implement maintenance in frontend of this products, in this moment i learn some javascript frameworks like vue.js, react, react-native and angular.",
+    "contact_me_title": "Get in Touch",
+    "contact_me_text": "You can contact me by email or social midia, I usualy answer in 3 days"
+  },
   "home_footer": {
-    "thanks_visit": "thanks for the visit!"
+    "thanks_visit": "thanks for the visit!",
+    "footer_link_title_01": "Featured Projects",
+    "footer_sub_link_01": "Work in Electrolux",
+    "footer_sub_link_02": "Triper Project",
+    "footer_sub_link_03": "The Chat Project",
+    "footer_sub_link_04": "Link Leito Project",
+    "footer_link_title_02": "Recent Projects",
+    "footer_sub_link_05": "Work in Ufund",
+    "footer_sub_link_06": "Triper Project",
+    "footer_sub_link_07": "The Chat Project",
+    "footer_sub_link_08": "Link Leito Project",
+    "footer_contact_title": "Get in Touch"
   },
   "all_projects": "All Projects",
   "cases": "Real Cases",

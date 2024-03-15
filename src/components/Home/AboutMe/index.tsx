@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import style from "./style.module.css";
-import Logo from "../../../assets/icons/logo";
 
 const AbaoutMe = () => {
+  const { t } = useTranslation();
+
   const companys = [
     { img: "/img/company_1.png" },
     { img: "/img/company_2.png" },
@@ -38,31 +40,22 @@ const AbaoutMe = () => {
 
           <div className={style.containerRightAboutMe}>
             <div>
-              <h3>About me</h3>
-              <p>
-                I start at tecnology through Quality and assurance job doing
-                tests in financial products, after I implement maintenance in
-                frontend of this products, in this moment i learn some
-                javascript frameworks like vue.js, react, react-native and
-                angular.
-              </p>
+              <h3>{t("home_about_me.about_me_title")}</h3>
+              <p>{t("home_about_me.bout_me_description")}</p>
             </div>
           </div>
         </div>
 
         <div className={style.containerLeftAboutMe}>
           <div className={style.containerTextLeftAboutMe}>
-            <h3>Contact</h3>
-            <p>
-              You can contact me by email or social midia, I usualy answer in 3
-              days
-            </p>
+            <h3>{t("home_about_me.contact_me_title")}</h3>
+            <p>{t("home_about_me.contact_me_text")}</p>
           </div>
 
           <div className={style.containerAboutMeActions}>
             <div className={style.buttonActions}>
-              <button>HIRE ME</button>
-              <button>KNOW MORE</button>
+              <button>{t("button_about_me_hire")}</button>
+              <button>{t("button_about_me_know_more")}</button>
             </div>
           </div>
         </div>
