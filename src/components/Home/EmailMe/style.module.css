@@ -23,6 +23,7 @@
   animation: showToast-animation 1s ease-in-out 0s 1 normal forwards;
 }
 
+
 @keyframes showToast-animation {
   0% {
     opacity: 0;
@@ -124,6 +125,74 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
+}
+
+.showContainerText {
+  opacity: 1;
+  transform: translateY(0);
+  animation: showContainerText-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes showContainerText-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hideContainerText {
+  opacity: 1;
+  transform: translateY(0);
+  animation: hideContainerText-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes hideContainerText-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+}
+
+.showContainerInput {
+  opacity: 1;
+  transform: translateY(0);
+  animation: showContainerInput-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes showContainerInput-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hideContainerInput {
+  opacity: 1;
+  transform: translateY(0);
+  animation: hideContainerInput-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes hideContainerInput-animation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
 }
 
 @media screen and (max-width: 800px){

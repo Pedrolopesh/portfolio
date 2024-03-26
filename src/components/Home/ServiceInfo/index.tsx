@@ -71,10 +71,6 @@ const ServiceInfo = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("showAnimation", showAnimation);
-  }, [showAnimation]);
-
   return (
     <>
       <div className={style.containerServiceInfo_Cards_Blocks}>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useEmailMe = () => {
-  const [viewToast, setViewToast] = useState(true);
+  const [viewToast, setViewToast] = useState(false);
   const [email, setEmail] = useState("");
 
   const sendEmail = () => {
@@ -33,12 +33,45 @@ const useEmailMe = () => {
     }
   }, [viewToast]);
 
+  const [showAnimation, setShowAnimation] = useState(false);
+
+  const handleScroll = () => {
+    const scrollPos = window.scrollY;
+
+    if (window.screen.width < 700) {
+      if (scrollPos >= 4050) {
+        setShowAnimation(true);
+      }
+    } else if (window.screen.width > 700 && window.screen.width < 1200) {
+      if (scrollPos >= 4400) {
+        setShowAnimation(true);
+      }
+    } else {
+      if (scrollPos >= 2650) {
+        setShowAnimation(true);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleScrollWithRAF = () => {
+      window.requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener("scroll", handleScrollWithRAF);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollWithRAF);
+    };
+  }, []);
+
   return {
     viewToast,
     setViewToast,
     email,
     setEmail,
     sendEmail,
+    showAnimation,
   };
 };
 
