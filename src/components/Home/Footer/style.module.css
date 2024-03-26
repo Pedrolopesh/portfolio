@@ -63,6 +63,7 @@
   display: flex;
   align-items: center;
   margin: 0 20px 0 0;
+  cursor: pointer;
 }
 
 .footerBlockIconsAndLinks > div {

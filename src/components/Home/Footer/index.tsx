@@ -17,19 +17,43 @@ const Footer = () => {
     firstFooterLinks: {
       title: t("home_footer.footer_link_title_01"),
       subLinks: [
-        t("home_footer.footer_sub_link_01"),
-        t("home_footer.footer_sub_link_02"),
-        t("home_footer.footer_sub_link_03"),
-        t("home_footer.footer_sub_link_04"),
+        {
+          text: t("home_footer.footer_sub_link_01"),
+          link: "/Project?name=electrolux",
+        },
+        {
+          text: t("home_footer.footer_sub_link_02"),
+          link: "/Project?name=triper",
+        },
+        {
+          text: t("home_footer.footer_sub_link_03"),
+          link: "/Project?name=the-chat",
+        },
+        {
+          text: t("home_footer.footer_sub_link_04"),
+          link: "/Project?name=link-leito",
+        },
       ],
     },
     secondFooterLinks: {
       title: t("home_footer.footer_link_title_02"),
       subLinks: [
-        t("home_footer.footer_sub_link_05"),
-        t("home_footer.footer_sub_link_06"),
-        t("home_footer.footer_sub_link_07"),
-        t("home_footer.footer_sub_link_08"),
+        {
+          text: t("home_footer.footer_sub_link_05"),
+          link: "/Project?name=blue-token",
+        },
+        {
+          text: t("home_footer.footer_sub_link_06"),
+          link: "/Project?name=match-coder",
+        },
+        {
+          text: t("home_footer.footer_sub_link_07"),
+          link: "/Project?name=pet-care",
+        },
+        {
+          text: t("home_footer.footer_sub_link_08"),
+          link: "/Project?name=pet-system",
+        },
       ],
     },
   };
@@ -63,18 +87,23 @@ const Footer = () => {
         <div className={styles.contentFooterLinks}>
           <div className={styles.footerBlockLinks}>
             <p>{footerLinks.firstFooterLinks.title}</p>
-            {footerLinks.firstFooterLinks.subLinks.map((link, index) => (
-              <a key={index} onClick={() => redirectTo(link)}>
-                {link}
+            {footerLinks.firstFooterLinks.subLinks.map((item, index) => (
+              <a key={index} target="_blank" href={item.link} rel="noreferrer">
+                {item.text}
               </a>
             ))}
           </div>
 
           <div className={styles.footerBlockLinks}>
             <p>{footerLinks.secondFooterLinks.title}</p>
-            {footerLinks.secondFooterLinks.subLinks.map((link, index) => (
-              <a key={`${index}_${index}`} onClick={() => redirectTo(link)}>
-                {link}
+            {footerLinks.secondFooterLinks.subLinks.map((item, index) => (
+              <a
+                key={`${index}_${index}`}
+                target="_blank"
+                href={item.link}
+                rel="noreferrer"
+              >
+                {item.text}
               </a>
             ))}
           </div>

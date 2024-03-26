@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 const useEmailMe = () => {
+  const [showAnimation, setShowAnimation] = useState(false);
   const [viewToast, setViewToast] = useState(false);
   const [email, setEmail] = useState("");
 
@@ -33,7 +34,6 @@ const useEmailMe = () => {
     }
   }, [viewToast]);
 
-  const [showAnimation, setShowAnimation] = useState(false);
 
   const handleScroll = () => {
     const scrollPos = window.scrollY;

@@ -1,6 +1,7 @@
 .titleCardsGallery {
     margin-top: 170px;
     text-align: center;
+    color: #fff;
 }
 
 .containerCardsGallery {
@@ -36,7 +37,7 @@
 .showImageEffect {
     transition: 0.6s;
     transform: scale(1.1);
-    
+
 }
 
 .hideImageEffect {
@@ -105,16 +106,16 @@
         min-height: 180px;
         height: 500px;
     }
-    
+
     .showTextContainer {
         height: 60vh;
     }
-    
+
     .showImageEffect {
         background-size: 100% 80%;
-        
+
     }
-    
+
     .hideImageEffect {
         background-size: 100% 80%;
         margin-top: 50%;
@@ -125,7 +126,7 @@
     .containerCardsGallery {
         width: 100%;
     }
-    
+
     .cardGallery {
         width: 80%;
         margin: 40px auto;
