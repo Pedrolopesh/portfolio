@@ -1,3 +1,58 @@
+.containerToast {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  background-color: #2aa628;
+  border-radius: 15px;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.containerToast p {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.showToastMessage {
+  opacity: 1;
+  transform: translateX(0);
+
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: showToast-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes showToast-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+.hideToastMessage {
+  opacity: 0;
+  transform: translateX(30%);
+  animation: hideToast-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes hideToast-animation {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+
+}
+
 .containerEmailMe {
   display: block;
   max-width: 100%;

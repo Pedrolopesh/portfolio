@@ -65,16 +65,7 @@
   display: flex;
   align-items: center;
   width: 30%;
-  /* margin: 0 0 0 auto; */
 }
-
-/* .blockTextFootInfo:first-child {
-  margin: 0;
-} */
-
-/* .blockTextFootInfo:last-child {
-  margin: 0;
-} */
 
 .blockTextFootInfo h3 {
   color: #0086D1;
@@ -142,6 +133,105 @@
 .containerDivederServices {
   display: flex;
   margin-top: -20vh;
+}
+
+.hideTextLeft {
+  opacity: 0;
+}
+
+.showTextLeft {
+  opacity: 1;
+  transform: translateX(0);
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: show-text-left-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes show-text-left-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hideTextRight {
+  opacity: 0;
+}
+
+.showTextRight {
+  opacity: 0;
+  transform: translateX(0);
+  animation: show-text-right-animation 1s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes show-text-right-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hideBlockServiceCard {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.showBlockServiceCard1 {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: show-block-service-card-animation 1s ease-in-out 0.5s 1 normal forwards;
+}
+
+@keyframes show-block-service-card-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.showBlockServiceCard2 {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: show-block-service-card-animation 1s ease-in-out 1s 1 normal forwards;
+}
+
+@keyframes show-block-service-card-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.showBlockServiceCard3 {
+  opacity: 0;
+  transform: translateY(100px);
+  animation: show-block-service-card-animation 1s ease-in-out 1.5s 1 normal forwards;
+}
+
+@keyframes show-block-service-card-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 900px) {

@@ -24,6 +24,7 @@
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.29.0",
     "react-wavify": "^1.10.0",
+    "resend": "^3.2.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   },

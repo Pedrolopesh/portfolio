@@ -27,6 +27,13 @@
     "title_box_service_2": "Software Engineering",
     "text_box_service_foot": "visit projects and works"
   },
+  "emailMe": {
+    "about_me_title": "Have an Awesome Project Idea?",
+    "bout_me_subtitle": "Let’s Discuss",
+    "input_placeholder": "Enter e-mail address",
+    "button_send": "Send",
+    "tost_message": "E-mail successfully sent!"
+  },
   "home_about_me": {
     "about_me_title": "About Me",
     "bout_me_description": " I start at tecnology through Quality and assurance job doing tests in financial products, after I implement maintenance in frontend of this products, in this moment i learn some javascript frameworks like vue.js, react, react-native and angular.",

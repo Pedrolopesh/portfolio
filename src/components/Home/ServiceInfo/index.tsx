@@ -4,16 +4,89 @@ import style from "./style.module.css";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { LuComputer } from "react-icons/lu";
 import CustomDividerService from "../../../assets/icons/CustomDividerService";
+import { useEffect, useState } from "react";
 
 const ServiceInfo = () => {
   const { t } = useTranslation();
+
+  const [showAnimation, setShowAnimation] = useState({
+    textAnimation: false,
+    serviceBlocksAnimation: false,
+  });
+
+  const handleScroll = () => {
+    const scrollPos = window.scrollY;
+
+    if (window.screen.width < 700) {
+      if (scrollPos >= 100) {
+        setShowAnimation((prevState) => ({
+          ...prevState,
+          textAnimation: true,
+        }));
+      }
+      if (scrollPos >= 180) {
+        setShowAnimation((prevState) => ({
+          ...prevState,
+          serviceBlocksAnimation: true,
+        }));
+      }
+    } else if (window.screen.width > 700 && window.screen.width < 1200) {
+      if (scrollPos >= 800) {
+        setShowAnimation((prevState) => ({
+          ...prevState,
+          textAnimation: true,
+        }));
+      }
+      if (scrollPos >= 890) {
+        setShowAnimation((prevState) => ({
+          ...prevState,
+          serviceBlocksAnimation: true,
+        }));
+      }
+    } else {
+      if (scrollPos >= 400) {
+        setShowAnimation((prevState) => ({
+          ...prevState,
+          textAnimation: true,
+        }));
+      }
+      if (scrollPos >= 490) {
+        setShowAnimation((prevState) => ({
+          ...prevState,
+          serviceBlocksAnimation: true,
+        }));
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleScrollWithRAF = () => {
+      window.requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener("scroll", handleScrollWithRAF);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollWithRAF);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("showAnimation", showAnimation);
+  }, [showAnimation]);
 
   return (
     <>
       <div className={style.containerServiceInfo_Cards_Blocks}>
         <div className={style.containerServiceInfo}>
           <div className={style.containerLeftBlock}>
-            <div className={style.textBlockLeft}>
+            <div
+              className={`${
+                showAnimation.textAnimation
+                  ? style.showTextLeft
+                  : style.hideTextLeft
+              } ${style.textBlockLeft}`}
+            >
               <h3> {t("homeServicesInfo.title_left")} </h3>
               <p> {t("homeServicesInfo.text_left")} </p>
 
@@ -29,7 +102,13 @@ const ServiceInfo = () => {
             </div>
           </div>
 
-          <div className={style.containerRightBlock}>
+          <div
+            className={`${
+              showAnimation.textAnimation
+                ? style.showTextRight
+                : style.hideTextRight
+            } ${style.containerRightBlock}`}
+          >
             <div className={style.containerFootRightBlock}>
               <h3 className={style.containerFootRightBlock_title}>
                 {t("homeServicesInfo.title_rigth")}
@@ -54,7 +133,13 @@ const ServiceInfo = () => {
         </div>
 
         <div className={style.containerServiceBlocks}>
-          <div className={style.blockServiceCard}>
+          <div
+            className={`${
+              showAnimation.serviceBlocksAnimation
+                ? style.showBlockServiceCard1
+                : style.hideBlockServiceCard
+            } ${style.blockServiceCard}`}
+          >
             <div className={style.titleCardBlock}>
               <HiOutlineLightBulb size={70} color={"#fff"} />
               <h3>{t("homeServicesInfo.title_box_service_0")}</h3>
@@ -65,7 +150,13 @@ const ServiceInfo = () => {
             </div>
           </div>
 
-          <div className={style.blockServiceCard}>
+          <div
+            className={`${
+              showAnimation.serviceBlocksAnimation
+                ? style.showBlockServiceCard2
+                : style.hideBlockServiceCard
+            } ${style.blockServiceCard}`}
+          >
             <div className={style.titleCardBlock}>
               <LuComputer size={60} color={"#fff"} />
               <h3>{t("homeServicesInfo.title_box_service_1")}</h3>
@@ -76,7 +167,13 @@ const ServiceInfo = () => {
             </div>
           </div>
 
-          <div className={style.blockServiceCard}>
+          <div
+            className={`${
+              showAnimation.serviceBlocksAnimation
+                ? style.showBlockServiceCard3
+                : style.hideBlockServiceCard
+            } ${style.blockServiceCard}`}
+          >
             <div className={style.titleCardBlock}>
               <BsCodeSquare size={60} color={"#fff"} />
               <h3>{t("homeServicesInfo.title_box_service_2")}</h3>

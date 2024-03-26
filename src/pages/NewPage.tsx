@@ -26,32 +26,6 @@ const DesignPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  setTimeout(() => {
-    window.addEventListener(
-      "scroll",
-      function (event) {
-        // var firstLocator:any = document.querySelector("#locator");
-        // const test = firstLocator.offsetTop
-        console.log("width => ", window.screen.width);
-        if (window.screen.width < 700) {
-          console.log("#Mobile");
-          console.log("Mobile => ", window.pageYOffset);
-        }
-
-        if (window.screen.width > 700 && window.screen.width < 1100) {
-          console.log("#Table");
-          console.log("Table => ", window.pageYOffset);
-        }
-
-        if (window.screen.width > 1100) {
-          console.log("#Desktop");
-          console.log("Desktop => ", window.pageYOffset);
-        }
-      },
-      true
-    );
-  }, 1000);
-
   return (
     <div>
       <HeadPages />

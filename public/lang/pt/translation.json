@@ -27,6 +27,13 @@
     "title_box_service_2": "Engenharia de Software",
     "text_box_service_foot": "visistar projetos e trabalhos"
   },
+  "emailMe": {
+    "about_me_title": "Tem uma ideia de projeto incrível?",
+    "bout_me_subtitle": "Vamos conversar",
+    "input_placeholder": "Insira seu melhor endereço de e-mail",
+    "button_send": "Enviar",
+    "tost_message": "E-mail enviado com sucesso!"
+  },
   "home_about_me": {
     "about_me_title": "Sobre",
     "bout_me_description": "Comecei na tecnologia através da área de testes de softwares como QA realizando testes em produtos financeiros, em seguida, comecei com implementação e manutenção de códigos frontend, nessa área de atuação aprendi alguns frameworks javascript como vue.js, react, react-native e angular.",
