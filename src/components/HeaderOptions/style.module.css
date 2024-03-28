@@ -1,19 +1,18 @@
 .containerHeaderOptions {
-    background: #ffffff;
-    box-shadow: 1px -5px 60px #999999;
+    background-color: #013d68;
+    box-shadow: 1px -5px 60px #00012c;
     max-width: 100%;
     width: 100%;
     position: absolute;
     top: 0;
 }
 
-.selectedPath{ 
-    color: #FF7897;
-    /* font-weight: 600; */
+.selectedPath{
+    color: #72a1ff;
 }
 
 .unSelectedPath {
-    color: #000000;
+    color: #ffffff;
 }
 
 .contactButton {
@@ -36,8 +35,6 @@
 .containerLeftHeaderOptions {
     display: flex;
     align-items: center;
-    /* max-width: 100%; */
-    /* width: 50%; */
 }
 
 .containerMenuMobile {
@@ -49,8 +46,6 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    /* width: 100%; */
-    /* max-width: 500px; */
 }
 
 .containerLinks > a {
@@ -60,8 +55,7 @@
 
 .logoHeaderOptions {
     width: 60px;
-    height: 60px;
-    /* margin: 0 0 0 20px; */
+    /* height: 60px; */
 }
 
 .buttonModal, .design_button, .code_button {
@@ -81,7 +75,7 @@
 }
 
 .code_button {
-    background: #1D1D1D;  
+    background: #1D1D1D;
 }
 
 .design_button {
@@ -162,10 +156,6 @@
     .containerMenuMobile {
         display: flex;
         align-items: center;
-        /* justify-content: center;
-        width: 60px;
-        height: 60px;
-        cursor: pointer; */
     }
 
     .containerModal {

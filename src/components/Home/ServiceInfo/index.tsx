@@ -5,8 +5,10 @@ import { HiOutlineLightBulb } from "react-icons/hi";
 import { LuComputer } from "react-icons/lu";
 import CustomDividerService from "../../../assets/icons/CustomDividerService";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 const ServiceInfo = () => {
+  const router = useRouter();
   const { t } = useTranslation();
 
   const [showAnimation, setShowAnimation] = useState({
@@ -71,6 +73,10 @@ const ServiceInfo = () => {
     };
   }, []);
 
+  const redirectTo = (url: string) => {
+    router.push(url);
+  };
+
   return (
     <>
       <div className={style.containerServiceInfo_Cards_Blocks}>
@@ -130,6 +136,9 @@ const ServiceInfo = () => {
 
         <div className={style.containerServiceBlocks}>
           <div
+            onClick={() => {
+              redirectTo("/Project");
+            }}
             className={`${
               showAnimation.serviceBlocksAnimation
                 ? style.showBlockServiceCard1
