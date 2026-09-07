@@ -1,92 +1,45 @@
-import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
-import style from './style.module.css'
-import type { IImageObject } from '../../../typings/IImageObject'
-import { useRouter } from 'next/router'
+import type { IImageObject } from "../../../typings/IImageObject";
+import { useRouter } from "next/router";
 
 interface IGalleryImagensProps {
-    images: IImageObject[];
+  images: IImageObject[];
 }
 
-const GalleryImagens = ({images}: IGalleryImagensProps) => {
-    const router = useRouter()
-    const { t } = useTranslation();
+const GalleryImagens = ({ images }: IGalleryImagensProps) => {
+  const router = useRouter();
+  const { t } = useTranslation();
 
-    const [showAnimationImage, setShowAnimationImage] = useState(0)
+  const redirectTo = (url: string) => router.push(url);
 
-    const redirectTo = (url: string) => {
-        router.push(url)
-    }
+  return (
+    <section className="mx-auto max-w-6xl px-6 pt-36 pb-24 sm:px-10">
+      <h1 className="text-2xl font-bold text-ink sm:text-3xl">
+        {t("project_clients")}
+      </h1>
 
-    return (
-        <div>
-            <h1 className={style.titleCardsGallery}>{ t('project_clients')}</h1>
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {images.map((image) => (
+          <button
+            key={image.url}
+            type="button"
+            onClick={() => redirectTo(image.url)}
+            aria-label={t(image.title)}
+            className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-border text-left"
+          >
+            <div
+              style={{ backgroundImage: `url(${image.src})` }}
+              className="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-bg via-bg/40 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <h3 className="font-semibold text-ink">{t(image.title)}</h3>
+              <p className="mt-1 text-sm text-ink-muted">{t(image.text)}</p>
+            </div>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+};
 
-            <div className={style.containerCardsGallery}>
-
-            {
-                images.map((image: IImageObject, index: number) => {
-                    return (
-                        <div
-                            onMouseOver={() => { setShowAnimationImage(index) }} 
-                            onMouseOut={() => { setShowAnimationImage(-1) }}
-                            onClick={() => { setShowAnimationImage(index) }} 
-                            className={style.cardGallery} 
-                            key={index}
-                        >
-                            <div
-                                style={{backgroundImage: `url(${image.src})`}}
-                                className={`${
-                                    showAnimationImage === index ? 
-                                    style.showImageEffect : 
-                                    style.hideImageEffect
-                                }`
-                                }
-                            >
-                                <div
-                                    className={
-                                        showAnimationImage === index ? 
-                                        style.containerShowDescriptions :
-                                        style.containerHideDescriptions
-                                    }
-                                >
-                                    <div
-                                        onClick={ () => { redirectTo(image.url) } }
-                                        className={
-                                            showAnimationImage === index ? 
-                                            style.showTextContainer : 
-                                            style.hideTextContainer
-                                        }
-                                    >
-                                        <div
-                                        className={style.containerTextHover}
-                                        >
-                                            <h3
-                                                className={
-                                                    showAnimationImage === index ? 
-                                                    style.showTitle : 
-                                                    style.hideTitle
-                                                }
-                                            >{t(image.title)}</h3>
-
-                                            <p
-                                                className={
-                                                    showAnimationImage === index ? 
-                                                    style.showDescription :
-                                                    style.hideDescription
-                                                }
-                                            >{t(image.text)}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </div>
-        </div>
-    )
-}
-
-export default GalleryImagens
+export default GalleryImagens;

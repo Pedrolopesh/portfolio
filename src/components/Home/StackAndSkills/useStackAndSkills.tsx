@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { stacksAndSkills } from "../../../utils/stacks";
 
 const useStackAndSkills = () => {
-  const [isHovered, setIsHovered] = useState(false);
   const [showStacksQuantity, setShowStacksQuantity] = useState(7);
   const router = useRouter();
 
@@ -25,8 +24,6 @@ const useStackAndSkills = () => {
   const internStacksAndSkills = stacksAndSkills({ iconSize: 40 });
 
   return {
-    setIsHovered,
-    isHovered,
     showStacksQuantity,
     redirectToStackPage,
     internStacksAndSkills,

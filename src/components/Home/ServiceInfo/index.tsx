@@ -1,197 +1,86 @@
 import { useTranslation } from "react-i18next";
 import { BsArrowRight, BsCodeSquare } from "react-icons/bs";
-import style from "./style.module.css";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { LuComputer } from "react-icons/lu";
-import CustomDividerService from "../../../assets/icons/CustomDividerService";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import useRevealOnScroll from "../../../utils/useRevealOnScroll";
+
+const SERVICE_CARDS = [
+  { icon: HiOutlineLightBulb, titleKey: "homeServicesInfo.title_box_service_0" },
+  { icon: LuComputer, titleKey: "homeServicesInfo.title_box_service_1" },
+  { icon: BsCodeSquare, titleKey: "homeServicesInfo.title_box_service_2" },
+];
 
 const ServiceInfo = () => {
   const router = useRouter();
   const { t } = useTranslation();
+  const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
 
-  const [showAnimation, setShowAnimation] = useState({
-    textAnimation: false,
-    serviceBlocksAnimation: false,
-  });
-
-  const handleScroll = () => {
-    const scrollPos = window.scrollY;
-
-    if (window.screen.width < 700) {
-      if (scrollPos >= 100) {
-        setShowAnimation((prevState) => ({
-          ...prevState,
-          textAnimation: true,
-        }));
-      }
-      if (scrollPos >= 180) {
-        setShowAnimation((prevState) => ({
-          ...prevState,
-          serviceBlocksAnimation: true,
-        }));
-      }
-    } else if (window.screen.width > 700 && window.screen.width < 1200) {
-      if (scrollPos >= 800) {
-        setShowAnimation((prevState) => ({
-          ...prevState,
-          textAnimation: true,
-        }));
-      }
-      if (scrollPos >= 890) {
-        setShowAnimation((prevState) => ({
-          ...prevState,
-          serviceBlocksAnimation: true,
-        }));
-      }
-    } else {
-      if (scrollPos >= 400) {
-        setShowAnimation((prevState) => ({
-          ...prevState,
-          textAnimation: true,
-        }));
-      }
-      if (scrollPos >= 490) {
-        setShowAnimation((prevState) => ({
-          ...prevState,
-          serviceBlocksAnimation: true,
-        }));
-      }
-    }
-  };
-
-  useEffect(() => {
-    const handleScrollWithRAF = () => {
-      window.requestAnimationFrame(handleScroll);
-    };
-
-    window.addEventListener("scroll", handleScrollWithRAF);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollWithRAF);
-    };
-  }, []);
-
-  const redirectTo = (url: string) => {
-    router.push(url);
-  };
+  const redirectTo = (url: string) => router.push(url);
 
   return (
-    <>
-      <div className={style.containerServiceInfo_Cards_Blocks}>
-        <div className={style.containerServiceInfo}>
-          <div className={style.containerLeftBlock}>
-            <div
-              className={`${
-                showAnimation.textAnimation
-                  ? style.showTextLeft
-                  : style.hideTextLeft
-              } ${style.textBlockLeft}`}
-            >
-              <h3> {t("homeServicesInfo.title_left")} </h3>
-              <p>{t("homeServicesInfo.text_left_1")}</p>
-              <p>{t("homeServicesInfo.text_left_2")}</p>
+    <section
+      ref={ref}
+      className={`mx-auto max-w-6xl px-6 py-24 transition-all duration-700 sm:px-10 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      }`}
+    >
+      <div className="grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+            {t("homeServicesInfo.title_left")}
+          </h2>
+          <p className="mt-4 text-ink-muted">
+            {t("homeServicesInfo.text_left_1")}
+          </p>
+          <p className="mt-4 text-ink-muted">
+            {t("homeServicesInfo.text_left_2")}
+          </p>
 
-              <a
-                className={style.containerService}
-                target="_blank"
-                href="mailto: pedrolopeshls@gmail.com"
-                rel="noopener noreferrer"
-              >
-                pedrolopeshls@gmail.com
-                <BsArrowRight size={20} />
-              </a>
-            </div>
-          </div>
-
-          <div
-            className={`${
-              showAnimation.textAnimation
-                ? style.showTextRight
-                : style.hideTextRight
-            } ${style.containerRightBlock}`}
+          <a
+            href="mailto: pedrolopeshls@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 font-medium text-ink transition-colors hover:text-brand-from"
           >
-            <div className={style.containerFootRightBlock}>
-              <h3 className={style.containerFootRightBlock_title}>
-                {t("homeServicesInfo.title_rigth")}
-              </h3>
-              <p className={style.containerFootRightBlock_text}>
-                {t("homeServicesInfo.text_rigth_0")}
-              </p>
-              <p className={style.containerFootRightBlock_text}>
-                {t("homeServicesInfo.text_rigth_1")}
-              </p>
-            </div>
-          </div>
+            pedrolopeshls@gmail.com
+            <BsArrowRight size={18} />
+          </a>
         </div>
 
-        <div className={style.containerServiceBlocks}>
-          <div
-            onClick={() => {
-              redirectTo("/Project");
-            }}
-            className={`${
-              showAnimation.serviceBlocksAnimation
-                ? style.showBlockServiceCard1
-                : style.hideBlockServiceCard
-            } ${style.blockServiceCard}`}
-          >
-            <div className={style.titleCardBlock}>
-              <HiOutlineLightBulb size={70} color={"#fff"} />
-              <h3>{t("homeServicesInfo.title_box_service_0")}</h3>
-            </div>
-            <div className={style.firstContainerFootCardLink}>
-              <p>{t("homeServicesInfo.text_box_service_foot")}</p>
-              <BsArrowRight size={20} />
-            </div>
-          </div>
-
-          <div
-            onClick={() => {
-              redirectTo("/Project");
-            }}
-            className={`${
-              showAnimation.serviceBlocksAnimation
-                ? style.showBlockServiceCard2
-                : style.hideBlockServiceCard
-            } ${style.blockServiceCard}`}
-          >
-            <div className={style.titleCardBlock}>
-              <LuComputer size={60} color={"#fff"} />
-              <h3>{t("homeServicesInfo.title_box_service_1")}</h3>
-            </div>
-            <div className={style.containerFootCardLink}>
-              <p>{t("homeServicesInfo.text_box_service_foot")}</p>
-              <BsArrowRight size={20} />
-            </div>
-          </div>
-
-          <div
-            onClick={() => {
-              redirectTo("/Project");
-            }}
-            className={`${
-              showAnimation.serviceBlocksAnimation
-                ? style.showBlockServiceCard3
-                : style.hideBlockServiceCard
-            } ${style.blockServiceCard}`}
-          >
-            <div className={style.titleCardBlock}>
-              <BsCodeSquare size={60} color={"#fff"} />
-              <h3>{t("homeServicesInfo.title_box_service_2")}</h3>
-            </div>
-            <div className={style.containerFootCardLink}>
-              <p>{t("homeServicesInfo.text_box_service_foot")}</p>
-              <BsArrowRight size={20} />
-            </div>
-          </div>
+        <div className="rounded-3xl border border-border bg-surface p-8">
+          <h3 className="text-xl font-semibold text-ink">
+            {t("homeServicesInfo.title_rigth")}
+          </h3>
+          <p className="mt-4 text-ink-muted">
+            {t("homeServicesInfo.text_rigth_0")}
+          </p>
+          <p className="mt-4 text-ink-muted">
+            {t("homeServicesInfo.text_rigth_1")}
+          </p>
         </div>
       </div>
-      {/* <div className={style.containerDivederServices}>
-        <CustomDividerService />
-      </div> */}
-    </>
+
+      <div className="mt-12 grid gap-6 sm:grid-cols-3">
+        {SERVICE_CARDS.map(({ icon: Icon, titleKey }) => (
+          <button
+            key={titleKey}
+            type="button"
+            onClick={() => redirectTo("/Project")}
+            className="group flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-6 text-left transition-colors hover:border-brand-to"
+          >
+            <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-from to-brand-to text-white">
+              <Icon size={24} />
+            </span>
+            <h3 className="text-lg font-semibold text-ink">{t(titleKey)}</h3>
+            <span className="flex items-center gap-2 text-sm text-ink-muted transition-colors group-hover:text-brand-from">
+              {t("homeServicesInfo.text_box_service_foot")}
+              <BsArrowRight size={16} />
+            </span>
+          </button>
+        ))}
+      </div>
+    </section>
   );
 };
 

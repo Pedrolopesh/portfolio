@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useMemo } from "react";
-import style from "./style.module.css";
+import { useTranslation } from "react-i18next";
 import useProjectWorks from "./useProjectWorks";
-import { t } from "i18next";
+import useRevealOnScroll from "../../../utils/useRevealOnScroll";
 
 export type CardWorkProps = {
   card: {
@@ -14,141 +13,69 @@ export type CardWorkProps = {
 };
 
 const ProjectsAndWorks = () => {
-  const {
-    projectAndWorks,
-    redirectTo,
-    selectedSection,
-    setSelectedSection,
-    setShowAnimation,
-    showAnimation,
-    setTotalProjectOptions,
-    totalProjectOptions,
-  } = useProjectWorks();
+  const { t } = useTranslation();
+  const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
+  const { projectAndWorks, redirectTo, selectedSection, setSelectedSection } =
+    useProjectWorks();
 
   const selectedSectionIndex = projectAndWorks.findIndex(
     (section) => section.name === selectedSection.name
   );
 
-  // useEffect(() => {
-  //   let position =
-  //     totalProjectOptions === projectAndWorks.length
-  //       ? 1
-  //       : totalProjectOptions + 1;
-  //   setTimeout(() => {
-  //     setSelectedSection({
-  //       name: projectAndWorks[position - 1].name,
-  //       position,
-  //     });
-  //     setTotalProjectOptions(position);
-  //   }, 6000);
-  // }, [totalProjectOptions]);
-
   return (
-    <div className={style.containerWorkAndProjects}>
-      <h1>{t("project_clients")}</h1>
-      <div className={style.containerWorkLinks}>
+    <section
+      ref={ref}
+      className={`mx-auto max-w-6xl px-6 py-24 transition-all duration-700 sm:px-10 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      }`}
+    >
+      <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+        {t("project_clients")}
+      </h2>
+
+      <div className="mt-8 flex flex-wrap gap-2">
         {projectAndWorks.map((section, index) => (
-          <div key={index}>
-            <button
-              onClick={() =>
-                setSelectedSection({
-                  name: section.name,
-                  position: index + 1,
-                })
-              }
-            >
-              <p>{section.name}</p>
-            </button>
-            <span
-              className={`${
-                selectedSectionIndex === index
-                  ? style.showSelectionLink
-                  : style.hideSelectionLink
-              } ${style.selectionLink}`}
-            ></span>
-          </div>
+          <button
+            key={section.name}
+            type="button"
+            onClick={() =>
+              setSelectedSection({ name: section.name, position: index + 1 })
+            }
+            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+              selectedSectionIndex === index
+                ? "bg-gradient-to-r from-brand-from to-brand-to text-white"
+                : "border border-border text-ink-muted hover:text-ink"
+            }`}
+          >
+            {section.name}
+          </button>
         ))}
       </div>
-      <div className={style.containerCards}>
-        <>
-          {projectAndWorks[selectedSectionIndex]?.projects.map(
-            (card, index) => {
-              return (
-                <div
-                  key={index}
-                  className={`${style.ContainerProjectCards}`}
-                  onMouseOver={() => {
-                    setShowAnimation(index);
-                  }}
-                  onMouseLeave={() => {
-                    setShowAnimation(-1);
-                  }}
-                >
-                  <div
-                    className={style.CardItemProjects}
-                    onClick={() => {
-                      redirectTo(card.url);
-                    }}
-                    key={index}
-                  >
-                    <img
-                      className={
-                        showAnimation === index
-                          ? style.showImageEffect
-                          : style.hideImageEffect
-                      }
-                      src={card.image}
-                      alt=""
-                    />
 
-                    <div
-                      className={
-                        showAnimation === index
-                          ? style.containerShowDescriptions
-                          : style.containerHideDescriptions
-                      }
-                    >
-                      <div
-                        className={
-                          showAnimation === index
-                            ? style.showTextContainer
-                            : style.hideTextContainer
-                        }
-                      >
-                        <div>
-                          <h3
-                            className={
-                              showAnimation === index
-                                ? style.showTitle
-                                : style.hideTitle
-                            }
-                          >
-                            {t(card.title)}
-                          </h3>
-
-                          <p
-                            className={
-                              showAnimation === index
-                                ? style.showDescription
-                                : style.hideDescription
-                            }
-                          >
-                            {t(card.description)}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* <h3>{card.title}</h3> */}
-                    {/* <p>{card.description}</p> */}
-                  </div>
-                </div>
-              );
-            }
-          )}
-        </>
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projectAndWorks[selectedSectionIndex]?.projects.map((card) => (
+          <button
+            key={card.url}
+            type="button"
+            onClick={() => redirectTo(card.url)}
+            aria-label={t(card.title)}
+            className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-border text-left"
+          >
+            <img
+              src={card.image}
+              alt=""
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-bg via-bg/40 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <h3 className="font-semibold text-ink">{t(card.title)}</h3>
+              <p className="mt-1 text-sm text-ink-muted">
+                {t(card.description)}
+              </p>
+            </div>
+          </button>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

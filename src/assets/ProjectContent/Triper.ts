@@ -3,7 +3,7 @@ export const TripperInfo = {
         title: 'projects.triper.title',
         fisrtDescription: 'projects.triper.fisrtDescription',
         projectDate: 'projects.triper.projectDate',
-        urlBanner: './img/projects/project_gallery_banner_1.png',
+        urlBanner: './img/projects/banner/project_gallery_banner_5.png',
         problemDescription: {
             title: 'projects.triper.problemTitle',
             description: 'projects.triper.problemDescription',

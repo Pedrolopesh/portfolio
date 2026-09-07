@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const useProjectWorks = () => {
   const router = useRouter();
-  const [showAnimation, setShowAnimation] = useState(-1);
 
   const redirectTo = (url: string) => {
     router.push(url);
@@ -107,30 +106,13 @@ const useProjectWorks = () => {
         },
       ],
     },
-    // {
-    //   name: "Tech Lead",
-    //   projects: [
-    //     {
-    //       image: "./img/home_projects/project_gallery_4.png",
-    //       title: "projects.electrolux.title",
-    //       description: "projects.electrolux.banner_description",
-    //       url: "/Project?name=electrolux",
-    //     },
-    //   ],
-    // },
   ];
 
-  const [totalProjectOptions, setTotalProjectOptions] = useState(0);
-
   return {
-    showAnimation,
-    setShowAnimation,
     redirectTo,
     projectAndWorks,
     selectedSection,
     setSelectedSection,
-    setTotalProjectOptions,
-    totalProjectOptions,
   };
 };
 

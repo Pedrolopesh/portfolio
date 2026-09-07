@@ -18,7 +18,8 @@
   "overview_text_banner": "Hello, I'm Pedro Lopes, a Software Engineer specialized in developing innovative IT solutions. Explore my portfolio to learn more about my projects and skills!",
   "home_stacks_skills": {
     "title": "Stack and Skills",
-    "description": "Click see more to see the technologies and approaches I used throughout the projects I worked on and understand more about how I used them and the results of their use in the project"
+    "description": "Click see more to see the technologies and approaches I used throughout the projects I worked on and understand more about how I used them and the results of their use in the project",
+    "see_more": "See more"
   },
   "homeServicesInfo": {
     "title_left": "Turning Ideas into Reality",

@@ -1,90 +1,93 @@
 import { MdOutlineEmail } from "react-icons/md";
-import style from "./style.module.css";
-import useEmailMe from "./useEmailme";
 import { IoCloseCircleOutline } from "react-icons/io5";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import useSendContactEmail from "../../../utils/useSendContactEmail";
+import useRevealOnScroll from "../../../utils/useRevealOnScroll";
+
 const EmailMe = () => {
+  const { t } = useTranslation();
+  const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
   const {
     email,
-    sendEmail,
     setEmail,
     website,
     setWebsite,
-    setViewToast,
+    sendEmail,
     viewToast,
+    setViewToast,
     toastHasError,
-    showAnimation,
-  } = useEmailMe();
+  } = useSendContactEmail();
 
   return (
-    <>
+    <section
+      ref={ref}
+      id="emailMe"
+      className={`mx-auto max-w-3xl px-6 py-24 text-center transition-all duration-700 sm:px-10 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+      }`}
+    >
       {viewToast && (
-        <div
-          className={`${style.containerToast} ${
-            viewToast ? style.showToastMessage : style.hideToastMessage
-          }`}
-        >
-          <p>
+        <div className="mx-auto mb-6 flex max-w-md items-center justify-between gap-4 rounded-xl border border-border bg-surface-solid px-4 py-3 text-sm">
+          <p className={toastHasError ? "text-red-300" : "text-ink"}>
             {toastHasError
               ? t("emailMe.toast_error_message")
               : t("emailMe.tost_message")}
           </p>
-          <IoCloseCircleOutline
-            size={30}
-            color="#fff"
+          <button
+            type="button"
             onClick={() => setViewToast(false)}
-          />
+            aria-label="Fechar aviso"
+            className="text-ink-muted transition-colors hover:text-ink"
+          >
+            <IoCloseCircleOutline size={20} />
+          </button>
         </div>
       )}
-      <div className={style.containerEmailMe} id="emailMe">
-        <div
-          className={
-            showAnimation ? style.showContainerText : style.hideContainerText
-          }
-        >
-          <h3 className={style.titleEmailMe}>{t("emailMe.about_me_title")} </h3>
-          <h3 className={style.subTitleEmailMe}>
-            {t("emailMe.bout_me_subtitle")}
-          </h3>
+
+      <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+        {t("emailMe.about_me_title")}
+      </h2>
+      <p className="mt-2 text-ink-muted">{t("emailMe.bout_me_subtitle")}</p>
+
+      <form
+        className="mx-auto mt-8 flex max-w-lg flex-col gap-3 sm:flex-row"
+        onSubmit={(event) => {
+          event.preventDefault();
+          sendEmail();
+        }}
+      >
+        <div className="flex flex-1 items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3">
+          <MdOutlineEmail size={20} className="text-ink-muted" />
+          <input
+            type="email"
+            required
+            placeholder={t("emailMe.input_placeholder")}
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            className="w-full bg-transparent text-sm text-ink placeholder:text-ink-muted focus:outline-none"
+          />
         </div>
 
-        <div
-          className={`${style.containerInputEmailMe} ${
-            showAnimation ? style.showContainerInput : style.hideContainerInput
-          }`}
+        {/* honeypot anti-spam: invisível pra usuários reais */}
+        <input
+          type="text"
+          name="website"
+          value={website}
+          onChange={(event) => setWebsite(event.target.value)}
+          style={{ display: "none" }}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
+
+        <button
+          type="submit"
+          className="shrink-0 rounded-xl bg-gradient-to-r from-brand-from to-brand-to px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
         >
-          <div className={style.boerderInputEmailMe}>
-            <div className={style.emailIconEmailMe}>
-              <MdOutlineEmail size={30} />
-            </div>
-            <input
-              name="email"
-              type="text"
-              placeholder="E-mail"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
-            />
-            {/* honeypot anti-spam: invisível e fora da navegação por
-                teclado para usuários reais, bots costumam preenchê-lo */}
-            <input
-              name="website"
-              type="text"
-              value={website}
-              onChange={(e) => setWebsite(e.target.value)}
-              style={{ display: "none" }}
-              tabIndex={-1}
-              autoComplete="off"
-              aria-hidden="true"
-            />
-            <div className={style.buttonSendEmailMe}>
-              <button onClick={sendEmail}>{t("emailMe.button_send")}</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+          {t("emailMe.button_send")}
+        </button>
+      </form>
+    </section>
   );
 };
 

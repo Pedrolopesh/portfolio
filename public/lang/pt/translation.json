@@ -18,7 +18,8 @@
   "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software especializado em desenvolver soluções inovadoras em TI. Explore meu portfólio para conhecer meus projetos e habilidades!",
   "home_stacks_skills": {
     "title": "Tecnologias e abordagens",
-    "description": "Clique em ver mais para ver as tecnologias e abordagens que utilizei ao longos dos projetos que já atuei e entender mais como as utilizei e resultados da utilização no projeto"
+    "description": "Clique em ver mais para ver as tecnologias e abordagens que utilizei ao longos dos projetos que já atuei e entender mais como as utilizei e resultados da utilização no projeto",
+    "see_more": "Ver mais"
   },
   "homeServicesInfo": {
     "title_left": "Transformando Ideias em Realidade",
