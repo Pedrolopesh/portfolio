@@ -166,17 +166,19 @@ smoke-testado num browser real).
 - [x] `/api/send` religado com validação de método, validação de e-mail,
   honeypot e rate limit básico por IP.
 
-### Fase 1 — Design system + Header + Footer + Contato
+### Fase 1 — Design system + Header + Footer + Contato — ✅ concluída (07/09/2026)
 Objetivo: consolidar uma identidade visual única antes de tocar em cada página
-individualmente.
+individualmente. Feita na branch `feat/fase-1-design-system`, validada com
+lint/typecheck/build + smoke test em browser real (incluindo o mismatch de
+hidratação do i18n documentado na seção 2.6, resolvido junto).
 
-- Configurar **Tailwind** e definir os tokens do design system em
+- [x] Configurar **Tailwind** e definir os tokens do design system em
   `tailwind.config` (cores, espaçamento, tipografia, breakpoints). Migração é
   incremental: todo componente tocado a partir daqui (Header, Footer, Contato, e
   depois Home/Projetos/Stack na Fase 2) já nasce em Tailwind; o CSS
   Modules/styled-components legado só é convertido quando o componente for
   mesmo redesenhado, sem precisar de uma reescrita "big bang" do projeto inteiro.
-- **Header**: adaptar o padrão visto em
+- [x] **Header**: adaptar o padrão visto em
   `we-party/.../LandingPage.vue` (linhas ~946-972 e ~1607-1796): header fixo e
   transparente no topo da página, que ao rolar vira um "pill" flutuante com fundo
   translúcido (`backdrop-filter: blur`), sombra suave e bordas arredondadas; logo à
@@ -184,14 +186,14 @@ individualmente.
   lateral com overlay desfocado. A cor de destaque muda para a paleta do
   portfólio (o azul do `--darken-blue-bg` / gradiente do logo atual) em vez do
   laranja/rosa da We Party.
-- **Footer**: reestruturar no padrão lelume.com.br — layout escuro em colunas:
+- [x] **Footer**: reestruturar no padrão lelume.com.br — layout escuro em colunas:
   coluna de marca (logo + frase de posicionamento), 2-3 colunas de links
   (Projetos, Stack, Blog, Contato), e uma barra inferior com copyright + redes
   sociais. Mantém a essência do footer atual (`Home/Footer`) mas organiza melhor a
   informação — hoje ele já tem 2 blocos de links + ícones sociais, então é
   reaproveitável, só precisa de nova estrutura visual e (futuramente) um link para
   o blog.
-- **Página de Contato** (`/Contact`): revisar o layout de
+- [x] **Página de Contato** (`/Contact`): revisar o layout de
   `src/pages/Contact.tsx` — hoje é uma foto + lista de botões de rede social,
   simples. Trazer o formulário de e-mail para essa página (hoje o `EmailMe` só
   aparece na Home) já religado ao endpoint da Fase 0, com estado de loading/erro
