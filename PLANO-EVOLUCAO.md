@@ -270,19 +270,35 @@ próprio):
 - **Decidido**: a API do backend sobe numa porta HTTPS dedicada e alternativa
   (`8443` por padrão, configurável via `PROXY_HTTPS_PORT`), com um Caddy só
   nosso — zero risco pro que já roda na VPS.
-- **Pendência de TLS**: como 80/443 estão ocupados, os desafios ACME padrão
-  (HTTP-01, TLS-ALPN-01) não completam pra emitir um certificado confiável.
-  Por enquanto o Caddy usa `tls internal` (certificado autoassinado) — funciona
-  para chamada servidor-a-servidor (Vercel → backend) mas exige desabilitar a
-  validação de TLS do lado do cliente, o que não é o ideal a longo prazo.
-  Antes de ir pra produção de verdade, decidir entre: (a) desafio DNS-01 (o DNS
-  do domínio é NS1) ou (b) colocar o subdomínio da API atrás da Cloudflare e
-  usar um certificado Origin CA.
+- **Decidido sobre TLS**: em vez de DNS-01 no NS1, vamos colocar
+  `api.pedrolopes.tech` atrás da **Cloudflare** (só esse subdomínio, resto do
+  domínio continua no NS1) e usar um certificado Origin CA — não depende das
+  portas 80/443 nem de dar acesso de API do NS1 pra ninguém.
+
+**✅ Deploy feito (07/09/2026)** — a API já está no ar em produção:
+- Código enviado pra `/opt/pedro-portfolio/app` na VPS via `rsync`, stack subida
+  com `docker compose -f docker-compose.prod.yml up -d --build`.
+- Corrigidos dois bugs achados só em produção (nenhum dos dois aparecia
+  localmente): (1) o build do Nest gera `dist/src/main.js`, não `dist/main.js`
+  — o `CMD` do Dockerfile apontava pro caminho errado; (2) o `tls internal`
+  do Caddy depende do SNI da conexão pra saber qual certificado servir, e
+  conexão direto por IP (sem SNI, como vai ser a chamada da Vercel) não batia
+  com nada — trocado por um certificado autoassinado fixo (`openssl`, com o IP
+  da VPS e os hostnames esperados no SAN), servido sempre, independente de SNI.
+- Porta `8443/tcp` liberada no firewall (`ufw`) da VPS — só ela, nada mais foi
+  tocado.
+- **Testado de ponta a ponta pela URL pública de verdade**
+  (`https://76.13.172.219:8443`, certificado autoassinado por enquanto):
+  criar post, listar publicamente, checar CORS, apagar — tudo confirmado
+  funcionando em produção, não só localmente.
+- `API_KEY` de produção foi gerada e comunicada nesta conversa — precisa ser
+  configurada como variável de ambiente na Vercel quando as páginas do blog
+  forem construídas.
 
 **Falta fazer**:
-- [ ] Resolver o certificado TLS de produção (ver pendência acima).
-- [ ] Deploy de fato do backend na VPS (`docker compose -f
-  docker-compose.prod.yml up -d --build`).
+- [ ] Criar `api.pedrolopes.tech` na Cloudflare (zona própria só pro
+  subdomínio) + delegar via NS no NS1 + certificado Origin CA — passo a passo
+  na seção 7 deste documento.
 - [ ] Rotina de backup do volume do Postgres.
 - [ ] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
   com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0).
@@ -339,8 +355,46 @@ próprio):
    VPS (não é um provider gerenciado). Detalhes na Fase 3, seção 3.
 3. **CSS**: migrar para Tailwind, de forma incremental (componente a componente
    conforme forem redesenhados), sem big-bang no que já existe.
-4. **Topologia de deploy**: app e banco juntos na mesma VPS (Postgres só na rede
-   interna do Docker, sem exposição pública; só a aplicação Next fica atrás de um
-   reverse proxy com TLS). Isso implica migrar o deploy do site para essa VPS
-   também — vou confirmar com você onde ele está hospedado hoje quando formos
-   detalhar essa parte da Fase 3.
+4. **Topologia de deploy** (revista em 07/09/2026 — a versão original desta
+   decisão dizia "Next.js e Postgres juntos na mesma VPS"; ficou assim depois de
+   conversar melhor sobre o que já roda nessa VPS): o **Next.js continua na
+   Vercel**, só o **backend** (API em NestJS + Postgres) fica na VPS, isolado
+   com o nome `pedro-portfolio` — containers, rede Docker e volumes todos
+   prefixados assim, sem tocar no que já roda lá (Plane e outras coisas).
+   Detalhes completos na Fase 3, seção 3.
+
+## 7. Guia — colocar api.pedrolopes.tech atrás da Cloudflare
+
+Passo a passo pra resolver o certificado TLS de produção da API (seção 3,
+Fase 3). Os passos com 👤 só você consegue fazer (envolvem criar conta/acessar
+dashboards que eu não tenho como acessar); os outros eu faço quando você
+chegar neles.
+
+1. 👤 Crie uma conta na Cloudflare (gratuita) se ainda não tiver uma:
+   https://dash.cloudflare.com/sign-up
+2. 👤 No dashboard, "Add a Site" → digite `api.pedrolopes.tech` (o subdomínio
+   inteiro, não `pedrolopes.tech`) → plano Free. A Cloudflare vai tratar isso
+   como uma zona própria e te dar **2 nameservers** (algo como
+   `ana.ns.cloudflare.com` / `bob.ns.cloudflare.com`).
+3. 👤 No NS1 (onde o domínio `pedrolopes.tech` já está), crie um registro **NS**
+   para o host `api` apontando pros 2 nameservers que a Cloudflare deu no passo
+   2. Isso delega só esse subdomínio pra Cloudflare — o resto do domínio
+   continua no NS1 normalmente.
+4. 👤 De volta na Cloudflare, adicione um registro **A**: `api` → `76.13.172.219`,
+   com o proxy (ícone de nuvem) **ativado** (laranja) — é isso que faz a
+   Cloudflare terminar o TLS público de verdade.
+4.1. 👤 **Importante**: por padrão a Cloudflare tenta falar com a origem na
+   porta 443 — que na nossa VPS é do Plane, não da nossa API. Em Rules →
+   Origin Rules, crie uma regra: quando hostname = `api.pedrolopes.tech`,
+   reescrever a porta de destino pra `8443`. Sem isso a Cloudflare bate na
+   porta errada.
+5. 👤 Em SSL/TLS → Overview, mude o modo de criptografia pra **Full (strict)**.
+6. 👤 Em SSL/TLS → Origin Server → "Create Certificate": gera um certificado
+   Origin CA (validade de até 15 anos) — me passe o certificado e a chave
+   gerados (ou me avisa que colocou os arquivos você mesmo direto na VPS, em
+   `/opt/pedro-portfolio/app/certs/cert.pem` e `key.pem`).
+7. A partir daí eu troco o certificado autoassinado atual pelo Origin CA no
+   Caddyfile e reinicio o proxy — a API passa a responder com um certificado
+   público de verdade em `https://api.pedrolopes.tech` (sem porta na URL,
+   já que a Cloudflare expõe na 443 padrão e conversa com a VPS na 8443 por
+   trás).
