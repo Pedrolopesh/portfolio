@@ -1,7 +1,7 @@
 import React from "react";
 import type { IProjectInfoItem } from "../../../typings/IProjectContent";
 import { useTranslation } from "react-i18next";
-import style from "../../../styles/mainStyles/ProjectItem.module.css";
+import style from "./style.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 
 const ProjectItem = (props: IProjectInfoItem) => {

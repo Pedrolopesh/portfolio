@@ -4,8 +4,8 @@ import { photos } from "../assets/mock-images";
 import { useRouter } from "next/router";
 // import type {IImageObject} from '../typings/IImageObject'
 
-import GalleryImagens from "../components/MainContent/GalleryImagens";
-import ProjectComponent from "../components/MainContent/ProjectItem";
+import GalleryImagens from "../components/Project/GalleryImagens";
+import ProjectComponent from "../components/Project/ProjectItem";
 
 import { TripperInfo } from "../assets/ProjectContent/Triper";
 import { LinkLeitoInfo } from "../assets/ProjectContent/LinkLeito";
@@ -26,7 +26,6 @@ import { PetSystemInfo } from "../assets/ProjectContent/PetSystem";
 import type { IProjectInfoItem } from "../typings/IProjectContent";
 
 import HeadPages from "../components/HeadPages";
-import FooterDesign from "../components/MainContent/FooterDesign";
 import ChangeLang from "../components/ChangeLang";
 import HeaderOptions from "../components/HeaderOptions";
 import Footer from "../components/Home/Footer";

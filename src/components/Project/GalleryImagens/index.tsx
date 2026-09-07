@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
-import style from '../../../styles/mainStyles/GalleryImagens.module.css'
+import style from './style.module.css'
 import type { IImageObject } from '../../../typings/IImageObject'
 import { useRouter } from 'next/router'
 
