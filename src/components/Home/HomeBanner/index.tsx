@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Logo from "../../../assets/icons/logo";
 import style from "./style.module.css";
@@ -11,7 +11,11 @@ const HomeBanner = () => {
   const [currentVideo, setCurrentVideo] = useState("videos/particles.mp4");
 
   useEffect(() => {
+    // `window` só existe no client: o vídeo desktop é o valor inicial
+    // (igual ao renderizado no servidor) e só troca pro mobile aqui,
+    // depois do mount — evita mismatch de hidratação.
     if (window.innerWidth <= 900) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrentVideo("videos/particles_mobile.mp4");
     }
 
@@ -20,26 +24,20 @@ const HomeBanner = () => {
     }
   }, []);
 
-  const VideoBanner = useCallback(() => {
-    return (
-      <video
-        id="homebanner-video-bg"
-        autoPlay
-        muted
-        loop
-        ref={videoRef}
-        width={"100%"}
-      >
-        <source src={currentVideo} type="video/mp4" />
-        Desculpe, seu navegador não suporta vídeos HTML5.
-      </video>
-    );
-  }, [currentVideo]);
-
   return (
     <div className={style.ContainerHomeBanner}>
       <div className={style.ContentVideoBanner}>
-        <VideoBanner />
+        <video
+          id="homebanner-video-bg"
+          autoPlay
+          muted
+          loop
+          ref={videoRef}
+          width={"100%"}
+        >
+          <source src={currentVideo} type="video/mp4" />
+          Desculpe, seu navegador não suporta vídeos HTML5.
+        </video>
       </div>
       <div className={style.ContainerContentBannerBG}></div>
       <div className={style.ContainerContentBanner}>

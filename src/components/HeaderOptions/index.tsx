@@ -32,15 +32,12 @@ const HeaderOptions = (props: IPropsHeader) => {
       }`}
     >
       <div className={style.containerHeaderOptionsContent}>
-        <Link href="/" passHref>
-          {/* <Logo classParam={style.logoHeaderOptions}/> */}
-          <div>
-            <img
-              src="./img/logo-gradient-blue.png"
-              alt="pedrolopes logo"
-              className={style.logoHeaderOptions}
-            />
-          </div>
+        <Link href="/">
+          <img
+            src="./img/logo-gradient-blue.png"
+            alt="pedrolopes logo"
+            className={style.logoHeaderOptions}
+          />
         </Link>
         <div className={style.containerDesktop}>
           <LinkOptions routerParam={router} />

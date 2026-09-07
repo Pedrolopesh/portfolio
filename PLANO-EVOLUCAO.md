@@ -102,8 +102,31 @@ remover essa árvore inteira (com sua confirmação antes de apagar).
   para rotas (`/Project`, `/Stacks`, `/Contact`) — funciona no Pages Router, mas é
   incomum (URLs com maiúscula) e caso migre para App Router isso muda.
 
+### 2.6 Bug confirmado: hydration mismatch por causa do i18n (não é regressão do upgrade)
+
+Testando o app depois do upgrade do Next/React (seção 3, Fase 0) num browser real,
+apareceu um erro de hidratação do React (`Minified React error #418`, mismatch de
+texto) em toda página que usa `t(...)` do i18next. Rastreei a causa: o
+`i18next-browser-languagedetector` (configurado em `_app.tsx`) e o `ChangeLang`
+detectam o idioma a partir de `localStorage`/`navigator.language` **dentro de um
+`useEffect`**, ou seja, só depois do primeiro paint no client — enquanto o servidor
+sempre renderiza com o idioma de fallback (`en`). Se o idioma detectado no client
+for diferente do fallback do servidor, o texto que o React hidrata não bate com o
+HTML que veio do servidor.
+
+Confirmei via `git diff` que essa lógica (timing da detecção de idioma, ordem de
+detecção) é exatamente a mesma de antes do upgrade — só toquei em tipagem/null-
+safety nesses arquivos. Ou seja, **não foi o upgrade do Next/React que causou
+isso** — é uma lacuna arquitetural que já existia (i18next nunca foi integrado ao
+SSR do Next), só fica mais visível/rastreável agora. Registrando aqui para não
+esquecer: vale resolver junto da Fase 1 (já que vou mexer no header/`ChangeLang`
+de qualquer forma), com uma de duas abordagens — renderizar as traduções no
+servidor (`getServerSideProps` + carregar o JSON antes do render) ou adiar a
+renderização do texto traduzido até depois do mount (com um estado de
+loading/skeleton), evitando o mismatch.
+
 **Nenhum desses pontos é bloqueante para começar** — mas decidi listar tudo porque
-several deles (design tokens, remoção de código morto, `strict: true`) são pré-
+vários deles (design tokens, remoção de código morto, `strict: true`) são pré-
 requisitos naturais para as fases 1 e 2 (fica mais barato arrumar a fundação antes
 de redesenhar em cima dela do que depois).
 

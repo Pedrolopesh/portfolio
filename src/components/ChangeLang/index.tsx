@@ -14,10 +14,14 @@ const ChangeLang = () => {
   };
 
   useEffect(() => {
+    // sincronizando o idioma com localStorage/navigator (fontes
+    // externas ao React) no mount — changeLangFunc dispara setState
+    // como parte disso, de propósito.
     const savedLang = localStorage.getItem("lang");
     const language = navigator.language;
 
     if (savedLang) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       changeLangFunc(savedLang);
     } else if (language) {
       changeLangFunc(language === "pt-BR" ? "pt" : "en");

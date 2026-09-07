@@ -86,8 +86,6 @@ const ProjectsAndWorks = () => {
                 >
                   <div
                     className={style.CardItemProjects}
-                    // onClick={() => { setShowAnimation(index) }}
-                    // eslint-disable-next-line react/jsx-no-duplicate-props
                     onClick={() => {
                       redirectTo(card.url);
                     }}

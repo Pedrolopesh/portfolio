@@ -81,6 +81,9 @@ const Project = () => {
       });
 
       if (findProject) {
+        // sincronizando o estado com a URL (?name=) — fonte externa,
+        // é exatamente pra isso que serve o efeito aqui.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setProjectParam(findProject.projectInfo);
       }
     }
@@ -95,7 +98,7 @@ const Project = () => {
     typeof router.query.name === "string" ? router.query.name : undefined;
   const projectTitle = projectSlug
     ?.split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
   return (

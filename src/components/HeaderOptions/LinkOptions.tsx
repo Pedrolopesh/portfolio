@@ -15,52 +15,46 @@ const LinkOptions = ({ routerParam: router }: ILinkOptionsProps) => {
     <>
       <div className={style.containerLeftHeaderOptions}>
         <div className={style.containerLinks}>
-          <Link href="/">
-            <a
-              className={`${
-                router.pathname === "/"
-                  ? style.selectedPath
-                  : style.unSelectedPath
-              }`}
-            >
-              {t("header_options.home")}
-            </a>
+          <Link
+            href="/"
+            className={
+              router.pathname === "/" ? style.selectedPath : style.unSelectedPath
+            }
+          >
+            {t("header_options.home")}
           </Link>
 
-          <Link href="/Project">
-            <a
-              className={`${
-                router.pathname === "/Project"
-                  ? style.selectedPath
-                  : style.unSelectedPath
-              }`}
-            >
-              {t("header_options.projects")}
-            </a>
+          <Link
+            href="/Project"
+            className={
+              router.pathname === "/Project"
+                ? style.selectedPath
+                : style.unSelectedPath
+            }
+          >
+            {t("header_options.projects")}
           </Link>
 
-          <Link href="/Stacks">
-            <a
-              className={`${
-                router.pathname === "/Stacks"
-                  ? style.selectedPath
-                  : style.unSelectedPath
-              }`}
-            >
-              {t("header_options.stacks")}
-            </a>
+          <Link
+            href="/Stacks"
+            className={
+              router.pathname === "/Stacks"
+                ? style.selectedPath
+                : style.unSelectedPath
+            }
+          >
+            {t("header_options.stacks")}
           </Link>
 
-          <Link href="/Contact">
-            <a
-              className={`${
-                router.pathname === "/Contact"
-                  ? style.selectedPath
-                  : style.unSelectedPath
-              }`}
-            >
-              {t("header_options.contact")}
-            </a>
+          <Link
+            href="/Contact"
+            className={
+              router.pathname === "/Contact"
+                ? style.selectedPath
+                : style.unSelectedPath
+            }
+          >
+            {t("header_options.contact")}
           </Link>
         </div>
       </div>
