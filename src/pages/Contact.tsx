@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import HeadPages from "../components/HeadPages";
 import HeaderOptions from "../components/HeaderOptions";
 import ChangeLang from "../components/ChangeLang";
@@ -37,16 +37,6 @@ const Contact = () => {
   const redirectTo = (routerPath: string) => {
     window.open(routerPath, "_blank");
   };
-
-  const setbodyBg = () => {
-    const body = document.querySelector("body");
-    body.classList.add("darken_blue_bg");
-  };
-
-  useEffect(() => {
-    setbodyBg();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div>

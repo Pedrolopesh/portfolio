@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: var(--darken-blue-bg);
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,12 +35,6 @@ a {
   box-sizing: border-box;
 }
 
-
-@keyframes gradient {
-  0% { background-position: 0 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 * {
   box-sizing: border-box;
@@ -78,20 +73,6 @@ a {
 
 .blackBg {
   background-color: #000000
-}
-
-.design_bg {
-  background-color: #ffffff
-}
-
-.darken_blue_bg {
-  background-color: #0A101E
-}
-
-.it_bg {
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #00001a 48%, #1a001c 100%) no-repeat;
-  background-size: 300% 300%;
-  animation: gradient 5s ease infinite;
 }
 
 .slick-prev, .slick-next {

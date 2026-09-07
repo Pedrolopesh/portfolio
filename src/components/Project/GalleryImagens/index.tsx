@@ -4,7 +4,11 @@ import style from './style.module.css'
 import type { IImageObject } from '../../../typings/IImageObject'
 import { useRouter } from 'next/router'
 
-const GalleryImagens = ({images}) => {
+interface IGalleryImagensProps {
+    images: IImageObject[];
+}
+
+const GalleryImagens = ({images}: IGalleryImagensProps) => {
     const router = useRouter()
     const { t } = useTranslation();
 

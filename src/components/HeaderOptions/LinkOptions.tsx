@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
+import type { NextRouter } from "next/router";
 import style from "./style.module.css";
 import { useTranslation } from "react-i18next";
 
-const LinkOptions = (routerParam: any) => {
-  const { t } = useTranslation();
-  const router = routerParam.routerParam;
-  const [sourceRoute, setSourceRoute] = useState("");
+interface ILinkOptionsProps {
+  routerParam: NextRouter;
+}
 
-  useEffect(() => {
-    const sourceRoute = localStorage.getItem("sourceRoute");
-    setSourceRoute(sourceRoute);
-  }, [sourceRoute]);
+const LinkOptions = ({ routerParam: router }: ILinkOptionsProps) => {
+  const { t } = useTranslation();
 
   return (
     <>

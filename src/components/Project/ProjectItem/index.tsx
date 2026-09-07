@@ -4,7 +4,13 @@ import { useTranslation } from "react-i18next";
 import style from "./style.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 
-const ProjectItem = (props: IProjectInfoItem) => {
+// nesta tela returnPage sempre é fornecido pelo caller (Project.tsx),
+// diferente de IProjectInfoItem onde ele é opcional
+interface IProjectItemProps extends IProjectInfoItem {
+  returnPage: () => void;
+}
+
+const ProjectItem = (props: IProjectItemProps) => {
   const { t } = useTranslation();
 
   React.useEffect(() => {

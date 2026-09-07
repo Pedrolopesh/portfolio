@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { photos } from "../assets/mock-images";
 import { useRouter } from "next/router";
@@ -79,24 +79,17 @@ const Project = () => {
       const findProject = ProjectContentOption.find((project) => {
         return project.projectName === router.query.name;
       });
-      setProjectParam(findProject.projectInfo);
+
+      if (findProject) {
+        setProjectParam(findProject.projectInfo);
+      }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query.name]);
 
-  const setbodyBg = () => {
-    const body = document.querySelector("body");
-    body.classList.add("darken_blue_bg");
-  };
-
   const returnPage = () => {
-    // if (router.components['/DesignPage'].initial) {     )
-    // router.push('/projects')
     router.back();
   };
-
-  useEffect(() => {
-    setbodyBg();
-  }, [router]);
 
   const projectSlug =
     typeof router.query.name === "string" ? router.query.name : undefined;

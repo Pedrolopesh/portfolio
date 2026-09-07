@@ -9,8 +9,7 @@ const ChangeLang = () => {
   const changeLangFunc = (newLang: string) => {
     i18next.changeLanguage(newLang);
     setVisibleDropdown(!visibleDropdown);
-    const htmlSelection = document.querySelector("html");
-    htmlSelection.lang = newLang === "pt" ? "pt-br" : "en";
+    document.documentElement.lang = newLang === "pt" ? "pt-br" : "en";
     localStorage.setItem("lang", newLang);
   };
 

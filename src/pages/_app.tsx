@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/animations.css";
 import "../styles/fonts.css";
 
+import type { AppProps } from "next/app";
 import i18n from "i18next";
 import HttpApi from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
@@ -35,7 +36,7 @@ i18n
     react: { useSuspense: false },
   });
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;
 };
 

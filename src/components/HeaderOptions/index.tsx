@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { HiMenu } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
@@ -11,14 +11,7 @@ import { IPropsHeader } from "./headerOptions";
 
 const HeaderOptions = (props: IPropsHeader) => {
   const router = useRouter();
-  const [sourceRoute, setSourceRoute] = useState("");
-
   const [visibleModal, setVisibleModal] = React.useState(false);
-
-  useEffect(() => {
-    const sourceRoute = localStorage.getItem("sourceRoute");
-    setSourceRoute(sourceRoute);
-  }, [sourceRoute]);
 
   const {
     showHeaderProps = false,
