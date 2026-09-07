@@ -7,7 +7,7 @@ import HeaderOptions from "../components/HeaderOptions";
 import StackAndSkills from "../components/Stacks/StacksAndSkills";
 import BannerStacks from "../components/Stacks/BannerStacks";
 
-const DesignPage = () => {
+const StacksPage = () => {
   const router = useRouter();
   const handlePath = (currentPath: string) => {
     localStorage.setItem("sourceRoute", currentPath);
@@ -26,7 +26,11 @@ const DesignPage = () => {
 
   return (
     <div>
-      <HeadPages />
+      <HeadPages
+        title="Stack & Skills | Pedro Lopes"
+        description="Tecnologias, ferramentas e habilidades que uso no dia a dia como desenvolvedor."
+        path="/Stacks"
+      />
       <HeaderOptions
         props={{
           startHidenHeader: true,
@@ -41,4 +45,4 @@ const DesignPage = () => {
   );
 };
 
-export default DesignPage;
+export default StacksPage;

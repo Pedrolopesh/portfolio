@@ -50,7 +50,11 @@ const Contact = () => {
 
   return (
     <div>
-      <HeadPages />
+      <HeadPages
+        title="Contato | Pedro Lopes"
+        description="Fale com Pedro Lopes — redes sociais e formas de contato."
+        path="/Contact"
+      />
       <HeaderOptions
         props={{
           showHeaderProps: true,

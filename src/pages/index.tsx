@@ -12,7 +12,7 @@ import Footer from "../components/Home/Footer";
 import HeaderOptions from "../components/HeaderOptions";
 import StackAndSkills from "../components/Home/StackAndSkills";
 
-const DesignPage = () => {
+const Home = () => {
   const router = useRouter();
   const handlePath = (currentPath: string) => {
     localStorage.setItem("sourceRoute", currentPath);
@@ -31,7 +31,7 @@ const DesignPage = () => {
 
   return (
     <div>
-      <HeadPages />
+      <HeadPages path="/" />
       <HeaderOptions
         props={{
           startHidenHeader: true,
@@ -50,4 +50,4 @@ const DesignPage = () => {
   );
 };
 
-export default DesignPage;
+export default Home;

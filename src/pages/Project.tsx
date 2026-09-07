@@ -98,9 +98,24 @@ const Project = () => {
     setbodyBg();
   }, [router]);
 
+  const projectSlug =
+    typeof router.query.name === "string" ? router.query.name : undefined;
+  const projectTitle = projectSlug
+    ?.split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
   return (
     <div>
-      <HeadPages />
+      <HeadPages
+        title={
+          projectTitle
+            ? `${projectTitle} | Projetos de Pedro Lopes`
+            : "Projetos | Pedro Lopes"
+        }
+        description="Projetos desenvolvidos por Pedro Lopes."
+        path={projectSlug ? `/Project?name=${projectSlug}` : "/Project"}
+      />
       <HeaderOptions
         props={{
           showHeaderProps: true,
