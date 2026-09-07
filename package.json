@@ -1,13 +1,13 @@
 {
   "name": "next-portfolio",
   "private": true,
-  "main": "server.js",
+  "engines": {
+    "node": ">=18.18.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "prod_start": "NODE_ENV=production node server.js",
     "lint": "next lint"
   },
   "dependencies": {
