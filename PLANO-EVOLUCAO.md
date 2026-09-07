@@ -134,23 +134,37 @@ de redesenhar em cima dela do que depois).
 
 ## 3. Plano de implementação por fases
 
-### Fase 0 — Fundação técnica (housekeeping)
+### Fase 0 — Fundação técnica (housekeeping) — ✅ concluída (07/09/2026)
 Objetivo: deixar o terreno limpo antes do redesign, sem mudar nada visual.
+Feita inteira na branch `chore/fase-0-fundacao`, em commits pequenos, cada um
+validado com `lint` + `typecheck` + `build` (e o upgrade do Next/React também
+smoke-testado num browser real).
 
-- Escolher **um** gerenciador de pacotes (recomendo `yarn`, já que o último commit
-  foi sobre isso) e remover o lockfile do outro.
-- Atualizar Next.js/React para a última versão estável da série 14/15 (avaliar
-  Pages Router vs. App Router — ver decisão em aberto na seção 6).
-- Ligar `"strict": true` no `tsconfig.json` e eliminar os `any` existentes aos
-  poucos.
-- Criar `.env.example` documentando `RESEND_API_KEY` e futura `DATABASE_URL`.
-- Adicionar CI simples no GitHub Actions: lint + typecheck + build em cada PR.
-- Remover a árvore `src/components/MainContent/*` + `DesignPage.tsx` + `TiPage.tsx`
-  (após sua confirmação).
-- Corrigir `HeadPages` (meta tags reais do site, suporte a título/descrição por
-  página — vira pré-requisito do blog também).
-- Religar o `/api/send` com validação de método/e-mail + alguma proteção
-  anti-spam (honeypot ou rate limit simples já resolve 90% do problema sem custo).
+- [x] Unificado em `yarn` (removido `package-lock.json`).
+- [x] Next.js 12 → 16, React 17 → 19, mantendo Pages Router. Toda a cadeia de
+  tooling foi junto: i18next/react-i18next, TypeScript (5.9, não 7.0 — ver
+  commit), ESLint (9.x, não 10 — idem), `next lint` → `eslint .` com flat
+  config (`eslint.config.mjs`), `tsconfig` (`target`/`moduleResolution`).
+  Corrigido um bug de hidratação real (`<Link><a>` aninhado, HTML inválido)
+  encontrado no smoke test. Um segundo problema de hidratação (i18n, pré-
+  existente — ver seção 2.6) ficou documentado para a Fase 1, não foi
+  mexido aqui.
+- [x] `"strict": true` no `tsconfig.json` — 14 erros reais encontrados e
+  corrigidos (não só silenciados), incluindo remoção de dead state
+  (`sourceRoute`) descoberta no processo.
+- [x] `.env.example` criado.
+- [x] CI no GitHub Actions (`.github/workflows/ci.yml`): lint + typecheck +
+  build em todo PR/push pra master.
+- [x] Removida a árvore `MainContent/*` + `DesignPage.tsx` + `TiPage.tsx` —
+  com o cuidado extra de resgatar `GalleryImagens`/`ProjectItem`, que na
+  verdade eram usados pela rota real `/Project` (movidos pra
+  `components/Project/*`). De quebra, saíram mais 3 dependências mortas
+  (`styled-components`, `react-slick`/`slick-carousel`, `react-wavify`).
+- [x] `HeadPages` corrigido — as meta tags OG/Twitter apontavam pro
+  `metatags.io` (nunca substituídas pelos dados reais); agora aceita
+  title/description/image/path por página.
+- [x] `/api/send` religado com validação de método, validação de e-mail,
+  honeypot e rate limit básico por IP.
 
 ### Fase 1 — Design system + Header + Footer + Contato
 Objetivo: consolidar uma identidade visual única antes de tocar em cada página
