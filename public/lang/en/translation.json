@@ -33,6 +33,12 @@
     "title_box_service_2": "Software Engineering",
     "text_box_service_foot": "visit projects and works"
   },
+  "contact_page": {
+    "title": "Let's talk",
+    "subtitle": "Have a project in mind or just want to chat? Send me a message or find me on the socials below.",
+    "form_title": "Send me an email",
+    "form_subtitle": "I usually reply within 1 business day."
+  },
   "emailMe": {
     "about_me_title": "Have an Awesome Project Idea?",
     "bout_me_subtitle": "Let’s Discuss",
@@ -61,7 +67,7 @@
     "footer_sub_link_06": "Match Coder UX/UI",
     "footer_sub_link_07": "Pet Care UX/UI",
     "footer_sub_link_08": "Pet System Project",
-    "footer_contact_title": "Get in Touch"
+    "footer_nav_title": "Navigation"
   },
   "all_projects": "All Projects",
   "cases": "Real Cases",

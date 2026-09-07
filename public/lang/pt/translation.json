@@ -33,6 +33,12 @@
     "title_box_service_2": "Engenharia de Software",
     "text_box_service_foot": "visistar projetos e trabalhos"
   },
+  "contact_page": {
+    "title": "Vamos conversar",
+    "subtitle": "Tem um projeto em mente ou quer trocar uma ideia? Me manda uma mensagem ou me encontra nas redes abaixo.",
+    "form_title": "Me manda um e-mail",
+    "form_subtitle": "Respondo em até 1 dia útil."
+  },
   "emailMe": {
     "about_me_title": "Tem uma ideia de projeto incrível?",
     "bout_me_subtitle": "Vamos conversar",
@@ -60,7 +66,7 @@
     "footer_sub_link_06": "Match Coder UX/UI",
     "footer_sub_link_07": "Pet Care UX/UI",
     "footer_sub_link_08": "Projeto Pet System",
-    "footer_contact_title": "Entre em contato"
+    "footer_nav_title": "Navegação"
   },
   "all_projects": "Todos os Projetos",
   "cases": "Casos Reais",

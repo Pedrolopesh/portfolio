@@ -7,8 +7,8 @@
 @theme {
   --color-bg: #0A101E;
   --color-surface: #10182B;
-  --color-surface-solid: rgba(10, 16, 30, 0.82);
-  --color-border: rgba(114, 161, 255, 0.16);
+  --color-surface-solid: rgba(17, 24, 43, 0.94);
+  --color-border: rgba(114, 161, 255, 0.24);
   --color-ink: #F5F7FB;
   --color-ink-muted: #9BA7C4;
   --color-brand-from: #6EC3F0;
@@ -18,100 +18,100 @@
   --font-sans: "Poppins", sans-serif;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-bg);
+/* Regras "soltas" (fora de @layer) sempre vencem CSS em camada no
+   CSS nativo — inclusive as utilities do Tailwind, não importa
+   especificidade ou ordem no arquivo. Colocando tudo isso dentro de
+   @layer base, o Tailwind volta a poder sobrescrever (ex: uma classe
+   `text-ink` num <a> deixa de perder pra esse `a { color: inherit }`
+   genérico). */
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-bg);
 
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* position: absolute; */
-  /* min-height: 365vh; */
-  max-width: 100%;
-  display: block;
-  width: 100%;
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+  }
 
-h1, h2, h3, h4, h5, span, p, div, button{
-  font-family: 'Poppins', sans-serif !important;
-}
+  h1, h2, h3, h4, h5, span, p, div, button{
+    font-family: 'Poppins', sans-serif !important;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
+  .d-flex {
+    display: flex;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  .align-center {
+    align-items: center;
+  }
 
-.d-flex {
-  display: flex;
-}
+  .main-body-container {
+    max-width: 1700px;
+    width: 100%;
+  }
 
-.align-center {
-  align-items: center;
-}
+  .main-body-container-fit {
+    max-width: 1200px;
+    width: 100%;
+  }
 
-.main-body-container {
-  max-width: 1700px;
-  width: 100%;
-}
+  .blackBg {
+    background-color: #000000
+  }
 
-.main-body-container-fit {
-  max-width: 1200px;
-  width: 100%;
-}
+  .ac{
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
-.blackBg {
-  background-color: #000000
-}
+  .cp{
+    cursor: pointer;
+  }
 
-.ac{
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+  .hide-modal {
+    display: none !important;
+  }
 
-.cp{
-  cursor: pointer;
-}
+  .hidden-modal {
+    display: none !important;
+  }
 
-.hide-modal {
-  display: none !important;
-}
+  .mt-content {
+    margin-top: 180px;
+  }
 
-.hidden-modal {
-  display: none !important;
-}
+  .float-block {
+    display: block;
+    max-width: 100%;
+    width: 10%;
+    z-index: 9999999;
+    top: 90px;
+    position: fixed;
+  }
 
-.mt-content {
-  margin-top: 180px;
-}
+  .text-center {
+    text-align: center;
+  }
 
-.float-block {
-  display: block;
-  max-width: 100%;
-  width: 10%;
-  z-index: 9999999;
-  top: 90px;
-  position: fixed;
-}
-
-
-.text-center {
-  text-align: center;
-}
-
-.gradient-divider {
-  background: linear-gradient(0deg, rgba(10, 16, 30, 1) 0%, rgb(10 16 30 / 95%) 50%, rgb(10 16 30 / 0%) 100%);
-  height: 280px;
-  width: 100%;
+  .gradient-divider {
+    background: linear-gradient(0deg, rgba(10, 16, 30, 1) 0%, rgb(10 16 30 / 95%) 50%, rgb(10 16 30 / 0%) 100%);
+    height: 280px;
+    width: 100%;
+  }
 }

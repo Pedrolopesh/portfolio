@@ -4,37 +4,36 @@ import "../styles/fonts.css";
 
 import type { AppProps } from "next/app";
 import i18n from "i18next";
-import HttpApi from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import en from "../../public/lang/en/translation.json";
+import pt from "../../public/lang/pt/translation.json";
 
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .use(LanguageDetector)
-  .use(HttpApi)
-  .init({
-    // the translations
-    // (tip move them in a JSON file and import them,
-    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-    // lng: document.querySelector('html').lang, // if you're using a language detector, do not define the lng option
-    supportedLngs: ["en", "pt"],
-    fallbackLng: "en",
-    detection: {
-      order: [
-        "localStorage",
-        "cookie",
-        "path",
-        "subdomain",
-        "navigator",
-        "htmlTag",
-      ],
-      caches: ["cookie"],
-    },
-    backend: {
-      loadPath: "/lang/{{lng}}/translation.json",
-    },
-    react: { useSuspense: false },
-  });
+// As traduções são importadas direto no bundle (em vez de buscadas via
+// HTTP em runtime com i18next-http-backend) de propósito: um fetch
+// assíncrono termina em momentos diferentes no servidor e no primeiro
+// render do client, então dependendo do timing o texto que hidrata no
+// client não bate com o que o servidor mandou — mismatch de
+// hidratação (React error #418) em qualquer texto traduzido, mesmo
+// com o idioma correto. Com os dois JSONs sempre disponíveis em
+// memória, `t()` é síncrono e determinístico dos dois lados.
+//
+// Sem LanguageDetector: ele resolvia o idioma de forma síncrona no
+// carregamento do módulo, a partir de localStorage/navigator — que só
+// existem no client, causando o mesmo tipo de mismatch. `lng` fixo
+// aqui garante que servidor e o primeiro render do client comecem
+// exatamente iguais; a troca real de idioma acontece depois do mount,
+// dentro de useLanguage (usado pelo Header), que faz sua própria
+// detecção.
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: en },
+    pt: { translation: pt },
+  },
+  supportedLngs: ["en", "pt"],
+  fallbackLng: "en",
+  lng: "en",
+  interpolation: { escapeValue: false },
+});
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;

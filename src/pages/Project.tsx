@@ -26,8 +26,7 @@ import { PetSystemInfo } from "../assets/ProjectContent/PetSystem";
 import type { IProjectInfoItem } from "../typings/IProjectContent";
 
 import HeadPages from "../components/HeadPages";
-import ChangeLang from "../components/ChangeLang";
-import HeaderOptions from "../components/HeaderOptions";
+import Header from "../components/Header";
 import Footer from "../components/Home/Footer";
 
 const Project = () => {
@@ -112,14 +111,7 @@ const Project = () => {
         description="Projetos desenvolvidos por Pedro Lopes."
         path={projectSlug ? `/Project?name=${projectSlug}` : "/Project"}
       />
-      <HeaderOptions
-        props={{
-          showHeaderProps: true,
-          startHidenHeader: false,
-          hideOnScrollTop: false,
-        }}
-      />
-      <ChangeLang />
+      <Header />
       {Object.keys(router.query).length === 0 ? (
         <GalleryImagens images={photos} />
       ) : (
