@@ -199,10 +199,28 @@ hidratação do i18n documentado na seção 2.6, resolvido junto).
   aparece na Home) já religado ao endpoint da Fase 0, com estado de loading/erro
   visível (hoje o toast de sucesso dispara sempre, mesmo em erro).
 
-### Fase 2 — Redesign de Home, Projetos e Stack & Skills
+### Fase 2 — Redesign de Home, Projetos e Stack & Skills — ✅ concluída (07/09/2026)
 Com o design system e header/footer prontos, redesenhar o conteúdo de cada página
 reaproveitando a estrutura de dados já existente (`ProjectContent/*.ts`,
 `utils/stacks.tsx`) — ou seja, foco em layout/visual, não em reescrever os dados.
+Feita na branch `feat/fase-2-home-projects-stacks`, validada com
+lint/typecheck/build + smoke test em browser real em todas as rotas.
+
+- [x] Todas as seções da Home (banner, serviços, projetos, stack, e-mail, sobre
+  mim) e o Footer migrados de CSS Modules pra Tailwind.
+- [x] Página `/Stacks` (banner + grid de cards) redesenhada.
+- [x] Página `/Project` (galeria + detalhe) redesenhada.
+- [x] Criado `useRevealOnScroll` (IntersectionObserver) substituindo os vários
+  hacks de "compara scrollY com número mágico de pixels" espalhados pela Home —
+  mais robusto, não quebra quando uma seção acima muda de altura.
+- [x] Removido código morto encontrado no caminho: `CustomDivider`/
+  `CustomDividerService` (nunca renderizados de verdade), `Logo` SVG duplicado
+  (substituído pelo PNG gradiente já usado no header, pra consistência visual),
+  estado de hover quebrado no `StackAndSkills` da Home (`boxShadow` recebendo uma
+  string de CSS inteira — nunca funcionou).
+- [x] Bug de dado encontrado e corrigido: `Triper.ts` apontava pra um banner que
+  não existia (`./img/projects/project_gallery_banner_1.png`, faltava o
+  `/banner/` no caminho — todos os outros 11 projetos já tinham isso certo).
 
 ### Fase 3 — Blog com slug
 - Modelagem: `Post { id, slug, title, excerpt, content, cover_image, tags[],
