@@ -1,30 +1,35 @@
 import { useEffect, useState } from "react";
 
-const SOLID_THRESHOLD = 24;
+// distância de rolagem (em px) até o header terminar a transição pro
+// "pill" sólido — quanto maior, mais gradual o efeito fica
+const SCROLL_RANGE = 160;
 
 /**
- * Header começa transparente no topo da página e vira um "pill"
- * flutuante com fundo sólido/blur assim que a página rola um pouco.
- * `isSolid` começa em `false` (igual em servidor e no primeiro render
- * do client) e só muda depois do mount, evitando mismatch de
- * hidratação.
+ * `progress` vai de 0 (topo da página, header transparente) a 1
+ * (rolado, header vira o "pill" flutuante), variando continuamente
+ * junto com o scroll em vez de alternar entre dois estados fixos —
+ * é isso que faz a transição parecer suave e visível acontecendo,
+ * em vez de um corte abrupto ao cruzar um limiar.
+ *
+ * Começa em 0 (igual em servidor e no primeiro render do client) e só
+ * muda depois do mount, evitando mismatch de hidratação.
  */
 const useHeaderScroll = () => {
-  const [isSolid, setIsSolid] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsSolid(window.scrollY > SOLID_THRESHOLD);
+    const updateProgress = () => {
+      setProgress(Math.min(window.scrollY / SCROLL_RANGE, 1));
     };
 
-    handleScroll();
+    updateProgress();
 
     let ticking = false;
     const onScroll = () => {
       if (ticking) return;
       ticking = true;
       window.requestAnimationFrame(() => {
-        handleScroll();
+        updateProgress();
         ticking = false;
       });
     };
@@ -33,7 +38,7 @@ const useHeaderScroll = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return { isSolid };
+  return { progress };
 };
 
 export default useHeaderScroll;

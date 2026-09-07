@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -6,9 +6,12 @@ import useHeaderScroll from "./useHeaderScroll";
 import NavLinks from "./NavLinks";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+const lerp = (from: number, to: number, progress: number) =>
+  from + (to - from) * progress;
+
 const Header = () => {
   const router = useRouter();
-  const { isSolid } = useHeaderScroll();
+  const { progress } = useHeaderScroll();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -37,15 +40,37 @@ const Header = () => {
     closeMobileMenu();
   }, [router.pathname]);
 
+  // Estilo do "pill" interpolado a partir de `progress` (0 a 1), em vez
+  // de alternar entre duas classes Tailwind fixas: propriedades como
+  // max-width, box-shadow e backdrop-filter não interpolam de forma
+  // suave quando saem de "ausente/none" direto pra um valor — o
+  // resultado era um corte abrupto no meio do scroll. Calculando cada
+  // valor numericamente e atualizando a cada frame de scroll, a
+  // transição acompanha a rolagem 1:1 e fica perceptível acontecendo.
+  const pillStyle = useMemo<CSSProperties>(
+    () => ({
+      maxWidth: `${lerp(1600, 768, progress)}px`,
+      marginTop: `${lerp(0, 12, progress)}px`,
+      paddingInline: `${lerp(24, 16, progress)}px`,
+      paddingBlock: `${lerp(24, 10, progress)}px`,
+      borderRadius: `${lerp(0, 16, progress)}px`,
+      borderWidth: "1px",
+      borderColor: `rgba(114, 161, 255, ${lerp(0, 0.24, progress)})`,
+      backgroundColor: `rgba(17, 24, 43, ${lerp(0, 0.94, progress)})`,
+      boxShadow: `0 16px 40px -16px rgba(47, 111, 239, ${lerp(0, 0.55, progress)})`,
+      backdropFilter: `blur(${lerp(0, 24, progress)}px)`,
+      transition:
+        "background-color 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out, backdrop-filter 120ms ease-out",
+    }),
+    [progress]
+  );
+
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50">
         <div
-          className={
-            isSolid
-              ? "mx-auto mt-3 flex max-w-3xl items-center justify-between gap-6 rounded-2xl border border-border bg-surface-solid px-4 py-2.5 shadow-[0_16px_40px_-16px_rgba(47,111,239,0.55)] backdrop-blur-xl transition-all duration-500"
-              : "mx-auto flex items-center justify-between gap-6 px-6 py-6 transition-all duration-500 sm:px-10"
-          }
+          style={pillStyle}
+          className="mx-auto flex items-center justify-between gap-6"
         >
           <Link
             href="/"
