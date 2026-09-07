@@ -38,7 +38,8 @@
     "bout_me_subtitle": "Let’s Discuss",
     "input_placeholder": "Enter e-mail address",
     "button_send": "Send",
-    "tost_message": "E-mail successfully sent!"
+    "tost_message": "E-mail successfully sent!",
+    "toast_error_message": "Couldn't send the e-mail, please try again later."
   },
   "home_about_me": {
     "about_me_title": "About Me",

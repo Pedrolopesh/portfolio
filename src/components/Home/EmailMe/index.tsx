@@ -4,8 +4,17 @@ import useEmailMe from "./useEmailme";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { t } from "i18next";
 const EmailMe = () => {
-  const { email, sendEmail, setEmail, setViewToast, viewToast, showAnimation } =
-    useEmailMe();
+  const {
+    email,
+    sendEmail,
+    setEmail,
+    website,
+    setWebsite,
+    setViewToast,
+    viewToast,
+    toastHasError,
+    showAnimation,
+  } = useEmailMe();
 
   return (
     <>
@@ -15,7 +24,11 @@ const EmailMe = () => {
             viewToast ? style.showToastMessage : style.hideToastMessage
           }`}
         >
-          <p>{t("emailMe.tost_message")}</p>
+          <p>
+            {toastHasError
+              ? t("emailMe.toast_error_message")
+              : t("emailMe.tost_message")}
+          </p>
           <IoCloseCircleOutline
             size={30}
             color="#fff"
@@ -52,6 +65,18 @@ const EmailMe = () => {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
+            />
+            {/* honeypot anti-spam: invisível e fora da navegação por
+                teclado para usuários reais, bots costumam preenchê-lo */}
+            <input
+              name="website"
+              type="text"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              style={{ display: "none" }}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
             />
             <div className={style.buttonSendEmailMe}>
               <button onClick={sendEmail}>{t("emailMe.button_send")}</button>

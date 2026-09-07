@@ -38,7 +38,8 @@
     "bout_me_subtitle": "Vamos conversar",
     "input_placeholder": "Insira seu melhor endereço de e-mail",
     "button_send": "Enviar",
-    "tost_message": "E-mail enviado com sucesso!"
+    "tost_message": "E-mail enviado com sucesso!",
+    "toast_error_message": "Não foi possível enviar o e-mail, tente novamente mais tarde."
   },
   "home_about_me": {
     "about_me_title": "Um pouco sobre mim...",

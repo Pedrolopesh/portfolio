@@ -3,28 +3,33 @@ import { useEffect, useState } from "react";
 const useEmailMe = () => {
   const [showAnimation, setShowAnimation] = useState(false);
   const [viewToast, setViewToast] = useState(false);
+  const [toastHasError, setToastHasError] = useState(false);
   const [email, setEmail] = useState("");
+  // honeypot: campo que só bots preenchem, fica escondido pro usuário real
+  const [website, setWebsite] = useState("");
 
-  const sendEmail = () => {
+  const sendEmail = async () => {
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        email: email,
-      }),
+      body: JSON.stringify({ email, website }),
     };
 
-    fetch("/api/send", options)
-      .then((data) => {
-        setViewToast(true);
-        return data.json();
-      })
-      .catch((err) => {
-        console.log(err);
-        console.error(err);
-      });
+    try {
+      const response = await fetch("/api/send", options);
+      setToastHasError(!response.ok);
+      setViewToast(true);
+
+      if (response.ok) {
+        setEmail("");
+      }
+    } catch (err) {
+      console.error(err);
+      setToastHasError(true);
+      setViewToast(true);
+    }
   };
 
   useEffect(() => {
@@ -68,8 +73,11 @@ const useEmailMe = () => {
   return {
     viewToast,
     setViewToast,
+    toastHasError,
     email,
     setEmail,
+    website,
+    setWebsite,
     sendEmail,
     showAnimation,
   };
