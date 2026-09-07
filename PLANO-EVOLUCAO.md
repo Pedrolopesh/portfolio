@@ -222,28 +222,72 @@ lint/typecheck/build + smoke test em browser real em todas as rotas.
   não existia (`./img/projects/project_gallery_banner_1.png`, faltava o
   `/banner/` no caminho — todos os outros 11 projetos já tinham isso certo).
 
-### Fase 3 — Blog com slug
-- Modelagem: `Post { id, slug, title, excerpt, content, cover_image, tags[],
-  published_at, updated_at, status }`. Slug gerado a partir do título
-  (`slugify`), único, é a chave usada na rota `/blog/[slug]`.
-- **Infra decidida**: Postgres rodando em container Docker, hospedado em uma VPS
-  própria (não é um provider gerenciado tipo Neon/Supabase). Implica:
-  - `docker-compose.yml` versionado (imagem `postgres`, volume nomeado para
-    persistir dados, variáveis via `.env` — nunca senha hardcoded no compose).
-  - Prisma como ORM/migrations (schema versionado no repo, `prisma migrate deploy`
-    no processo de deploy).
-  - Rotina de **backup** do volume/dump do Postgres — banco auto-hospedado não
-    tem backup automático de fábrica como um provider gerenciado tem.
-  - **Topologia decidida**: Next.js e Postgres rodam juntos na mesma VPS (app e
-    banco no mesmo `docker-compose.yml`, comunicando por rede interna do Docker).
-    O Postgres **não fica exposto publicamente** — só a aplicação Next é
-    publicada (via Nginx/Caddy como reverse proxy + TLS na frente dela). Isso
-    também implica migrar o deploy do site para essa VPS (hoje presumo que está
-    em algo tipo Vercel — a confirmar quando formos detalhar o deploy).
-- SEO por post: aproveitar o `HeadPages` corrigido na Fase 0 para gerar
-  title/description/og:image dinâmicos por slug.
-- Como o post é sobre estudo/aprendizado (ligação com a Fase 4), vale já nascer
-  com campo de `tags` para depois filtrar por tema/tecnologia.
+### Fase 3 — Blog com slug — 🚧 em andamento (começou 07/09/2026)
+
+**Arquitetura decidida** (revista em relação à primeira versão deste plano —
+antes era "Next.js e Postgres na mesma VPS", agora é uma separação mais limpa
+em 3 partes):
+
+- **Frontend**: continua o Next.js deste repositório, hospedado na **Vercel**
+  como já é hoje. As páginas do blog (`/blog`, `/blog/[slug]`) vão viver aqui e
+  consumir a API do backend.
+- **Backend**: repositório novo e separado,
+  [`pedro-portfolio-backend`](../pedro-portfolio-backend) (irmão deste, fora do
+  git deste projeto) — uma API em **NestJS + Prisma** que expõe o CRUD dos
+  posts. Roda numa VPS que já hospeda outras coisas (Plane, picoclaw, etc.), daí
+  o cuidado de isolar tudo com o nome `pedro-portfolio` (containers, rede Docker
+  e volumes todos prefixados assim, sem tocar no que já existe lá).
+- **Banco**: Postgres em container Docker, **só na rede interna** do
+  docker-compose do backend — nunca exposto publicamente, só a API acessa.
+
+**Status do backend** (`pedro-portfolio-backend`, já commitado como repo
+próprio):
+- [x] Projeto NestJS criado, com Prisma configurado (driver adapter
+  `@prisma/adapter-pg`, exigido a partir do Prisma 7 mesmo no generator
+  clássico `prisma-client-js` — usei o clássico em vez do novo `prisma-client`
+  porque o novo gera um client ESM que quebra o Jest).
+- [x] Modelo `Post { id, slug, title, excerpt, content, coverImage, tags[],
+  status (DRAFT|PUBLISHED), publishedAt, createdAt, updatedAt }`, migration
+  aplicada.
+- [x] CRUD completo: rotas públicas (`GET /posts`, `GET /posts/:slug`) nunca
+  vazam rascunhos — um `DRAFT` dá 404 na rota pública mesmo sabendo o slug
+  exato. Rotas de escrita e a listagem completa (`/admin/posts/*`) exigem
+  header `x-api-key`, comparado com `timingSafeEqual` (evita timing attack).
+- [x] Slug gerado automaticamente do título (acentos removidos, único —
+  409 em caso de conflito); `publishedAt` preenchido sozinho na primeira vez
+  que o post vira `PUBLISHED`.
+- [x] Dockerfile (build multi-estágio) + `docker-compose.prod.yml` (db sem
+  porta publicada, api sem porta publicada, Caddy como único ponto de entrada).
+- [x] Testado localmente de ponta a ponta via HTTP de verdade (não só
+  lint/build): criar, listar, buscar por slug, editar, apagar, conflito de
+  slug, e a proteção de rascunho — todos os casos confirmados.
+
+**Reconhecimento feito na VPS (76.13.172.219, root, chave SSH já configurada)**:
+- Ubuntu 24.04, Docker 29 + Compose v5 já instalados.
+- **Portas 80/443 já ocupadas** pelo proxy de outro serviço que já roda lá
+  (Plane, uma ferramenta de gestão de projetos, com seu próprio
+  Postgres/Redis/RabbitMQ/MinIO). Não vamos mexer nisso.
+- **Decidido**: a API do backend sobe numa porta HTTPS dedicada e alternativa
+  (`8443` por padrão, configurável via `PROXY_HTTPS_PORT`), com um Caddy só
+  nosso — zero risco pro que já roda na VPS.
+- **Pendência de TLS**: como 80/443 estão ocupados, os desafios ACME padrão
+  (HTTP-01, TLS-ALPN-01) não completam pra emitir um certificado confiável.
+  Por enquanto o Caddy usa `tls internal` (certificado autoassinado) — funciona
+  para chamada servidor-a-servidor (Vercel → backend) mas exige desabilitar a
+  validação de TLS do lado do cliente, o que não é o ideal a longo prazo.
+  Antes de ir pra produção de verdade, decidir entre: (a) desafio DNS-01 (o DNS
+  do domínio é NS1) ou (b) colocar o subdomínio da API atrás da Cloudflare e
+  usar um certificado Origin CA.
+
+**Falta fazer**:
+- [ ] Resolver o certificado TLS de produção (ver pendência acima).
+- [ ] Deploy de fato do backend na VPS (`docker compose -f
+  docker-compose.prod.yml up -d --build`).
+- [ ] Rotina de backup do volume do Postgres.
+- [ ] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
+  com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0).
+- [ ] Como o post é sobre estudo/aprendizado (ligação com a Fase 4), o campo
+  `tags` já existe no modelo pra filtrar por tema/tecnologia depois.
 
 ### Fase 4 — Portfólio como repositório de estudos (médio/longo prazo)
 - Cada post do blog pode documentar uma técnica/lib testada no próprio código do
