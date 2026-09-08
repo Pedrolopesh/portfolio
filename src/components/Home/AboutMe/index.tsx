@@ -54,7 +54,23 @@ const AboutMe = () => {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-col items-center gap-6 text-center">
+      <div className="mx-auto mt-16 max-w-3xl text-center">
+        <h3 className="text-xl font-semibold text-ink">
+          {t("home_about_me.podcast_title")}
+        </h3>
+        <div className="mt-6 aspect-video w-full overflow-hidden rounded-2xl border border-border">
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube-nocookie.com/embed/txRuWn07YrU"
+            title="Podcast episode video"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      </div>
+
+      <div className="mt-16 flex flex-col items-center gap-6 text-center">
         <div>
           <h3 className="text-xl font-semibold text-ink">
             {t("home_about_me.contact_me_title")}

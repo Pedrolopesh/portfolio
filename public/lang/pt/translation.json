@@ -52,6 +52,7 @@
     "about_me_title": "Um pouco sobre mim...",
     "bout_me_description_0": "Minha jornada na tecnologia começou na área de testes de software como QA, onde realizei testes em produtos financeiros. Posteriormente, transitei para a implementação e manutenção de códigos frontend. Nessa área, adquiri expertise em diversos frameworks JavaScript, incluindo Vue.js, React, React Native e Angular.",
     "bout_me_description_1": "Através dos conhecimentos adquiridos no frontend, expandi minhas habilidades para fullstack utilizando tecnologias como Node.js, Express e bancos de dados como MongoDB e SQ entre outras mais, aumentando minha versatilidade e possibilidades. Essa experiência me permite criar soluções completas, desde a interface do usuário até a lógica de negócios e gerenciamento de dados, oferecendo suporte abrangente para empresas em busca de produtos inovadores e experiências aprimoradas.",
+    "podcast_title": "Conheça um pouco mais sobre mim e minha carreira nesse episódio de podcast",
     "contact_me_title": "Como falar comigo? ",
     "contact_me_text": "Você pode entrar em contato comigo por e-mail ou rede social, eu costumo responder em 1 dia"
   },
