@@ -268,10 +268,9 @@ próprio):
   (Plane, uma ferramenta de gestão de projetos, com seu próprio
   Postgres/Redis/RabbitMQ/MinIO). Não vamos mexer nisso.
 - Inicialmente subiu numa porta HTTPS dedicada e alternativa (`8443`, Caddy
-  próprio, certificado autoassinado) — **superado pela solução final abaixo**,
-  mas o Caddy próprio (`pedro-portfolio-proxy`) e a porta 8443 continuam
-  configurados no `docker-compose.prod.yml` como caminho alternativo (não
-  removidos ainda, ver "falta fazer").
+  próprio, certificado autoassinado) — **superado pela solução final abaixo**.
+  O Caddy próprio (`pedro-portfolio-proxy`) e a porta 8443 foram removidos em
+  08/09/2026 (ver "falta fazer" mais abaixo).
 - **TLS de produção resolvido de verdade (08/09/2026)** — tentamos Cloudflare
   (esbarrou no fato de que ela não deixa mais criar zona só de subdomínio, só
   domínio raiz) e cogitamos certbot com desafio DNS-01 manual (funcionaria,
@@ -314,14 +313,18 @@ próprio):
   forem construídas.
 
 **Falta fazer**:
-- [ ] Decidir se remove o Caddy próprio do backend (`pedro-portfolio-proxy`,
-  porta 8443, certificado autoassinado) — ficou redundante agora que
-  `api.pedrolopes.tech` responde de verdade pelo Caddy do Plane. Fechar
-  também a porta 8443 no firewall se remover.
-- [ ] Decidir se dá `git push` na mudança do Caddyfile do Plane pro remoto
-  (`we-tech-git/plane`) — por enquanto só commitada localmente na VPS.
-- [ ] Rotina de backup do volume do Postgres do `pedro-portfolio` (o do Plane
-  já tem, o nosso ainda não).
+- [x] Remover o Caddy próprio do backend (`pedro-portfolio-proxy`, porta 8443,
+  certificado autoassinado) — feito em 08/09/2026: container removido do
+  `docker-compose.prod.yml` e da VPS, `Caddyfile`/`certs` próprios apagados,
+  volume Docker removido, porta 8443 fechada no `ufw`. Confirmado que
+  `https://api.pedrolopes.tech/health` segue no ar normalmente só através do
+  Caddy do Plane.
+- [x] `git push` da mudança do Caddyfile do Plane pro remoto
+  (`we-tech-git/plane`) — feito em 08/09/2026 (commit `6919b4a`).
+- [x] Rotina de backup do Postgres do `pedro-portfolio` — feito em 08/09/2026:
+  `pg_dump` semanal (segunda às 4h, retenção de 4 semanas), mesmo padrão do
+  script que o Plane já usa. Script e doc em `backups/` no repo
+  `pedro-portfolio-backend`, agendado via cron do root na VPS.
 - [ ] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
   com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0).
 - [ ] Como o post é sobre estudo/aprendizado (ligação com a Fase 4), o campo
