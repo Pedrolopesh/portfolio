@@ -270,10 +270,14 @@ próprio):
 - **Decidido**: a API do backend sobe numa porta HTTPS dedicada e alternativa
   (`8443` por padrão, configurável via `PROXY_HTTPS_PORT`), com um Caddy só
   nosso — zero risco pro que já roda na VPS.
-- **Decidido sobre TLS**: em vez de DNS-01 no NS1, vamos colocar
+- **Decidido sobre TLS**: em vez de desafio DNS-01, vamos colocar
   `api.pedrolopes.tech` atrás da **Cloudflare** (só esse subdomínio, resto do
-  domínio continua no NS1) e usar um certificado Origin CA — não depende das
-  portas 80/443 nem de dar acesso de API do NS1 pra ninguém.
+  domínio continua sendo gerenciado normalmente na **Hostinger**, onde o
+  domínio está registrado) e usar um certificado Origin CA — não depende das
+  portas 80/443 nem de dar acesso de API de DNS pra ninguém. (Os nameservers
+  atuais do domínio resolvem pra infraestrutura da NS1 — provavelmente a
+  Hostinger usa a NS1 como provedor de DNS por trás do painel dela; na
+  prática, pra você, mexer no DNS continua sendo pelo painel da Hostinger.)
 
 **✅ Deploy feito (07/09/2026)** — a API já está no ar em produção:
 - Código enviado pra `/opt/pedro-portfolio/app` na VPS via `rsync`, stack subida
@@ -297,8 +301,8 @@ próprio):
 
 **Falta fazer**:
 - [ ] Criar `api.pedrolopes.tech` na Cloudflare (zona própria só pro
-  subdomínio) + delegar via NS no NS1 + certificado Origin CA — passo a passo
-  na seção 7 deste documento.
+  subdomínio) + delegar via NS na Hostinger + certificado Origin CA — passo a
+  passo na seção 7 deste documento.
 - [ ] Rotina de backup do volume do Postgres.
 - [ ] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
   com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0).
@@ -376,10 +380,13 @@ chegar neles.
    inteiro, não `pedrolopes.tech`) → plano Free. A Cloudflare vai tratar isso
    como uma zona própria e te dar **2 nameservers** (algo como
    `ana.ns.cloudflare.com` / `bob.ns.cloudflare.com`).
-3. 👤 No NS1 (onde o domínio `pedrolopes.tech` já está), crie um registro **NS**
-   para o host `api` apontando pros 2 nameservers que a Cloudflare deu no passo
-   2. Isso delega só esse subdomínio pra Cloudflare — o resto do domínio
-   continua no NS1 normalmente.
+3. 👤 No painel da **Hostinger** (Domínios → `pedrolopes.tech` → DNS /
+   Nameservers), crie um registro **NS** para o host `api` apontando pros 2
+   nameservers que a Cloudflare deu no passo 2. Isso delega só esse subdomínio
+   pra Cloudflare — o resto do domínio continua na Hostinger normalmente. Se a
+   Hostinger não deixar criar um registro NS pra um subdomínio específico pela
+   interface normal de DNS, procure por "delegação de subdomínio" no suporte
+   deles, ou me avisa que a gente vê uma alternativa.
 4. 👤 De volta na Cloudflare, adicione um registro **A**: `api` → `76.13.172.219`,
    com o proxy (ícone de nuvem) **ativado** (laranja) — é isso que faz a
    Cloudflare terminar o TLS público de verdade.
