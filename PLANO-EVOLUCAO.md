@@ -267,17 +267,31 @@ próprio):
 - **Portas 80/443 já ocupadas** pelo proxy de outro serviço que já roda lá
   (Plane, uma ferramenta de gestão de projetos, com seu próprio
   Postgres/Redis/RabbitMQ/MinIO). Não vamos mexer nisso.
-- **Decidido**: a API do backend sobe numa porta HTTPS dedicada e alternativa
-  (`8443` por padrão, configurável via `PROXY_HTTPS_PORT`), com um Caddy só
-  nosso — zero risco pro que já roda na VPS.
-- **Decidido sobre TLS**: em vez de desafio DNS-01, vamos colocar
-  `api.pedrolopes.tech` atrás da **Cloudflare** (só esse subdomínio, resto do
-  domínio continua sendo gerenciado normalmente na **Hostinger**, onde o
-  domínio está registrado) e usar um certificado Origin CA — não depende das
-  portas 80/443 nem de dar acesso de API de DNS pra ninguém. (Os nameservers
-  atuais do domínio resolvem pra infraestrutura da NS1 — provavelmente a
-  Hostinger usa a NS1 como provedor de DNS por trás do painel dela; na
-  prática, pra você, mexer no DNS continua sendo pelo painel da Hostinger.)
+- Inicialmente subiu numa porta HTTPS dedicada e alternativa (`8443`, Caddy
+  próprio, certificado autoassinado) — **superado pela solução final abaixo**,
+  mas o Caddy próprio (`pedro-portfolio-proxy`) e a porta 8443 continuam
+  configurados no `docker-compose.prod.yml` como caminho alternativo (não
+  removidos ainda, ver "falta fazer").
+- **TLS de produção resolvido de verdade (08/09/2026)** — tentamos Cloudflare
+  (esbarrou no fato de que ela não deixa mais criar zona só de subdomínio, só
+  domínio raiz) e cogitamos certbot com desafio DNS-01 manual (funcionaria,
+  mas exigiria renovar na mão a cada ~90 dias). Solução final, mais simples
+  que as duas: **compartilhar o Caddy que já roda na VPS pro Plane** (ele já é
+  dono das portas 80/443 e já emite/renova certificado automaticamente).
+  Adicionado um bloco novo no `caddy-custom.Caddyfile` do Plane
+  (`api.pedrolopes.tech { reverse_proxy pedro-portfolio-api:3333 }`) e
+  conectado o container `pedro-portfolio-api` também na rede Docker
+  `plane_default`, sem alterar nada do que já existia pro Plane. Documentado
+  em detalhe (com backup feito antes e diff completo) no Obsidian, em
+  `02-Areas/We-Tech-Hub/Tools e Workers/Plane changelog.md`.
+- **Efeito colateral encontrado no meio do caminho**: pra criar o registro DNS
+  do `api`, o domínio `pedrolopes.tech` acabou tendo os nameservers trocados
+  (de uma zona gerenciada via Netlify/NS1 pra Hostinger direto) — isso
+  temporariamente quebrou o registro raiz do site principal (apontava pra uma
+  página de parking da Hostinger em vez da Vercel). Identificado e corrigido
+  na hora (registro `A` da raiz e `CNAME` do `www` atualizados pro que a
+  Vercel espera) — confirmado que o site voltou a funcionar normalmente antes
+  de seguir com a API.
 
 **✅ Deploy feito (07/09/2026)** — a API já está no ar em produção:
 - Código enviado pra `/opt/pedro-portfolio/app` na VPS via `rsync`, stack subida
@@ -291,19 +305,23 @@ próprio):
   da VPS e os hostnames esperados no SAN), servido sempre, independente de SNI.
 - Porta `8443/tcp` liberada no firewall (`ufw`) da VPS — só ela, nada mais foi
   tocado.
-- **Testado de ponta a ponta pela URL pública de verdade**
-  (`https://76.13.172.219:8443`, certificado autoassinado por enquanto):
-  criar post, listar publicamente, checar CORS, apagar — tudo confirmado
-  funcionando em produção, não só localmente.
+- **Testado de ponta a ponta pela URL pública de verdade, com certificado
+  confiável** (`https://api.pedrolopes.tech`, sem precisar desabilitar
+  validação de TLS em lugar nenhum): criar post, listar publicamente, checar
+  CORS, apagar — tudo confirmado funcionando em produção.
 - `API_KEY` de produção foi gerada e comunicada nesta conversa — precisa ser
   configurada como variável de ambiente na Vercel quando as páginas do blog
   forem construídas.
 
 **Falta fazer**:
-- [ ] Criar `api.pedrolopes.tech` na Cloudflare (zona própria só pro
-  subdomínio) + delegar via NS na Hostinger + certificado Origin CA — passo a
-  passo na seção 7 deste documento.
-- [ ] Rotina de backup do volume do Postgres.
+- [ ] Decidir se remove o Caddy próprio do backend (`pedro-portfolio-proxy`,
+  porta 8443, certificado autoassinado) — ficou redundante agora que
+  `api.pedrolopes.tech` responde de verdade pelo Caddy do Plane. Fechar
+  também a porta 8443 no firewall se remover.
+- [ ] Decidir se dá `git push` na mudança do Caddyfile do Plane pro remoto
+  (`we-tech-git/plane`) — por enquanto só commitada localmente na VPS.
+- [ ] Rotina de backup do volume do Postgres do `pedro-portfolio` (o do Plane
+  já tem, o nosso ainda não).
 - [ ] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
   com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0).
 - [ ] Como o post é sobre estudo/aprendizado (ligação com a Fase 4), o campo
@@ -367,12 +385,16 @@ próprio):
    prefixados assim, sem tocar no que já roda lá (Plane e outras coisas).
    Detalhes completos na Fase 3, seção 3.
 
-## 7. Guia — colocar api.pedrolopes.tech atrás da Cloudflare
+## 7. Guia — colocar api.pedrolopes.tech atrás da Cloudflare (⚠️ não seguido — ver Fase 3)
 
-Passo a passo pra resolver o certificado TLS de produção da API (seção 3,
-Fase 3). Os passos com 👤 só você consegue fazer (envolvem criar conta/acessar
-dashboards que eu não tenho como acessar); os outros eu faço quando você
-chegar neles.
+**Superado**: a Cloudflare parou de deixar criar zona só de subdomínio (exige
+domínio raiz), então esse caminho não deu pra seguir como planejado. O TLS de
+produção acabou resolvido de outra forma — compartilhando o Caddy que já
+roda na VPS pro Plane (ver Fase 3, seção 3). Mantendo esse guia aqui só como
+registro, caso um dia faça sentido migrar o domínio inteiro pra Cloudflare
+por outro motivo.
+
+Passo a passo original (não executado):
 
 1. 👤 Crie uma conta na Cloudflare (gratuita) se ainda não tiver uma:
    https://dash.cloudflare.com/sign-up
