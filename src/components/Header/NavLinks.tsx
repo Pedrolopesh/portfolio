@@ -21,7 +21,10 @@ const NavLinks = ({
   return (
     <div className={className}>
       {NAV_ITEMS.map(({ href, labelKey }) => {
-        const isActive = router.pathname === href;
+        // seções com subpáginas (ex.: /blog/[slug]) continuam marcadas
+        const isActive =
+          router.pathname === href ||
+          (href !== "/" && router.pathname.startsWith(`${href}/`));
 
         return (
           <Link

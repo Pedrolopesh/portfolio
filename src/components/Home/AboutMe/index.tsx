@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import useRevealOnScroll from "../../../utils/useRevealOnScroll";
+import CodePortrait from "../HomeBanner/CodePortrait";
 
 const COMPANIES = [
   "/img/company_1.png",
@@ -36,11 +37,20 @@ const AboutMe = () => {
       </p>
 
       <div className="mt-16 grid gap-10 rounded-3xl border border-border bg-surface p-8 sm:p-10 lg:grid-cols-[auto_1fr] lg:items-center">
-        <img
-          src="/img/profile-pic.png"
-          alt="Pedro Lopes"
-          className="h-32 w-32 rounded-2xl object-cover"
-        />
+        {/* mesmo retrato foto ⇄ código do banner inicial */}
+        <div className="mx-auto w-[200px] sm:w-[220px] lg:w-[240px]">
+          <CodePortrait
+            src="/img/profile-cutout.webp"
+            precut
+            alt={t("homeBanner.portrait_alt")}
+            mode="mix"
+            density={80}
+            loop
+            hold={10000}
+            delay={2500}
+            duration={2200}
+          />
+        </div>
         <div>
           <h2 className="text-2xl font-bold text-ink sm:text-3xl">
             {t("home_about_me.about_me_title")}
