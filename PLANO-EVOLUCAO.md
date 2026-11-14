@@ -325,10 +325,50 @@ próprio):
   `pg_dump` semanal (segunda às 4h, retenção de 4 semanas), mesmo padrão do
   script que o Plane já usa. Script e doc em `backups/` no repo
   `pedro-portfolio-backend`, agendado via cron do root na VPS.
-- [ ] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
-  com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0).
+- [x] Páginas do blog no Next.js (`/blog`, `/blog/[slug]`) consumindo a API,
+  com SEO dinâmico por post via `HeadPages` (já corrigido na Fase 0) — feito
+  em 14/11/2026: landing `/blog` (introdução, estrutura dos posts,
+  categorias, filtro) e página por post (sumário, tempo de leitura,
+  relacionados). Os posts vêm de duas fontes, juntadas em
+  `src/content/blog/api.ts`: 12 posts locais em `src/content/blog/posts/`
+  (os projetos do portfólio reescritos como posts) + os publicados na API,
+  com ISR de 5 min — post novo na API aparece sem deploy, na categoria
+  "Artigos". Se a API cair, o blog segue só com os locais.
+- [ ] Configurar a `API_KEY` de produção pra publicar posts pela API (só
+  necessária pra escrita; a leitura é pública).
 - [ ] Como o post é sobre estudo/aprendizado (ligação com a Fase 4), o campo
   `tags` já existe no modelo pra filtrar por tema/tecnologia depois.
+
+**✅ Migração de VPS concluída (26/09/2026)** — a VPS original
+(`76.13.172.219`) também hospeda o Plane e outros projetos e ficou sem folga
+de recursos; o backend está sendo movido pra uma segunda VPS já em uso
+(`72.61.56.2`), pra isolar melhor e liberar a original. Plano completo e
+progresso detalhado em
+`Pedro's Vault/02-Areas/We-Tech-Hub/Operacao/VPS/Migration.md` (Obsidian) — aqui só o que
+muda estruturalmente pra este projeto:
+
+- **Mudança de arquitetura**: a API deixa de depender do Caddy do Plane
+  (que só existia porque os dois dividiam a mesma VPS). Na VPS nova o padrão
+  já usado é **nginx nativo do host + certbot**, então a API passa a publicar
+  a porta `3333` diretamente no host e o nginx termina o TLS — mesma
+  arquitetura usada pelos outros apps dessa VPS. Isso é permanente, não só
+  enquanto o Plane não migra junto.
+- **Repositório `pedro-portfolio-backend`**: `docker-compose.prod.yml`
+  atualizado (removida a rede externa `plane_default`, adicionada a porta
+  publicada) — commit `60c3e5b`.
+- **Status técnico já concluído na VPS nova**: código deployado, Postgres
+  restaurado a partir de um dump fresco da produção (conferido: 0 posts nos
+  dois lados — blog ainda não tinha conteúdo real, sem risco de perda), API
+  rodando e respondendo `/health` e `/posts` internamente, bloco nginx
+  (redirect HTTP→HTTPS + desafio ACME) criado e validado sem afetar os
+  outros sites da VPS.
+- **Concluído**: DNS trocado (Hostinger), certificado real emitido via
+  certbot, `https://api.pedrolopes.tech` validado de ponta a ponta na VPS
+  nova. Containers antigos parados (não apagados ainda, ficam como rede de
+  segurança por um tempo) e o bloco correspondente removido do `Caddyfile`
+  do Plane. Backup semanal do Postgres migrado pra rodar na VPS nova.
+  Progresso detalhado (comandos, decisões, achados) em
+  `Pedro's Vault/02-Areas/We-Tech-Hub/Operacao/VPS/Migration.md`.
 
 ### Fase 4 — Portfólio como repositório de estudos (médio/longo prazo)
 - Cada post do blog pode documentar uma técnica/lib testada no próprio código do

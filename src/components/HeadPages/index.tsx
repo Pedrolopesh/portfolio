@@ -13,6 +13,8 @@ interface IHeadPagesProps {
   image?: string;
   /** Caminho da página a partir da raiz, ex: "/Project" */
   path?: string;
+  /** og:type — "article" nos posts do blog */
+  type?: "website" | "article";
 }
 
 const HeadPages = ({
@@ -20,6 +22,7 @@ const HeadPages = ({
   description = DEFAULT_DESCRIPTION,
   image = DEFAULT_IMAGE,
   path = "",
+  type = "website",
 }: IHeadPagesProps) => {
   const url = `${SITE_URL}${path}`;
 
@@ -37,7 +40,7 @@ const HeadPages = ({
       <link rel="manifest" href="/manifest.json" />
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />

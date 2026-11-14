@@ -5,7 +5,8 @@
     "contact": "Contato",
     "stacks": "Tecnologias",
     "button_design_option": "Design",
-    "button_code_option": "Dev"
+    "button_code_option": "Dev",
+    "blog": "Blog"
   },
   "homeBanner": {
     "home_title_banner": "Web",
@@ -389,5 +390,74 @@
   },
   "click_know_more": "Clique para saber mais",
   "know_more_about_project": "saiba mais deste projeto",
-  "building_web_site": "Estou desenvolvendo novas funcionalidades para o The Chat com Python e outros frameworks! Em breve teremos novidades incríveis! Acompanhe meu GitHub para ficar por dentro!"
+  "building_web_site": "Estou desenvolvendo novas funcionalidades para o The Chat com Python e outros frameworks! Em breve teremos novidades incríveis! Acompanhe meu GitHub para ficar por dentro!",
+  "blog": {
+    "label": "// blog",
+    "title": "Bastidores de código, produto e carreira",
+    "intro": "Aqui eu conto o que aconteceu por trás dos projetos que aparecem no portfólio: o contexto, o que deu trabalho, as decisões que tomei e o que ficou de aprendizado — inclusive quando o resultado não foi o esperado.",
+    "posts_lang_note": "",
+    "read_latest": "Ler o post mais recente",
+    "see_all": "Ver todos os posts",
+    "how_title": "Como o blog funciona",
+    "how_structure_title": "Todo post segue a mesma estrutura",
+    "how_structure_text": "Pra ficar fácil comparar projetos e ir direto ao que interessa, cada texto passa pelas mesmas cinco etapas:",
+    "steps": [
+      "O contexto",
+      "Os desafios",
+      "O que eu construí",
+      "O que aprendi",
+      "O resultado"
+    ],
+    "how_categories_title": "Organizado por categorias",
+    "how_categories_text": "Os posts são agrupados pela origem do projeto. Use o filtro abaixo pra ver só uma delas.",
+    "how_pages_title": "O que tem por aqui",
+    "pages": [
+      {
+        "path": "/blog",
+        "text": "Esta página: a introdução, as categorias e a lista de todos os posts."
+      },
+      {
+        "path": "/blog/[post]",
+        "text": "Cada post tem a própria página, com sumário, tempo de leitura, imagens do projeto e link pra ver o projeto no ar."
+      },
+      {
+        "path": "Tags",
+        "text": "Cada post traz as tecnologias e temas envolvidos — React, VTEX IO, UX, Socket.IO e outros."
+      }
+    ],
+    "featured": "Em destaque",
+    "all_posts": "Todos os posts",
+    "filter_all": "Todos",
+    "posts_count": "{{count}} posts",
+    "read_time": "{{min}} min de leitura",
+    "read_more": "Ler post",
+    "back": "Voltar para o blog",
+    "on_this_page": "Neste post",
+    "more_posts": "Continue lendo",
+    "cta_title": "Quer conversar sobre algum desses projetos?",
+    "cta_text": "Se algum post te lembrou de um desafio parecido, me chama — adoro trocar ideia sobre produto e código.",
+    "cta_button": "Fale comigo",
+    "empty": "Nenhum post nesta categoria ainda.",
+    "categories": {
+      "trabalho": {
+        "label": "Trabalho",
+        "description": "Bastidores de projetos que construí em empresas e startups."
+      },
+      "projetos-pessoais": {
+        "label": "Projetos pessoais",
+        "description": "O que construí por conta própria pra aprender algo novo."
+      },
+      "faculdade": {
+        "label": "Faculdade & estudos",
+        "description": "Projetos da faculdade e do Senai: produto, requisitos e UX."
+      },
+      "artigos": {
+        "label": "Artigos",
+        "description": "Textos novos publicados direto no blog."
+      }
+    },
+    "meta_title": "Blog | Pedro Lopes",
+    "meta_description": "Bastidores dos projetos de Pedro Lopes: contexto, desafios, o que foi construído, aprendizados e resultados.",
+    "categories_count": "{{count}} categorias"
+  }
 }
