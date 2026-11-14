@@ -24,6 +24,7 @@ const ProjectsAndWorks = () => {
 
   return (
     <section
+      id="projects"
       ref={ref}
       className={`mx-auto max-w-6xl px-6 py-24 transition-all duration-700 sm:px-10 ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"

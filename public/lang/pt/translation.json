@@ -13,7 +13,13 @@
     "title_typing_1": "Serviços",
     "title_typing_2": "Arquitetura",
     "title_typing_3": "Análises",
-    "title_typing_4": "Performance"
+    "title_typing_4": "Performance",
+    "greeting": "olá, mundo",
+    "role": "Engenheiro de Software",
+    "cta_projects": "Ver projetos",
+    "cta_contact": "Fale comigo",
+    "portrait_alt": "Foto de Pedro Lopes que se transforma em código",
+    "portrait_hint": "passe o mouse ou clique no retrato"
   },
   "overview_text_banner": "Olá, sou Pedro Lopes, Engenheiro de Software especializado em desenvolver soluções inovadoras em TI. Explore meu portfólio para conhecer meus projetos e habilidades!",
   "home_stacks_skills": {
