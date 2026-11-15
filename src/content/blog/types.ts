@@ -17,4 +17,6 @@ export type BlogPost = {
   category: BlogCategory;
   /** ISO 8601 */
   publishedAt: string;
+  /** Rascunho local (src/content/blog/drafts) — só aparece em `next dev`. */
+  draft?: boolean;
 };

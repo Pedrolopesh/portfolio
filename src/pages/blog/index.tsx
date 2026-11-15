@@ -228,7 +228,7 @@ const BlogHome = ({ posts }: Props) => {
         </section>
 
         {/* veja também: podcast, discreto */}
-        <section className="mx-auto max-w-3xl px-6 pb-16 sm:px-10">
+        <section className="mx-auto max-w-6xl px-6 pb-16 sm:px-10">
           <PodcastNote />
         </section>
 

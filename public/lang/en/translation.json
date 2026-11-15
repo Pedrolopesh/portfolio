@@ -462,6 +462,8 @@
     "categories_count": "{{count}} categories",
     "podcast_label": "// see also",
     "podcast_title": "Podcast episode with Pedro Lopes",
-    "podcast_cta": "Watch"
+    "podcast_cta": "Watch",
+    "draft": "Draft",
+    "draft_notice": "Local draft — this post only shows up when the site runs with next dev and never ships to production."
   }
 }
