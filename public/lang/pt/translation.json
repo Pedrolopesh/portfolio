@@ -273,27 +273,11 @@
   "projects_page": {
     "label": "// projetos",
     "title": "Produtos, trabalhos e experimentos",
-    "intro": "Tudo o que eu construí — dos produtos no ar hoje aos projetos de estudo que me trouxeram até aqui. Cada card leva pro site e, quando existe, pra história completa no blog.",
-    "stats": {
-      "projects": "Projetos",
-      "live": "No ar",
-      "posts": "Com história no blog"
-    },
+    "intro": "Produtos no ar, o app que está a caminho e os projetos de trabalho, estudo e design que me trouxeram até aqui. Cada um leva pro site ou pra história completa no blog.",
     "highlight_badge": "Em destaque",
     "coming_soon": "Em breve na App Store e no Google Play",
     "notify": "Quero testar",
     "live_title": "No ar agora",
-    "live_subtitle": "Produtos que estão funcionando hoje",
-    "all_title": "Todos os projetos",
-    "all_count": "{{count}} projetos",
-    "filter_all": "Todos",
-    "categories": {
-      "produtos": "Produtos",
-      "trabalho": "Trabalho",
-      "pessoais": "Pessoais",
-      "faculdade": "Faculdade",
-      "design": "UX/UI"
-    },
     "status": {
       "live": "No ar",
       "dev": "Em desenvolvimento",
@@ -309,7 +293,35 @@
     "cta_blog": "Ir para o blog",
     "cta_contact": "Fale comigo",
     "meta_title": "Projetos | Pedro Lopes",
-    "meta_description": "Produtos, trabalhos e experimentos de Pedro Lopes: Next Journey, We Party, Lelume, BDR APP, Ateliê Maria Mariana e mais."
+    "meta_description": "Produtos, trabalhos e experimentos de Pedro Lopes: Next Journey, We Party, Lelume, BDR APP, Ateliê Maria Mariana e mais.",
+    "jump_live": "no-ar",
+    "jump_archive": "arquivo",
+    "highlight_chapter": "Capítulo atual",
+    "live_label": "// no ar",
+    "live_subtitle": "Produtos que estão funcionando hoje — e o meu papel em cada um.",
+    "archive_label": "// arquivo",
+    "archive_title": "Arquivo",
+    "archive_subtitle": "Projetos de trabalho, estudo e design. Os que têm história no blog levam direto pro post.",
+    "folders": {
+      "produtos": "produtos",
+      "trabalho": "trabalho",
+      "pessoais": "pessoais",
+      "faculdade": "faculdade",
+      "design": "ux-ui"
+    },
+    "col_project": "Projeto",
+    "col_category": "Pasta",
+    "col_stack": "Stack",
+    "col_status": "Status",
+    "terminal": {
+      "projects": "projetos",
+      "contributions": "contribuições",
+      "repositories": "repositórios",
+      "projects_note": "produtos, trabalhos e experimentos neste portfólio",
+      "contributions_note": "commits, PRs e revisões no GitHub desde {{since}}",
+      "repositories_note": "{{own}} meus · {{others}} de terceiros com contribuição minha",
+      "updated": "dados do GitHub · atualizado em {{date}}"
+    }
   },
   "home_projects": {
     "label": "// projetos",

@@ -274,27 +274,11 @@
   "projects_page": {
     "label": "// projects",
     "title": "Products, work and experiments",
-    "intro": "Everything I've built — from products live today to the study projects that brought me here. Each card links to the site and, when there is one, to the full story on the blog.",
-    "stats": {
-      "projects": "Projects",
-      "live": "Live",
-      "posts": "With a blog story"
-    },
+    "intro": "Live products, the app on its way and the work, study and design projects that brought me here. Each one links to the site or to the full story on the blog.",
     "highlight_badge": "Featured",
     "coming_soon": "Coming soon to the App Store and Google Play",
     "notify": "I want to try it",
     "live_title": "Live now",
-    "live_subtitle": "Products running today",
-    "all_title": "All projects",
-    "all_count": "{{count}} projects",
-    "filter_all": "All",
-    "categories": {
-      "produtos": "Products",
-      "trabalho": "Work",
-      "pessoais": "Side projects",
-      "faculdade": "College",
-      "design": "UX/UI"
-    },
     "status": {
       "live": "Live",
       "dev": "In development",
@@ -310,7 +294,35 @@
     "cta_blog": "Go to the blog",
     "cta_contact": "Get in touch",
     "meta_title": "Projects | Pedro Lopes",
-    "meta_description": "Products, work and experiments by Pedro Lopes: Next Journey, We Party, Lelume, BDR APP, Ateliê Maria Mariana and more."
+    "meta_description": "Products, work and experiments by Pedro Lopes: Next Journey, We Party, Lelume, BDR APP, Ateliê Maria Mariana and more.",
+    "jump_live": "live",
+    "jump_archive": "archive",
+    "highlight_chapter": "Current chapter",
+    "live_label": "// live",
+    "live_subtitle": "Products running today — and my role in each one.",
+    "archive_label": "// archive",
+    "archive_title": "Archive",
+    "archive_subtitle": "Work, study and design projects. The ones with a story on the blog link straight to the post.",
+    "folders": {
+      "produtos": "products",
+      "trabalho": "work",
+      "pessoais": "side-projects",
+      "faculdade": "college",
+      "design": "ux-ui"
+    },
+    "col_project": "Project",
+    "col_category": "Folder",
+    "col_stack": "Stack",
+    "col_status": "Status",
+    "terminal": {
+      "projects": "projects",
+      "contributions": "contributions",
+      "repositories": "repositories",
+      "projects_note": "products, work and experiments in this portfolio",
+      "contributions_note": "commits, PRs and reviews on GitHub since {{since}}",
+      "repositories_note": "{{own}} mine · {{others}} by others with my contributions",
+      "updated": "GitHub data · updated {{date}}"
+    }
   },
   "home_projects": {
     "label": "// projects",

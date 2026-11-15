@@ -23,6 +23,7 @@ portfólio — siga sem perguntar de novo; só pergunte o que não estiver cober
 |---|---|
 | Projetos (fonte única, PT/EN) | `src/content/projects.ts` |
 | Landing de projetos | `src/pages/Project.tsx` + `src/components/Projects/*` |
+| Números do GitHub (snapshot) | `src/content/github-stats.json` ← `node scripts/update-github-stats.mjs` |
 | Blog: dados (locais + API + rascunhos) | `src/content/blog/api.ts`, `posts/`, `drafts.ts` |
 | Blog: páginas | `src/pages/blog/index.tsx`, `src/pages/blog/[slug].tsx` |
 | Retrato foto ⇄ código | `src/components/Home/HomeBanner/CodePortrait.tsx` |
@@ -47,9 +48,17 @@ portfólio — siga sem perguntar de novo; só pergunte o que não estiver cober
 - **Botões**: primário = pill com gradiente da marca; secundário = pill com borda.
 - **Selos**: status (`No ar` verde, `Em desenvolvimento` âmbar, `Arquivado`/`Conceito`
   neutro), `Novo` azul, `Rascunho` âmbar.
-- Referências aprovadas: apps.oprimo.dev (landing de projetos: destaque → produtos
-  → lista com filtro), rubenmarcus.dev (reveal escalonado, efeitos de cursor),
-  jonathannwokolo.com. Inspire-se, nunca copie textos ou marcas.
+- **Identidade própria**: código/terminal (o retrato vira código, rótulos `// x`,
+  janelas de terminal, molduras de navegador, filtros como pastas `trabalho/`).
+  Referências (apps.oprimo.dev, rubenmarcus.dev, jonathannwokolo.com) são só
+  inspiração: o dono reprovou um layout "muito igual" ao oprimo — **não replique
+  estrutura nem visual** de referência; reinterprete na linguagem do site.
+- **/Project** hoje: abertura + terminal com números (CountUp) → faixa
+  "capítulo atual" do Next Journey → "No ar agora" em zigue-zague com moldura de
+  navegador → "Arquivo" em lista com filtro por pasta.
+- **Números do GitHub**: rode `node scripts/update-github-stats.mjs` (usa `gh auth
+  token`) e commite o JSON. "Contribuições" = gráfico do perfil (inclui privados;
+  não chamar só de "commits", o GitHub não separa os tipos nos privados).
 
 ## 3. Movimento e UX
 
