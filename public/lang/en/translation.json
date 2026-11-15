@@ -32,7 +32,7 @@
     "title_left": "Turning Ideas into Reality",
     "text_left_1": "Whether you are a startup looking to revolutionize the market, an established company seeking to stay ahead of the competition, or a small entrepreneur seeking innovation for your business, I'm here to help.",
     "text_left_2": "Explore my portfolio and see how my services, experiences, and personal projects have made a difference for other clients and teams I've worked with.",
-    "title_rigth": "Turning Ideas into Reality",
+    "title_rigth": "Analyze, plan and implement",
     "text_rigth_0": "In my personal projects, I study, analyze, test, and implement new technologies to maintain and expand the knowledge acquired over 5 years of experience, helping companies stand out with innovative products and enhanced experiences.",
     "text_rigth_1": "Feel free to explore my projects and work, and if you need help turning your idea into reality, get in touch with me.",
     "text_rigth_2": "Completed Projects",
@@ -317,11 +317,12 @@
     "terminal": {
       "projects": "projects",
       "contributions": "contributions",
-      "repositories": "repositories",
       "projects_note": "products, work and experiments in this portfolio",
       "contributions_note": "commits, PRs and reviews on GitHub since {{since}}",
-      "repositories_note": "{{own}} mine · {{others}} by others with my contributions",
-      "updated": "GitHub data · updated {{date}}"
+      "updated": "GitHub data · updated {{date}}",
+      "loc": "lines of code",
+      "loc_note": "written by me across {{commits}} commits in {{repos}} repositories · live estimate",
+      "live": "live"
     }
   },
   "home_projects": {
@@ -336,5 +337,14 @@
     "nav": "Navigation",
     "about": "Software developer & designer — products, projects, blog and ways to reach me.",
     "rights": "All rights reserved."
+  },
+  "not_found": {
+    "label": "// error 404",
+    "title": "This page doesn't exist (yet).",
+    "text": "The link may be broken or the page has moved. How about one of these paths?",
+    "home": "Go home",
+    "projects": "See projects",
+    "blog": "Read the blog",
+    "meta_title": "Page not found | Pedro Lopes"
   }
 }

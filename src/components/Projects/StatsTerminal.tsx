@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import CountUp from "../ui/CountUp";
+import LiveCounter from "../ui/LiveCounter";
 import { formatDate } from "../Blog/PostCard";
 import stats from "../../content/github-stats.json";
+import code from "../../content/code-stats.json";
 
 /**
  * Janela de "terminal" com os números do portfólio e do GitHub.
@@ -12,7 +14,7 @@ const StatsTerminal = ({ projects }: { projects: number }) => {
   const { t, i18n } = useTranslation();
   const locale = i18n.language?.startsWith("pt") ? "pt-BR" : "en-US";
 
-  const rows = [
+  const rows: { key: string; value: number; note: string; live?: boolean }[] = [
     { key: "projects", value: projects, note: t("projects_page.terminal.projects_note") },
     {
       key: "contributions",
@@ -20,11 +22,12 @@ const StatsTerminal = ({ projects }: { projects: number }) => {
       note: t("projects_page.terminal.contributions_note", { since: stats.since }),
     },
     {
-      key: "repositories",
-      value: stats.repositories,
-      note: t("projects_page.terminal.repositories_note", {
-        own: stats.ownRepositories,
-        others: stats.contributedRepositories,
+      key: "loc",
+      value: code.linesOfCode,
+      live: true,
+      note: t("projects_page.terminal.loc_note", {
+        commits: code.commits.toLocaleString(locale),
+        repos: code.repositories,
       }),
     },
   ];
@@ -47,10 +50,27 @@ const StatsTerminal = ({ projects }: { projects: number }) => {
           {rows.map((row) => (
             <div key={row.key}>
               <div className="flex items-baseline gap-3">
-                <dt className="shrink-0 text-ink-muted">{t(`projects_page.terminal.${row.key}`)}</dt>
+                <dt className="flex shrink-0 items-center gap-2 text-ink-muted">
+                  {t(`projects_page.terminal.${row.key}`)}
+                  {row.live && (
+                    <span className="flex items-center gap-1 rounded-full border border-emerald-400/30 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-emerald-300">
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" aria-hidden="true" />
+                      {t("projects_page.terminal.live")}
+                    </span>
+                  )}
+                </dt>
                 <span aria-hidden="true" className="min-w-4 flex-1 translate-y-[-3px] border-b border-dashed border-border" />
                 <dd className="shrink-0 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-                  <CountUp value={row.value} locale={locale} />
+                  {row.live ? (
+                    <LiveCounter
+                      base={code.linesOfCode}
+                      since={code.updatedAt}
+                      perDay={code.dailyRate}
+                      locale={locale}
+                    />
+                  ) : (
+                    <CountUp value={row.value} locale={locale} />
+                  )}
                 </dd>
               </div>
               <p className="mt-1 text-xs text-ink-muted/70">{`# ${row.note}`}</p>

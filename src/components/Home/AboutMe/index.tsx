@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import useRevealOnScroll from "../../../utils/useRevealOnScroll";
 import CodePortrait from "../HomeBanner/CodePortrait";
 
@@ -12,12 +12,9 @@ const COMPANIES = [
 ];
 
 const AboutMe = () => {
-  const router = useRouter();
   const { t } = useTranslation();
   const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
 
-  const redirectToProjects = () => router.push("/Project");
-  const redirectToContact = () => router.push("/Contact");
 
   return (
     <section
@@ -91,20 +88,18 @@ const AboutMe = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <button
-            type="button"
-            onClick={redirectToContact}
+          <Link
+            href="/Contact"
             className="rounded-full bg-gradient-to-r from-brand-from to-brand-to px-6 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
           >
             {t("button_about_me_hire")}
-          </button>
-          <button
-            type="button"
-            onClick={redirectToProjects}
+          </Link>
+          <Link
+            href="/Project"
             className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-brand-to"
           >
             {t("button_about_me_know_more")}
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -24,6 +24,7 @@ portfólio — siga sem perguntar de novo; só pergunte o que não estiver cober
 | Projetos (fonte única, PT/EN) | `src/content/projects.ts` |
 | Landing de projetos | `src/pages/Project.tsx` + `src/components/Projects/*` |
 | Números do GitHub (snapshot) | `src/content/github-stats.json` ← `node scripts/update-github-stats.mjs` |
+| Linhas de código (snapshot) | `src/content/code-stats.json` ← `node scripts/update-code-stats.mjs` (lê repositórios locais; e-mails em `scripts/.code-stats.local.json`, fora do git) |
 | Blog: dados (locais + API + rascunhos) | `src/content/blog/api.ts`, `posts/`, `drafts.ts` |
 | Blog: páginas | `src/pages/blog/index.tsx`, `src/pages/blog/[slug].tsx` |
 | Retrato foto ⇄ código | `src/components/Home/HomeBanner/CodePortrait.tsx` |
@@ -56,6 +57,11 @@ portfólio — siga sem perguntar de novo; só pergunte o que não estiver cober
 - **/Project** hoje: abertura + terminal com números (CountUp) → faixa
   "capítulo atual" do Next Journey → "No ar agora" em zigue-zague com moldura de
   navegador → "Arquivo" em lista com filtro por pasta.
+- **Linhas de código ao vivo** (`<LiveCounter>`): alvo = total real do snapshot +
+  média diária do último ano × dias desde a contagem; pula a cada ~0,7–1,5s
+  (+1…+37, às vezes −1…−9) preso numa faixa estreita em volta do alvo. Conta só
+  extensões de código (sem .md/.json/gerados), commits únicos, sem merges.
+  Atualize o snapshot de tempos em tempos rodando o script e commitando o JSON.
 - **Números do GitHub**: rode `node scripts/update-github-stats.mjs` (usa `gh auth
   token`) e commite o JSON. "Contribuições" = gráfico do perfil (inclui privados;
   não chamar só de "commits", o GitHub não separa os tipos nos privados).
@@ -74,6 +80,7 @@ portfólio — siga sem perguntar de novo; só pergunte o que não estiver cober
   movimento reduzido. Nada de alert/confirm/prompt.
 - **Mídia pesada sob demanda**: embeds (YouTube) só carregam no clique,
   usando `youtube-nocookie`.
+- Páginas novas seguem o visual do site — inclusive erro (`src/pages/404.tsx`).
 - Acessibilidade: links são `<Link>`/`<a>` (nunca botão com `router.push`),
   `aria-label` em botões só com ícone, `role="tab"`/`aria-selected` em filtros.
 
