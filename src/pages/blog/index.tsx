@@ -8,6 +8,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Home/Footer";
 import PostCard, { type PostSummary } from "../../components/Blog/PostCard";
 import PodcastNote from "../../components/Blog/PodcastNote";
+import Reveal from "../../components/ui/Reveal";
 import {
   BLOG_REVALIDATE_SECONDS,
   getAllPosts,
@@ -185,7 +186,9 @@ const BlogHome = ({ posts }: Props) => {
         {featured && filter === "all" && (
           <section className="mx-auto max-w-6xl px-6 py-8 sm:px-10">
             <p className="mb-5 font-mono text-sm text-brand-from">{`// ${t("blog.featured")}`}</p>
-            <PostCard post={featured} featured />
+            <Reveal>
+              <PostCard post={featured} featured />
+            </Reveal>
           </section>
         )}
 
@@ -218,8 +221,10 @@ const BlogHome = ({ posts }: Props) => {
 
           {visible.length ? (
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {visible.map((post) => (
-                <PostCard key={post.slug} post={post} />
+              {visible.map((post, i) => (
+                <Reveal key={`${filter}-${post.slug}`} delay={(i % 3) * 70} className="h-full">
+                  <PostCard post={post} />
+                </Reveal>
               ))}
             </div>
           ) : (

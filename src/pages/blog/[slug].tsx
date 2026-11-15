@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Home/Footer";
 import Markdown, { headingsOf } from "../../components/Blog/Markdown";
 import PostCard, { formatDate, type PostSummary } from "../../components/Blog/PostCard";
+import Reveal from "../../components/ui/Reveal";
 import {
   BLOG_REVALIDATE_SECONDS,
   getAllPosts,
@@ -148,8 +149,10 @@ const BlogPostPage = ({ post, related }: Props) => {
           <section className="mx-auto max-w-6xl px-6 py-20 sm:px-10">
             <h2 className="text-2xl font-bold text-ink">{t("blog.more_posts")}</h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((p) => (
-                <PostCard key={p.slug} post={p} />
+              {related.map((p, i) => (
+                <Reveal key={p.slug} delay={i * 70} className="h-full">
+                  <PostCard post={p} />
+                </Reveal>
               ))}
             </div>
           </section>

@@ -23,7 +23,7 @@ const PostCard = ({ post, featured = false }: Props) => {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className={`group flex overflow-hidden rounded-3xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand-from/60 hover:shadow-[0_20px_60px_-20px_rgba(46,111,239,0.45)] ${
+      className={`group flex h-full overflow-hidden rounded-3xl border border-border bg-surface transition-all duration-300 hover:-translate-y-1 hover:border-brand-from/60 hover:shadow-[0_20px_60px_-20px_rgba(46,111,239,0.45)] ${
         featured ? "flex-col lg:flex-row" : "flex-col"
       }`}
     >

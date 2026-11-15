@@ -1,79 +1,42 @@
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import useProjectWorks from "./useProjectWorks";
-import useRevealOnScroll from "../../../utils/useRevealOnScroll";
 
-export type CardWorkProps = {
-  card: {
-    image: string;
-    title: string;
-    description: string;
-    url: string;
-  };
-  index: number;
-};
+import Reveal from "../../ui/Reveal";
+import HighlightCard from "../../Projects/HighlightCard";
+import ProjectCard from "../../Projects/ProjectCard";
+import { highlightProject, liveProducts } from "../../../content/projects";
 
+/**
+ * Prévia de projetos na Home: o destaque (Next Journey) + os produtos no
+ * ar em cards compactos, com link pra landing completa em /Project.
+ */
 const ProjectsAndWorks = () => {
   const { t } = useTranslation();
-  const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
-  const { projectAndWorks, redirectTo, selectedSection, setSelectedSection } =
-    useProjectWorks();
-
-  const selectedSectionIndex = projectAndWorks.findIndex(
-    (section) => section.name === selectedSection.name
-  );
 
   return (
-    <section
-      id="projects"
-      ref={ref}
-      className={`mx-auto max-w-6xl px-6 py-24 transition-all duration-700 sm:px-10 ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-      }`}
-    >
-      <h2 className="text-2xl font-bold text-ink sm:text-3xl">
-        {t("project_clients")}
-      </h2>
+    <section id="projects" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 sm:px-10">
+      <Reveal className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="font-mono text-sm text-brand-from">{t("home_projects.label")}</p>
+          <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">{t("home_projects.title")}</h2>
+          <p className="mt-3 max-w-xl text-ink-muted">{t("home_projects.subtitle")}</p>
+        </div>
+        <Link
+          href="/Project"
+          className="shrink-0 text-sm font-semibold text-brand-from transition hover:text-ink"
+        >
+          {t("home_projects.see_all")} →
+        </Link>
+      </Reveal>
 
-      <div className="mt-8 flex flex-wrap gap-2">
-        {projectAndWorks.map((section, index) => (
-          <button
-            key={section.name}
-            type="button"
-            onClick={() =>
-              setSelectedSection({ name: section.name, position: index + 1 })
-            }
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-              selectedSectionIndex === index
-                ? "bg-gradient-to-r from-brand-from to-brand-to text-white"
-                : "border border-border text-ink-muted hover:text-ink"
-            }`}
-          >
-            {section.name}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projectAndWorks[selectedSectionIndex]?.projects.map((card) => (
-          <button
-            key={card.url}
-            type="button"
-            onClick={() => redirectTo(card.url)}
-            aria-label={t(card.title)}
-            className="group relative aspect-4/3 overflow-hidden rounded-2xl border border-border text-left"
-          >
-            <img
-              src={card.image}
-              alt=""
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-bg via-bg/40 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <h3 className="font-semibold text-ink">{t(card.title)}</h3>
-              <p className="mt-1 text-sm text-ink-muted">
-                {t(card.description)}
-              </p>
-            </div>
-          </button>
+      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        <Reveal className="h-full lg:row-span-2">
+          <HighlightCard project={highlightProject} compact />
+        </Reveal>
+        {liveProducts.map((p, i) => (
+          <Reveal key={p.slug} delay={(i % 2) * 80} className="h-full">
+            <ProjectCard project={p} />
+          </Reveal>
         ))}
       </div>
     </section>

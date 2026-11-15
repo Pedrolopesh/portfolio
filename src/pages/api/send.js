@@ -23,6 +23,12 @@ const isRateLimited = (ip) => {
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_EMAIL_LENGTH = 254;
+
+// o e-mail digitado entra no HTML da mensagem: escapa pra ninguém injetar
+// marcação/links no e-mail que chega na caixa de entrada
+const escapeHtml = (value) =>
+  value.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 export default async function SendEmail(req, res) {
   if (req.method !== "POST") {
@@ -47,7 +53,7 @@ export default async function SendEmail(req, res) {
     return res.status(200).send({ message: "Email sent" });
   }
 
-  if (typeof email !== "string" || !EMAIL_REGEX.test(email)) {
+  if (typeof email !== "string" || email.length > MAX_EMAIL_LENGTH || !EMAIL_REGEX.test(email)) {
     return res.status(400).send({ error: "Invalid email address" });
   }
 
@@ -62,7 +68,7 @@ export default async function SendEmail(req, res) {
       from: "onboarding@resend.dev",
       to: "pedrolopeshls99@gmail.com",
       subject: "Have an Awesome Project Idea",
-      html: `${email} has an awesome project idea! email to learn more. <br /> <br /> obs: this email was sent from your portfolio`,
+      html: `${escapeHtml(email)} has an awesome project idea! email to learn more. <br /> <br /> obs: this email was sent from your portfolio`,
     });
 
     return res.status(200).send({ message: "Email sent" });
