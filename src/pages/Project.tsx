@@ -98,8 +98,14 @@ const Projects = () => {
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {liveProducts.map((p, i) => (
-              <Reveal key={p.slug} delay={(i % 2) * 80} className="h-full">
-                <ProductCard project={p} />
+              // o primeiro (We Tech Hub, a empresa por trás de vários outros)
+              // ocupa a largura toda
+              <Reveal
+                key={p.slug}
+                delay={(i % 2) * 80}
+                className={`h-full ${i === 0 ? "md:col-span-2" : ""}`}
+              >
+                <ProductCard project={p} large={i === 0} />
               </Reveal>
             ))}
           </div>

@@ -20,7 +20,7 @@ const ProductCard = ({ project, large = false }: { project: Project; large?: boo
       style={{ "--spot": project.accent } as CSSProperties}
       className="spotlight group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-3xl border border-border bg-surface transition duration-300 hover:-translate-y-1 hover:border-brand-from/50 hover:shadow-[0_24px_60px_-24px_rgba(46,111,239,0.45)]"
     >
-      <div className={`relative overflow-hidden bg-bg ${large ? "aspect-[16/10]" : "aspect-[16/9]"}`}>
+      <div className={`relative overflow-hidden bg-bg ${large ? "aspect-[16/9] md:aspect-[21/8]" : "aspect-[16/9]"}`}>
         {project.image && (
           <img
             src={project.image}
@@ -37,7 +37,10 @@ const ProductCard = ({ project, large = false }: { project: Project; large?: boo
           <ProjectIcon project={project} size={44} />
           <div className="min-w-0">
             <h3 className={`font-bold text-ink ${large ? "text-2xl" : "text-lg"}`}>{project.name}</h3>
-            <p className="font-mono text-[11px] text-ink-muted">{project.stack.join(" · ")}</p>
+            <p className="font-mono text-[11px] text-ink-muted">
+              {project.role && <span className="text-brand-from">{local(project.role)} · </span>}
+              {project.stack.join(" · ")}
+            </p>
           </div>
         </div>
         <p className={`mt-4 text-ink-muted ${large ? "text-base" : "line-clamp-2 text-sm"}`}>

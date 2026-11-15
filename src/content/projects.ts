@@ -29,6 +29,8 @@ export type Project = {
   image?: string;
   /** ícone quadrado; sem ícone, o card mostra um monograma */
   icon?: string;
+  /** meu papel no projeto (ex.: Fundador, Contribuidor) */
+  role?: Localized;
   /** cor do monograma / brilho do card */
   accent: string;
   isNew?: boolean;
@@ -54,6 +56,24 @@ export const PROJECTS: Project[] = [
     highlight: true,
   },
   {
+    slug: "we-tech-hub",
+    name: "We Tech Hub",
+    tagline: {
+      pt: "Minha empresa de serviços de software: chatbots, agentes de IA, sites, aplicativos e qualquer necessidade de software — com linguagem e público próprios. Atende clientes como a Lelume e o Ateliê Maria Mariana.",
+      en: "My software services company: chatbots, AI agents, websites, apps and any software need — with its own audience and voice. Clients include Lelume and Ateliê Maria Mariana.",
+    },
+    category: "produtos",
+    status: "live",
+    platforms: ["Web"],
+    stack: ["Next.js", "React", "Tailwind"],
+    url: "https://www.wetechhub.com.br",
+    image: "/img/projects/live/we-tech-hub.webp",
+    icon: "/img/projects/live/we-tech-hub-icon.webp",
+    role: { pt: "Fundador", en: "Founder" },
+    accent: "#FF4D00",
+    isNew: true,
+  },
+  {
     slug: "we-party",
     name: "We Party",
     tagline: {
@@ -67,6 +87,7 @@ export const PROJECTS: Project[] = [
     url: "https://www.wepartyapp.com",
     image: "/img/projects/live/we-party.webp",
     icon: "/img/projects/live/we-party-icon.webp",
+    role: { pt: "Fundador", en: "Founder" },
     accent: "#FF6B57",
     isNew: true,
   },
@@ -74,8 +95,8 @@ export const PROJECTS: Project[] = [
     slug: "lelume",
     name: "Lelume",
     tagline: {
-      pt: "Biblioteca digital por assinatura: livros digitais, audiolivros e conteúdos educacionais num só lugar.",
-      en: "A subscription digital library: ebooks, audiobooks and educational content in one place.",
+      pt: "Biblioteca digital por assinatura: livros digitais, audiolivros e conteúdos educacionais num só lugar. Cliente da We Tech Hub.",
+      en: "A subscription digital library: ebooks, audiobooks and educational content in one place. A We Tech Hub client.",
     },
     category: "produtos",
     status: "live",
@@ -84,6 +105,7 @@ export const PROJECTS: Project[] = [
     url: "https://lelume.com.br",
     image: "/img/projects/live/lelume.webp",
     icon: "/img/projects/live/lelume-icon.webp",
+    role: { pt: "Tecnologia por We Tech Hub", en: "Tech by We Tech Hub" },
     accent: "#1E5BD8",
     isNew: true,
   },
@@ -91,8 +113,8 @@ export const PROJECTS: Project[] = [
     slug: "bdr-app",
     name: "BDR APP",
     tagline: {
-      pt: "A plataforma das batalhas de rima e poesia: da inscrição ao campeão, numa tela só — gratuita pra organizadores e participantes.",
-      en: "The platform for rap battles and slam poetry: from sign-up to champion on a single screen — free for organizers and participants.",
+      pt: "A plataforma das batalhas de rima e poesia: da inscrição ao campeão, numa tela só — gratuita pra organizadores e participantes. Projeto de um amigo, em que contribuo com estrutura e resolução de problemas.",
+      en: "The platform for rap battles and slam poetry: from sign-up to champion on a single screen — free for organizers and participants. A friend's project where I help with structure and problem-solving.",
     },
     category: "produtos",
     status: "live",
@@ -101,6 +123,7 @@ export const PROJECTS: Project[] = [
     url: "https://www.bdrapp.com.br/institucional",
     image: "/img/projects/live/bdr-app.webp",
     icon: "/img/projects/live/bdr-app-icon.webp",
+    role: { pt: "Contribuidor", en: "Contributor" },
     accent: "#E11D2E",
     isNew: true,
   },
@@ -108,8 +131,8 @@ export const PROJECTS: Project[] = [
     slug: "atelie-maria-mariana",
     name: "Ateliê Maria Mariana",
     tagline: {
-      pt: "E-commerce de têxteis artesanais para a mesa: jogos americanos e trilhos tecidos à mão.",
-      en: "E-commerce for handmade table textiles: placemats and table runners woven by hand.",
+      pt: "E-commerce de têxteis artesanais para a mesa. A We Tech Hub cuida de toda a tecnologia: site, aplicativo, funcionamento e entregas.",
+      en: "E-commerce for handmade table textiles. We Tech Hub runs all of its technology: website, app, operations and shipping setup.",
     },
     category: "produtos",
     status: "live",
@@ -118,6 +141,7 @@ export const PROJECTS: Project[] = [
     url: "https://ateliemariamariana.com.br",
     image: "/img/projects/live/atelie-maria-mariana.webp",
     icon: "/img/projects/live/atelie-maria-mariana-icon.webp",
+    role: { pt: "Tecnologia por We Tech Hub", en: "Tech by We Tech Hub" },
     accent: "#1F3A6E",
     isNew: true,
   },
@@ -137,6 +161,7 @@ export const PROJECTS: Project[] = [
     url: "https://loja.electrolux.com.br/",
     blogSlug: "migrando-a-loja-da-electrolux-para-vtex-io",
     icon: "/img/projects/live/electrolux-icon.webp",
+    role: { pt: "Engenheiro de software", en: "Software engineer" },
     accent: "#3B5BDB",
   },
 

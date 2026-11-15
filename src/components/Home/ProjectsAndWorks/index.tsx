@@ -33,7 +33,7 @@ const ProjectsAndWorks = () => {
         <Reveal className="h-full lg:row-span-2">
           <HighlightCard project={highlightProject} compact />
         </Reveal>
-        {liveProducts.map((p, i) => (
+        {liveProducts.slice(0, 4).map((p, i) => (
           <Reveal key={p.slug} delay={(i % 2) * 80} className="h-full">
             <ProjectCard project={p} />
           </Reveal>

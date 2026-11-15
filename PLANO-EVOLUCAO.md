@@ -379,7 +379,7 @@ muda estruturalmente pra este projeto:
 - Toro, BLUE e Genesis Bank saíram de projetos e ficaram só no blog. Links
   antigos `/Project?name=…` redirecionam (308) para o post.
 - Rascunhos locais do blog em `src/content/blog/drafts/` (fora do git, só em
-  `next dev`): Porta do Espírito Santo (4 posts), primeiro app publicado,
+  `next dev`): Portal Único do Espírito Santo (4 posts), primeiro app publicado,
   Multidrop e Next Journey.
 - UX: `<Reveal>`, spotlight nos cards, scroll suave. Segurança: CSP e headers
   em `next.config.js`, links externos com `noopener`, `/api/send` escapando
