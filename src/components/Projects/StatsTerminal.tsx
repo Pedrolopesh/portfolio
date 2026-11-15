@@ -49,7 +49,7 @@ const StatsTerminal = ({ projects }: { projects: number }) => {
         <dl className="space-y-4">
           {rows.map((row) => (
             <div key={row.key}>
-              <div className="flex items-baseline gap-3">
+              <div className="flex flex-wrap items-baseline gap-x-3">
                 <dt className="flex shrink-0 items-center gap-2 text-ink-muted">
                   {t(`projects_page.terminal.${row.key}`)}
                   {row.live && (
@@ -59,8 +59,8 @@ const StatsTerminal = ({ projects }: { projects: number }) => {
                     </span>
                   )}
                 </dt>
-                <span aria-hidden="true" className="min-w-4 flex-1 translate-y-[-3px] border-b border-dashed border-border" />
-                <dd className="shrink-0 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+                <span aria-hidden="true" className="min-w-0 flex-1 translate-y-[-3px] border-b border-dashed border-border" />
+                <dd className="ml-auto shrink-0 text-2xl font-bold tracking-tight text-ink min-[400px]:text-3xl sm:text-4xl">
                   {row.live ? (
                     <LiveCounter
                       base={code.linesOfCode}
