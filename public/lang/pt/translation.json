@@ -32,14 +32,14 @@
     "title_left": "Transformando Ideias em Realidade",
     "text_left_1": "Seja você uma startup buscando revolucionar o mercado, uma empresa consolidada buscando se manter à frente da concorrência ou pequeno empreendedor buscando inovação para o seu negócio, estou aqui para ajudar.",
     "text_left_2": "Explore meu portfólio e veja como meus serviços, experiências e projetos pessoais fizeram a diferença para outros clientes e equipes por onde passei.",
-    "title_rigth": "Analisar, planejar e Implementar",
+    "title_rigth": "Analisar, planejar e implementar",
     "text_rigth_0": "Nos meus projetos pessoais, estudo, analiso, testo e implemento novas tecnologias para manter e expandir os conhecimentos adquiridos em 5 anos de experiência, ajudando empresas a se destacarem com produtos inovadores e experiências aprimoradas.",
     "text_rigth_1": "Sinta-se a vontade para explorar meus projetos e trabalhos, e se precisar de ajuda para transformar sua ideia em realidade, entre em contato comigo.",
     "text_rigth_2": "Projetos Concluidos",
     "title_box_service_0": "UX/UI",
     "title_box_service_1": "Implementações Web",
     "title_box_service_2": "Engenharia de Software",
-    "text_box_service_foot": "visistar projetos e trabalhos"
+    "text_box_service_foot": "ver projetos e trabalhos"
   },
   "contact_page": {
     "title": "Vamos conversar",
@@ -316,11 +316,12 @@
     "terminal": {
       "projects": "projetos",
       "contributions": "contribuições",
-      "repositories": "repositórios",
       "projects_note": "produtos, trabalhos e experimentos neste portfólio",
       "contributions_note": "commits, PRs e revisões no GitHub desde {{since}}",
-      "repositories_note": "{{own}} meus · {{others}} de terceiros com contribuição minha",
-      "updated": "dados do GitHub · atualizado em {{date}}"
+      "updated": "dados do GitHub · atualizado em {{date}}",
+      "loc": "linhas de código",
+      "loc_note": "escritas por mim em {{commits}} commits de {{repos}} repositórios · estimativa ao vivo",
+      "live": "ao vivo"
     }
   },
   "home_projects": {
@@ -335,5 +336,14 @@
     "nav": "Navegação",
     "about": "Software developer & designer — produtos, projetos, blog e formas de contato.",
     "rights": "Todos os direitos reservados."
+  },
+  "not_found": {
+    "label": "// erro 404",
+    "title": "Essa página não existe (ainda).",
+    "text": "O link pode estar quebrado ou a página mudou de lugar. Que tal seguir por um destes caminhos?",
+    "home": "Ir para o início",
+    "projects": "Ver projetos",
+    "blog": "Ler o blog",
+    "meta_title": "Página não encontrada | Pedro Lopes"
   }
 }

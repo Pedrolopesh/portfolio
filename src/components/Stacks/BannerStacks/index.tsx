@@ -5,7 +5,7 @@ const BannerStacks = () => {
 
   return (
     <section
-      className="relative flex h-[420px] items-center justify-center bg-cover bg-center"
+      className="relative flex h-[300px] items-end justify-center bg-cover bg-center pb-12 pt-28 sm:h-[380px] sm:items-center sm:pb-0"
       style={{ backgroundImage: "url(/img/stack-banner-bg.png)" }}
     >
       <div className="absolute inset-0 bg-bg/70" />

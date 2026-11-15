@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { BsArrowRight, BsCodeSquare } from "react-icons/bs";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { LuComputer } from "react-icons/lu";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import useRevealOnScroll from "../../../utils/useRevealOnScroll";
 
 const SERVICE_CARDS = [
@@ -12,11 +12,9 @@ const SERVICE_CARDS = [
 ];
 
 const ServiceInfo = () => {
-  const router = useRouter();
   const { t } = useTranslation();
   const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
 
-  const redirectTo = (url: string) => router.push(url);
 
   return (
     <section
@@ -38,9 +36,7 @@ const ServiceInfo = () => {
           </p>
 
           <a
-            href="mailto: pedrolopeshls@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:pedrolopeshls@gmail.com"
             className="mt-6 inline-flex items-center gap-2 font-medium text-ink transition-colors hover:text-brand-from"
           >
             pedrolopeshls@gmail.com
@@ -63,10 +59,9 @@ const ServiceInfo = () => {
 
       <div className="mt-12 grid gap-6 sm:grid-cols-3">
         {SERVICE_CARDS.map(({ icon: Icon, titleKey }) => (
-          <button
+          <Link
             key={titleKey}
-            type="button"
-            onClick={() => redirectTo("/Project")}
+            href="/Project"
             className="group flex flex-col items-start gap-4 rounded-2xl border border-border bg-surface p-6 text-left transition-colors hover:border-brand-to"
           >
             <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-from to-brand-to text-white">
@@ -77,7 +72,7 @@ const ServiceInfo = () => {
               {t("homeServicesInfo.text_box_service_foot")}
               <BsArrowRight size={16} />
             </span>
-          </button>
+          </Link>
         ))}
       </div>
     </section>

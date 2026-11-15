@@ -39,3 +39,6 @@ yarn-error.log*
 # rascunhos locais do blog (só o README é versionado)
 /src/content/blog/drafts/*
 !/src/content/blog/drafts/README.md
+
+# e-mails de autor pro scripts/update-code-stats.mjs (não versionar)
+/scripts/.code-stats.local.json

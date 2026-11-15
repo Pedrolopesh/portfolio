@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import useStackAndSkills from "./useStackAndSkills";
 import useRevealOnScroll from "../../../utils/useRevealOnScroll";
@@ -5,7 +6,7 @@ import useRevealOnScroll from "../../../utils/useRevealOnScroll";
 const StackAndSkills = () => {
   const { t } = useTranslation();
   const { ref, isVisible } = useRevealOnScroll<HTMLDivElement>();
-  const { internStacksAndSkills, showStacksQuantity, redirectToStackPage } =
+  const { internStacksAndSkills, showStacksQuantity } =
     useStackAndSkills();
 
   return (
@@ -36,13 +37,12 @@ const StackAndSkills = () => {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <button
-          type="button"
-          onClick={redirectToStackPage}
+        <Link
+          href="/Stacks"
           className="rounded-full border border-border px-6 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand-to hover:text-brand-from"
         >
           {t("home_stacks_skills.see_more")}
-        </button>
+        </Link>
       </div>
     </section>
   );
