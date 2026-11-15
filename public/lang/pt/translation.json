@@ -458,6 +458,9 @@
     },
     "meta_title": "Blog | Pedro Lopes",
     "meta_description": "Bastidores dos projetos de Pedro Lopes: contexto, desafios, o que foi construído, aprendizados e resultados.",
-    "categories_count": "{{count}} categorias"
+    "categories_count": "{{count}} categorias",
+    "podcast_label": "// veja também",
+    "podcast_title": "Episódio de podcast com Pedro Lopes",
+    "podcast_cta": "Assistir"
   }
 }

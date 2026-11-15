@@ -7,6 +7,7 @@ import HeadPages from "../../components/HeadPages";
 import Header from "../../components/Header";
 import Footer from "../../components/Home/Footer";
 import PostCard, { type PostSummary } from "../../components/Blog/PostCard";
+import PodcastNote from "../../components/Blog/PodcastNote";
 import {
   BLOG_REVALIDATE_SECONDS,
   getAllPosts,
@@ -224,6 +225,11 @@ const BlogHome = ({ posts }: Props) => {
           ) : (
             <p className="mt-10 text-ink-muted">{t("blog.empty")}</p>
           )}
+        </section>
+
+        {/* veja também: podcast, discreto */}
+        <section className="mx-auto max-w-3xl px-6 pb-16 sm:px-10">
+          <PodcastNote />
         </section>
 
         {/* cta */}
