@@ -83,6 +83,7 @@ export const PROJECTS: Project[] = [
     stack: ["Next.js", "React", "Tailwind"],
     url: "https://lelume.com.br",
     image: "/img/projects/live/lelume.webp",
+    icon: "/img/projects/live/lelume-icon.webp",
     accent: "#1E5BD8",
     isNew: true,
   },
@@ -116,6 +117,7 @@ export const PROJECTS: Project[] = [
     stack: ["Next.js", "React"],
     url: "https://ateliemariamariana.com.br",
     image: "/img/projects/live/atelie-maria-mariana.webp",
+    icon: "/img/projects/live/atelie-maria-mariana-icon.webp",
     accent: "#1F3A6E",
     isNew: true,
   },
@@ -134,6 +136,7 @@ export const PROJECTS: Project[] = [
     stack: ["VTEX IO", "React", "E-commerce"],
     url: "https://loja.electrolux.com.br/",
     blogSlug: "migrando-a-loja-da-electrolux-para-vtex-io",
+    icon: "/img/projects/live/electrolux-icon.webp",
     accent: "#3B5BDB",
   },
 
@@ -151,6 +154,7 @@ export const PROJECTS: Project[] = [
     stack: ["Node.js", "Socket.IO", "Express"],
     url: "https://thechat-app.netlify.app",
     blogSlug: "the-chat-comunicacao-em-tempo-real-com-socket-io",
+    icon: "/img/projects/live/the-chat-icon.webp",
     accent: "#64748B",
   },
   {
@@ -166,6 +170,7 @@ export const PROJECTS: Project[] = [
     stack: ["Next.js", "React", "CSS"],
     url: "https://tripper-landing.netlify.app",
     blogSlug: "triper-estudando-nextjs-e-animacoes-css",
+    icon: "/img/projects/live/triper-icon.webp",
     accent: "#0EA5E9",
   },
   {
@@ -181,6 +186,7 @@ export const PROJECTS: Project[] = [
     stack: ["HTML", "CSS", "JavaScript"],
     url: "https://pet-sytem.netlify.app/pet-system-website/home/home",
     blogSlug: "petsystem-meu-primeiro-projeto",
+    icon: "/img/projects/live/pet-system-icon.webp",
     accent: "#F59E0B",
   },
 
@@ -198,6 +204,7 @@ export const PROJECTS: Project[] = [
     stack: ["Dashboard", "Dados", "Saúde"],
     url: "https://linkleitoweb.netlify.app/#/",
     blogSlug: "link-leito-tecnologia-contra-filas-em-hospitais",
+    icon: "/img/projects/live/link-leito-icon.webp",
     accent: "#14B8A6",
   },
   {
@@ -213,6 +220,7 @@ export const PROJECTS: Project[] = [
     stack: ["Vue.js", "Node.js", "Express"],
     url: "https://quest-game.netlify.app",
     blogSlug: "quest-game-pontuacao-por-dificuldade",
+    icon: "/img/projects/live/quest-game-icon.webp",
     accent: "#22C55E",
   },
 
@@ -230,6 +238,7 @@ export const PROJECTS: Project[] = [
     stack: ["UX/UI", "Design system"],
     url: "https://www.behance.net/gallery/127210581/Community-Alert",
     blogSlug: "community-alert-ux-para-alertas-de-catastrofes",
+    icon: "/img/projects/live/community-alert-icon.webp",
     accent: "#EC4899",
   },
   {
@@ -245,6 +254,7 @@ export const PROJECTS: Project[] = [
     stack: ["UX/UI", "Personas"],
     url: "https://www.behance.net/gallery/127211141/Match-Coder",
     blogSlug: "match-coder-um-tinder-para-vagas-de-ti",
+    icon: "/img/projects/live/match-coder-icon.webp",
     accent: "#DC2626",
   },
   {
@@ -260,6 +270,7 @@ export const PROJECTS: Project[] = [
     stack: ["UX/UI", "Requisitos"],
     url: "https://www.behance.net/gallery/127210829/Pet-care",
     blogSlug: "pet-care-ux-para-ongs-de-protecao-animal",
+    icon: "/img/projects/live/pet-care-icon.webp",
     accent: "#A855F7",
   },
 ];

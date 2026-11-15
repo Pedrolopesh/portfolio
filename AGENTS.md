@@ -7,3 +7,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Padrões deste projeto
+
+Antes de criar ou alterar qualquer página, componente, texto, post, projeto ou
+configuração, leia **`.claude/skills/portfolio-standards/SKILL.md`**. Ele reúne
+design, animações/UX, regras de conteúdo (blog, rascunhos, projetos, logos,
+i18n), segurança mínima e o fluxo de entrega (PR → merge → verificar
+produção). Vale para o Claude Code e para qualquer outro agente.
