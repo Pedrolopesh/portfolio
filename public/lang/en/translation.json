@@ -459,6 +459,9 @@
     },
     "meta_title": "Blog | Pedro Lopes",
     "meta_description": "Behind Pedro Lopes' projects: context, challenges, what was built, lessons and results.",
-    "categories_count": "{{count}} categories"
+    "categories_count": "{{count}} categories",
+    "podcast_label": "// see also",
+    "podcast_title": "Podcast episode with Pedro Lopes",
+    "podcast_cta": "Watch"
   }
 }
