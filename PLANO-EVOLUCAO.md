@@ -370,6 +370,23 @@ muda estruturalmente pra este projeto:
   Progresso detalhado (comandos, decisões, achados) em
   `Pedro's Vault/02-Areas/We-Tech-Hub/Operacao/VPS/Migration.md`.
 
+### Fase 3.1 — Landing de projetos, UX e padrões — ✅ concluída (15/11/2026)
+
+- `/Project` virou uma landing (inspirada no apps.oprimo.dev): destaque do
+  **Next Journey**, "No ar agora" (We Party, Lelume, BDR APP, Ateliê Maria
+  Mariana) e "Todos os projetos" com filtro. Fonte única em
+  `src/content/projects.ts`; cada card usa o logo real do projeto.
+- Toro, BLUE e Genesis Bank saíram de projetos e ficaram só no blog. Links
+  antigos `/Project?name=…` redirecionam (308) para o post.
+- Rascunhos locais do blog em `src/content/blog/drafts/` (fora do git, só em
+  `next dev`): Porta do Espírito Santo (4 posts), primeiro app publicado,
+  Multidrop e Next Journey.
+- UX: `<Reveal>`, spotlight nos cards, scroll suave. Segurança: CSP e headers
+  em `next.config.js`, links externos com `noopener`, `/api/send` escapando
+  input.
+- Padrões documentados em `.claude/skills/portfolio-standards/SKILL.md`
+  (referenciado no `AGENTS.md`) e verificação em `scripts/check-pages.py`.
+
 ### Fase 4 — Portfólio como repositório de estudos (médio/longo prazo)
 - Cada post do blog pode documentar uma técnica/lib testada no próprio código do
   portfólio (ex: "como estruturei o header com CSS puro", "testando App Router").
