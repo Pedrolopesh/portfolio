@@ -53,6 +53,12 @@ const BlogPostPage = ({ post, related }: Props) => {
               ← {t("blog.back")}
             </Link>
 
+            {post.draft && (
+              <p className="mt-6 rounded-xl border border-amber-400/40 bg-amber-400/5 px-4 py-3 text-sm text-amber-200">
+                {t("blog.draft_notice")}
+              </p>
+            )}
+
             <div className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-brand-from">
               <span>{t(`blog.categories.${post.category}.label`)}</span>
               <span className="text-ink-muted/50">•</span>

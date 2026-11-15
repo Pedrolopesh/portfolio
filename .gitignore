@@ -35,3 +35,7 @@ yarn-error.log*
 
 .env
 *.tsbuildinfo
+
+# rascunhos locais do blog (só o README é versionado)
+/src/content/blog/drafts/*
+!/src/content/blog/drafts/README.md

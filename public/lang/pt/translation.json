@@ -461,6 +461,8 @@
     "categories_count": "{{count}} categorias",
     "podcast_label": "// veja também",
     "podcast_title": "Episódio de podcast com Pedro Lopes",
-    "podcast_cta": "Assistir"
+    "podcast_cta": "Assistir",
+    "draft": "Rascunho",
+    "draft_notice": "Rascunho local — este post só aparece quando o site roda com next dev e nunca vai pra produção."
   }
 }

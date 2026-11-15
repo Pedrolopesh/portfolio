@@ -1,5 +1,6 @@
 import type { BlogPost } from "./types";
 import { LOCAL_POSTS } from "./posts";
+import { getDraftPosts } from "./drafts";
 
 /**
  * Camada de dados do blog. Junta duas fontes:
@@ -72,17 +73,20 @@ const byDateDesc = (a: BlogPost, b: BlogPost) =>
   b.publishedAt.localeCompare(a.publishedAt);
 
 export async function getAllPosts(): Promise<BlogPost[]> {
-  const apiPosts = await fetchApiPosts();
+  const [apiPosts, drafts] = await Promise.all([fetchApiPosts(), getDraftPosts()]);
   const apiSlugs = new Set(apiPosts.map((p) => p.slug));
   const local = LOCAL_POSTS.filter((p) => !apiSlugs.has(p.slug));
-  // posts da API (mais novos) primeiro; locais mantêm a ordem curada
-  return [...apiPosts.sort(byDateDesc), ...local];
+  // rascunhos (só em dev) primeiro, depois posts da API (mais novos) e os
+  // locais na ordem curada
+  return [...drafts, ...apiPosts.sort(byDateDesc), ...local];
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fromApiPost = await getJson<ApiPost>(`/posts/${encodeURIComponent(slug)}`);
   if (fromApiPost) return fromApi(fromApiPost);
-  return LOCAL_POSTS.find((p) => p.slug === slug) ?? null;
+  const local = LOCAL_POSTS.find((p) => p.slug === slug);
+  if (local) return local;
+  return (await getDraftPosts()).find((p) => p.slug === slug) ?? null;
 }
 
 /** Tempo de leitura estimado (~200 palavras/min). */

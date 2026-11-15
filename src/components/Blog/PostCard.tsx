@@ -45,6 +45,11 @@ const PostCard = ({ post, featured = false }: Props) => {
 
       <div className={`flex flex-1 flex-col ${featured ? "p-8 lg:p-10" : "p-6"}`}>
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-brand-from">
+          {post.draft && (
+            <span className="rounded-full border border-amber-400/50 px-2 py-0.5 text-amber-300">
+              {t("blog.draft")}
+            </span>
+          )}
           <span>{t(`blog.categories.${post.category}.label`)}</span>
           <span className="text-ink-muted/50">•</span>
           <span className="text-ink-muted">
