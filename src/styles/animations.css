@@ -162,3 +162,55 @@
 @keyframes animationBarDocker-responsive {
     0% { width: 6vw; } 100% { width: 35vw;}
 }
+/* ------------------------------------------------------------------
+   Padrões de movimento do site (ver .claude/skills/portfolio-standards)
+   ------------------------------------------------------------------ */
+
+/* <Reveal>: o JS só marca data-reveal em elementos abaixo da dobra */
+[data-reveal] {
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(16px);
+}
+[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* .spotlight + useSpotlight(): brilho que segue o cursor */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in srgb, var(--spot, #6ec3f0) 16%, transparent),
+    transparent 65%
+  );
+  transition: opacity 0.3s ease;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -25,6 +25,17 @@
    `text-ink` num <a> deixa de perder pra esse `a { color: inherit }`
    genérico). */
 @layer base {
+  /* scroll suave em âncoras (#projects, #posts…), descontando o header
+     fixo; desligado pra quem prefere movimento reduzido */
+  html {
+    scroll-padding-top: 6rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   html,
   body {
     margin: 0;
