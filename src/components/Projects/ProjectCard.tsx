@@ -61,6 +61,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
             </h3>
             {project.isNew && <NewBadge />}
           </div>
+          {project.role && (
+            <p className="mt-0.5 font-mono text-[11px] text-brand-from/90">{local(project.role)}</p>
+          )}
           <p className="mt-1.5 line-clamp-2 text-sm text-ink-muted">{local(project.tagline)}</p>
         </div>
       </div>

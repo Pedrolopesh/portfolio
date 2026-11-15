@@ -80,8 +80,13 @@ portfólio — siga sem perguntar de novo; só pergunte o que não estiver cober
   formato no README da pasta). Aparecem só em `next dev`, nunca em produção.
   Conteúdo opinativo sobre clientes/empresas só como rascunho até o dono revisar.
 - **Projetos**: adicione em `src/content/projects.ts` (tagline PT/EN, categoria,
-  status, plataformas, stack, `url`, `blogSlug`, `icon`, `image`, `accent`).
-  Toro, BLUE e Genesis Bank ficam só no blog. O destaque é o Next Journey.
+  status, plataformas, stack, `url`, `blogSlug`, `icon`, `image`, `accent`,
+  `role`). Toro, BLUE e Genesis Bank ficam só no blog. O destaque é o Next Journey.
+- **Papéis do Pedro** (campo `role`, mostrado nos cards): **We Tech Hub** é a
+  empresa dele (Fundador) — serviços de software (chatbots, agentes de IA, sites,
+  apps). **We Party**: Fundador. **Lelume** e **Ateliê Maria Mariana**: clientes —
+  "Tecnologia por We Tech Hub" (não usar "CTO"). **BDR APP**: Contribuidor
+  (projeto de um amigo). Ao citar o governo do ES: "Portal Único do Espírito Santo".
 - **Imagens**: WebP, em `public/img/projects/live/`. Print de site 960×600
   (q≈82); ícone/logo 192×192. Sempre o **logo real** do projeto (repositório local
   em `~/Documents/we-tech-hub/...`, `public/` do projeto, manifest/favicon do site
