@@ -214,3 +214,19 @@
     transform: none;
   }
 }
+
+/* faixa do Next Journey (/Project): ícone flutuando + selos de EXP */
+/* só o eixo Y: a centralização vem da propriedade `translate` do Tailwind */
+@keyframes nj-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes nj-xp {
+  0% { opacity: 0; transform: translateY(8px); }
+  15%, 70% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-14px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .nj-float { animation: nj-float 4s ease-in-out infinite; }
+  .nj-xp { animation: nj-xp 3.6s ease-in-out infinite both; }
+}

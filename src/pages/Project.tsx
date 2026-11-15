@@ -1,4 +1,3 @@
-import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -6,44 +5,25 @@ import HeadPages from "../components/HeadPages";
 import Header from "../components/Header";
 import Footer from "../components/Home/Footer";
 import Reveal from "../components/ui/Reveal";
-import HighlightCard from "../components/Projects/HighlightCard";
-import ProductCard from "../components/Projects/ProductCard";
-import ProjectCard from "../components/Projects/ProjectCard";
-import {
-  CATEGORY_ORDER,
-  PROJECTS,
-  highlightProject,
-  liveProducts,
-  type ProjectCategory,
-} from "../content/projects";
+import StatsTerminal from "../components/Projects/StatsTerminal";
+import HighlightBanner from "../components/Projects/HighlightBanner";
+import ShowcaseRow from "../components/Projects/ShowcaseRow";
+import ArchiveList from "../components/Projects/ArchiveList";
+import { PROJECTS, highlightProject, liveProducts } from "../content/projects";
 
 /**
- * Landing de projetos: destaque (Next Journey) → produtos no ar com print
- * → todos os projetos com filtro por categoria. Sem página por projeto:
- * cada card leva pro site e/ou pra história no blog. Links antigos
- * /Project?name=… são redirecionados pro post (next.config.js).
+ * Landing de projetos, com cara própria (código/terminal):
+ *  1. abertura + terminal com números do portfólio e do GitHub;
+ *  2. faixa do projeto em destaque (Next Journey);
+ *  3. "No ar agora": vitrine em zigue-zague com moldura de navegador;
+ *  4. "Arquivo": demais projetos em lista, filtrados por pasta.
+ * Links antigos /Project?name=… redirecionam pro blog (next.config.js).
  */
 const Projects = () => {
   const { t } = useTranslation();
-  const [filter, setFilter] = useState<ProjectCategory | "all">("all");
 
-  const counts = useMemo(() => {
-    const c = new Map<ProjectCategory, number>();
-    for (const p of PROJECTS) {
-      if (p.highlight) continue; // o destaque fica fora da lista
-      c.set(p.category, (c.get(p.category) ?? 0) + 1);
-    }
-    return c;
-  }, []);
-
-  const list = PROJECTS.filter(
-    (p) => !p.highlight && (filter === "all" || p.category === filter)
-  );
-  const stats = [
-    { label: t("projects_page.stats.projects"), value: PROJECTS.length },
-    { label: t("projects_page.stats.live"), value: PROJECTS.filter((p) => p.status === "live").length },
-    { label: t("projects_page.stats.posts"), value: PROJECTS.filter((p) => p.blogSlug).length },
-  ];
+  const showcased = new Set([highlightProject.slug, ...liveProducts.map((p) => p.slug)]);
+  const archive = PROJECTS.filter((p) => !showcased.has(p.slug));
 
   return (
     <div>
@@ -55,8 +35,8 @@ const Projects = () => {
       <Header />
 
       <main>
-        {/* hero + destaque */}
-        <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40">
+        {/* abertura + terminal */}
+        <section className="relative overflow-hidden pb-14 pt-32 sm:pt-40">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -64,94 +44,68 @@ const Projects = () => {
               backgroundImage:
                 "linear-gradient(to right, #72A1FF 1px, transparent 1px), linear-gradient(to bottom, #72A1FF 1px, transparent 1px)",
               backgroundSize: "48px 48px",
-              maskImage: "radial-gradient(ellipse at 30% 30%, black 15%, transparent 65%)",
+              maskImage: "radial-gradient(ellipse at 70% 40%, black 15%, transparent 65%)",
             }}
           />
-          <div className="relative mx-auto grid max-w-6xl items-stretch gap-10 px-6 sm:px-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="flex flex-col justify-center">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute right-[10%] top-24 h-[340px] w-[480px] rounded-full bg-brand-to/20 blur-[120px]"
+          />
+
+          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 sm:px-10 lg:grid-cols-[1fr_0.95fr]">
+            <div>
               <p className="font-mono text-sm text-brand-from">{t("projects_page.label")}</p>
               <h1 className="mt-4 text-4xl font-bold tracking-tight text-ink sm:text-6xl">
                 {t("projects_page.title")}
               </h1>
               <p className="mt-6 max-w-xl text-lg text-ink-muted">{t("projects_page.intro")}</p>
-
-              <dl className="mt-10 flex flex-wrap gap-x-12 gap-y-6">
-                {stats.map((s) => (
-                  <div key={s.label}>
-                    <dt className="text-xs text-ink-muted">{s.label}</dt>
-                    <dd className="mt-1 text-4xl font-bold text-ink">{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
+              <div className="mt-8 flex flex-wrap gap-3 font-mono text-sm">
+                <a href="#no-ar" className="rounded-lg border border-border px-3 py-2 text-ink-muted transition hover:border-brand-from hover:text-ink">
+                  ./{t("projects_page.jump_live")}
+                </a>
+                <a href="#arquivo" className="rounded-lg border border-border px-3 py-2 text-ink-muted transition hover:border-brand-from hover:text-ink">
+                  ./{t("projects_page.jump_archive")}
+                </a>
+              </div>
             </div>
-
-            <HighlightCard project={highlightProject} />
+            <StatsTerminal projects={PROJECTS.length} />
           </div>
         </section>
 
-        {/* produtos no ar */}
-        <section className="mx-auto max-w-6xl px-6 py-16 sm:px-10">
-          <Reveal className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <h2 className="text-3xl font-bold text-ink">{t("projects_page.live_title")}</h2>
-            <p className="text-sm text-ink-muted">{t("projects_page.live_subtitle")}</p>
+        {/* destaque */}
+        <section className="mx-auto max-w-6xl px-6 py-10 sm:px-10">
+          <Reveal>
+            <HighlightBanner project={highlightProject} />
+          </Reveal>
+        </section>
+
+        {/* vitrine */}
+        <section id="no-ar" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-20 sm:px-10">
+          <Reveal>
+            <p className="font-mono text-sm text-brand-from">{t("projects_page.live_label")}</p>
+            <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">{t("projects_page.live_title")}</h2>
+            <p className="mt-3 max-w-xl text-ink-muted">{t("projects_page.live_subtitle")}</p>
           </Reveal>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-14 space-y-20 lg:space-y-28">
             {liveProducts.map((p, i) => (
-              // o primeiro (We Tech Hub, a empresa por trás de vários outros)
-              // ocupa a largura toda
-              <Reveal
-                key={p.slug}
-                delay={(i % 2) * 80}
-                className={`h-full ${i === 0 ? "md:col-span-2" : ""}`}
-              >
-                <ProductCard project={p} large={i === 0} />
+              <Reveal key={p.slug}>
+                <ShowcaseRow project={p} index={i} />
               </Reveal>
             ))}
           </div>
         </section>
 
-        {/* todos */}
-        <section id="todos" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 sm:px-10">
-          <Reveal className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="text-3xl font-bold text-ink">{t("projects_page.all_title")}</h2>
-              <p className="mt-2 text-sm text-ink-muted">
-                {t("projects_page.all_count", { count: list.length })}
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-2" role="tablist" aria-label={t("projects_page.all_title")}>
-              {(["all", ...CATEGORY_ORDER] as const).map((id) => {
-                const active = filter === id;
-                const count = id === "all" ? PROJECTS.length - 1 : counts.get(id) ?? 0;
-                return (
-                  <button
-                    key={id}
-                    type="button"
-                    role="tab"
-                    aria-selected={active}
-                    onClick={() => setFilter(id)}
-                    className={`rounded-full border px-4 py-2 text-sm transition ${
-                      active
-                        ? "border-brand-from bg-brand-from/10 text-ink"
-                        : "border-border text-ink-muted hover:text-ink"
-                    }`}
-                  >
-                    {id === "all" ? t("projects_page.filter_all") : t(`projects_page.categories.${id}`)}
-                    <span className="ml-1.5 font-mono text-[11px] text-ink-muted">{count}</span>
-                  </button>
-                );
-              })}
-            </div>
+        {/* arquivo */}
+        <section id="arquivo" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-16 sm:px-10">
+          <Reveal className="mb-8">
+            <p className="font-mono text-sm text-brand-from">{t("projects_page.archive_label")}</p>
+            <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">{t("projects_page.archive_title")}</h2>
+            <p className="mt-3 max-w-xl text-ink-muted">{t("projects_page.archive_subtitle")}</p>
           </Reveal>
-
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {list.map((p, i) => (
-              <Reveal key={`${filter}-${p.slug}`} delay={(i % 3) * 70} className="h-full">
-                <ProjectCard project={p} />
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <ArchiveList projects={archive} />
+          </Reveal>
         </section>
 
         {/* cta */}
