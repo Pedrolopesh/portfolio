@@ -53,7 +53,7 @@ const NotFound = () => {
           </div>
 
           <p className="mt-10 font-mono text-sm text-brand-from">{t("not_found.label")}</p>
-          <h1 className="mt-3 text-3xl font-bold text-ink sm:text-5xl">{t("not_found.title")}</h1>
+          <h1 className="mt-3 text-3xl font-bold leading-tight text-ink sm:text-5xl sm:leading-[1.2]">{t("not_found.title")}</h1>
           <p className="mt-4 text-lg text-ink-muted">{t("not_found.text")}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
