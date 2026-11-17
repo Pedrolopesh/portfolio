@@ -2,15 +2,15 @@ import type { BlogPost } from "../types";
 
 export const triper: BlogPost = {
   slug: "triper-estudando-nextjs-e-animacoes-css",
-  title: "Triper: o site de viagens que construí para aprender Next.js e animações CSS",
+  title: "Bússola das Trilhas: o site de viagens que construí para aprender Next.js e animações CSS",
   excerpt:
     "Um projeto de estudo com conteúdo fictício e objetivo real: entender renderização no servidor, performance e como animar uma página sem pesar a navegação.",
-  coverImage: "/img/projects/banner/project_gallery_banner_5.png",
+  coverImage: "/img/projects/banner/bussola-das-trilhas.png",
   tags: ["Next.js", "React", "CSS", "Animações"],
   category: "projetos-pessoais",
   publishedAt: "2026-11-14",
   content: `
-O Triper é um site de viagens — mas viagem foi só o pretexto. Eu queria aprofundar três coisas: **Next.js**, **animações CSS** e **código limpo**. Todo o conteúdo do site é ilustrativo; o que importava era o que acontecia por baixo.
+A Bússola das Trilhas é um site de viagens — mas viagem foi só o pretexto. Eu queria aprofundar três coisas: **Next.js**, **animações CSS** e **código limpo**. Todo o conteúdo do site é ilustrativo; o que importava era o que acontecia por baixo.
 
 ## O contexto
 
@@ -26,7 +26,7 @@ O Next.js resolve problemas que o React puro deixa para você: renderização no
 
 Um site em Next.js com animações de elementos da página e **keyframes** para movimentos personalizados, deixando a navegação mais fluida e suave. Segui padrões de organização de código e documentação e, depois, comparei o resultado com aplicações reais do mercado para ver onde eu estava acertando e onde podia melhorar.
 
-![O site do Triper](/img/projects/exemple/tripper_web_site.png)
+![O site da Bússola das Trilhas](/img/projects/exemple/bussola-das-trilhas-site.webp)
 
 ## O que aprendi
 
@@ -36,7 +36,7 @@ Um site em Next.js com animações de elementos da página e **keyframes** para 
 
 ## O resultado
 
-O Triper virou meu laboratório: de tempos em tempos volto nele para melhorar visual, performance e navegação, comparando o antes e o depois. E ele ainda me serve de referência para dúvidas do dia a dia. Veja em [tripper-landing.netlify.app](https://tripper-landing.netlify.app).
+A Bússola das Trilhas virou meu laboratório: de tempos em tempos volto nela para melhorar visual, performance e navegação, comparando o antes e o depois. E ela ainda me serve de referência para dúvidas do dia a dia. Veja em [tripper-landing.netlify.app](https://tripper-landing.netlify.app).
 `,
 };
 

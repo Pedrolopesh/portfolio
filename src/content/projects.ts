@@ -184,7 +184,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "triper",
-    name: "Triper",
+    name: "Bússola das Trilhas",
     tagline: {
       pt: "Site de viagens feito para estudar Next.js, animações CSS e código limpo.",
       en: "A travel website built to study Next.js, CSS animations and clean code.",
@@ -195,7 +195,7 @@ export const PROJECTS: Project[] = [
     stack: ["Next.js", "React", "CSS"],
     url: "https://tripper-landing.netlify.app",
     blogSlug: "triper-estudando-nextjs-e-animacoes-css",
-    icon: "/img/projects/live/triper-icon.webp",
+    icon: "/img/projects/live/bussola-das-trilhas-icon.webp",
     accent: "#0EA5E9",
   },
   {
