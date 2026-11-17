@@ -200,19 +200,19 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "pet-system",
-    name: "PetSystem",
+    name: "Pet System",
     tagline: {
-      pt: "Meu primeiro projeto: um ERP de pet shop feito só com HTML, CSS e JavaScript.",
-      en: "My first project: a pet shop ERP built with plain HTML, CSS and JavaScript.",
+      pt: "SaaS de gestão para pet shops, creches e clínicas: agenda sem conflito, prontuário clínico, portal do tutor e multi-loja com NestJS e Postgres.",
+      en: "SaaS for pet shops, daycares and vet clinics: conflict-free scheduling, clinical records, owner portal and multi-tenant with NestJS and Postgres.",
     },
     category: "pessoais",
-    status: "archived",
+    status: "live",
     platforms: ["Web"],
-    stack: ["HTML", "CSS", "JavaScript"],
-    url: "https://pet-sytem.netlify.app/pet-system-website/home/home",
+    stack: ["NestJS", "Prisma", "PostgreSQL", "Next.js", "React"],
+    url: "https://pet-sytem.netlify.app",
     blogSlug: "petsystem-meu-primeiro-projeto",
     icon: "/img/projects/live/pet-system-icon.webp",
-    accent: "#F59E0B",
+    accent: "#B026D9",
   },
 
   // ---------- faculdade ----------
