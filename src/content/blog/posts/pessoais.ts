@@ -2,15 +2,15 @@ import type { BlogPost } from "../types";
 
 export const triper: BlogPost = {
   slug: "triper-estudando-nextjs-e-animacoes-css",
-  title: "Bússola das Trilhas: o site de viagens que construí para aprender Next.js e animações CSS",
+  title: "Bússola das Trilhas: o guia de trilhas que construí para aprender Next.js e animações CSS",
   excerpt:
-    "Um projeto de estudo com conteúdo fictício e objetivo real: entender renderização no servidor, performance e como animar uma página sem pesar a navegação.",
+    "Um projeto de estudo com conteúdo ilustrativo e objetivo real: entender geração de páginas estáticas, performance e como animar uma página só com CSS, sem pesar a navegação.",
   coverImage: "/img/projects/banner/bussola-das-trilhas.png",
   tags: ["Next.js", "React", "CSS", "Animações"],
   category: "projetos-pessoais",
   publishedAt: "2026-11-14",
   content: `
-A Bússola das Trilhas é um site de viagens — mas viagem foi só o pretexto. Eu queria aprofundar três coisas: **Next.js**, **animações CSS** e **código limpo**. Todo o conteúdo do site é ilustrativo; o que importava era o que acontecia por baixo.
+A Bússola das Trilhas (antes chamada Triper) é um guia de trilhas e montanhas do Brasil — mas o tema foi só o pretexto. Eu queria aprofundar três coisas: **Next.js**, **animações CSS** e **código limpo**. Todo o conteúdo do site é ilustrativo; o que importava era o que acontecia por baixo.
 
 ## O contexto
 
@@ -26,6 +26,13 @@ O Next.js resolve problemas que o React puro deixa para você: renderização no
 
 Um site em Next.js com animações de elementos da página e **keyframes** para movimentos personalizados, deixando a navegação mais fluida e suave. Segui padrões de organização de código e documentação e, depois, comparei o resultado com aplicações reais do mercado para ver onde eu estava acertando e onde podia melhorar.
 
+Na segunda versão, refiz tudo:
+
+- **Next 16 com site 100% estático:** as páginas em português e em inglês são geradas no build e publicadas como arquivos, sem servidor.
+- **Parallax sem JavaScript:** a versão antiga reagia à rolagem com JS a cada pixel; agora é CSS com \`animation-timeline\`.
+- **Seis destinos**, cada um com página própria, filtros por dificuldade e duração, "quero ir" e uma lista do que levar na mochila, tudo salvo no próprio navegador.
+- **Silhueta da subida** de cada trilha desenhada em SVG a partir de um perfil ilustrativo.
+
 ![O site da Bússola das Trilhas](/img/projects/exemple/bussola-das-trilhas-site.webp)
 
 ## O que aprendi
@@ -36,7 +43,7 @@ Um site em Next.js com animações de elementos da página e **keyframes** para 
 
 ## O resultado
 
-A Bússola das Trilhas virou meu laboratório: de tempos em tempos volto nela para melhorar visual, performance e navegação, comparando o antes e o depois. E ela ainda me serve de referência para dúvidas do dia a dia. Veja em [tripper-landing.netlify.app](https://tripper-landing.netlify.app).
+A Bússola das Trilhas virou meu laboratório: de tempos em tempos volto nela para melhorar visual, performance e navegação, comparando o antes e o depois. As fotos são ilustrativas e as altitudes marcadas com "~" são estimativas, então ela não serve como guia real de trilha; serve como referência para dúvidas do dia a dia. Veja em [tripper-landing.netlify.app](https://tripper-landing.netlify.app).
 `,
 };
 
@@ -82,11 +89,11 @@ O chat funciona com dois usuários conversando em tempo real e segue recebendo m
 
 export const petSystem: BlogPost = {
   slug: "petsystem-meu-primeiro-projeto",
-  title: "PetSystem: meu primeiro projeto, um ERP de pet shop sem frameworks",
+  title: "PetSystem: do meu primeiro projeto, sem frameworks, a um SaaS para pet shops",
   excerpt:
-    "Antes de React, Vue ou Next.js, teve o PetSystem: um sistema de pet shop feito só com o básico da web. O que ele me ensinou ainda vale hoje.",
+    "O PetSystem começou como um ERP de pet shop feito só com o básico da web. Em 2026 voltei nele e o refiz como um SaaS multi-loja, com API própria, banco de dados e testes.",
   coverImage: "/img/projects/banner/project_gallery_banner_12.png",
-  tags: ["HTML", "CSS", "JavaScript", "Fundamentos"],
+  tags: ["HTML", "JavaScript", "NestJS", "Next.js", "PostgreSQL"],
   category: "projetos-pessoais",
   publishedAt: "2026-11-14",
   content: `
@@ -114,8 +121,24 @@ Um sistema com cadastro de produtos, controle de compras e vendas e outras funci
 - Escrever "na mão" o que um framework faria me ajudou a entender *por que* os frameworks existem.
 - Escopo é uma escolha: um ERP inteiro é complexo demais para um primeiro projeto, e isso também é aprendizado.
 
+## A segunda versão
+
+A primeira versão ficou parada por um bom tempo, justamente pela complexidade do que foi implementado, e virou fonte de consulta: eu voltava nela para rever boas práticas e funcionalidades. Em 2026 resolvi refazer o projeto de verdade, agora sabendo o que faltava nele.
+
+O mesmo tema, com o que eu não conseguia fazer na primeira vez:
+
+- **Um SaaS para pet shops, creches e clínicas**, com várias lojas no mesmo sistema e cada uma enxergando só os próprios dados.
+- **API própria** em NestJS com Prisma e PostgreSQL, em vez de dados presos ao navegador. A agenda checa o conflito de horário por profissional direto no banco, então dois atendimentos não caem no mesmo horário.
+- **Módulo clínico** com prontuário, receitas e carteira de vacinas com a data do próximo reforço.
+- **Agendamento online público** e uma área para o tutor ver os atendimentos, o histórico e as vacinas do pet.
+- **Site em Next.js** e um repositório único (monorepo) com os contratos compartilhados entre front e API, mais 97 testes automatizados.
+
+Dá para testar sem cadastro: a página inicial tem uma loja de demonstração, que volta ao estado original todo dia.
+
+![O PetSystem hoje](/img/projects/exemple/pet_system_v2_site.webp)
+
 ## O resultado
 
-O PetSystem não teve continuação, justamente pela complexidade do que foi implementado. Mas ele segue sendo uma fonte de consulta: volto nele para rever boas práticas e funcionalidades que podem ser reaproveitadas em projetos do dia a dia. Está no ar em [pet-sytem.netlify.app](https://pet-sytem.netlify.app/pet-system-website/home/home).
+O que o primeiro projeto me ensinou ficou: o escopo de um ERP completo era grande demais para quem estava começando, e hoje eu consegui tratá-lo como um produto de verdade. Veja em [pet-sytem.netlify.app](https://pet-sytem.netlify.app) e o código em [github.com/Pedrolopesh/pet-system](https://github.com/Pedrolopesh/pet-system).
 `,
 };
